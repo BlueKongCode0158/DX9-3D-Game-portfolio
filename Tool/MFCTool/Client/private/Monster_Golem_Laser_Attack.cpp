@@ -1,0 +1,79 @@
+#include "stdafx.h"
+#include "Golem.h"
+#include "GameInstacne.h"
+#include "Client_Defines.h"
+#include "..\public\Monster_Golem_Laser_Attack.h"
+
+CMonster_Golem_Laser_Attack::CMonster_Golem_Laser_Attack(LPDIRECT3DDEVICE9 pGraphic_Device)
+	:CMonster_Data(pGraphic_Device)
+{
+}
+
+HRESULT CMonster_Golem_Laser_Attack::NativeConstruct(CGameObject * pObject)
+{
+	if (FAILED(__super::NativeConstruct(pObject)))
+	{
+		return E_FAIL;
+	}
+	return S_OK;
+}
+
+_uint CMonster_Golem_Laser_Attack::HandleInput()
+{
+	CGameInstacne* pGameInstance = GET_INSTANCE(CGameInstacne);
+
+
+Laser:
+	RELEASE_INSTANCE(CGameInstacne);
+	return CMonsterState::MOTION::SIGNATURE_ATTACK;
+
+Attack:
+	RELEASE_INSTANCE(CGameInstacne);
+	return CMonsterState::MOTION::ATTACK;
+
+Idle:
+	RELEASE_INSTANCE(CGameInstacne);
+	return CMonsterState::MOTION::IDLE;
+
+Move:
+	RELEASE_INSTANCE(CGameInstacne);
+	return CMonsterState::MOTION::MOVE;
+
+}
+
+void CMonster_Golem_Laser_Attack::Enter()
+{
+	m_pMonster->Get_MeshCom()->Set_AnimationIndex(CGolem::ANIMATION_KEY::FIRELASER);
+}
+
+void CMonster_Golem_Laser_Attack::Update(_float TimeDelta)
+{
+
+}
+
+void CMonster_Golem_Laser_Attack::Late_Update(_float TimeDelta)
+{
+
+}
+
+void CMonster_Golem_Laser_Attack::Exit()
+{
+
+}
+
+CMonster_Golem_Laser_Attack * CMonster_Golem_Laser_Attack::Create(LPDIRECT3DDEVICE9 pGraphic_Device, CGameObject* pObject)
+{
+	CMonster_Golem_Laser_Attack* pInstance = new CMonster_Golem_Laser_Attack(pGraphic_Device);
+
+	if (FAILED(pInstance->NativeConstruct(pObject)))
+	{
+		Safe_Release(pInstance);
+		MSGBOX("Failed to Creating CMonster_Golem_Laser_Attack");
+	}
+	return pInstance;
+}
+
+void CMonster_Golem_Laser_Attack::Free()
+{
+	__super::Free();
+}

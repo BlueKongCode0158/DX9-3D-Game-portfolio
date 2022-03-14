@@ -1,0 +1,3 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(368,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+  Base.cpp
+c:\users\bluek\desktop\jusin\framework\framework_1012_64bit\framework\engine\private\base.cpp(1): fatal error C1083: 포함 파일을 열 수 없습니다. 'Base.h': No such file or directory

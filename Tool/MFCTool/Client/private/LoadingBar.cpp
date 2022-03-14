@@ -1,0 +1,128 @@
+#include "stdafx.h"
+#include "..\public\LoadingBar.h"
+#include "GameInstacne.h"
+
+CLoadingBar::CLoadingBar(LPDIRECT3DDEVICE9 pGraphic_Device)
+	:CUI(pGraphic_Device)
+{
+}
+
+CLoadingBar::CLoadingBar(const CLoadingBar & rhs)
+	:CUI(rhs)
+{
+}
+
+HRESULT CLoadingBar::NativeConstruct_Prototype()
+{
+	if (FAILED(__super::NativeConstruct_Prototype()))
+	{
+		return E_FAIL;
+	}
+	return S_OK;
+}
+
+HRESULT CLoadingBar::NativeConstruct(void * pArg)
+{
+	if (FAILED(__super::NativeConstruct(pArg)))\
+
+	{
+		return E_FAIL;
+	}
+	if (FAILED(D3DXCreateTextureFromFileExW(m_pGraphicDevice, TEXT("../bin/resources/Image/Loading/Loading.tga"), 320, 64, 0, 0, D3DFMT_A8R8G8B8,
+		D3DPOOL_MANAGED, D3DX_DEFAULT, D3DX_DEFAULT, 0, NULL, NULL, &m_pTexture)))
+	{
+		return E_FAIL;
+	}
+	if (FAILED(Add_Components()))
+	{
+		return E_FAIL;
+	}
+
+
+	return S_OK;
+}
+
+_int CLoadingBar::Tick(_double TimeDelta)
+{
+	__super::Tick(TimeDelta);
+
+	return _int();
+}
+
+_int CLoadingBar::Late_Tick(_double TimeDelta)
+{
+	__super::Late_Tick(TimeDelta);
+
+	m_pRendererCom->Add_RenderGroup(CRenderer::RENDERGROUP::RENDER_UI, this);
+
+	return _int();
+}
+
+HRESULT CLoadingBar::Render()
+{
+	m_iShaderIndex = 1;
+	_float	fLoadingPer = m_fFinishPer / 100.f;
+
+	if (FAILED(m_pShaderCom->SetUp_ConstantTable("g_fLoadingPer", &fLoadingPer, sizeof(_float))))
+	{
+		return E_FAIL;
+	}
+	if (FAILED(m_pShaderCom->SetUp_TextureConstantTable("g_DiffuseTexture", m_pTexture)))
+	{
+		return E_FAIL;
+
+	}
+	if (FAILED(__super::Render()))
+	{
+		return E_FAIL;
+	}
+
+	return S_OK;
+}
+
+HRESULT CLoadingBar::Add_Components()
+{
+	if (FAILED(__super::Add_Component(LEVEL_STATIC, TEXT("Prototype_Renderer"), TEXT("Com_Renderer"), reinterpret_cast<CComponent**>(&m_pRendererCom))))
+	{
+		return E_FAIL;
+	}
+	if (FAILED(__super::Add_Component(LEVEL_STATIC, TEXT("Prototype_VIBuffer_Rect"), TEXT("Com_VIBuffer"), reinterpret_cast<CComponent**>(&m_pVIBufferCom))))
+	{
+		return E_FAIL;
+	}
+	if (FAILED(__super::Add_Component(LEVEL_STATIC, TEXT("Prototype_Shader_UI_2D"), TEXT("Com_Shader"), reinterpret_cast<CComponent**>(&m_pShaderCom))))
+	{
+		return E_FAIL;
+	}
+
+	return S_OK;
+}
+
+CLoadingBar * CLoadingBar::Create(LPDIRECT3DDEVICE9 pGraphic_Device)
+{
+	CLoadingBar*		pInstance = new CLoadingBar(pGraphic_Device);
+	if (FAILED(pInstance->NativeConstruct_Prototype()))
+	{
+		Safe_Release(pInstance);
+		MSGBOX("Failed to Creating CTitle_Prorotype");
+	}
+	return pInstance;
+}
+
+CGameObject * CLoadingBar::Clone(void * pArg)
+{
+	CLoadingBar*		pInstance = new CLoadingBar(*this);
+	if (FAILED(pInstance->NativeConstruct(pArg)))
+	{
+		Safe_Release(pInstance);
+		MSGBOX("Failed to Creating CTitle_Prorotype");
+	}
+	return pInstance;
+}
+
+void CLoadingBar::Free()
+{
+	__super::Free();
+
+	Safe_Release(m_pTexture);
+}

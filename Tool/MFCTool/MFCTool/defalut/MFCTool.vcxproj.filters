@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="99.Default">
+      <UniqueIdentifier>{711c0f77-d2d0-40b1-859e-fd0bb0db619f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="00.MainFrame">
+      <UniqueIdentifier>{e74f8c43-b97c-4145-ba75-3391080aa05d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Tool">
+      <UniqueIdentifier>{3b796b9e-cfd4-44ab-8e78-d7fdf437abec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.Document">
+      <UniqueIdentifier>{f572127d-66af-4db8-959d-8196c131b274}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.View">
+      <UniqueIdentifier>{2c9da531-4f72-4e78-8766-ccd3397ba5b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03.View\00.FormView">
+      <UniqueIdentifier>{3356699b-7469-4967-85a9-62c62e5f8bb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Object">
+      <UniqueIdentifier>{bf05504e-5ea9-48f1-9385-71a49abfcc8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05.Tab">
+      <UniqueIdentifier>{b57877a8-06be-431c-85a3-35821637ca32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05.Tab\02.EffectTab">
+      <UniqueIdentifier>{52f87615-03d0-465f-bfbc-656a3b8d1710}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="98.Headers">
+      <UniqueIdentifier>{89a6e2cf-5aea-4693-95b7-ff7597b16dca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05.Tab\00.TerrainTab">
+      <UniqueIdentifier>{bfc14e05-aaa9-4978-a572-62067c399208}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="05.Tab\01.GameObjectTab">
+      <UniqueIdentifier>{9bad8dfd-bfb8-4917-ac91-6fcfa3a479b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97.Shader_File">
+      <UniqueIdentifier>{535e5df5-c8f7-49ca-b06a-0070d44554e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="06.Save_Load">
+      <UniqueIdentifier>{1f0541dc-5d34-405a-9e3a-ba39a1116f24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="07.Manager">
+      <UniqueIdentifier>{dc4f48a0-b658-47ef-bbab-d1af4e357c13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="07.Manager\00.Brush_Manager">
+      <UniqueIdentifier>{c7ed952a-0bc7-4e86-8154-d2fd4088748f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="08.Window">
+      <UniqueIdentifier>{beb8d5f1-7fb8-4012-9402-25080c14c4d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="08.Window\00.Static_Mesh_Window">
+      <UniqueIdentifier>{aa23ed83-1697-4596-8ffa-3bb8133040de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="08.Window\01.Dynamic_Mesh_Window">
+      <UniqueIdentifier>{95666e88-deea-4948-b17f-356864a55d7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Object\00.Point">
+      <UniqueIdentifier>{16e834b8-a41b-4fe2-8004-70da5c65b113}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Object\00.Point\00.Shader">
+      <UniqueIdentifier>{a6341d8c-8ade-4a63-8459-56d931bd1ce3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Object\01.Free_Camera">
+      <UniqueIdentifier>{206bb283-8a19-4973-a709-978c4bfd82b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Object\02.Terrain">
+      <UniqueIdentifier>{53b69709-3860-4b2d-a653-990cf9d875da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Object\03.CellPoint">
+      <UniqueIdentifier>{ef7ec741-eb8a-4914-a4e7-b6b05188a8af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Object\03.CellPoint\00.Manager">
+      <UniqueIdentifier>{93c7345b-8213-4121-a925-532fa4da188b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Object\05.Pivot">
+      <UniqueIdentifier>{40645af5-1deb-45f3-8a48-8573694f205d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Object\04.Mesh">
+      <UniqueIdentifier>{93cdf9c1-275a-46b7-92f4-aae1c24ee2de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Object\04.Mesh\00.Dynamic">
+      <UniqueIdentifier>{c617cf5c-b371-4ad6-bffa-98d0e1b70a26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Object\04.Mesh\00.Dynamic\02.Teleport">
+      <UniqueIdentifier>{1438810c-0ca3-4d31-b98f-00cc0bc51370}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Object\04.Mesh\01.Static">
+      <UniqueIdentifier>{394eb915-24f1-4d4f-856d-3c9370412251}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Object\04.Mesh\Manager">
+      <UniqueIdentifier>{b1e261a0-80fe-4087-9c7c-41ad4475ce76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Object\04.Mesh\Manager\MeshList">
+      <UniqueIdentifier>{b3cc1ba4-342a-4914-846e-2e62c702b8f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Object\05.Pivot\PivotPoint">
+      <UniqueIdentifier>{4b21a4e0-8e94-4a3f-a6a6-61b6d5a450f3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MainFrm.h">
+      <Filter>00.MainFrame</Filter>
+    </ClInclude>
+    <ClInclude Include="MFCTool.h">
+      <Filter>01.Tool</Filter>
+    </ClInclude>
+    <ClInclude Include="MFCToolView.h">
+      <Filter>03.View</Filter>
+    </ClInclude>
+    <ClInclude Include="MFCToolDoc.h">
+      <Filter>02.Document</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>99.Default</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>99.Default</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>99.Default</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\ControlFormView.h">
+      <Filter>03.View\00.FormView</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\DIgTab0.h">
+      <Filter>05.Tab\00.TerrainTab</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\DIgLog1.h">
+      <Filter>05.Tab\01.GameObjectTab</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\DIgLog2.h">
+      <Filter>05.Tab\02.EffectTab</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\MFC_Defines.h">
+      <Filter>98.Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\MFC_Struct.h">
+      <Filter>98.Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\Free_Camera.h">
+      <Filter>04.Object\01.Free_Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\MFC_Terrain.h">
+      <Filter>04.Object\02.Terrain</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\SaveLoadInfo.h">
+      <Filter>06.Save_Load</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\Brush_Manager.h">
+      <Filter>07.Manager\00.Brush_Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\Static_Mesh_List.h">
+      <Filter>08.Window\00.Static_Mesh_Window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\Dynamic_Mesh_List.h">
+      <Filter>08.Window\01.Dynamic_Mesh_Window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\CursorPoint.h">
+      <Filter>04.Object\00.Point</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\CellPoint.h">
+      <Filter>04.Object\03.CellPoint</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\CellPoint_Manager.h">
+      <Filter>04.Object\03.CellPoint\00.Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\Mesh_Manager.h">
+      <Filter>04.Object\04.Mesh\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\MeshList.h">
+      <Filter>04.Object\04.Mesh\Manager\MeshList</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\Static_Prob_Object.h">
+      <Filter>04.Object\04.Mesh\01.Static</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\Pivot.h">
+      <Filter>04.Object\05.Pivot</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\PivotPoint.h">
+      <Filter>04.Object\05.Pivot\PivotPoint</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>00.MainFrame</Filter>
+    </ClCompile>
+    <ClCompile Include="MFCTool.cpp">
+      <Filter>01.Tool</Filter>
+    </ClCompile>
+    <ClCompile Include="MFCToolView.cpp">
+      <Filter>03.View</Filter>
+    </ClCompile>
+    <ClCompile Include="MFCToolDoc.cpp">
+      <Filter>02.Document</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>99.Default</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\ControlFormView.cpp">
+      <Filter>03.View\00.FormView</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\DIgTab0.cpp">
+      <Filter>05.Tab\00.TerrainTab</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\DIgLog1.cpp">
+      <Filter>05.Tab\01.GameObjectTab</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\DIgLog2.cpp">
+      <Filter>05.Tab\02.EffectTab</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\Free_Camera.cpp">
+      <Filter>04.Object\01.Free_Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\MFC_Terrain.cpp">
+      <Filter>04.Object\02.Terrain</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\SaveLoadInfo.cpp">
+      <Filter>06.Save_Load</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\Brush_Manager.cpp">
+      <Filter>07.Manager\00.Brush_Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\Static_Mesh_List.cpp">
+      <Filter>08.Window\00.Static_Mesh_Window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\Dynamic_Mesh_List.cpp">
+      <Filter>08.Window\01.Dynamic_Mesh_Window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\CursorPoint.cpp">
+      <Filter>04.Object\00.Point</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\CellPoint.cpp">
+      <Filter>04.Object\03.CellPoint</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\CellPoint_Manager.cpp">
+      <Filter>04.Object\03.CellPoint\00.Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\Mesh_Manager.cpp">
+      <Filter>04.Object\04.Mesh\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\MeshList.cpp">
+      <Filter>04.Object\04.Mesh\Manager\MeshList</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\Static_Prob_Object.cpp">
+      <Filter>04.Object\04.Mesh\01.Static</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\Pivot.cpp">
+      <Filter>04.Object\05.Pivot</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\PivotPoint.cpp">
+      <Filter>04.Object\05.Pivot\PivotPoint</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MFCTool.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\MFCTool.rc2">
+      <Filter>리소스 파일</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\MFCToolDoc.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\MFCTool.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\Toolbar.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt">
+      <Filter>99.Default</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="..\bin\ShaderFiles\Shader_Terrain_MFC.hlsl">
+      <Filter>97.Shader_File</Filter>
+    </FxCompile>
+    <FxCompile Include="..\bin\ShaderFiles\Shader_Point.hlsl">
+      <Filter>04.Object\00.Point\00.Shader</Filter>
+    </FxCompile>
+  </ItemGroup>
+</Project>
