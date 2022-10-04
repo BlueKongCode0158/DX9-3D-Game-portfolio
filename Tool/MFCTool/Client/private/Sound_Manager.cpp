@@ -1,6 +1,5 @@
 #include "stdafx.h"
 #include "Client_Defines.h"
-#include "Sound_Manager.h"
 
 IMPLEMENT_SINGLETON(CSound_Manager);
 

@@ -13,6 +13,7 @@
 #include "Camera_Free.h"
 #include "Start_Button.h"
 #include "Exit_Button.h"
+#include "Logo_Terrain.h"
 
 CMainApp::CMainApp()
 {
@@ -152,6 +153,10 @@ HRESULT CMainApp::Add_Prototype_GameObject()
 	{
 		return E_FAIL;
 	}
+	if (FAILED(pInstance->Add_Prototype_Object(LEVEL_LOGO, TEXT("Prototype_Logo_Terrain"), CLogo_Terrain::Create(m_pGraphic_Device))))
+	{
+		return E_FAIL;
+	}
 
 	RELEASE_INSTANCE(CGameInstacne);
 
@@ -228,6 +233,18 @@ HRESULT CMainApp::Add_Prototype_Component()
 		goto failed;
 	}
 	if (FAILED(pInstance->Add_Prototype_Component(LEVEL_LOGO, TEXT("Prototype_Texture_Cube"), CTexture::Create(CTexture::TEXTURETYPE::TEXTURE_CUBE, TEXT("../bin/resources/skybox/SkyBox_%d.dds"), m_pGraphic_Device, 2))))
+	{
+		goto failed;
+	}
+	if (FAILED(pInstance->Add_Prototype_Component(LEVEL_LOGO, TEXT("Prototype_VIBuffer_Logo_Terrain"), CVIBuffer_Terrain::Create(m_pGraphic_Device, TEXT("../bin/resources/Textures/Logo_HeightMap_0.bmp"), 1.f))))
+	{
+		goto failed;
+	}
+	if (FAILED(pInstance->Add_Prototype_Component(LEVEL_LOGO, TEXT("Prototype_Texture_Terrain"), CTexture::Create(CTexture::TEXTURETYPE::TEXTURE_GENERIC, TEXT("../bin/resources/Textures/TerrainTile%d.tga"), m_pGraphic_Device, 4))))
+	{
+		goto failed;
+	}
+	if (FAILED(pInstance->Add_Prototype_Component(LEVEL_LOGO, TEXT("Prototype_Shader_Terrain"), CShader::Create(m_pGraphic_Device, TEXT("../Bin/ShaderFiles/Shader_Terrain.hlsl")))))
 	{
 		goto failed;
 	}

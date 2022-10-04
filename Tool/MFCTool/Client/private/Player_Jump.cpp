@@ -41,15 +41,10 @@ _uint CPlayer_Jump::HandleInput()
 
 	if (pGameInstance->Input_KeyMouse_Down(CInput_Device::DIM::DIM_LBUTTON))
 	{
-		goto JumpAttack;
+		RETURN(CPlayerState::MOTION::JUMP_ATTACK);
 	}
 
-	RELEASE_INSTANCE(CGameInstacne);
-	return CPlayerState::MOTION::JUMP;
-
-JumpAttack:
-	RELEASE_INSTANCE(CGameInstacne);
-	return CPlayerState::MOTION::JUMP_ATTACK;
+	RETURN(CPlayerState::MOTION::JUMP);
 }
 
 void CPlayer_Jump::Enter()

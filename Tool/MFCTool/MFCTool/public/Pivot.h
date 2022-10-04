@@ -4,6 +4,7 @@
 
 BEGIN(Engine)
 class CRenderer;
+class CGameObject;
 END
 
 BEGIN(MFC_TOOL)
@@ -27,7 +28,7 @@ private:
 	LPDIRECT3DDEVICE9		m_pGraphicDevice	= nullptr;
 private:
 	map<_uint, CPivotPoint*>	m_mapPivotPoints;
-	CGameObject*								m_pTransformObject = nullptr;
+	class CGameObject*			m_pTransformObject = nullptr;
 public:
 	virtual void Free() override;
 };

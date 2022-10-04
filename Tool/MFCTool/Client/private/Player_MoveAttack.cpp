@@ -48,8 +48,7 @@ _uint CPlayer_MoveAttack::HandleInput()
 		pGameInstance->Input_KeyBoard_Up(DIK_D))  &&
 		pGameInstance->Input_KeyMouse_Pressing(CInput_Device::DIM::DIM_LBUTTON))
 	{
-		RELEASE_INSTANCE(CGameInstacne);
-		return CPlayerState::MOTION::ATTACK;
+		RETURN(CPlayerState::MOTION::ATTACK);
 	}
 
 
@@ -59,31 +58,26 @@ _uint CPlayer_MoveAttack::HandleInput()
 		pGameInstance->Input_KeyBoard_Pressing(DIK_S)	||
 		pGameInstance->Input_KeyBoard_Pressing(DIK_D)))
 	{
-		RELEASE_INSTANCE(CGameInstacne);
-		return CPlayerState::MOTION::MOVE;
+		RETURN(CPlayerState::MOTION::MOVE);
 	}
 
 	if (pGameInstance->Input_KeyMouse_Up(CInput_Device::DIM::DIM_LBUTTON))
 	{
-		RELEASE_INSTANCE(CGameInstacne);
-		return CPlayerState::MOTION::MOVE;
+		RETURN(CPlayerState::MOTION::MOVE);
 	}
 
 	if (pGameInstance->Input_KeyBoard_Down(DIK_SPACE) &&
 		pGameInstance->Input_KeyMouse_Pressing(CInput_Device::DIM::DIM_LBUTTON))
 	{
-		RELEASE_INSTANCE(CGameInstacne);
-		return CPlayerState::MOTION::JUMP_ATTACK;
+		RETURN(CPlayerState::MOTION::JUMP_ATTACK);
 	}
 
 	if (pGameInstance->Input_KeyBoard_Down(DIK_SPACE))
 	{
-		RELEASE_INSTANCE(CGameInstacne);
-		return CPlayerState::MOTION::JUMP;
+		RETURN(CPlayerState::MOTION::JUMP);
 	}
 
-	RELEASE_INSTANCE(CGameInstacne);
-	return CPlayerState::MOTION::MOVE_ATTACK;
+	RETURN(CPlayerState::MOTION::MOVE_ATTACK);
 }
 
 void CPlayer_MoveAttack::Enter()

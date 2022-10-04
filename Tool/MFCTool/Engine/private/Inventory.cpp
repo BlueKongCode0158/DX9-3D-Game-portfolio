@@ -1,4 +1,5 @@
 #include "..\public\Inventory.h"
+#include "Item.h"
 
 CInventory::CInventory(LPDIRECT3DDEVICE9 pGraphic_Device)
 	:CComponent(pGraphic_Device)

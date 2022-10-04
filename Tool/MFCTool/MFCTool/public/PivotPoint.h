@@ -19,7 +19,6 @@ public:
 	{
 		RIGHT, UP, LOOK, CENTER, DIR_END
 	};
-
 	typedef struct tagPivotPointInfo
 	{
 		DIR_STATE			eType				= DIR_END;
@@ -47,7 +46,6 @@ private:
 	PIVOT_INFO		m_tPointInfo;
 private:
 	CShader*		m_pShaderCom	= nullptr;
-	CPicking*		m_pPicking		= nullptr;
 	CRenderer*		m_pRendererCom	= nullptr;
 	CCollider*		m_pCollidercom	= nullptr;
 	CTransform*		m_pTransformCom = nullptr;

@@ -60,6 +60,7 @@ _int CNormal_Monster_Hp::Late_Tick(_double TimeDelta)
 	m_pRendererCom->Add_RenderGroup(CRenderer::RENDERGROUP::RENDER_ALPHA, this);
 
 	_matrix ParentMatrix;
+	/* 행렬 초기화 */
 	D3DXMatrixIdentity(&ParentMatrix);
 
 	if (nullptr != m_tHpdesc.pParentMatrix)

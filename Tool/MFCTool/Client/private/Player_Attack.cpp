@@ -24,50 +24,39 @@ _uint CPlayer_Attack::HandleInput()
 	if (pGameInstance->Input_KeyBoard_Pressing(DIK_W) &&
 		pGameInstance->Input_KeyMouse_Pressing(CInput_Device::DIM::DIM_LBUTTON))
 	{
-		RELEASE_INSTANCE(CGameInstacne);
-		return CPlayerState::MOTION::MOVE_ATTACK;
-
+		RETURN(CPlayerState::MOTION::MOVE_ATTACK);
 		//m_pObject->Get_MeshCom()->Set_AnimationIndex(CPlayer::ANIMATION_KEY::RUN_FOWARD, CPlayer::ANIMATION_KEY::RUN_FOWARD);
 	}
 	if (pGameInstance->Input_KeyBoard_Pressing(DIK_A) &&
 		pGameInstance->Input_KeyMouse_Pressing(CInput_Device::DIM::DIM_LBUTTON))
 	{
-		RELEASE_INSTANCE(CGameInstacne);
-		return CPlayerState::MOTION::MOVE_ATTACK;
-
+		RETURN(CPlayerState::MOTION::MOVE_ATTACK);
 		//m_pObject->Get_MeshCom()->Set_AnimationIndex(CPlayer::ANIMATION_KEY::RUN_LEFT, CPlayer::ANIMATION_KEY::RUN_LEFT);
 	}
 	if (pGameInstance->Input_KeyBoard_Pressing(DIK_S) &&
 		pGameInstance->Input_KeyMouse_Pressing(CInput_Device::DIM::DIM_LBUTTON))
 	{
-		RELEASE_INSTANCE(CGameInstacne);
-		return CPlayerState::MOTION::MOVE_ATTACK;
-
 		//m_pObject->Get_MeshCom()->Set_AnimationIndex(CPlayer::ANIMATION_KEY::RUN_BACKWARD, CPlayer::ANIMATION_KEY::RUN_BACKWARD);
+		RETURN(CPlayerState::MOTION::MOVE_ATTACK);
 	}
 	if (pGameInstance->Input_KeyBoard_Pressing(DIK_D) &&
 		pGameInstance->Input_KeyMouse_Pressing(CInput_Device::DIM::DIM_LBUTTON))
 	{
-		RELEASE_INSTANCE(CGameInstacne);
-		return CPlayerState::MOTION::MOVE_ATTACK;
-
+		RETURN(CPlayerState::MOTION::MOVE_ATTACK);
 		//m_pObject->Get_MeshCom()->Set_AnimationIndex(CPlayer::ANIMATION_KEY::RUN_RIGHT, CPlayer::ANIMATION_KEY::RUN_RIGHT);
 	}
 
 	if (pGameInstance->Input_KeyMouse_Up(CInput_Device::DIM::DIM_LBUTTON))
 	{
-		RELEASE_INSTANCE(CGameInstacne);
-		return CPlayerState::MOTION::IDLE;
+		RETURN(CPlayerState::MOTION::IDLE);
 	}
 
 	if (pGameInstance->Input_KeyBoard_Up(DIK_SPACE))
 	{
-		RELEASE_INSTANCE(CGameInstacne);
-		return CPlayerState::MOTION::JUMP;
+		RETURN(CPlayerState::MOTION::JUMP);
 	}
 
-	RELEASE_INSTANCE(CGameInstacne);
-	return CPlayerState::MOTION::ATTACK;
+	RETURN(CPlayerState::MOTION::ATTACK);
 }
 
 void CPlayer_Attack::Enter()

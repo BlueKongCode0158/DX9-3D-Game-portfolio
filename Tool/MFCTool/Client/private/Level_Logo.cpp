@@ -7,6 +7,7 @@
 #include "Camera_Free.h"
 #include "Level_Loading.h"
 #include "Start_Button.h"
+#include "Exit_Button.h"
 #include "SkyBox.h"
 #include "UI.h"
 
@@ -39,7 +40,10 @@ HRESULT CLevel_Logo::NativeConstruct()
 	{
 		return E_FAIL;
 	}
-
+	if (FAILED(Ready_Layer_Terrain(TEXT("Layer_Terrain"))))
+	{
+		return E_FAIL;
+	}
 	CSound_Manager::Get_Instance()->PlayBGM(L"Main.mp3");
 
 	return S_OK;
@@ -51,6 +55,7 @@ _int CLevel_Logo::Tick(_double TimeDelta)
 
 	CGameInstacne* pGameInstance = GET_INSTANCE(CGameInstacne);
 	CStart_Button* pSelectButton = dynamic_cast<CStart_Button*>(pGameInstance->Find_GameObject(LEVEL_LOGO, TEXT("Layer_UI"), 0));
+	CExit_Button*  pExitButton = dynamic_cast<CExit_Button*>(pGameInstance->Find_GameObject(LEVEL_LOGO, TEXT("Layer_UI"), 1));
 
 	if (true == pSelectButton->Get_Select())
 	{
@@ -60,6 +65,10 @@ _int CLevel_Logo::Tick(_double TimeDelta)
 			pGameInstance->Level_Relese_Light();
 			goto succeeded;
 		}
+	}
+	if (true == pExitButton->Get_Select())
+	{
+		DestroyWindow(g_hWnd);
 	}
 
 	RELEASE_INSTANCE(CGameInstacne);
@@ -118,6 +127,19 @@ HRESULT CLevel_Logo::Ready_Layer_BackGround(const _tchar * pLayerTag)
 	return S_OK;
 }
 
+HRESULT CLevel_Logo::Ready_Layer_Terrain(const _tchar * pLayerTag)
+{
+	CGameInstacne* pGameInstance = GET_INSTANCE(CGameInstacne);
+
+	if (FAILED(pGameInstance->Add_GameObject_Clone(LEVEL_LOGO, TEXT("Prototype_Logo_Terrain"), pLayerTag)))
+	{
+		return E_FAIL;
+	}
+
+	RELEASE_INSTANCE(CGameInstacne);
+	return S_OK;
+}
+
 HRESULT CLevel_Logo::Ready_Layer_SkyBox(const _tchar * pLayerTag)
 {
 	CGameInstacne* pInstance = GET_INSTANCE(CGameInstacne);
@@ -144,8 +166,8 @@ HRESULT CLevel_Logo::Ready_Camera(const _tchar * pLayerTag)
 	CCamera::CAMERADESC CameraDesc;
 
 	CameraDesc.fAspect = static_cast<_float>(iWinCX) / iWinCY;
-	CameraDesc.fAt = _float3(-10.f, 2.8f, -7.7f);
-	CameraDesc.fEye = _float3(-17.f, 2.7f, -6.3f);
+	CameraDesc.fEye = _float3(50.5f, 1.3f, 9.f);
+	CameraDesc.fAt = _float3(48.4f, 3.6f, 57.2f);
 	CameraDesc.fFar = 300.f;
 	CameraDesc.fNear = 0.25f;
 	CameraDesc.fFov = D3DXToRadian(80.f);

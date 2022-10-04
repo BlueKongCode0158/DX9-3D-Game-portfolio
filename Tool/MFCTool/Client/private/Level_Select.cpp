@@ -213,12 +213,12 @@ HRESULT CLevel_Select::Ready_Layer_UI(const _tchar * pLayerTag)
 	tUIDesc.m_fX = pt.x;
 	tUIDesc.m_fY = pt.y;
 
-	if (FAILED(pGameInstance->Add_GameObject_Clone(LEVEL_SELECT, TEXT("Prototype_Cursor"), pLayerTag, &tUIDesc)))
+	if (FAILED(pGameInstance->Add_GameObject_Clone(LEVEL_SELECT, TEXT("Prototype_BackGound_UI"), pLayerTag)))
 	{
 		return E_FAIL;
 	}
 
-	if (FAILED(pGameInstance->Add_GameObject_Clone(LEVEL_SELECT, TEXT("Prototype_BackGound_UI"), pLayerTag)))
+	if (FAILED(pGameInstance->Add_GameObject_Clone(LEVEL_SELECT, TEXT("Prototype_Cursor"), pLayerTag, &tUIDesc)))
 	{
 		return E_FAIL;
 	}

@@ -214,8 +214,12 @@
     <ClInclude Include="..\public\MFC_Defines.h" />
     <ClInclude Include="..\public\MFC_Struct.h" />
     <ClInclude Include="..\public\MFC_Terrain.h" />
-    <ClInclude Include="..\public\Pivot.h" />
-    <ClInclude Include="..\public\PivotPoint.h" />
+    <ClInclude Include="..\public\Pivot.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\public\PivotPoint.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="..\public\SaveLoadInfo.h" />
     <ClInclude Include="..\public\Static_Mesh_List.h" />
     <ClInclude Include="..\public\Static_Prob_Object.h" />
@@ -243,8 +247,12 @@
     <ClCompile Include="..\private\MeshList.cpp" />
     <ClCompile Include="..\private\Mesh_Manager.cpp" />
     <ClCompile Include="..\private\MFC_Terrain.cpp" />
-    <ClCompile Include="..\private\Pivot.cpp" />
-    <ClCompile Include="..\private\PivotPoint.cpp" />
+    <ClCompile Include="..\private\Pivot.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\private\PivotPoint.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\private\SaveLoadInfo.cpp" />
     <ClCompile Include="..\private\Static_Mesh_List.cpp" />
     <ClCompile Include="..\private\Static_Prob_Object.cpp" />

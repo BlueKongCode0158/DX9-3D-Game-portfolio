@@ -100,14 +100,12 @@ _uint CPlayer_Move::HandleInput()
 		pGameInstance->Input_KeyBoard_Up(DIK_S) ||
 		pGameInstance->Input_KeyBoard_Up(DIK_D))
 	{
-		RELEASE_INSTANCE(CGameInstacne);
-		return CPlayerState::MOTION::IDLE;
+		RETURN(CPlayerState::MOTION::IDLE);
 	}
 
 	if (pGameInstance->Input_KeyMouse_Down(CInput_Device::DIM::DIM_LBUTTON))
 	{
-		RELEASE_INSTANCE(CGameInstacne);
-		return CPlayerState::MOTION::MOVE_ATTACK;
+		RETURN(CPlayerState::MOTION::MOVE_ATTACK);
 	}
 
 	if ((m_pObject->Get_MeshCom()->Play_Animation_Per() > 0.8f &&
@@ -125,18 +123,14 @@ _uint CPlayer_Move::HandleInput()
 		m_fTimeAcc = 0.f;
 		m_pObject->Set_PlayerSpeed(2.f);
 
-		RELEASE_INSTANCE(CGameInstacne);
-		return CPlayerState::MOTION::IDLE;
+		RETURN(CPlayerState::MOTION::IDLE);
 	}
 
 	if (pGameInstance->Input_KeyBoard_Down(DIK_SPACE))
 	{
-		RELEASE_INSTANCE(CGameInstacne);
-		return CPlayerState::MOTION::JUMP;
+		RETURN(CPlayerState::MOTION::JUMP);
 	}
-
-	RELEASE_INSTANCE(CGameInstacne);
-	return CPlayerState::MOTION::MOVE;
+	RETURN(CPlayerState::MOTION::MOVE);
 }
 
 void CPlayer_Move::Enter()

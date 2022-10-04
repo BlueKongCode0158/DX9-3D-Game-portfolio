@@ -3,7 +3,7 @@ namespace Engine
 {
 	typedef struct D3DXFrame_Derived : public D3DXFRAME
 	{
-		_bool			isCloned = false;
+		bool			isCloned = false;
 		D3DXMATRIX		CombinedTransformationMatrix;
 	}D3DXFRAME_DERIVED;
 
@@ -64,4 +64,13 @@ namespace Engine
 		D3DXVECTOR2		vTexUV;
 		float			fSize;
 	}VTXPOINT;
+
+	typedef struct tagSingleItem
+	{
+		unsigned int		iAddHp;
+		unsigned int		iAddAtt;
+		unsigned int		iAdd;
+		unsigned int		iAddJump;
+		float				iAddSpeed;
+	}SINGLEITEM;
 }

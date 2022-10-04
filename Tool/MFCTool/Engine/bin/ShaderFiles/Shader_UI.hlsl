@@ -85,6 +85,7 @@ PS_OUT PS_MAIN_SELECT(PS_IN In)
 
 	Out.vColor = tex2D(DiffuseSampler, In.vTexUV);
 	Out.vColor.rgb *= 0.7f;
+	Out.vColor.a *= 0.5f;
 	return Out;
 }
 
@@ -104,6 +105,15 @@ PS_OUT PS_MAIN_PLAYER_HP(PS_IN In)
 		Out.vColor.a	= 0.2f;
 	}
 
+	return Out;
+}
+
+PS_OUT PS_MAIN_MOUSE_CURSOR(PS_IN In)
+{
+	PS_OUT			Out = (PS_OUT)0;
+
+	Out.vColor = tex2D(DiffuseSampler, In.vTexUV);
+	
 	return Out;
 }
 
@@ -136,10 +146,11 @@ technique DefaultTechnique
 	}
 	pass DefaultRendering
 	{
-		AlphaBlendenable = false;
-		AlphaTestEnable = true;
-		AlphaFunc = Greater;
-		AlphaRef = 0;
+		AlphaTestEnable = false;
+		AlphaBlendenable = true;
+		BlendOp = Add;
+		SrcBlend = SRCALPHA;
+		DestBlend = INVSRCALPHA;
 
 		VertexShader = compile vs_3_0 VS_MAIN();
 		PixelShader = compile ps_3_0 PS_MAIN_SELECT();
@@ -155,6 +166,19 @@ technique DefaultTechnique
 
 		VertexShader = compile vs_3_0 VS_MAIN();
 		PixelShader = compile ps_3_0 PS_MAIN_PLAYER_HP();
+	}
+
+	pass DefaultRendering
+	{
+		AlphaTestEnable = false;
+		AlphaBlendenable = true;
+		BlendOp = Add;
+		SrcBlend = SRCALPHA;
+		DestBlend = INVSRCALPHA;
+
+
+		VertexShader = compile vs_3_0 VS_MAIN();
+		PixelShader = compile ps_3_0 PS_MAIN_MOUSE_CURSOR();
 	}
 
 }

@@ -352,6 +352,15 @@
     <Filter Include="02.GameObject\01.Monster\04.MonsterState\00.Data\03.Titan\06.Laser">
       <UniqueIdentifier>{36aa6528-1fba-4967-8dd2-97ea4c1c0e91}</UniqueIdentifier>
     </Filter>
+    <Filter Include="02.GameObject\10.UI\07.Skil">
+      <UniqueIdentifier>{eed75f85-f8d7-4e4f-94a2-21222e0a4f95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\03.Terrain\Play">
+      <UniqueIdentifier>{ffc875d2-d6f2-448a-b1fb-b500f2f39f9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.GameObject\03.Terrain\Logo">
+      <UniqueIdentifier>{3b45226e-a456-45e5-a663-1fe665ef7af9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Client.h">
@@ -389,9 +398,6 @@
     </ClInclude>
     <ClInclude Include="..\public\Player.h">
       <Filter>02.GameObject\02.Player</Filter>
-    </ClInclude>
-    <ClInclude Include="..\public\Terrain.h">
-      <Filter>02.GameObject\03.Terrain</Filter>
     </ClInclude>
     <ClInclude Include="..\public\Level_GamePlay_Stage0.h">
       <Filter>01.Level\02.Level_GamePlay\00.Stage0</Filter>
@@ -609,6 +615,12 @@
     <ClInclude Include="..\public\Monster_Titan_Laser_Attack.h">
       <Filter>02.GameObject\01.Monster\04.MonsterState\00.Data\03.Titan\06.Laser</Filter>
     </ClInclude>
+    <ClInclude Include="..\public\Terrain.h">
+      <Filter>02.GameObject\03.Terrain\Play</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\Logo_Terrain.h">
+      <Filter>02.GameObject\03.Terrain\Logo</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Client.cpp">
@@ -637,9 +649,6 @@
     </ClCompile>
     <ClCompile Include="..\private\Player.cpp">
       <Filter>02.GameObject\02.Player</Filter>
-    </ClCompile>
-    <ClCompile Include="..\private\Terrain.cpp">
-      <Filter>02.GameObject\03.Terrain</Filter>
     </ClCompile>
     <ClCompile Include="..\private\Level_GamePlay_Stage0.cpp">
       <Filter>01.Level\02.Level_GamePlay\00.Stage0</Filter>
@@ -856,6 +865,12 @@
     </ClCompile>
     <ClCompile Include="..\private\Monster_Titan_Laser_Attack.cpp">
       <Filter>02.GameObject\01.Monster\04.MonsterState\00.Data\03.Titan\06.Laser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\Terrain.cpp">
+      <Filter>02.GameObject\03.Terrain\Play</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\Logo_Terrain.cpp">
+      <Filter>02.GameObject\03.Terrain\Logo</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

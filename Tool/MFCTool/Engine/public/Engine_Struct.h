@@ -72,5 +72,5 @@ namespace Engine
 		unsigned int		iAdd;
 		unsigned int		iAddJump;
 		float				iAddSpeed;
-	};
+	}SINGLEITEM;
 }

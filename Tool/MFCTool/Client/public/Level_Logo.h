@@ -15,6 +15,7 @@ public:
 private:
 	HRESULT	Ready_Light_Desc();
 	HRESULT	Ready_Layer_BackGround(const _tchar* pLayerTag);
+	HRESULT	Ready_Layer_Terrain(const _tchar* pLayerTag);
 	HRESULT	Ready_Layer_SkyBox(const _tchar* pLayerTag);
 	HRESULT Ready_Camera(const _tchar* pLayerTag);
 	HRESULT Ready_UI(const _tchar* pLayerTag);

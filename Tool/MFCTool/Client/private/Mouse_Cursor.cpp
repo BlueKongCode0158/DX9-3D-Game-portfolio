@@ -57,7 +57,7 @@ _int CMouse_Cursor::Late_Tick(_double TimeDelta)
 
 HRESULT CMouse_Cursor::Render()
 {
-	m_iShaderIndex = 0;
+	m_iShaderIndex = 4;
 
 	if (FAILED(m_pShaderCom->SetUp_TextureConstantTable("g_DiffuseTexture", m_pTextureCom, m_isActive)))
 	{

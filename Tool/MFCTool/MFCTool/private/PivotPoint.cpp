@@ -42,7 +42,9 @@ HRESULT CPivotPoint::NativeConstruct(void * pArg)
 
 _int CPivotPoint::Tick(_double TimeDelta)
 {
-	_float3* vPickingPoint = m_pPicking->Compute_PickingPoint(m_pVIBufferCom, *m_pTransformCom->Get_WorldMatrix());
+	CGameInstacne* pGameInstacne = GET_INSTANCE(CGameInstacne);
+
+	_float3* vPickingPoint = pGameInstacne->Compute_PickingPoint(m_pVIBufferCom, *m_pTransformCom->Get_WorldMatrix());
 
 	if (nullptr != vPickingPoint)
 	{
@@ -53,6 +55,7 @@ _int CPivotPoint::Tick(_double TimeDelta)
 		m_isContect = false;
 	}
 
+	RELEASE_INSTANCE(CGameInstacne);
 	return _int();
 }
 
@@ -181,9 +184,6 @@ HRESULT CPivotPoint::Add_Component()
 	{
 		return E_FAIL;
 	}
-	m_pPicking = CPicking::Get_Instance();
-	Safe_AddRef(m_pPicking);
-
 	return S_OK;
 }
 
@@ -231,7 +231,6 @@ void CPivotPoint::Free()
 {
 	__super::Free();
 
-	Safe_Release(m_pPicking);
 	Safe_Release(m_pRendererCom);
 	Safe_Release(m_pVIBufferCom);
 	Safe_Release(m_pCollidercom);

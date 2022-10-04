@@ -1,14 +1,11 @@
-﻿cl : 명령줄 warning D9030: '/Gm'이(가) 다중 처리와 호환되지 않습니다. /MP 스위치를 무시합니다.
-  건너뛰고 있습니다... (관련된 변경 내용 없음)
-  MainFrm.cpp
-  MFCToolView.cpp
-  MFCToolDoc.cpp
-  MFCTool.cpp
-  Static_Mesh_List.cpp
-  Dynamic_Mesh_List.cpp
-  DIgTab0.cpp
-  DIgLog2.cpp
-  DIgLog1.cpp
-  ControlFormView.cpp
-  MFCTool.vcxproj -> C:\Users\bluek\Desktop\Jusin\MFC\Tool\MFCTool\MFCTool\defalut\..\bin\MFCTool.exe
+﻿FXC : warning X4717: Effects deprecated for D3DCompiler_47
+  
+  compilation object save succeeded; see C:\Users\a\Desktop\GitHub\Risk-of-Rain2\Tool\MFCTool\MFCTool\bin\Shader_Point.cso
+C:\Users\a\Desktop\GitHub\Risk-of-Rain2\Tool\MFCTool\MFCTool\bin\ShaderFiles\Shader_Terrain_MFC.hlsl(3,24-31): warning X3081: comma expression used where a vector constructor may have been intended
+C:\Users\a\Desktop\GitHub\Risk-of-Rain2\Tool\MFCTool\MFCTool\bin\ShaderFiles\Shader_Terrain_MFC.hlsl(3,24-36): warning X3081: comma expression used where a vector constructor may have been intended
+C:\Users\a\Desktop\GitHub\Risk-of-Rain2\Tool\MFCTool\MFCTool\bin\ShaderFiles\Shader_Terrain_MFC.hlsl(3,24-41): warning X3081: comma expression used where a vector constructor may have been intended
+FXC : warning X4717: Effects deprecated for D3DCompiler_47
+  
+  compilation object save succeeded; see C:\Users\a\Desktop\GitHub\Risk-of-Rain2\Tool\MFCTool\MFCTool\bin\Shader_Terrain_MFC.cso
+  MFCTool.vcxproj -> C:\Users\a\Desktop\GitHub\Risk-of-Rain2\Tool\MFCTool\MFCTool\defalut\..\bin\MFCTool.exe
   MFCTool.vcxproj -> ..\bin\MFCTool.pdb (Partial PDB)

@@ -178,7 +178,7 @@
     <Filter Include="01.Utility\11.Item\Multy">
       <UniqueIdentifier>{fe563b88-3ede-403f-a046-6abf17b25d50}</UniqueIdentifier>
     </Filter>
-    <Filter Include="01.Utility\12. Particle_System">
+    <Filter Include="01.Utility\12.Particle_System">
       <UniqueIdentifier>{1193c58e-3ad2-4754-b609-2e83d73e05b0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -331,7 +331,7 @@
       <Filter>01.Utility\11.Item\Multy</Filter>
     </ClCompile>
     <ClCompile Include="..\private\Particle_System.cpp">
-      <Filter>01.Utility\12. Particle_System</Filter>
+      <Filter>01.Utility\12.Particle_System</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -501,7 +501,7 @@
       <Filter>01.Utility\11.Item\Multy</Filter>
     </ClInclude>
     <ClInclude Include="..\public\Particle_System.h">
-      <Filter>01.Utility\12. Particle_System</Filter>
+      <Filter>01.Utility\12.Particle_System</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

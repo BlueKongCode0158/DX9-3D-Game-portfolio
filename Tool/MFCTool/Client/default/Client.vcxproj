@@ -178,6 +178,7 @@
     <ClInclude Include="..\public\Level_Select.h" />
     <ClInclude Include="..\public\Loader.h" />
     <ClInclude Include="..\public\LoadingBar.h" />
+    <ClInclude Include="..\public\Logo_Terrain.h" />
     <ClInclude Include="..\public\MainApp.h" />
     <ClInclude Include="..\public\Monster.h" />
     <ClInclude Include="..\public\MonsterState.h" />
@@ -266,6 +267,7 @@
     <ClCompile Include="..\private\Level_Select.cpp" />
     <ClCompile Include="..\private\Loader.cpp" />
     <ClCompile Include="..\private\LoadingBar.cpp" />
+    <ClCompile Include="..\private\Logo_Terrain.cpp" />
     <ClCompile Include="..\private\MainApp.cpp" />
     <ClCompile Include="..\private\Monster.cpp" />
     <ClCompile Include="..\private\MonsterState.cpp" />

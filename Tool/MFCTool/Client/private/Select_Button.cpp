@@ -2,6 +2,7 @@
 #include "Client_Defines.h"
 #include "GameInstacne.h"
 #include "..\public\Select_Button.h"
+#include "Mouse_Cursor.h"
 
 CSelect_Button::CSelect_Button(LPDIRECT3DDEVICE9 pGraphic_Device)
 	:CUI(pGraphic_Device)
@@ -58,18 +59,32 @@ _int CSelect_Button::Tick(_double TimeDelta)
 
 
 	RECT rc;
-	rc.left = m_tUIDesc.m_fX - m_tUIDesc.m_fSizeX * 0.5f;
-	rc.top = m_tUIDesc.m_fY - m_tUIDesc.m_fSizeY*0.5f;
-	rc.right = m_tUIDesc.m_fX + m_tUIDesc.m_fSizeX * 0.5f;
-	rc.bottom = m_tUIDesc.m_fY + m_tUIDesc.m_fSizeY*0.5f;
+	rc.left		= m_tUIDesc.m_fX - m_tUIDesc.m_fSizeX * 0.5f;
+	rc.top		= m_tUIDesc.m_fY - m_tUIDesc.m_fSizeY*0.5f;
+	rc.right	= m_tUIDesc.m_fX + m_tUIDesc.m_fSizeX * 0.5f;
+	rc.bottom	= m_tUIDesc.m_fY + m_tUIDesc.m_fSizeY*0.5f;
+
+	CGameInstacne* pGameInstance = GET_INSTANCE(CGameInstacne);
+	CMouse_Cursor* pGameMouse = dynamic_cast<CMouse_Cursor*>(pGameInstance->Find_GameObject(LEVEL_SELECT, TEXT("Layer_UI"), 1));
+
 	if (true == PtInRect(&rc, pt))
 	{
 		m_isSelecting = true;
+		if (nullptr != pGameMouse)
+		{
+			pGameMouse->Set_isActive(true);
+		}
 	}
-	else
+	else if (true == pGameMouse->Get_isActive())
 	{
 		m_isSelecting = false;
+		if (nullptr != pGameMouse)
+		{
+			pGameMouse->Set_isActive(false);
+		}
 	}
+
+	RELEASE_INSTANCE(CGameInstacne);
 
 	return _int();
 }
@@ -118,6 +133,7 @@ HRESULT CSelect_Button::SetUp_ConstantTable()
 	{
 		m_iShaderIndex = 2;
 	}
+
 	return S_OK;
 }
 

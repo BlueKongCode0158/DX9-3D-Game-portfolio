@@ -1,15 +1,25 @@
 #include "..\public\Multy_ITem.h"
+#include "Item.h"
 
 
+CMulty_ITem::CMulty_ITem(LPDIRECT3DDEVICE9 pGraphic_Device)
+	:CItem(pGraphic_Device)
+{
+}
+
+CMulty_ITem::CMulty_ITem(const CMulty_ITem & rhs)
+	:CItem(rhs)
+{
+}
 
 HRESULT CMulty_ITem::NativeConstruct_Prototype()
 {
-	return E_NOTIMPL;
+	return S_OK;
 }
 
 HRESULT CMulty_ITem::NativeConstruct(void * pArg)
 {
-	return E_NOTIMPL;
+	return S_OK;
 }
 
 void CMulty_ITem::Add_Item()

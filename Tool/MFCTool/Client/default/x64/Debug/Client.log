@@ -1,411 +1,415 @@
 ﻿FXC : warning X4717: Effects deprecated for D3DCompiler_47
   
-  compilation object save succeeded; see C:\Users\bluek\Desktop\Jusin\MFC\Risk-of-Rain2\Tool\MFCTool\Client\bin\Shader_Cube.cso
-C:\Users\bluek\Desktop\Jusin\MFC\Risk-of-Rain2\Tool\MFCTool\Client\bin\ShaderFiles\Shader_Mesh.hlsl(249,2-47): warning X3206: implicit truncation of vector type
+  compilation object save succeeded; see C:\Users\a\Desktop\GitHub\Risk-of-Rain2\Tool\MFCTool\Client\bin\Shader_Cube.cso
+C:\Users\a\Desktop\GitHub\Risk-of-Rain2\Tool\MFCTool\Client\bin\ShaderFiles\Shader_Mesh.hlsl(249,2-47): warning X3206: implicit truncation of vector type
 FXC : warning X4717: Effects deprecated for D3DCompiler_47
   
-  compilation object save succeeded; see C:\Users\bluek\Desktop\Jusin\MFC\Risk-of-Rain2\Tool\MFCTool\Client\bin\Shader_Mesh.cso
+  compilation object save succeeded; see C:\Users\a\Desktop\GitHub\Risk-of-Rain2\Tool\MFCTool\Client\bin\Shader_Mesh.cso
 FXC : warning X4717: Effects deprecated for D3DCompiler_47
   
-  compilation object save succeeded; see C:\Users\bluek\Desktop\Jusin\MFC\Risk-of-Rain2\Tool\MFCTool\Client\bin\Shader_Point_Effect.cso
+  compilation object save succeeded; see C:\Users\a\Desktop\GitHub\Risk-of-Rain2\Tool\MFCTool\Client\bin\Shader_Point_Effect.cso
 FXC : warning X4717: Effects deprecated for D3DCompiler_47
   
-  compilation object save succeeded; see C:\Users\bluek\Desktop\Jusin\MFC\Risk-of-Rain2\Tool\MFCTool\Client\bin\Shader_Rect.cso
+  compilation object save succeeded; see C:\Users\a\Desktop\GitHub\Risk-of-Rain2\Tool\MFCTool\Client\bin\Shader_Rect.cso
 FXC : warning X4717: Effects deprecated for D3DCompiler_47
   
-  compilation object save succeeded; see C:\Users\bluek\Desktop\Jusin\MFC\Risk-of-Rain2\Tool\MFCTool\Client\bin\Shader_SkyBox.cso
+  compilation object save succeeded; see C:\Users\a\Desktop\GitHub\Risk-of-Rain2\Tool\MFCTool\Client\bin\Shader_SkyBox.cso
 FXC : warning X4717: Effects deprecated for D3DCompiler_47
   
-  compilation object save succeeded; see C:\Users\bluek\Desktop\Jusin\MFC\Risk-of-Rain2\Tool\MFCTool\Client\bin\Shader_Terrain.cso
+  compilation object save succeeded; see C:\Users\a\Desktop\GitHub\Risk-of-Rain2\Tool\MFCTool\Client\bin\Shader_Terrain.cso
 FXC : warning X4717: Effects deprecated for D3DCompiler_47
   
-  compilation object save succeeded; see C:\Users\bluek\Desktop\Jusin\MFC\Risk-of-Rain2\Tool\MFCTool\Client\bin\Shader_UI_3D.cso
-  stdafx.cpp
+  compilation object save succeeded; see C:\Users\a\Desktop\GitHub\Risk-of-Rain2\Tool\MFCTool\Client\bin\Shader_UI_3D.cso
 cl : 명령줄 warning D9030: '/Gm'이(가) 다중 처리와 호환되지 않습니다. /MP 스위치를 무시합니다.
-  Client.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Wisp.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\wisp.cpp(70): warning C4244: '인수': 'double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\wisp.cpp(100): warning C4244: '인수': 'double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Vagrant.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\vagrant.cpp(89): warning C4244: '인수': 'Engine::_double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\vagrant.cpp(112): warning C4244: '인수': 'Engine::_double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  UI_BackGround.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Title.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Titan.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\titan.cpp(54): warning C4244: '인수': 'Engine::_double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\titan.cpp(82): warning C4244: '인수': 'Engine::_double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Terrain.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Static_Object.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Start_Button.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\start_button.cpp(57): warning C4244: '=': 'Engine::_float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\start_button.cpp(58): warning C4244: '=': 'Engine::_float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\start_button.cpp(59): warning C4244: '=': 'Engine::_float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\start_button.cpp(60): warning C4244: '=': 'Engine::_float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\start_button.cpp(65): warning C4805: '==': 연산에 'bool' 형식과 'BOOL' 형식을 함께 사용하는 것은 안전하지 않습니다.
   Sound_Manager.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\sound_manager.cpp(92): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  SkyBox.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  ShotUI.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Select_Stage_Object.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Select_Button.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\select_button.cpp(61): warning C4244: '=': 'Engine::_float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\select_button.cpp(62): warning C4244: '=': 'Engine::_float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\select_button.cpp(63): warning C4244: '=': 'Engine::_float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\select_button.cpp(64): warning C4244: '=': 'Engine::_float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\select_button.cpp(65): warning C4805: '==': 연산에 'bool' 형식과 'BOOL' 형식을 함께 사용하는 것은 안전하지 않습니다.
-  Pod.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Player_Select_Dummy.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Player_MoveAttack.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Player_Move.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Player_Jump_Attack.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Player_Jump.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  코드를 생성하고 있습니다...
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\player_select_dummy.cpp(88): warning C4715: 'Client::CPlayer_Select_Dummy::Render': 모든 제어 경로에서 값을 반환하지는 않습니다.
-  컴파일하고 있습니다...
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\sound_manager.cpp(91): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Player_Idle.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Player_Hp.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Player_Death.cpp
-  Player_Attack.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  PlayerState.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  PlayerData.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Player.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\player.cpp(83): warning C4244: '+=': 'double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\player.cpp(88): warning C4244: '인수': 'double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\player.cpp(427): warning C4244: '인수': 'Engine::_double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\player.cpp(431): warning C4244: '인수': 'Engine::_double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\player.cpp(435): warning C4244: '인수': 'Engine::_double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\player.cpp(439): warning C4244: '인수': 'Engine::_double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\player.cpp(448): warning C4244: '인수': 'Engine::_double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\player.cpp(455): warning C4244: '인수': 'Engine::_double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Normal_Monster_Hp.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  NormalHp_BackGround.cpp
-  Mouse_Cursor.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\player.cpp(83): warning C4244: '+=': 'double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\player.cpp(88): warning C4244: '인수': 'double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\player.cpp(427): warning C4244: '인수': 'Engine::_double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\player.cpp(431): warning C4244: '인수': 'Engine::_double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\player.cpp(435): warning C4244: '인수': 'Engine::_double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\player.cpp(439): warning C4244: '인수': 'Engine::_double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\player.cpp(448): warning C4244: '인수': 'Engine::_double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\player.cpp(455): warning C4244: '인수': 'Engine::_double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Monster_Wisp_Spawn.cpp
-  Monster_Wisp_Move.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Monster_Wisp_Idle.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Monster_Wisp_Death.cpp
-  Monster_Wisp_Attack.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Monster_Vagrant_Spawn.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Monster_Vagrant_Idle.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\monster_vagrant_idle.cpp(47): warning C4102: 'Attack': 참조되지 않은 레이블입니다.
-  Monster_Vagrant_Hurt.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Monster_Vagrant_Attack.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Monster_Vagrant_Area_Attack.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  코드를 생성하고 있습니다...
-  컴파일하고 있습니다...
-  Monster_Titan_Spawn.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\monster_titan_spawn.cpp(36): warning C4102: 'Move': 참조되지 않은 레이블입니다.
-  Monster_Titan_Move.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\monster_titan_move.cpp(42): warning C4102: 'Move': 참조되지 않은 레이블입니다.
-  Monster_Titan_Laser_Attack.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\monster_titan_laser_attack.cpp(27): warning C4102: 'Laser': 참조되지 않은 레이블입니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\monster_titan_laser_attack.cpp(30): warning C4102: 'Attack': 참조되지 않은 레이블입니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\monster_titan_laser_attack.cpp(33): warning C4102: 'Idle': 참조되지 않은 레이블입니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\monster_titan_laser_attack.cpp(36): warning C4102: 'Move': 참조되지 않은 레이블입니다.
-  Monster_Titan_Idle.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\monster_titan_idle.cpp(54): warning C4102: 'Death': 참조되지 않은 레이블입니다.
-  Monster_Titan_Flinch.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Monster_Titan_Death.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Monster_Titan_Attack.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Monster_Golem_Spawn.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Monster_Golem_Move.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\monster_golem_move.cpp(43): warning C4102: 'Death': 참조되지 않은 레이블입니다.
-  Monster_Golem_Laser_Attack.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\monster_golem_laser_attack.cpp(26): warning C4102: 'Laser': 참조되지 않은 레이블입니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\monster_golem_laser_attack.cpp(30): warning C4102: 'Attack': 참조되지 않은 레이블입니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\monster_golem_laser_attack.cpp(34): warning C4102: 'Idle': 참조되지 않은 레이블입니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\monster_golem_laser_attack.cpp(38): warning C4102: 'Move': 참조되지 않은 레이블입니다.
-  Monster_Golem_Idle.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Monster_Golem_Flinch.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Monster_Golem_Death.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Monster_Golem_Attack.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\monster_golem_attack.cpp(35): warning C4102: 'Move': 참조되지 않은 레이블입니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\monster_golem_attack.cpp(38): warning C4102: 'Death': 참조되지 않은 레이블입니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\monster_golem_attack.cpp(41): warning C4102: 'Flinch': 참조되지 않은 레이블입니다.
   Monster_Data.cpp
-  Monster_Beetle_Spawn.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Monster_Beetle_Move.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\monster_beetle_move.cpp(38): warning C4102: 'Idle': 참조되지 않은 레이블입니다.
-  Monster_Beetle_Idle.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\monster_beetle_idle.cpp(44): warning C4102: 'Attack': 참조되지 않은 레이블입니다.
-  Monster_Beetle_Death.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Monster_Beetle_Buff.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  MonsterState.cpp
   코드를 생성하고 있습니다...
   컴파일하고 있습니다...
-  Monster_Beetle_Attack.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\monster_beetle_attack.cpp(34): warning C4102: 'Move': 참조되지 않은 레이블입니다.
-  MonsterState.cpp
-  Monster.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  MainApp.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  LoadingBar.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Loader.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Level_Select.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\level_select.cpp(213): warning C4244: '=': 'LONG'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\level_select.cpp(214): warning C4244: '=': 'LONG'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Level_Logo.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\level_logo.cpp(199): warning C4244: '=': 'LONG'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\level_logo.cpp(200): warning C4244: '=': 'LONG'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Level_Loading.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\level_loading.cpp(110): warning C4244: '=': 'LONG'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\level_loading.cpp(111): warning C4244: '=': 'LONG'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Gun_Right.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Gun_Left.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Golem.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\golem.cpp(73): warning C4244: '인수': 'double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\golem.cpp(102): warning C4244: '인수': 'double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Exit_Button.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\exit_button.cpp(57): warning C4244: '=': 'Engine::_float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\exit_button.cpp(58): warning C4244: '=': 'Engine::_float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\exit_button.cpp(59): warning C4244: '=': 'Engine::_float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\exit_button.cpp(60): warning C4244: '=': 'Engine::_float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\exit_button.cpp(65): warning C4805: '==': 연산에 'bool' 형식과 'BOOL' 형식을 함께 사용하는 것은 안전하지 않습니다.
-  Character_Camera.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\character_camera.cpp(80): warning C4244: '인수': 'Engine::_double'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\character_camera.cpp(80): warning C4244: '인수': 'Engine::_long'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\character_camera.cpp(80): warning C4305: '인수': 'double'에서 'FLOAT'(으)로 잘립니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\character_camera.cpp(81): warning C4244: '인수': 'Engine::_double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\character_camera.cpp(101): warning C4244: '인수': 'Engine::_double'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\character_camera.cpp(102): warning C4244: '인수': 'Engine::_double'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\character_camera.cpp(106): warning C4244: '인수': 'Engine::_double'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\character_camera.cpp(111): warning C4244: '인수': 'Engine::_double'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Camera_Free.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\camera_free.cpp(41): warning C4244: '인수': 'Engine::_double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\camera_free.cpp(45): warning C4244: '인수': 'Engine::_double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\camera_free.cpp(49): warning C4244: '인수': 'Engine::_double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\camera_free.cpp(53): warning C4244: '인수': 'Engine::_double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Bullet.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\bullet.cpp(114): warning C4244: '+=': 'double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\bullet.cpp(121): warning C4244: '인수': 'double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Boss_Hp.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  BossHp_BackGround.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Beetle.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\beetle.cpp(77): warning C4244: '인수': 'double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\beetle.cpp(105): warning C4244: '인수': 'double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  BackGround.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Client.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Wisp.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\wisp.cpp(70): warning C4244: '인수': 'double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\wisp.cpp(100): warning C4244: '인수': 'double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Vagrant.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\vagrant.cpp(89): warning C4244: '인수': 'Engine::_double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\vagrant.cpp(112): warning C4244: '인수': 'Engine::_double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  UI_BackGround.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Title.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Titan.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\titan.cpp(54): warning C4244: '인수': 'Engine::_double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\titan.cpp(82): warning C4244: '인수': 'Engine::_double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Terrain.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Static_Object.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Start_Button.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\start_button.cpp(57): warning C4244: '=': 'Engine::_float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\start_button.cpp(58): warning C4244: '=': 'Engine::_float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\start_button.cpp(59): warning C4244: '=': 'Engine::_float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\start_button.cpp(60): warning C4244: '=': 'Engine::_float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\start_button.cpp(65): warning C4805: '==': 연산에 'bool' 형식과 'BOOL' 형식을 함께 사용하는 것은 안전하지 않습니다.
+  SkyBox.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  ShotUI.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Select_Stage_Object.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Select_Button.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\select_button.cpp(62): warning C4244: '=': 'Engine::_float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\select_button.cpp(63): warning C4244: '=': 'Engine::_float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\select_button.cpp(64): warning C4244: '=': 'Engine::_float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\select_button.cpp(65): warning C4244: '=': 'Engine::_float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\select_button.cpp(70): warning C4805: '==': 연산에 'bool' 형식과 'BOOL' 형식을 함께 사용하는 것은 안전하지 않습니다.
+  Pod.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Player_Select_Dummy.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Player_MoveAttack.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Player_Move.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Player_Jump_Attack.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Player_Jump.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Player_Hp.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   코드를 생성하고 있습니다...
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\client\private\gun_left.cpp(93): warning C4715: 'Client::CGun_Left::Late_Tick': 모든 제어 경로에서 값을 반환하지는 않습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\player_select_dummy.cpp(88): warning C4715: 'Client::CPlayer_Select_Dummy::Render': 모든 제어 경로에서 값을 반환하지는 않습니다.
+  컴파일하고 있습니다...
+  Player_Attack.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  PlayerState.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  PlayerData.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Normal_Monster_Hp.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Mouse_Cursor.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Monster_Wisp_Move.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Monster_Wisp_Idle.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Monster_Wisp_Attack.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Monster_Vagrant_Spawn.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Monster_Vagrant_Idle.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\monster_vagrant_idle.cpp(47): warning C4102: 'Attack': 참조되지 않은 레이블입니다.
+  Monster_Vagrant_Hurt.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Monster_Vagrant_Attack.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Monster_Vagrant_Area_Attack.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Monster_Titan_Spawn.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\monster_titan_spawn.cpp(36): warning C4102: 'Move': 참조되지 않은 레이블입니다.
+  Monster_Titan_Move.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\monster_titan_move.cpp(42): warning C4102: 'Move': 참조되지 않은 레이블입니다.
+  Monster_Titan_Laser_Attack.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\monster_titan_laser_attack.cpp(27): warning C4102: 'Laser': 참조되지 않은 레이블입니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\monster_titan_laser_attack.cpp(30): warning C4102: 'Attack': 참조되지 않은 레이블입니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\monster_titan_laser_attack.cpp(33): warning C4102: 'Idle': 참조되지 않은 레이블입니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\monster_titan_laser_attack.cpp(36): warning C4102: 'Move': 참조되지 않은 레이블입니다.
+  Monster_Titan_Idle.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\monster_titan_idle.cpp(54): warning C4102: 'Death': 참조되지 않은 레이블입니다.
+  Monster_Titan_Flinch.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Monster_Titan_Death.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Monster_Titan_Attack.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
+  Monster_Golem_Spawn.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Monster_Golem_Move.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\monster_golem_move.cpp(43): warning C4102: 'Death': 참조되지 않은 레이블입니다.
+  Monster_Golem_Laser_Attack.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\monster_golem_laser_attack.cpp(26): warning C4102: 'Laser': 참조되지 않은 레이블입니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\monster_golem_laser_attack.cpp(30): warning C4102: 'Attack': 참조되지 않은 레이블입니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\monster_golem_laser_attack.cpp(34): warning C4102: 'Idle': 참조되지 않은 레이블입니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\monster_golem_laser_attack.cpp(38): warning C4102: 'Move': 참조되지 않은 레이블입니다.
+  Monster_Golem_Idle.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Monster_Golem_Flinch.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Monster_Golem_Death.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Monster_Golem_Attack.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\monster_golem_attack.cpp(35): warning C4102: 'Move': 참조되지 않은 레이블입니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\monster_golem_attack.cpp(38): warning C4102: 'Death': 참조되지 않은 레이블입니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\monster_golem_attack.cpp(41): warning C4102: 'Flinch': 참조되지 않은 레이블입니다.
+  Monster_Beetle_Spawn.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Monster_Beetle_Move.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\monster_beetle_move.cpp(38): warning C4102: 'Idle': 참조되지 않은 레이블입니다.
+  Monster_Beetle_Idle.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\monster_beetle_idle.cpp(44): warning C4102: 'Attack': 참조되지 않은 레이블입니다.
+  Monster_Beetle_Death.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Monster_Beetle_Buff.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Monster_Beetle_Attack.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\monster_beetle_attack.cpp(34): warning C4102: 'Move': 참조되지 않은 레이블입니다.
+  Monster.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  MainApp.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Logo_Terrain.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  LoadingBar.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Loader.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Level_Select.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\level_select.cpp(213): warning C4244: '=': 'LONG'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\level_select.cpp(214): warning C4244: '=': 'LONG'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Level_Logo.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\level_logo.cpp(221): warning C4244: '=': 'LONG'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\level_logo.cpp(222): warning C4244: '=': 'LONG'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
+  Level_Loading.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\level_loading.cpp(110): warning C4244: '=': 'LONG'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\level_loading.cpp(111): warning C4244: '=': 'LONG'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Gun_Right.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Gun_Left.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Golem.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\golem.cpp(73): warning C4244: '인수': 'double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\golem.cpp(102): warning C4244: '인수': 'double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Exit_Button.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\exit_button.cpp(57): warning C4244: '=': 'Engine::_float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\exit_button.cpp(58): warning C4244: '=': 'Engine::_float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\exit_button.cpp(59): warning C4244: '=': 'Engine::_float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\exit_button.cpp(60): warning C4244: '=': 'Engine::_float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\exit_button.cpp(65): warning C4805: '==': 연산에 'bool' 형식과 'BOOL' 형식을 함께 사용하는 것은 안전하지 않습니다.
+  Character_Camera.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\character_camera.cpp(80): warning C4244: '인수': 'Engine::_double'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\character_camera.cpp(80): warning C4244: '인수': 'Engine::_long'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\character_camera.cpp(80): warning C4305: '인수': 'double'에서 'FLOAT'(으)로 잘립니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\character_camera.cpp(81): warning C4244: '인수': 'Engine::_double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\character_camera.cpp(101): warning C4244: '인수': 'Engine::_double'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\character_camera.cpp(102): warning C4244: '인수': 'Engine::_double'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\character_camera.cpp(106): warning C4244: '인수': 'Engine::_double'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\character_camera.cpp(111): warning C4244: '인수': 'Engine::_double'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Camera_Free.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\camera_free.cpp(41): warning C4244: '인수': 'Engine::_double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\camera_free.cpp(45): warning C4244: '인수': 'Engine::_double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\camera_free.cpp(49): warning C4244: '인수': 'Engine::_double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\camera_free.cpp(53): warning C4244: '인수': 'Engine::_double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Bullet.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\bullet.cpp(114): warning C4244: '+=': 'double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\bullet.cpp(121): warning C4244: '인수': 'double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Boss_Hp.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  BossHp_BackGround.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Beetle.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\beetle.cpp(77): warning C4244: '인수': 'double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\beetle.cpp(105): warning C4244: '인수': 'double'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  BackGround.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다...
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\client\private\gun_left.cpp(93): warning C4715: 'Client::CGun_Left::Late_Tick': 모든 제어 경로에서 값을 반환하지는 않습니다.
   Level_GamePlay_Stage0.cpp
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\bluek\desktop\jusin\mfc\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Client.vcxproj -> C:\Users\bluek\Desktop\Jusin\MFC\Risk-of-Rain2\Tool\MFCTool\Client\default\..\bin\Client.exe
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\reference\inc\dynamic_mesh.h(17): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Client.vcxproj -> C:\Users\a\Desktop\GitHub\Risk-of-Rain2\Tool\MFCTool\Client\default\..\bin\Client.exe
   Client.vcxproj -> ..\bin\Client.pdb (Full PDB)

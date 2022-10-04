@@ -9,7 +9,7 @@ CMeshList::CMeshList()
 HRESULT CMeshList::Add_Mesh(CGameObject * pGameObject)
 {
 	m_vecMeshList.push_back(pGameObject);
-	Safe_AddRef(pGameObject);
+	//Safe_AddRef(pGameObject);
 	return S_OK;
 }
 
