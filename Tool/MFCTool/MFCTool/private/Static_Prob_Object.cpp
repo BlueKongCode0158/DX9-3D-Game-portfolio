@@ -166,7 +166,7 @@ HRESULT CStatic_Prob_Object::Add_Component()
 	{
 		return E_FAIL;
 	}
-	if (FAILED(__super::Add_Component(LEVEL_STATIC, m_pPrototypeTag, TEXT("Com_VIBuffer"), reinterpret_cast<CComponent**>(&m_pMeshCom))))
+	if (FAILED(__super::Add_Component(LEVEL_STATIC, m_pPrototypeTag, TEXT("Com_Mesh"), reinterpret_cast<CComponent**>(&m_pMeshCom))))
 	{
 		return E_FAIL;
 	}

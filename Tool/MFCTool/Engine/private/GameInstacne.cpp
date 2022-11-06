@@ -345,7 +345,7 @@ CGameObject * CGameInstacne::Find_GameObject(_uint iLevelIndex, const _tchar * p
 	{
 		return nullptr;
 	}
-	return m_pGameObject->Find_CloneObject(iLevelIndex,pLayerTag,iIndexNum);
+	return m_pGameObject->Find_GameObject(iLevelIndex,pLayerTag,iIndexNum);
 }
 
 HRESULT CGameInstacne::Delete_Prototype(_uint iTypeNum, const _tchar * pPrototypeTag)
@@ -355,6 +355,15 @@ HRESULT CGameInstacne::Delete_Prototype(_uint iTypeNum, const _tchar * pPrototyp
 		return E_FAIL;
 	}
 	return m_pGameObject->Delete_Prototype(iTypeNum,pPrototypeTag);
+}
+
+HRESULT CGameInstacne::Delete_GameObject(_uint iTypeNum, const _tchar * pLayerTag, _int iIndex)
+{
+	if (nullptr == m_pGameObject)
+	{
+		return E_FAIL;
+	}
+	return m_pGameObject->Delete_GameObject(iTypeNum, pLayerTag, iIndex);
 }
 
 _uint CGameInstacne::Get_GameObject_ListSize(_uint iLevelIndex, const _tchar * pLayerTag)

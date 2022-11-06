@@ -54,25 +54,25 @@ _int CCamera_Free::Tick(_double TimeDelta)
 	}
 
 
-	//CGameInstacne* pGameInstance = GET_INSTANCE(CGameInstacne);
+	CGameInstacne* pGameInstance = GET_INSTANCE(CGameInstacne);
 
-	//_long MouseMove = 0l;
+	_long MouseMove = 0l;
 
-	//MouseMove = pGameInstance->Get_DIMouseMoveState(CInput_Device::DIMM::DIMM_X);
+	MouseMove = pGameInstance->Get_DIMouseMoveState(CInput_Device::DIMM::DIMM_X);
 
-	//if (0 != MouseMove)
-	//{
-	//	m_pTransform->Rotation_Axis(_float3(0.f, 1.f, 0.f), TimeDelta * MouseMove * 0.2f);
-	//}
+	if (0 != MouseMove)
+	{
+		m_pTransform->Rotation_Axis(_float3(0.f, 1.f, 0.f), TimeDelta * MouseMove * 0.2f);
+	}
 
-	//MouseMove = pGameInstance->Get_DIMouseMoveState(CInput_Device::DIMM::DIMM_Y);
+	MouseMove = pGameInstance->Get_DIMouseMoveState(CInput_Device::DIMM::DIMM_Y);
 
-	//if (0 != MouseMove)
-	//{
-	//	m_pTransform->Rotation_Axis(m_pTransform->Get_MatrixRow(CTransform::STATE::STATE_RIGHT), TimeDelta*MouseMove * 0.2f);
-	//}
+	if (0 != MouseMove)
+	{
+		m_pTransform->Rotation_Axis(m_pTransform->Get_MatrixRow(CTransform::STATE::STATE_RIGHT), TimeDelta*MouseMove * 0.2f);
+	}
 
-	//RELEASE_INSTANCE(CGameInstacne);
+	RELEASE_INSTANCE(CGameInstacne);
 	return _int();
 }
 

@@ -7,6 +7,7 @@
 #include "SkyBox.h"
 #include "Camera.h"
 #include "UI.h"
+#include "Canvas.h"
 
 CLevel_Select::CLevel_Select(LPDIRECT3DDEVICE9 pGraphic_Device)
 	:CLevel(pGraphic_Device)
@@ -145,6 +146,11 @@ HRESULT CLevel_Select::Ready_Layer_UI_Button(const _tchar * pLayerTag)
 	tUIDesc.m_fSizeY = 128.f;
 
 	if (FAILED(pGameInstance->Add_GameObject_Clone(LEVEL_SELECT, TEXT("Prototype_Select_Botton"), pLayerTag, &tUIDesc)))
+	{
+		return E_FAIL;
+	}
+	LEVEL eLevel = LEVEL_STATIC;
+	if (FAILED(pGameInstance->Add_GameObject_Clone(LEVEL_SELECT, TEXT("Prototype_Canvas"), pLayerTag, &eLevel)))
 	{
 		return E_FAIL;
 	}

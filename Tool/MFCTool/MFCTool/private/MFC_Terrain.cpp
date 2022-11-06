@@ -211,7 +211,7 @@ HRESULT CMFC_Terrain::Filter_Texture_Load(const _tchar* pFile)
 		return E_FAIL;
 	}
 
-	D3DXCreateTextureFromFileEx(m_pGraphicDevice, pFile,m_iIndexX,m_iIndexZ,0,0,D3DFMT_A8R8G8B8,D3DPOOL_MANAGED,D3DX_DEFAULT, D3DX_DEFAULT,0,NULL,NULL,&m_pFilterTexture);
+	D3DXCreateTextureFromFileEx(m_pGraphicDevice, pFile,m_iIndexX - 1,m_iIndexZ - 1,0,0,D3DFMT_A8R8G8B8,D3DPOOL_MANAGED,D3DX_DEFAULT, D3DX_DEFAULT,0,NULL,NULL,&m_pFilterTexture);
 
 	return S_OK;
 }

@@ -112,6 +112,9 @@
     <Filter Include="04.Object\05.Pivot\PivotPoint">
       <UniqueIdentifier>{4b21a4e0-8e94-4a3f-a6a6-61b6d5a450f3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="05.Tab\03.UITab">
+      <UniqueIdentifier>{63acbad0-f4e1-489f-beb0-955d4e56bfb0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainFrm.h">
@@ -195,6 +198,9 @@
     <ClInclude Include="..\public\PivotPoint.h">
       <Filter>04.Object\05.Pivot\PivotPoint</Filter>
     </ClInclude>
+    <ClInclude Include="UITabLog.h">
+      <Filter>05.Tab\03.UITab</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MainFrm.cpp">
@@ -265,6 +271,9 @@
     </ClCompile>
     <ClCompile Include="..\private\PivotPoint.cpp">
       <Filter>04.Object\05.Pivot\PivotPoint</Filter>
+    </ClCompile>
+    <ClCompile Include="UITabLog.cpp">
+      <Filter>05.Tab\03.UITab</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

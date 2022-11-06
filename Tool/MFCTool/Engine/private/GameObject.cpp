@@ -1,8 +1,6 @@
 #include "..\public\GameObject.h"
 #include "GameInstacne.h"
 
-
-
 CGameObject::CGameObject(LPDIRECT3DDEVICE9 pGraphic_Device)
 	:m_pGraphicDevice(pGraphic_Device)
 {

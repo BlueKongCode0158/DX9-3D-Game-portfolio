@@ -361,6 +361,9 @@
     <Filter Include="02.GameObject\03.Terrain\Logo">
       <UniqueIdentifier>{3b45226e-a456-45e5-a663-1fe665ef7af9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="02.GameObject\10.UI\08.SelectWindow">
+      <UniqueIdentifier>{954ac7b9-b4c1-4ab5-b7c4-f108d3075f26}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Client.h">

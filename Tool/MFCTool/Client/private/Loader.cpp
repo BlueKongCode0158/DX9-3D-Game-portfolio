@@ -31,6 +31,7 @@
 #include "Boss_Hp.h"
 #include "BossHp_BackGround.h"
 
+#include "Canvas.h"
 
 CLoader::CLoader(LPDIRECT3DDEVICE9 pGrephic_Device)
 	:m_pGraphic_Device(pGrephic_Device)
@@ -116,6 +117,10 @@ HRESULT CLoader::GameSelect_Stage()
 		goto failed;
 	}
 	if (FAILED(pGameInstance->Add_Prototype_Component(LEVEL_SELECT, TEXT("Prototype_Shader_Cube"), CShader::Create(m_pGraphic_Device, TEXT("../Bin/ShaderFiles/Shader_Cube.hlsl")))))
+	{
+		goto failed;
+	}
+	if (FAILED(pGameInstance->Add_Prototype_Object(LEVEL_SELECT, TEXT("Prototype_Canvas"), CCanvas::Create(m_pGraphic_Device))))
 	{
 		goto failed;
 	}

@@ -164,6 +164,7 @@
     <ClInclude Include="..\public\Animation.h" />
     <ClInclude Include="..\public\Base.h" />
     <ClInclude Include="..\public\Camera.h" />
+    <ClInclude Include="..\public\Canvas.h" />
     <ClInclude Include="..\public\Cell.h" />
     <ClInclude Include="..\public\Collider.h" />
     <ClInclude Include="..\public\Component.h" />
@@ -224,6 +225,7 @@
     <ClCompile Include="..\private\Animation.cpp" />
     <ClCompile Include="..\private\Base.cpp" />
     <ClCompile Include="..\private\Camera.cpp" />
+    <ClCompile Include="..\private\Canvas.cpp" />
     <ClCompile Include="..\private\Cell.cpp" />
     <ClCompile Include="..\private\Collider.cpp" />
     <ClCompile Include="..\private\Component.cpp" />

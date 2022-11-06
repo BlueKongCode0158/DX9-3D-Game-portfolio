@@ -79,6 +79,7 @@ public:
 	CGameObject* Find_GameObject(_uint iLevelIndex, const _tchar* pLayerTag, _uint iIndexNum = 0);
 public:
 	HRESULT	Delete_Prototype(_uint iTypeNum, const _tchar* pPrototypeTag);
+	HRESULT Delete_GameObject(_uint iTypeNum, const _tchar* pLayerTag, _int iIndex);
 public:
 	_uint	Get_GameObject_ListSize(_uint iLevelIndex, const _tchar* pLayerTag);
 #pragma endregion

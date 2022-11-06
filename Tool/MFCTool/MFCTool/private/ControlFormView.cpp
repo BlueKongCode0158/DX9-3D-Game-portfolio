@@ -8,7 +8,7 @@
 #include "DIgTab0.h"
 #include "DIgLog1.h"
 #include "DIgLog2.h"
-
+#include "UITabLog.h"
 
 
 // CControlFormView
@@ -26,6 +26,7 @@ CControlFormView::~CControlFormView()
 	delete pTab_MapTool;
 	delete pTab_Object_Tool;
 	delete pTab_EffectTool;
+	delete pTab_UITool;
 }
 
 void CControlFormView::DoDataExchange(CDataExchange* pDX)
@@ -44,23 +45,34 @@ void CControlFormView::OnSelchangeTabMain(NMHDR *pNMHDR, LRESULT *pResult)
 
 	switch (iSelect)
 	{
-	case 0:
+	case TERRAIN:
 		pTab_MapTool->ShowWindow(SW_SHOW);
 		pTab_Object_Tool->ShowWindow(SW_HIDE);
 		pTab_EffectTool->ShowWindow(SW_HIDE);
+		pTab_UITool->ShowWindow(SW_HIDE);
+
 		m_eControl = CControlFormView::CControlFormView::CONTROLTAB::TERRAIN;
 		break;
-	case 1:
+	case OBJECT:
 		pTab_MapTool->ShowWindow(SW_HIDE);
 		pTab_Object_Tool->ShowWindow(SW_SHOW);
 		pTab_EffectTool->ShowWindow(SW_HIDE);
+		pTab_UITool->ShowWindow(SW_HIDE);
 		m_eControl = CControlFormView::CControlFormView::CONTROLTAB::OBJECT;
 		break;
-	case 2:
+	case EFFECT:
 		pTab_MapTool->ShowWindow(SW_HIDE);
 		pTab_Object_Tool->ShowWindow(SW_HIDE);
 		pTab_EffectTool->ShowWindow(SW_SHOW);
+		pTab_UITool->ShowWindow(SW_HIDE);
 		m_eControl = CControlFormView::CControlFormView::CONTROLTAB::EFFECT;
+		break;
+	case UI:
+		pTab_MapTool->ShowWindow(SW_HIDE);
+		pTab_Object_Tool->ShowWindow(SW_HIDE);
+		pTab_EffectTool->ShowWindow(SW_HIDE);
+		pTab_UITool->ShowWindow(SW_SHOW);
+		m_eControl = CControlFormView::CControlFormView::CONTROLTAB::UI;
 		break;
 	default:
 		break;
@@ -76,6 +88,7 @@ void CControlFormView::OnInitialUpdate()
 	m_MapTab.InsertItem(0, L"Terrain");
 	m_MapTab.InsertItem(1, L"Game_Object");
 	m_MapTab.InsertItem(2, L"Effect");
+	m_MapTab.InsertItem(3, L"UI");
 
 	m_MapTab.SetCurSel(0);
 
@@ -98,7 +111,10 @@ void CControlFormView::OnInitialUpdate()
 	pTab_EffectTool->MoveWindow(0, 25, rect.Width(), rect.Height());
 	pTab_EffectTool->ShowWindow(SW_HIDE);
 
-
+	pTab_UITool = new CUITabLog;
+	pTab_UITool->Create(IDD_UITABLOG, &m_MapTab);
+	pTab_UITool->MoveWindow(0, 25, rect.Width(), rect.Height());
+	pTab_UITool->ShowWindow(SW_HIDE);
 }
 
 BEGIN_MESSAGE_MAP(CControlFormView, CFormView)

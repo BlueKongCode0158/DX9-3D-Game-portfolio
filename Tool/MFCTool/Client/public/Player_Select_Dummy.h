@@ -4,6 +4,7 @@
 BEGIN(Engine)
 class CShader;
 class CNavigation;
+class CEngine_Font;
 class CCollider;
 class CRenderer;
 class CTransform;
@@ -31,6 +32,7 @@ private:
 	CShader*			m_pShaderCom		= nullptr;
 	CRenderer*			m_pRendererCom		= nullptr;
 	CTransform*			m_pTransformCom		= nullptr;
+	CEngine_Font*		m_pFont				= nullptr;
 public:
 	static CPlayer_Select_Dummy*	Create(LPDIRECT3DDEVICE9 pGraphic_Device);
 	virtual CGameObject*			Clone(void* pArg) override;

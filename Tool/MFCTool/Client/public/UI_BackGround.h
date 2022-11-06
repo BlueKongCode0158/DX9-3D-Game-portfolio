@@ -24,7 +24,7 @@ public:
 private:
 	HRESULT Add_Component();
 	HRESULT SetUp_ConstantTable();
-public:
+private:
 	LPDIRECT3DTEXTURE9	m_pTexture		= nullptr;
 	CShader*			m_pShaderCom	= nullptr;
 	CRenderer*			m_pRendererCom	= nullptr;

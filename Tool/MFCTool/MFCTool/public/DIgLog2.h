@@ -1,6 +1,4 @@
 #pragma once
-
-
 // CDIgLog2 대화 상자입니다.
 
 class CDIgLog2 : public CDialogEx

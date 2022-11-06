@@ -25,7 +25,6 @@ public:
 	void	Update_Font();
 	HRESULT	Render_Font(const _tchar* pText, RECT rect);
 private:
-	LPD3DXSPRITE		m_pSprite	= nullptr;
 	LPD3DXFONT			m_pFont		= nullptr;
 private:
 	CShader*			m_pShader		= nullptr;

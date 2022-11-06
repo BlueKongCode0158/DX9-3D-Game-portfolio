@@ -6,6 +6,7 @@
 class CDIgTab0;
 class CDIgLog1;
 class CDIgLog2;
+class CUITabLog;
 
 // CControlFormView 폼 뷰입니다.
 
@@ -13,7 +14,7 @@ class CControlFormView : public CFormView
 {
 	DECLARE_DYNCREATE(CControlFormView)
 public:
-	enum CONTROLTAB { TERRAIN, OBJECT, EFFECT, TAB_END };
+	enum CONTROLTAB { TERRAIN, OBJECT, EFFECT, UI ,TAB_END };
 protected:
 	CControlFormView();           // 동적 만들기에 사용되는 protected 생성자입니다.
 	virtual ~CControlFormView();
@@ -21,6 +22,7 @@ public:
 	CDIgTab0*	pTab_MapTool;
 	CDIgLog1*	pTab_Object_Tool;
 	CDIgLog2*	pTab_EffectTool;
+	CUITabLog*	pTab_UITool;
 public:
 #ifdef AFX_DESIGN_TIME
 	enum { IDD = IDD_CONTROLFORMVIEW };

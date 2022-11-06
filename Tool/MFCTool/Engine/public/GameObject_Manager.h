@@ -22,6 +22,7 @@ public:
 	HRESULT Add_GameObject_Clone(_uint iNumLevel, const _tchar* pPrototypeTag, const _tchar* pLayerTag, void* pArg = nullptr);
 public:
 	HRESULT	Delete_Prototype(_uint iTypeNum, const _tchar* pPrototypeTag);
+	HRESULT Delete_GameObject(_uint iTypeNum, const _tchar* pLayerTag, _int iIndex);
 public:
 	_uint	Get_GameObject_ListSize(_uint iLevelIndex, const _tchar* pLayerTag);
 public:
@@ -36,7 +37,7 @@ private:
 private:
 	_uint		m_iNumLevel = 0;
 public:
-	//CGameObject* Find_GameObject(_uint iLevelIndex, const _tchar* pLayerTag);
+	CGameObject*	Find_GameObject(_uint iLevelIndex, const _tchar* pLayerTag, _int iIndex);
 	CComponent*		Find_Component(_uint iLevelIndex, const _tchar* pLayerTag, const _tchar* pComponentTag, _uint iIndexNum = 0);
 	CGameObject*	Find_CloneObject(_uint iTypeNum, const _tchar* pLayerTag, _uint iIndex);
 private:

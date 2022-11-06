@@ -142,6 +142,23 @@ HRESULT CGameObject_Manager::Delete_Prototype(_uint iTypeNum, const _tchar * pPr
 	
 }
 
+HRESULT CGameObject_Manager::Delete_GameObject(_uint iTypeNum, const _tchar * pLayerTag, _int iIndex)
+{
+	if (iTypeNum >= m_iNumLevel)
+	{
+		return E_FAIL;
+	}
+
+	CGameObject* pObj = Find_GameObject(iTypeNum, pLayerTag, iIndex);
+	if (nullptr == pObj)
+	{
+		MSGBOX("is Empty Pointer");
+		return E_FAIL;
+	}
+	Safe_Release(pObj);
+	return S_OK;
+}
+
 _uint CGameObject_Manager::Get_GameObject_ListSize(_uint iLevelIndex, const _tchar * pLayerTag)
 {
 	CLayer*	pLayer = Find_Layer(iLevelIndex, pLayerTag);
@@ -175,6 +192,16 @@ _int CGameObject_Manager::Late_Tick(_double TimeDelta)
 		}
 	}
 	return _int();
+}
+
+CGameObject * CGameObject_Manager::Find_GameObject(_uint iLevelIndex, const _tchar * pLayerTag, _int iIndex)
+{
+	CLayer* pLayer = Find_Layer(iLevelIndex, pLayerTag);
+	if (nullptr == pLayer)
+	{
+		return nullptr;
+	}
+	return pLayer->Get_GameObjectPointer(iIndex);
 }
 
 CComponent * CGameObject_Manager::Find_Component(_uint iLevelIndex, const _tchar * pLayerTag, const _tchar * pComponentTag, _uint iIndexNum)

@@ -14,10 +14,8 @@ CEngine_Font::CEngine_Font(const CEngine_Font & rhs)
 	:CComponent(rhs)
 	,m_pShader(reinterpret_cast<CShader*>(rhs.m_pShader->Clone()))
 	,m_pTransform(reinterpret_cast<CTransform*>(rhs.m_pTransform->Clone()))
-	,m_pSprite(rhs.m_pSprite)
 	,m_pFont(rhs.m_pFont)
 {
-	Safe_AddRef(m_pSprite);
 	Safe_AddRef(m_pFont);
 }
 
@@ -26,10 +24,7 @@ HRESULT CEngine_Font::NativeConstruct_Prototype()
 	CGraphic_Device* pGraphic_Device = GET_INSTANCE(CGraphic_Device);
 
 	m_pFont = pGraphic_Device->Get_Font();
-	m_pSprite = pGraphic_Device->Get_Sprite();
-
 	Safe_AddRef(m_pFont);
-	Safe_AddRef(m_pSprite);
 
 	RELEASE_INSTANCE(CGraphic_Device);
 
@@ -95,18 +90,15 @@ void CEngine_Font::Update_Font()
 
 HRESULT CEngine_Font::Render_Font(const _tchar * pText, RECT rect)
 {
-	if (nullptr == m_pSprite ||
-		nullptr == m_pFont)
+	if (nullptr == m_pFont)
 	{
 		return E_FAIL;
 	}
 
-	m_pSprite->SetTransform(m_pTransform->Get_WorldMatrix());
 	//D3DXMATRIX world;
 	////75.f, 0.f, 62.f
 	//D3DXMatrixTranslation(&world, 75, 12, 62);
 	//m_pSprite->SetTransform(&world);
-	m_pSprite->Begin(D3DXSPRITE_ALPHABLEND | D3DXSPRITE_OBJECTSPACE);
 	CPipeLine* pPipeLine = GET_INSTANCE(CPipeLine);
 
 	//m_pShader->SetUp_ConstantTable("g_WorldMatrix", m_pTransform->Get_WorldMatrix(), sizeof(_matrix));
@@ -114,11 +106,8 @@ HRESULT CEngine_Font::Render_Font(const _tchar * pText, RECT rect)
 	//m_pShader->SetUp_ConstantTable("g_ProjectionMatrix", &pPipeLine->Get_Transform(D3DTS_VIEW), sizeof(_matrix));
 
 	//m_pShader->Begin_Shader(0);
-
-	m_pFont->DrawTextW(m_pSprite, pText, -1, &rect, 0, D3DCOLOR_COLORVALUE(1, 0, 1, 1));
-
 	//m_pShader->End_Shader();
-	m_pSprite->End();
+
 	RELEASE_INSTANCE(CPipeLine);
 	return S_OK;
 }
@@ -151,6 +140,5 @@ void CEngine_Font::Free()
 
 	Safe_Release(m_pFont);
 	Safe_Release(m_pShader);
-	Safe_Release(m_pSprite);
 	Safe_Release(m_pTransform);
 }
