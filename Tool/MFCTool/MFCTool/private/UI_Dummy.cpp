@@ -79,7 +79,7 @@ HRESULT CUI_Dummy::Add_Component()
 	{
 		return E_FAIL;
 	}
-	if (FAILED(__super::Add_Component(LEVEL_STATIC, TEXT("Prototyoe_Renderer"), TEXT("Com_Renderer"), reinterpret_cast<CComponent**>(&m_pRendererCom))))
+	if (FAILED(__super::Add_Component(LEVEL_STATIC, TEXT("Prototype_Renderer"), TEXT("Com_Renderer"), reinterpret_cast<CComponent**>(&m_pRendererCom))))
 	{
 		return E_FAIL;
 	}
