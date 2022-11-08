@@ -28,7 +28,21 @@ void CUITabLog::DoDataExchange(CDataExchange* pDX)
 
 
 BEGIN_MESSAGE_MAP(CUITabLog, CDialogEx)
+	ON_LBN_SELCHANGE(IDC_LIST1, &CUITabLog::OnLbnSelchangeList_UIList)
+	ON_BN_CLICKED(IDC_BUTTON1, &CUITabLog::OnBnClickedButton_Create)
 END_MESSAGE_MAP()
 
 
 // CUITabLog 메시지 처리기입니다.
+
+
+void CUITabLog::OnLbnSelchangeList_UIList()
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+}
+
+
+void CUITabLog::OnBnClickedButton_Create()
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+}

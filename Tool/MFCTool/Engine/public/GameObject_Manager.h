@@ -39,7 +39,6 @@ private:
 public:
 	CGameObject*	Find_GameObject(_uint iLevelIndex, const _tchar* pLayerTag, _int iIndex);
 	CComponent*		Find_Component(_uint iLevelIndex, const _tchar* pLayerTag, const _tchar* pComponentTag, _uint iIndexNum = 0);
-	CGameObject*	Find_CloneObject(_uint iTypeNum, const _tchar* pLayerTag, _uint iIndex);
 private:
 	CGameObject* Find_Prototype(_uint iTypeNum,const _tchar* pPrototypeTag);
 	CLayer*      Find_Layer(_uint iLevelIndex, const _tchar* pLayerTag);

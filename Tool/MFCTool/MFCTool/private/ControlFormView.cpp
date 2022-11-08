@@ -4,6 +4,8 @@
 #include "stdafx.h"
 #include "MFCTool.h"
 #include "ControlFormView.h"
+#include "MFCToolView.h"
+#include "MainFrm.h"
 
 #include "DIgTab0.h"
 #include "DIgLog1.h"
@@ -17,6 +19,7 @@ IMPLEMENT_DYNCREATE(CControlFormView, CFormView)
 
 CControlFormView::CControlFormView()
 	: CFormView(IDD_CONTROLFORMVIEW)
+	, m_isLockView(_T("UNLOCK"))
 {
 
 }
@@ -35,6 +38,8 @@ void CControlFormView::DoDataExchange(CDataExchange* pDX)
 	DDX_Control(pDX, IDD_CONTROLFORMVIEW, m_MapTab);
 	//DDX_Control(pDX, IDC_TAB_MAIN, m_MapTab);
 	//È¤½Ã ¸ô¶ó¼­ ¹Ù²ãÁáÀ½.
+	DDX_Control(pDX, IDC_LOCKTEXT, m_TextLockView);
+	DDX_Text(pDX, IDC_LOCKTEXT, m_isLockView);
 }
 
 
@@ -117,8 +122,29 @@ void CControlFormView::OnInitialUpdate()
 	pTab_UITool->ShowWindow(SW_HIDE);
 }
 
+void CControlFormView::OnMButtonDown(UINT nFlags, CPoint point)
+{
+	CMFCToolView* pView = (CMFCToolView*)(((CMainFrame*)AfxGetMainWnd())->m_tMainSplitter.GetPane(0, 1));
+	if (m_isLock == false)
+	{
+		//pView->LockWindowUpdate();
+		pView->KillTimer(1);
+		m_isLock = true;
+		m_isLockView = _T("LOCK");
+	}
+	else
+	{
+		pView->SetTimer(1, 1000 / 60, NULL);
+		//pView->UnlockWindowUpdate();
+		m_isLock = false;
+		m_isLockView = _T("UNLOCK");
+	}
+	m_TextLockView.SetWindowTextW(m_isLockView);
+}
+
 BEGIN_MESSAGE_MAP(CControlFormView, CFormView)
 	ON_NOTIFY(TCN_SELCHANGE, IDC_TAB_MAIN, &CControlFormView::OnSelchangeTabMain)
+	ON_WM_MBUTTONDOWN()
 END_MESSAGE_MAP()
 
 

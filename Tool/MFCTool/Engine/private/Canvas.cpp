@@ -39,6 +39,12 @@ HRESULT CCanvas::NativeConstruct(void * pArg)
 	{
 		return E_FAIL;
 	}
+	if (FAILED(D3DXCreateTextureFromFileExW(m_pGraphicDevice, TEXT("../../Client/bin/resources/Image/UI/BackGround/UI_Background_0.tga"), 1000, 928, 0, 0, D3DFMT_A8R8G8B8,
+		D3DPOOL_MANAGED, D3DX_DEFAULT, D3DX_DEFAULT, 0, NULL, NULL, &m_pTexture)))
+	{
+		return E_FAIL;
+	}
+
 	return S_OK;
 }
 
@@ -92,22 +98,7 @@ _int CCanvas::Late_Tick(double TimeDelta)
 	m_pRendererCom->Add_RenderGroup(CRenderer::RENDERGROUP::RENDER_ALPHA, this);
 
 	CGameInstacne* pGameInstance = GET_INSTANCE(CGameInstacne);
-	if (pGameInstance->Input_KeyBoard_Pressing(DIK_W))
-	{
-		m_pTransformCom->Walk_Look(TimeDelta * 0.5f);
-	}
-	if (pGameInstance->Input_KeyBoard_Pressing(DIK_S))
-	{
-		m_pTransformCom->Walk_Back(TimeDelta*0.5f);
-	}
-	if (pGameInstance->Input_KeyBoard_Pressing(DIK_A))
-	{
-		m_pTransformCom->Rotation_Axis(_float3(0.f, -1.f, 0.f), TimeDelta * 0.2f);
-	}
-	if (pGameInstance->Input_KeyBoard_Pressing(DIK_D))
-	{
-		m_pTransformCom->Rotation_Axis(_float3(0.f, 1.f, 0.f), TimeDelta * 0.2f);
-	}
+
 	if (pGameInstance->Input_KeyBoard_Down(DIK_Z))
 	{
 		if (m_isSetting)
@@ -167,6 +158,10 @@ HRESULT CCanvas::Add_Component(_uint iLevel)
 
 HRESULT CCanvas::SetUp_ConstantTable()
 {
+	if (FAILED(m_pShaderCom->SetUp_TextureConstantTable("g_DiffuseTexture", m_pTexture)))
+	{
+		return E_FAIL;
+	}
 	CGameInstacne* pGameInstance = GET_INSTANCE(CGameInstacne);
 
 	m_pShaderCom->SetUp_ConstantTable("g_WorldMatrix", m_pTransformCom->Get_WorldMatrix(), sizeof(_matrix));

@@ -20,7 +20,7 @@
 #include "CursorPoint.h"
 #include "CellPoint.h"
 #include "Static_Prob_Object.h"
-
+#include "Canvas.h"
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
@@ -295,6 +295,10 @@ HRESULT CMFCToolView::Add_Prototype_Object()
 	{
 		return E_FAIL;
 	}
+	if (FAILED(pGameInstance->Add_Prototype_Object(LEVEL_STATIC, TEXT("Prototype_Canvas"), CCanvas::Create(m_pGraphic_Device))))
+	{
+		return E_FAIL;
+	}
 	RELEASE_INSTANCE(CGameInstacne);
 	return S_OK;
 }
@@ -307,7 +311,7 @@ HRESULT CMFCToolView::Add_Prototype_Component()
 	{
 		return E_FAIL;
 	}
-	if (FAILED(pGameInstance->Add_Prototype_Component(LEVEL_STATIC, TEXT("Prototyoe_Renderer"), m_pRendererCom = CRenderer::Create(m_pGraphic_Device))))
+	if (FAILED(pGameInstance->Add_Prototype_Component(LEVEL_STATIC, TEXT("Prototype_Renderer"), m_pRendererCom = CRenderer::Create(m_pGraphic_Device))))
 	{
 		return E_FAIL;
 	}
@@ -334,12 +338,25 @@ HRESULT CMFCToolView::Add_Prototype_Component()
 	{
 		return E_FAIL;
 	}
+	if (FAILED(pGameInstance->Add_Prototype_Component(LEVEL_STATIC, TEXT("Prototype_Mesh_Shader"), CShader::Create(m_pGraphic_Device, TEXT("../../Client/Bin/ShaderFiles/Shader_Mesh.hlsl")))))
+	{
+		return E_FAIL;
+	}
+	if (FAILED(pGameInstance->Add_Prototype_Component(LEVEL_STATIC, TEXT("Prototype_Shader_UI_3D"), CShader::Create(m_pGraphic_Device, TEXT("../../Client/Bin/ShaderFiles/Shader_UI_3D.hlsl")))))
+	{
+		return E_FAIL;
+	}
+
 	if (FAILED(pGameInstance->Add_Prototype_Component(LEVEL_STATIC, TEXT("Prototype_Terrain_Texture"), CTexture::Create(CTexture::TEXTURETYPE::TEXTURE_GENERIC, TEXT("../bin/Reference/Texture/TerrainTile%d.tga"), m_pGraphic_Device, 4))))
 	{
 		return E_FAIL;
 	}
 
 	if (FAILED(pGameInstance->Add_Prototype_Component(LEVEL_STATIC, TEXT("Prototype_VIBuffer_Cube"), CVIBuffer_Cube::Create(m_pGraphic_Device))))
+	{
+		return E_FAIL;
+	}
+	if (FAILED(pGameInstance->Add_Prototype_Component(LEVEL_STATIC, TEXT("Prototype_VIBuffer_Rect"), CVIBuffer_Rect::Create(m_pGraphic_Device))))
 	{
 		return E_FAIL;
 	}
@@ -367,10 +384,7 @@ HRESULT CMFCToolView::Add_Prototype_Component()
 	{
 		return E_FAIL;
 	}
-	if (FAILED(pGameInstance->Add_Prototype_Component(LEVEL_STATIC, TEXT("Prototype_Mesh_Shader"), CShader::Create(m_pGraphic_Device, TEXT("../../Client/Bin/ShaderFiles/Shader_Mesh.hlsl")))))
-	{
-		return E_FAIL;
-	}
+
 
 	RELEASE_INSTANCE(CGameInstacne);
 	return S_OK;
@@ -399,6 +413,13 @@ HRESULT CMFCToolView::Add_GameObject()
 	{
 		RELEASE_INSTANCE(CGameInstacne);
 		MessageBoxA(g_hWND, "Failed to Clone Cursor", "완료", MB_OK);
+		return E_FAIL;
+	}
+	LEVEL eLevel = LEVEL_STATIC;
+	if (FAILED(pGameInstance->Add_GameObject_Clone(LEVEL_STATIC, TEXT("Prototype_Canvas"), TEXT("Layer_3DUI_Parent"), &eLevel)))
+	{
+		RELEASE_INSTANCE(CGameInstacne);
+		MessageBoxA(g_hWND, "Failed to Clone Canvas", "완료", MB_OK);
 		return E_FAIL;
 	}
 	RELEASE_INSTANCE(CGameInstacne);

@@ -1,6 +1,7 @@
 #pragma once
 #include "afxcmn.h"
 #include "MFC_Defines.h"
+#include "afxwin.h"
 
 
 class CDIgTab0;
@@ -23,6 +24,8 @@ public:
 	CDIgLog1*	pTab_Object_Tool;
 	CDIgLog2*	pTab_EffectTool;
 	CUITabLog*	pTab_UITool;
+private:
+	bool		m_isLock = false;
 public:
 #ifdef AFX_DESIGN_TIME
 	enum { IDD = IDD_CONTROLFORMVIEW };
@@ -44,7 +47,10 @@ public:
 public:
 	CTabCtrl	m_MapTab;
 	CONTROLTAB	m_eControl = TAB_END;
-
+	afx_msg void OnMButtonDown(UINT nFlags, CPoint point);
+private:
+	CString m_isLockView;
+	CStatic m_TextLockView;
 };
 
 

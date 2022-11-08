@@ -108,18 +108,6 @@ HRESULT CGameObject_Manager::Add_GameObject_Clone(_uint iNumLevel, const _tchar 
 	return S_OK;
 }
 
-CGameObject * CGameObject_Manager::Find_CloneObject(_uint iTypeNum, const _tchar * pLayerTag, _uint iIndex)
-{
-	CLayer* pLayer = Find_Layer(iTypeNum, pLayerTag);
-
-	if (nullptr == pLayer)
-	{
-		return nullptr;
-	}
-	CGameObject* pObject = pLayer->Get_GameObjectPointer(iIndex);
-	return pObject;
-}
-
 HRESULT CGameObject_Manager::Delete_Prototype(_uint iTypeNum, const _tchar * pPrototypeTag)
 {
 	if (iTypeNum >= m_iNumLevel)
