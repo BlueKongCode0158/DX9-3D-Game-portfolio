@@ -24,8 +24,9 @@ void CSingle_ITem::Add_Item()
 {
 }
 
-void CSingle_ITem::Use_Item()
+int CSingle_ITem::Use_Item()
 {
+	return ITEM_OK;
 }
 
 CSingle_ITem * CSingle_ITem::Create(LPDIRECT3DDEVICE9 pGraphic_Device)

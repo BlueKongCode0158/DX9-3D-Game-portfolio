@@ -24,10 +24,17 @@ HRESULT CMulty_ITem::NativeConstruct(void * pArg)
 
 void CMulty_ITem::Add_Item()
 {
+	m_iNums += 1;
 }
 
-void CMulty_ITem::Use_Item()
+int CMulty_ITem::Use_Item()
 {
+	m_iNums -= 1;
+	if (m_iNums == 0)
+	{
+		return ITEM_DELETE;
+	}
+	return ITEM_OK;
 }
 
 CMulty_ITem * CMulty_ITem::Create(LPDIRECT3DDEVICE9 pGraphic_Device)

@@ -24,17 +24,23 @@ HRESULT CInventory::NativeConstruct(void * pArg)
 HRESULT CInventory::Add_Item(const _tchar * pItemName, CItem * pItem)
 {
 	CItem* pItem_Element = Find_Item(pItemName);
-	if (nullptr != pItem_Element)
+	if (nullptr == pItem_Element)
 	{
-		Safe_Release(pItem);
+		m_mapItems.emplace(pItemName, pItem);
 	}
-
-
+	m_mapItems[pItemName]->Add_Item();
 	return S_OK;
 }
 
 HRESULT CInventory::Use_Item(const _tchar * pItemName)
 {
+	const int iState = m_mapItems[pItemName]->Use_Item();
+
+	if (iState == CItem::ITEM_DELETE)
+	{
+		Safe_Release(m_mapItems[pItemName]);
+		m_mapItems.erase(pItemName);
+	}
 	return S_OK;
 }
 
@@ -87,5 +93,4 @@ void CInventory::Free()
 		Safe_Release(Pair.second);
 	}
 	m_mapItems.clear();
-
 }

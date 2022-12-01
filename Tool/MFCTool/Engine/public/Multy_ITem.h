@@ -13,7 +13,7 @@ public:
 	virtual HRESULT			NativeConstruct(void* pArg) override;
 public:
 	virtual void			Add_Item()					override;
-	virtual void			Use_Item()					override;
+	virtual int				Use_Item()					override;
 public:
 	static	CMulty_ITem*	Create(LPDIRECT3DDEVICE9 pGraphic_Device);
 	virtual CItem*			Clone(void* pArg) override;
