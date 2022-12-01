@@ -37,6 +37,39 @@ CComponent * CLayer::Find_Component(const _tchar * ComponentTag, _uint iIndexNum
 	return (*iter)->Find_ObjectComponent(ComponentTag);
 }
 
+HRESULT CLayer::Delete_GameObject(_uint iIndex)
+{
+	if (m_Objects.size() <= iIndex)
+	{
+		return E_FAIL;
+	}
+	auto iter = m_Objects.begin();
+	for (size_t i = 0; i < iIndex; i++)
+	{
+		iter++;
+	}
+	Safe_Release(*iter);
+	m_Objects.erase(iter);
+	return S_OK;
+}
+
+HRESULT CLayer::Delete_GameObjects()
+{
+	for (auto iter = m_Objects.begin(); iter != m_Objects.end(); )
+	{
+		if ((*iter)->IsDead() == true)
+		{
+			Safe_Release(*iter);
+			iter = m_Objects.erase(iter);
+		}
+		else
+		{
+
+		}
+	}
+	return S_OK;
+}
+
 
 HRESULT CLayer::NativeConstruct()
 {
@@ -82,6 +115,11 @@ _int CLayer::Late_Tick(_double TimeDelta)
 		pGameObject->Late_Tick(TimeDelta);
 	}
 	return _int();
+}
+
+_bool CLayer::IsEmpty()
+{
+	return m_Objects.empty();
 }
 
 CLayer * CLayer::Create()

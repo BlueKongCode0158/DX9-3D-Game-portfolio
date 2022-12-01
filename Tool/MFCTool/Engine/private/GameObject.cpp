@@ -72,6 +72,11 @@ HRESULT CGameObject::Render()
 	return S_OK;
 }
 
+_bool CGameObject::IsDead()
+{
+	return m_isDead;
+}
+
 void CGameObject::Compute_CameraDistance(CTransform * pTransform)
 {
 	CGameInstacne* pGameInstance = GET_INSTANCE(CGameInstacne);

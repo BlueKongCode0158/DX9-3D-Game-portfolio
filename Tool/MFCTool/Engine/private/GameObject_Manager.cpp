@@ -119,8 +119,8 @@ HRESULT CGameObject_Manager::Delete_Prototype(_uint iTypeNum, const _tchar * pPr
 	CGameObject* pPrototype = Find_Prototype(iTypeNum, pPrototypeTag);
 	if (nullptr == pPrototype)
 	{
-		//MSGBOX("Add GameObject Clone - pPrototype Pointer nullptr");
-		return E_FAIL;
+		MSGBOX("is Empty Pointer_[GameObject_Manager_Delete_Prototype]");
+		return S_OK;
 	}
 
 	Safe_Release(pPrototype);
@@ -137,13 +137,32 @@ HRESULT CGameObject_Manager::Delete_GameObject(_uint iTypeNum, const _tchar * pL
 		return E_FAIL;
 	}
 
-	CGameObject* pObj = Find_GameObject(iTypeNum, pLayerTag, iIndex);
-	if (nullptr == pObj)
+	CLayer* pLayer = Find_Layer(iTypeNum, pLayerTag);
+	if (nullptr == pLayer)
 	{
-		MSGBOX("is Empty Pointer");
+		MSGBOX("is Empty Pointer_[GameObject_Manager_Delete_GameObject]");
+		return S_OK;
+	}
+	pLayer->Delete_GameObject(iIndex);
+	Delete_EmptyLayer(iTypeNum, pLayerTag);
+	return S_OK;
+}
+
+HRESULT CGameObject_Manager::Delete_GameObjects(_uint iTypeNum, const _tchar * pLayerTag)
+{
+	if (iTypeNum >= m_iNumLevel)
+	{
 		return E_FAIL;
 	}
-	Safe_Release(pObj);
+
+	CLayer* pLayer = Find_Layer(iTypeNum, pLayerTag);
+	if (nullptr == pLayer)
+	{
+		MSGBOX("is Empty Pointer_[GameObject_Manager_Delete_GameObject]");
+		return S_OK;
+	}
+	pLayer->Delete_GameObjects();
+	Delete_EmptyLayer(iTypeNum, pLayerTag);
 	return S_OK;
 }
 
@@ -226,6 +245,18 @@ CLayer * CGameObject_Manager::Find_Layer(_uint iLevelIndex, const _tchar * pLaye
 		return nullptr;
 	}
 	return iter->second;
+}
+
+HRESULT CGameObject_Manager::Delete_EmptyLayer(_uint iTypeNum, const _tchar * pLayerTag)
+{
+	CLayer* pLayer = Find_Layer(iTypeNum, pLayerTag);
+
+	if (pLayer->IsEmpty() == true)
+	{
+		Safe_Release(pLayer);
+		m_pLayers[iTypeNum].erase(pLayerTag);
+	}
+	return S_OK;
 }
 
 void CGameObject_Manager::Free()

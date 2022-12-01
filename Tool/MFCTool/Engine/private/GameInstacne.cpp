@@ -366,6 +366,15 @@ HRESULT CGameInstacne::Delete_GameObject(_uint iTypeNum, const _tchar * pLayerTa
 	return m_pGameObject->Delete_GameObject(iTypeNum, pLayerTag, iIndex);
 }
 
+HRESULT CGameInstacne::Delete_GameObjects(_uint iTypeNum, const _tchar * pLayerTag)
+{
+	if (nullptr == m_pGameObject)
+	{
+		return E_FAIL;
+	}
+	return m_pGameObject->Delete_GameObjects(iTypeNum, pLayerTag);
+}
+
 _uint CGameInstacne::Get_GameObject_ListSize(_uint iLevelIndex, const _tchar * pLayerTag)
 {
 	if (nullptr == m_pGameObject)

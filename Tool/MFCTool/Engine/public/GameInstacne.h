@@ -80,6 +80,7 @@ public:
 public:
 	HRESULT	Delete_Prototype(_uint iTypeNum, const _tchar* pPrototypeTag);
 	HRESULT Delete_GameObject(_uint iTypeNum, const _tchar* pLayerTag, _int iIndex);
+	HRESULT Delete_GameObjects(_uint iTypeNum, const _tchar* pLayerTag);
 public:
 	_uint	Get_GameObject_ListSize(_uint iLevelIndex, const _tchar* pLayerTag);
 #pragma endregion
