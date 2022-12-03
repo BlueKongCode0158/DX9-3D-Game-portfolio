@@ -424,11 +424,10 @@ void CVIBuffer_Terrain::Update_Terrain_Brush_Circle(LPDIRECT3DTEXTURE9 pHightMap
 
 			_float fHeight = pow(fBrushSize, 2) - (fDistance*fDistance);
 
-			pVertices[iIndex].vPosition.y = m_pVerticesPos[iIndex].y = m_pVerticesPos[iIndex].y + fHeight*TimeDelta;
 
 			if (pVertices[iIndex].vPosition.y <= 255.f)
 			{
-				pVertices[iIndex].vPosition.y = m_pVerticesPos[iIndex].y = m_pVerticesPos[iIndex].y + TimeDelta;
+				pVertices[iIndex].vPosition.y = m_pVerticesPos[iIndex].y = m_pVerticesPos[iIndex].y + fHeight*TimeDelta;
 			}
 			else
 			{
@@ -512,9 +511,19 @@ void CVIBuffer_Terrain::Update_Terrain_Flat_Circle(LPDIRECT3DTEXTURE9 pHeightMap
 				continue;
 			}
 
+			_float fHeight = pow(fBrushSize, 2) - (fDistance*fDistance);
+
 			if (pVertices[iIndex].vPosition.y <= 255.f)
 			{
-				pVertices[iIndex].vPosition.y = m_pVerticesPos[iIndex].y = dHeight;
+				if (pVertices[iIndex].vPosition.y > dHeight)
+				{
+					pVertices[iIndex].vPosition.y = m_pVerticesPos[iIndex].y = m_pVerticesPos[iIndex].y - TimeDelta;
+				}
+				else if (pVertices[iIndex].vPosition.y < dHeight)
+				{
+					pVertices[iIndex].vPosition.y = m_pVerticesPos[iIndex].y = m_pVerticesPos[iIndex].y + TimeDelta;
+				}
+				
 			}
 			else
 			{
