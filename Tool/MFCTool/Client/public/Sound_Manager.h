@@ -17,7 +17,8 @@ public:
 	void PlayBGM(TCHAR* pSoundKey);
 	void StopSound(CHANNELID eID);
 	void StopAll();
-
+public:
+	void SetVolum(CHANNELID eID, _float fVolum);
 private:
 	void LoadSoundFile(); 
 

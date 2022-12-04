@@ -65,6 +65,11 @@ void CSound_Manager::StopAll()
 		FMOD_Channel_Stop(m_pChannelArr[i]);
 }
 
+void CSound_Manager::SetVolum(CHANNELID eID, _float fVolum)
+{
+	FMOD_Channel_SetVolume(m_pChannelArr[eID], fVolum);
+}
+
 void CSound_Manager::LoadSoundFile()
 {
 	_finddata_t fd; 
