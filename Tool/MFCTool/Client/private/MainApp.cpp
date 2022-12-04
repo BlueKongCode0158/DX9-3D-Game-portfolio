@@ -14,6 +14,7 @@
 #include "Start_Button.h"
 #include "Exit_Button.h"
 #include "Logo_Terrain.h"
+#include "Xml_Manager.h"
 
 CMainApp::CMainApp()
 {
@@ -52,6 +53,7 @@ HRESULT CMainApp::NativeConstruct()
 	//{
 	//	return E_FAIL;
 	//}
+	CXml_Manager::Get_Instance()->Read_XmlFile(TEXT("../../Data/Save/XML/Sample.xml"));
 	if (FAILED(pInstance->SetUp_Level(CLevel_Logo::Create(m_pGraphic_Device))))
 	{
 		return E_FAIL;
@@ -60,7 +62,6 @@ HRESULT CMainApp::NativeConstruct()
 
 
 	//m_pGraphic_Device->ShowCursor(TRUE);
-
 	return S_OK;
 }
 
@@ -300,6 +301,7 @@ void CMainApp::Free()
 	Safe_Release(m_pFrustum);
 	Safe_Release(m_pGraphic_Device);
 
+	CXml_Manager::Destroy_Instance();
 	CSound_Manager::Destroy_Instance();
 	CGameInstacne::Release_Engine();
 }
