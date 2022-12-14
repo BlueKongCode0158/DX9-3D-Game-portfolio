@@ -39,10 +39,7 @@ HRESULT CCellPoint::NativeConstruct(void* pArg)
 		m_pTransformCom->Set_WorldMatrixRow(CTransform::STATE::STATE_POSITION, vPosition);
 	}
 	m_pTransformCom->Set_MatrixScale(0.25f, 0.25f, 0.25f);
-
-
 	CCellPoint_Manager::Get_Instance()->Add_CellPoint(this);
-
 	return S_OK;
 }
 

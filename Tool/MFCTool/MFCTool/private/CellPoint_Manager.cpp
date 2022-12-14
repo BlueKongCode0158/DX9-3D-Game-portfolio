@@ -191,7 +191,6 @@ HRESULT CCellPoint_Manager::Load_VecCellPoint(const _tchar * pFileName)
 		}
 
 		CCellPoint*	pCell = nullptr;
-
 		for (_uint i = 0; i < 3; i++)
 		{
 			if (true == Is_in(vPoint[i], pCell))
@@ -203,7 +202,7 @@ HRESULT CCellPoint_Manager::Load_VecCellPoint(const _tchar * pFileName)
 			}
 			else
 			{
-				if (FAILED(pGameInstance->Add_GameObject_Clone(LEVEL_STATIC, TEXT("Prototype_Cell"), TEXT("Layer_Cell"), vPoint[i])))
+				if (FAILED(pGameInstance->Add_GameObject_Clone(LEVEL_STATIC, TEXT("Prototype_Cell"), TEXT("Layer_Cell"), &vPoint[i])))
 				{
 					return E_FAIL;
 				}
