@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "..\public\UI_Dummy.h"
 #include "GameInstacne.h"
+#include "UICreate_Manager.h"
 
 CUI_Dummy::CUI_Dummy(LPDIRECT3DDEVICE9 pGraphic_Device)
 	:CGameObject(pGraphic_Device)
@@ -25,6 +26,8 @@ HRESULT CUI_Dummy::NativeConstruct_Prototype()
 
 HRESULT CUI_Dummy::NativeConstruct(void * pArg)
 {
+	m_pLayerTag = reinterpret_cast<_tchar*>(pArg);
+
 	if (FAILED(__super::NativeConstruct(pArg)))
 	{
 		return E_FAIL;
@@ -33,14 +36,16 @@ HRESULT CUI_Dummy::NativeConstruct(void * pArg)
 	{
 		return E_FAIL;
 	}
-
+	CGameInstacne* pGameInstance = GET_INSTANCE(CGameInstacne);
+	m_pParentTransform = reinterpret_cast<CTransform*>(pGameInstance->Find_Component(LEVEL_STATIC, TEXT("Layer_3DUI_Parent"), TEXT("Com_Transform")));
+	RELEASE_INSTANCE(CGameInstacne);
+	CUICreate_Manager::Get_Instance()->Add_UI(m_pLayerTag,this);
 	return S_OK;
 }
 
 _int CUI_Dummy::Tick(_double TimeDelta)
 {
 	__super::Tick(TimeDelta);
-
 	return _int();
 }
 
@@ -69,6 +74,21 @@ HRESULT CUI_Dummy::Render()
 	return S_OK;
 }
 
+HRESULT CUI_Dummy::Set_Position(_float3 vecPosition)
+{
+	if (nullptr == m_pTransformCom)
+	{
+		return E_FAIL;
+	}
+	m_pTransformCom->Set_WorldMatrixRow(CTransform::STATE::STATE_POSITION, vecPosition);
+	return S_OK;
+}
+
+void CUI_Dummy::Set_Dead(_bool isDead)
+{
+	m_isDead = isDead;
+}
+
 HRESULT CUI_Dummy::Add_Component()
 {
 	CTransform::TRANSFORMDESC TransformDesc;
@@ -87,7 +107,7 @@ HRESULT CUI_Dummy::Add_Component()
 	{
 		return E_FAIL;
 	}
-	if (FAILED(__super::Add_Component(LEVEL_STATIC, TEXT("Prototype_Mesh_Shader"), TEXT("Com_Shader"), reinterpret_cast<CComponent**>(&m_pShaderCom))))
+	if (FAILED(__super::Add_Component(LEVEL_STATIC, TEXT("Prototype_Shader_UI_3D"), TEXT("Com_Shader"), reinterpret_cast<CComponent**>(&m_pShaderCom))))
 	{
 		return E_FAIL;
 	}

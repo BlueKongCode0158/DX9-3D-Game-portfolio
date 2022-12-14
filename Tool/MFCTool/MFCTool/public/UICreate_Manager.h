@@ -12,11 +12,13 @@ private:
 	CUICreate_Manager();
 	virtual ~CUICreate_Manager();
 public:
-	HRESULT Add_UI(_tchar* pLayer, const CUI_Dummy* pUI);
+	HRESULT Add_UI(_tchar* pLayerTag,CUI_Dummy* pUI);
 	HRESULT	Delete_UI(_tchar* pLayer);
 public:
-	HRESULT Import_UI(_tchar* pFile);
+	HRESULT Load_UI(_tchar* pFile);
 	HRESULT Save_UI(_tchar* pFileName);
+private:
+
 private:
 	map<_tchar*, CUI_Dummy*> map_UIs;
 public:
