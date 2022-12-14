@@ -18,13 +18,14 @@ public:
 public:
 	HRESULT Delete_GameObject(const _uint iIndex);
 	HRESULT Delete_GameObjects();
+	HRESULT Delete_GameObject_End();
 public:
 	HRESULT NativeConstruct();
 	HRESULT Add_GameObject(CGameObject* pGameObject);
 	_int	Tick(_double TimeDelta);
 	_int	Late_Tick(_double TimeDelta);
 public:
-	_bool	Is_Empty();
+	_bool	IsEmpty();
 private:
 	list<CGameObject*>	m_Objects;
 

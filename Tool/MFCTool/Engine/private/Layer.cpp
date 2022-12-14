@@ -64,9 +64,24 @@ HRESULT CLayer::Delete_GameObjects()
 		}
 		else
 		{
-
+			iter++;
 		}
 	}
+	return S_OK;
+}
+
+HRESULT CLayer::Delete_GameObject_End()
+{
+	if (m_Objects.empty())
+	{
+		MSGBOX("해당 Layer는 비어있습니다.");
+		return S_OK;
+	}
+	auto iter = m_Objects.end();
+	iter--;
+
+	Safe_Release(*iter);
+	m_Objects.pop_back();
 	return S_OK;
 }
 

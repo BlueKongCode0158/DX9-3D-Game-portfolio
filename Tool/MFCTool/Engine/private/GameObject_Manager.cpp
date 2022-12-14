@@ -108,6 +108,25 @@ HRESULT CGameObject_Manager::Add_GameObject_Clone(_uint iNumLevel, const _tchar 
 	return S_OK;
 }
 
+HRESULT CGameObject_Manager::Delete_GameObject_End(_uint iTypeNum, const _tchar * pLayerTag)
+{
+	if (iTypeNum >= m_iNumLevel)
+	{
+		return E_FAIL;
+	}
+
+	CLayer* pLayer = Find_Layer(iTypeNum, pLayerTag);
+	if (nullptr == pLayer)
+	{
+		MSGBOX("is Empty Pointer_[GameObject_Manager_Delete_GameObject]");
+		return S_OK;
+	}
+	pLayer->Delete_GameObject_End();
+	Delete_EmptyLayer(iTypeNum, pLayerTag);
+
+	return S_OK;
+}
+
 HRESULT CGameObject_Manager::Delete_Prototype(_uint iTypeNum, const _tchar * pPrototypeTag)
 {
 	if (iTypeNum >= m_iNumLevel)

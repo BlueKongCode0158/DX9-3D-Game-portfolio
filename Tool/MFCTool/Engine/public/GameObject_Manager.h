@@ -21,6 +21,8 @@ public:
 	HRESULT Add_Prototype(_uint iTypeNum, const _tchar* pPrototypeTag, CGameObject* pGameObject);
 	HRESULT Add_GameObject_Clone(_uint iNumLevel, const _tchar* pPrototypeTag, const _tchar* pLayerTag, void* pArg = nullptr);
 public:
+	HRESULT Delete_GameObject_End(_uint iTypeNum, const _tchar* pLayerTag);
+public:
 	HRESULT	Delete_Prototype(_uint iTypeNum, const _tchar* pPrototypeTag);
 	HRESULT Delete_GameObject(_uint iTypeNum, const _tchar* pLayerTag, _int iIndex);
 	HRESULT Delete_GameObjects(_uint iTypeNum, const _tchar* pLayerTag);
@@ -43,8 +45,7 @@ public:
 private:
 	CGameObject* Find_Prototype(_uint iTypeNum,const _tchar* pPrototypeTag);
 	CLayer*      Find_Layer(_uint iLevelIndex, const _tchar* pLayerTag);
-private:
-	HRESULT	Delete_Layer(_uint iTypeNum, const _tchar* pLayerTag);
+	HRESULT		 Delete_EmptyLayer(_uint iTypeNum, const _tchar* pLayerTag);
 public:
 	virtual void Free() override;
 };
