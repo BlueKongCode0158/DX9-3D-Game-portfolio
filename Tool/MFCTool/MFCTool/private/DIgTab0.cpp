@@ -143,7 +143,7 @@ void CDIgTab0::OnBnClicked_Delete_PrototypeTerrainList()
 	
 	CGameInstacne* pGameInstacne = GET_INSTANCE(CGameInstacne);
 
-	if (FAILED(pGameInstacne->Delete_Prototype(LEVEL_STATIC, m_TerrainName.operator LPCWSTR())))
+	if (FAILED(pGameInstacne->Delete_Prototype(LEVEL_STATIC, wstrFindName.operator LPCWSTR())))
 	{
 		MessageBoxA(m_hWnd, "해당 Prototype은 존재하지 않습니다.", "OK", MB_OK);
 	}

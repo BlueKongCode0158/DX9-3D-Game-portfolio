@@ -95,6 +95,7 @@ public:
 public:
 	HRESULT	Add_Timers(const _tchar* pTimerTag);
 	_float	Compute_Time(const _tchar* pTimerTag);
+	_float	Get_Time(const _tchar* pTimerTag);
 #pragma endregion
 #pragma region PICKING
 public:

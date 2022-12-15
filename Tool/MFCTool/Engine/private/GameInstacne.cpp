@@ -433,6 +433,15 @@ _float CGameInstacne::Compute_Time(const _tchar * pTimerTag)
 	return m_pTimer->Compute_Time(pTimerTag);
 }
 
+_float CGameInstacne::Get_Time(const _tchar * pTimerTag)
+{
+	if (nullptr == m_pTimer)
+	{
+		return 0.f;
+	}
+	return m_pTimer->Get_Time(pTimerTag);
+}
+
 HRESULT CGameInstacne::Compute_MouseCursorPosInWorld(HWND hWnd)
 {
 	if (nullptr == m_pPicking)

@@ -5,6 +5,7 @@
 #include "MFCTool.h"
 #include "UITabLog.h"
 #include "afxdialogex.h"
+#include "GameInstacne.h"
 #include "UICreate_Manager.h"
 
 
@@ -36,6 +37,7 @@ void CUITabLog::DoDataExchange(CDataExchange* pDX)
 	DDX_Text(pDX, IDC_EDIT17, m_fRotationY);
 	DDX_Text(pDX, IDC_EDIT18, m_fScaleX);
 	DDX_Text(pDX, IDC_EDIT19, m_fScaleY);
+	DDX_Control(pDX, IDC_LIST1, m_UIListBox);
 }
 
 
@@ -43,6 +45,7 @@ BEGIN_MESSAGE_MAP(CUITabLog, CDialogEx)
 	ON_LBN_SELCHANGE(IDC_LIST1, &CUITabLog::OnLbnSelchangeList_UIList)
 	ON_BN_CLICKED(IDC_BUTTON1, &CUITabLog::OnBnClickedButton_Create)
 	ON_BN_CLICKED(IDC_BUTTON12, &CUITabLog::OnBnClickedSaveButton)
+	ON_BN_CLICKED(IDC_BUTTON2, &CUITabLog::OnBnClicked_EditButton)
 END_MESSAGE_MAP()
 
 
@@ -57,10 +60,18 @@ void CUITabLog::OnLbnSelchangeList_UIList()
 
 void CUITabLog::OnBnClickedButton_Create()
 {
+	UpdateData(TRUE);
 	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
 	// UI 생성
-
-
+	CGameInstacne* pInstance = GET_INSTANCE(CGameInstacne);
+	if (FAILED(pInstance->Add_GameObject_Clone(LEVEL_STATIC, TEXT("Prototype_3DUI"), m_LayerName.operator LPCWSTR(), &m_LayerName)))
+	{
+		RELEASE_INSTANCE(CGameInstacne);
+		return;
+	}
+	m_UIListBox.AddString(m_LayerName);
+	RELEASE_INSTANCE(CGameInstacne);
+	UpdateData(FALSE);
 }
 
 
@@ -84,4 +95,19 @@ void CUITabLog::OnBnClickedSaveButton()
 		wstPathName.ReleaseBuffer();
 		m_pManager->Save_UI(pFilePath);
 	}
+}
+
+
+void CUITabLog::OnBnClicked_EditButton()
+{
+	UpdateData(TRUE);
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	if (nullptr == m_pManager)
+	{
+		return;
+	}
+	m_pManager->Set_Position(m_LayerName.operator LPCWSTR(), m_fX, m_fY);
+	m_pManager->Set_Rotation(m_LayerName.operator LPCWSTR(), m_fRotationY);
+	m_pManager->Set_Scale(m_LayerName.operator LPCWSTR(), m_fScaleX, m_fScaleY);
+	UpdateData(FALSE);
 }

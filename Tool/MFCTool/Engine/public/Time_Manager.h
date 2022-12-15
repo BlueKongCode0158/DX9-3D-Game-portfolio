@@ -11,6 +11,8 @@ private:
 public:
 	HRESULT	Add_Timers(const _tchar* pTimerTag);
 	_float	Compute_Time(const _tchar* pTimerTag);
+public:
+	_float	Get_Time(const _tchar* pTimerTag);
 private:
 	map<const _tchar*, class CTimer*>		m_Timers;
 	typedef map<const _tchar*, class CTimer* > TIMERS;

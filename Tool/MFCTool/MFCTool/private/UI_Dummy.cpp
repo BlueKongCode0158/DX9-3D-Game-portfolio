@@ -26,7 +26,7 @@ HRESULT CUI_Dummy::NativeConstruct_Prototype()
 
 HRESULT CUI_Dummy::NativeConstruct(void * pArg)
 {
-	m_pLayerTag = reinterpret_cast<_tchar*>(pArg);
+	m_pLayerTag = *static_cast<CString*>(pArg)->operator LPCWSTR();
 
 	if (FAILED(__super::NativeConstruct(pArg)))
 	{
@@ -37,7 +37,7 @@ HRESULT CUI_Dummy::NativeConstruct(void * pArg)
 		return E_FAIL;
 	}
 	CGameInstacne* pGameInstance = GET_INSTANCE(CGameInstacne);
-	m_pParentTransform = reinterpret_cast<CTransform*>(pGameInstance->Find_Component(LEVEL_STATIC, TEXT("Layer_3DUI_Parent"), TEXT("Com_Transform")));
+	m_pParentTransform = dynamic_cast<CTransform*>(pGameInstance->Find_Component(LEVEL_STATIC, TEXT("Layer_3DUI_Parent"), TEXT("Com_Transform")));
 	RELEASE_INSTANCE(CGameInstacne);
 	CUICreate_Manager::Get_Instance()->Add_UI(m_pLayerTag,this);
 	return S_OK;
@@ -46,6 +46,19 @@ HRESULT CUI_Dummy::NativeConstruct(void * pArg)
 _int CUI_Dummy::Tick(_double TimeDelta)
 {
 	__super::Tick(TimeDelta);
+
+	if (m_isDead == true)
+	{
+		return OBJ_DEAD;
+	}
+	CGameInstacne* pInstance = GET_INSTANCE(CGameInstacne);
+	if (pInstance->Input_KeyBoard_Pressing(DIK_W))
+	{
+		m_pTransformCom->Walk_Look(TimeDelta);
+	}
+	RELEASE_INSTANCE(CGameInstacne);
+	Update_Matrix();
+
 	return _int();
 }
 
@@ -89,6 +102,17 @@ void CUI_Dummy::Set_Dead(_bool isDead)
 	m_isDead = isDead;
 }
 
+void CUI_Dummy::Update_Matrix()
+{
+	if (nullptr == m_pParentTransform)
+	{
+		return;
+	}
+	_matrix _OriginalMatrix = *m_pTransformCom->Get_WorldMatrix();
+	m_ParentMatrix = *m_pParentTransform->Get_WorldMatrix();
+	m_WorldMatrix = _OriginalMatrix * m_ParentMatrix;
+}
+
 HRESULT CUI_Dummy::Add_Component()
 {
 	CTransform::TRANSFORMDESC TransformDesc;
@@ -103,7 +127,7 @@ HRESULT CUI_Dummy::Add_Component()
 	{
 		return E_FAIL;
 	}
-	if (FAILED(__super::Add_Component(LEVEL_STATIC, TEXT("Prototype_VIBuffer"), TEXT("Com_VIBuffer"), reinterpret_cast<CComponent**>(&m_pVIBufferCom))))
+	if (FAILED(__super::Add_Component(LEVEL_STATIC, TEXT("Prototype_VIBuffer_Rect"), TEXT("Com_VIBuffer"), reinterpret_cast<CComponent**>(&m_pVIBufferCom))))
 	{
 		return E_FAIL;
 	}
@@ -124,7 +148,7 @@ HRESULT CUI_Dummy::SetUp_ConstantTable()
 	CGameInstacne*		pGameInstance = GET_INSTANCE(CGameInstacne);
 	/*	matrix  g_WorldMatrix, g_ViewMatrix, g_ProjectionMatrix;
 	texture g_DiffuseTexture;*/
-	m_pShaderCom->SetUp_ConstantTable("g_WorldMatrix", m_pTransformCom->Get_WorldMatrix(), sizeof(_matrix));
+	m_pShaderCom->SetUp_ConstantTable("g_WorldMatrix", m_WorldMatrix, sizeof(_matrix));
 	m_pShaderCom->SetUp_ConstantTable("g_ViewMatrix", &pGameInstance->Get_Transform(D3DTS_VIEW), sizeof(_matrix));
 	m_pShaderCom->SetUp_ConstantTable("g_ProjectionMatrix", &pGameInstance->Get_Transform(D3DTS_PROJECTION), sizeof(_matrix));
 

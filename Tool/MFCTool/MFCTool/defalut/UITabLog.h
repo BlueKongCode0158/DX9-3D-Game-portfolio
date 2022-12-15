@@ -34,4 +34,7 @@ private:
 	float m_fRotationY;
 	float m_fScaleX;
 	float m_fScaleY;
+	CListBox m_UIListBox;
+public:
+	afx_msg void OnBnClicked_EditButton();
 };

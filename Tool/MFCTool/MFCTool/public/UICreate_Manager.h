@@ -12,15 +12,19 @@ private:
 	CUICreate_Manager();
 	virtual ~CUICreate_Manager();
 public:
-	HRESULT Add_UI(_tchar* pLayerTag,CUI_Dummy* pUI);
-	HRESULT	Delete_UI(_tchar* pLayer);
+	HRESULT Add_UI(const _tchar* pLayerTag,CUI_Dummy* pUI);
+	HRESULT	Delete_UI(const _tchar* pLayer);
+public:
+	void	Set_Position(const _tchar* pLayerTag, _float fX, _float fY);
+	void	Set_Rotation(const _tchar* pLayerTag, _float fY);
+	void	Set_Scale(const _tchar* pLayerTag, _float fScaleX, _float fScaleY);
 public:
 	HRESULT Load_UI(_tchar* pFile);
 	HRESULT Save_UI(_tchar* pFileName);
 private:
 
 private:
-	map<_tchar*, CUI_Dummy*> map_UIs;
+	map<const _tchar*, CUI_Dummy*> map_UIs;
 public:
 	virtual void Free() override;
 };

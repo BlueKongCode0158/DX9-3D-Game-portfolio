@@ -36,6 +36,16 @@ _float CTime_Manager::Compute_Time(const _tchar * pTimerTag)
 	return pTimer->Get_Time();
 }
 
+_float CTime_Manager::Get_Time(const _tchar * pTimerTag)
+{
+	CTimer* pTimer = Find_Timer(pTimerTag);
+	if (nullptr == pTimer)
+	{
+		return 0.f;
+	}
+	return pTimer->Get_Time();
+}
+
 CTimer * CTime_Manager::Find_Timer(const _tchar * pTimerTag)
 {
 	auto iter = find_if(m_Timers.begin(), m_Timers.end(), CTagFinder(pTimerTag));

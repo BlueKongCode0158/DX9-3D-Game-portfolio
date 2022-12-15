@@ -33,11 +33,12 @@ public:
 public:
 	HRESULT Set_Position(_float3 vecPosition);
 	void	Set_Dead(_bool isDead);
+	void	Update_Matrix();
 private:
 	HRESULT	Add_Component();
 	HRESULT	SetUp_ConstantTable();
 private:
-	_tchar*			m_pLayerTag;
+	CString			m_pLayerTag;
 private:
 	CShader*		m_pShaderCom		= nullptr;
 	CTexture*		m_pTextureCom		= nullptr;
@@ -47,6 +48,8 @@ private:
 private:
 	CTransform*		m_pParentTransform	= nullptr;
 	_matrix			m_ParentMatrix;
+	_matrix			m_OriginMatrix;
+	_matrix			m_WorldMatrix;
 public:
 	static	CUI_Dummy*			Create(LPDIRECT3DDEVICE9 pGraphic_Device);
 	virtual CGameObject*		Clone(void* pArg) override;

@@ -14,7 +14,7 @@ CUICreate_Manager::~CUICreate_Manager()
 {
 }
 
-HRESULT CUICreate_Manager::Add_UI(_tchar* pLayerTag, CUI_Dummy * pUI)
+HRESULT CUICreate_Manager::Add_UI(const _tchar* pLayerTag, CUI_Dummy * pUI)
 {
 	auto iter = map_UIs.find(pLayerTag);
 
@@ -26,15 +26,80 @@ HRESULT CUICreate_Manager::Add_UI(_tchar* pLayerTag, CUI_Dummy * pUI)
 		RELEASE_INSTANCE(CGameInstacne);
 		return S_OK;
 	}
-
+	
+	map_UIs.emplace(pLayerTag, pUI);
+	Safe_AddRef(pUI);
 
 	return S_OK;
 }
 
-HRESULT CUICreate_Manager::Delete_UI( _tchar * pLayer)
+HRESULT CUICreate_Manager::Delete_UI(const _tchar * pLayer)
 {
+	auto iter = map_UIs.find(pLayer);
 
+	if (iter == map_UIs.end())
+	{
+		MSGBOX("해당 Layer는 존재하지 않습니다.");
+		return S_OK;
+	}
+
+	Safe_Release(iter->second);
+	iter->second->Set_Dead(true);
+
+	map_UIs.erase(pLayer);
+
+	CGameInstacne* pGameInstance = GET_INSTANCE(CGameInstacne);
+	RELEASE_INSTANCE(CGameInstacne);
 	return S_OK;
+}
+
+void CUICreate_Manager::Set_Position(const _tchar * pLayerTag, _float fX, _float fY)
+{
+	CGameInstacne* pInstance = GET_INSTANCE(CGameInstacne);
+	CTransform* pTransform = dynamic_cast<CTransform*>(pInstance->Find_Component(LEVEL_STATIC, pLayerTag, TEXT("Com_Transform")));
+
+	if (nullptr == pTransform)
+	{
+		MSGBOX("해당 Component는 존재하지 않습니다.");
+		return;
+	}
+	_float3 tPosition = pTransform->Get_MatrixRow(CTransform::STATE::STATE_POSITION);
+	tPosition.x = fX;
+	tPosition.y = fY;
+	pTransform->Set_WorldMatrixRow(CTransform::STATE::STATE_POSITION, tPosition);
+	RELEASE_INSTANCE(CGameInstacne);
+}
+
+void CUICreate_Manager::Set_Rotation(const _tchar * pLayerTag, _float fY)
+{
+	CGameInstacne* pInstance = GET_INSTANCE(CGameInstacne);
+	CTransform* pTransform = dynamic_cast<CTransform*>(pInstance->Find_Component(LEVEL_STATIC, pLayerTag, TEXT("Com_Transform")));
+
+	if (nullptr == pTransform)
+	{
+		MSGBOX("해당 Component는 존재하지 않습니다.");
+		return;
+	}
+
+	_float fTimeDelte = pInstance->Get_Time(TEXT("FPS_60"));
+	_float fRadian = D3DXToRadian(fY);
+	pTransform->SetUp_RotatinAxis(_float3(0.f, 1.f, 0.f), fRadian);
+
+	RELEASE_INSTANCE(CGameInstacne);
+}
+
+void CUICreate_Manager::Set_Scale(const _tchar * pLayerTag, _float fScaleX, _float fScaleY)
+{
+	CGameInstacne* pInstance = GET_INSTANCE(CGameInstacne);
+	CTransform* pTransform = dynamic_cast<CTransform*>(pInstance->Find_Component(LEVEL_STATIC, pLayerTag, TEXT("Com_Transform")));
+
+	if (nullptr == pTransform)
+	{
+		MSGBOX("해당 Component는 존재하지 않습니다.");
+		return;
+	}
+	pTransform->Set_MatrixScale(fScaleX, fScaleY, 1.f);
+	RELEASE_INSTANCE(CGameInstacne);
 }
 
 HRESULT CUICreate_Manager::Load_UI( _tchar * pFile)
@@ -91,7 +156,6 @@ void CUICreate_Manager::Free()
 		Safe_Release(Pair.second);
 	}
 	map_UIs.clear();
-
 }
 
 
