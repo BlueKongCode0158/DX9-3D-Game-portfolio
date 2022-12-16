@@ -32,8 +32,11 @@ public:
 	virtual HRESULT	Render()					override;
 public:
 	HRESULT Set_Position(_float3 vecPosition);
+	void	Set_Select(_bool isSelect);
 	void	Set_Dead(_bool isDead);
 	void	Update_Matrix();
+public:
+	void	Get_Information(UIINFO& rInfo);
 private:
 	HRESULT	Add_Component();
 	HRESULT	SetUp_ConstantTable();
@@ -50,6 +53,8 @@ private:
 	_matrix			m_ParentMatrix;
 	_matrix			m_OriginMatrix;
 	_matrix			m_WorldMatrix;
+private:
+	_bool			m_isSelect = false;
 public:
 	static	CUI_Dummy*			Create(LPDIRECT3DDEVICE9 pGraphic_Device);
 	virtual CGameObject*		Clone(void* pArg) override;

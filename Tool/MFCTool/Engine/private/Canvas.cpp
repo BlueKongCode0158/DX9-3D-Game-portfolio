@@ -51,6 +51,13 @@ HRESULT CCanvas::NativeConstruct(void * pArg)
 _int CCanvas::Tick(double TimeDelta)
 {
 	__super::Tick(TimeDelta);
+	return _int();
+}
+
+_int CCanvas::Late_Tick(double TimeDelta)
+{
+	__super::Late_Tick(TimeDelta);
+
 	CGameInstacne* pInstance = GET_INSTANCE(CGameInstacne);
 	_matrix ProjMatrix = pInstance->Get_Transform(D3DTRANSFORMSTATETYPE::D3DTS_PROJECTION);
 	_matrix ViewMatrix = pInstance->Get_Transform(D3DTRANSFORMSTATETYPE::D3DTS_VIEW);
@@ -89,16 +96,10 @@ _int CCanvas::Tick(double TimeDelta)
 		m_pTransformCom->Set_WorldMatrixRow(CTransform::STATE::STATE_LOOK, *reinterpret_cast<_float3*>(&ViewMatrix.m[2][0]));
 		m_pTransformCom->Set_MatrixScale(iLengthX, iLengthY, 1.f);
 	}
-	return _int();
-}
 
-_int CCanvas::Late_Tick(double TimeDelta)
-{
-	__super::Late_Tick(TimeDelta);
 	m_pRendererCom->Add_RenderGroup(CRenderer::RENDERGROUP::RENDER_ALPHA, this);
 
 	CGameInstacne* pGameInstance = GET_INSTANCE(CGameInstacne);
-
 	if (pGameInstance->Input_KeyBoard_Down(DIK_Z))
 	{
 		if (m_isSetting)

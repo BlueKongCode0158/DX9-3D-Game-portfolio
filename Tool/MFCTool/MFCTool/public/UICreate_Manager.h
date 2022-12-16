@@ -19,12 +19,20 @@ public:
 	void	Set_Rotation(const _tchar* pLayerTag, _float fY);
 	void	Set_Scale(const _tchar* pLayerTag, _float fScaleX, _float fScaleY);
 public:
+	void	Get_Information(const _tchar* pLayerTag, UIINFO& rInfo);
+public:
+	void	Set_Select(const _tchar* pLayerTag);
+public:
 	HRESULT Load_UI(_tchar* pFile);
 	HRESULT Save_UI(_tchar* pFileName);
 private:
-
+	void	Object_Select(const _tchar* pLayerTag, _bool isSelect);
 private:
-	map<const _tchar*, CUI_Dummy*> map_UIs;
+	_tchar	m_pastTag[128]{};
+	_tchar	m_preTag[128]{};
+private:
+	map<const _tchar*, CUI_Dummy*>	map_UIs;
+	map<const _tchar*, _float>		map_Radians;
 public:
 	virtual void Free() override;
 };

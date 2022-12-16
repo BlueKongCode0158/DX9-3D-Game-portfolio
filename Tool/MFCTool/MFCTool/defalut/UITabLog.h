@@ -37,4 +37,5 @@ private:
 	CListBox m_UIListBox;
 public:
 	afx_msg void OnBnClicked_EditButton();
+	afx_msg void OnBnClicked_Delete();
 };

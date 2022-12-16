@@ -26,7 +26,7 @@ HRESULT CUI_Dummy::NativeConstruct_Prototype()
 
 HRESULT CUI_Dummy::NativeConstruct(void * pArg)
 {
-	m_pLayerTag = *static_cast<CString*>(pArg)->operator LPCWSTR();
+	m_pLayerTag = *static_cast<CString*>(pArg);
 
 	if (FAILED(__super::NativeConstruct(pArg)))
 	{
@@ -51,14 +51,28 @@ _int CUI_Dummy::Tick(_double TimeDelta)
 	{
 		return OBJ_DEAD;
 	}
-	CGameInstacne* pInstance = GET_INSTANCE(CGameInstacne);
-	if (pInstance->Input_KeyBoard_Pressing(DIK_W))
-	{
-		m_pTransformCom->Walk_Look(TimeDelta);
-	}
-	RELEASE_INSTANCE(CGameInstacne);
-	Update_Matrix();
 
+	if (m_isSelect == true)
+	{
+		CGameInstacne* pGameInstance = GET_INSTANCE(CGameInstacne);
+		if (pGameInstance->Input_KeyBoard_Pressing(DIK_W))
+		{
+			m_pTransformCom->Walk_Up(TimeDelta * 0.1f);
+		}
+		if (pGameInstance->Input_KeyBoard_Pressing(DIK_A))
+		{
+			m_pTransformCom->Walk_Left(TimeDelta * 0.1f);
+		}
+		if (pGameInstance->Input_KeyBoard_Pressing(DIK_S))
+		{
+			m_pTransformCom->Walk_Down(TimeDelta * 0.1f);
+		}
+		if (pGameInstance->Input_KeyBoard_Pressing(DIK_D))
+		{
+			m_pTransformCom->Walk_Right(TimeDelta * 0.1f);
+		}
+		RELEASE_INSTANCE(CGameInstacne);
+	}
 	return _int();
 }
 
@@ -67,11 +81,14 @@ _int CUI_Dummy::Late_Tick(_double TimeDelta)
 	__super::Late_Tick(TimeDelta);
 	m_pRendererCom->Add_RenderGroup(CRenderer::RENDERGROUP::RENDER_NONALPHA, this);
 
+	cout << m_isSelect << '\n';
+
 	return _int();
 }
 
 HRESULT CUI_Dummy::Render()
 {
+	Update_Matrix();
 	if (__super::Render())
 	{
 		return E_FAIL;
@@ -97,6 +114,11 @@ HRESULT CUI_Dummy::Set_Position(_float3 vecPosition)
 	return S_OK;
 }
 
+void CUI_Dummy::Set_Select(_bool isSelect)
+{
+	m_isSelect = isSelect;
+}
+
 void CUI_Dummy::Set_Dead(_bool isDead)
 {
 	m_isDead = isDead;
@@ -111,6 +133,12 @@ void CUI_Dummy::Update_Matrix()
 	_matrix _OriginalMatrix = *m_pTransformCom->Get_WorldMatrix();
 	m_ParentMatrix = *m_pParentTransform->Get_WorldMatrix();
 	m_WorldMatrix = _OriginalMatrix * m_ParentMatrix;
+}
+
+void CUI_Dummy::Get_Information(UIINFO & rInfo)
+{
+	rInfo.vPosition = m_pTransformCom->Get_MatrixRow(CTransform::STATE::STATE_POSITION);
+	rInfo.vScale = m_pTransformCom->Get_Scale();
 }
 
 HRESULT CUI_Dummy::Add_Component()

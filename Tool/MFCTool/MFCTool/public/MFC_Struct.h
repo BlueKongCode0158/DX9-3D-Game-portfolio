@@ -20,3 +20,10 @@ typedef	struct tagObject_Info
 {
 	_matrix		matrix_OriginState;
 }OBJECTINFO;
+
+typedef	struct tagUI_Info
+{
+	_float3		vScale;
+	_float3		vPosition;
+	_float		fRadian;
+}UIINFO;
