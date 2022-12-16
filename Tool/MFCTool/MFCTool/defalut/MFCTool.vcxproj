@@ -123,7 +123,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <AdditionalLibraryDirectories>..\..\Reference\lib\;%(AdditionalDependencies)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>Engine.lib;d3dx9.lib;d3d9.lib</AdditionalDependencies>
+      <AdditionalDependencies>TinyXML.lib;Engine.lib;d3dx9.lib;d3d9.lib</AdditionalDependencies>
       <LargeAddressAware>true</LargeAddressAware>
     </Link>
     <Midl>
@@ -212,6 +212,7 @@
     <ClInclude Include="..\public\MeshList.h" />
     <ClInclude Include="..\public\Mesh_Manager.h" />
     <ClInclude Include="..\public\MFC_Defines.h" />
+    <ClInclude Include="..\public\MFC_Functions.h" />
     <ClInclude Include="..\public\MFC_Struct.h" />
     <ClInclude Include="..\public\MFC_Terrain.h" />
     <ClInclude Include="..\public\Pivot.h">
@@ -223,6 +224,8 @@
     <ClInclude Include="..\public\SaveLoadInfo.h" />
     <ClInclude Include="..\public\Static_Mesh_List.h" />
     <ClInclude Include="..\public\Static_Prob_Object.h" />
+    <ClInclude Include="..\public\UICreate_Manager.h" />
+    <ClInclude Include="..\public\UI_Dummy.h" />
     <ClInclude Include="MainFrm.h">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClInclude>
@@ -257,6 +260,8 @@
     <ClCompile Include="..\private\SaveLoadInfo.cpp" />
     <ClCompile Include="..\private\Static_Mesh_List.cpp" />
     <ClCompile Include="..\private\Static_Prob_Object.cpp" />
+    <ClCompile Include="..\private\UICreate_Manager.cpp" />
+    <ClCompile Include="..\private\UI_Dummy.cpp" />
     <ClCompile Include="MainFrm.cpp" />
     <ClCompile Include="MFCTool.cpp" />
     <ClCompile Include="MFCToolDoc.cpp" />
@@ -270,10 +275,8 @@
     <ClCompile Include="UITabLog.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="MFCTool.rc" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="res\MFCTool.rc2" />
+    <FxCompile Include="..\bin\ShaderFiles\Shader_Point.hlsl" />
+    <FxCompile Include="..\bin\ShaderFiles\Shader_Terrain_MFC.hlsl" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\MFCTool.ico" />
@@ -281,8 +284,11 @@
     <Image Include="res\Toolbar.bmp" />
   </ItemGroup>
   <ItemGroup>
-    <FxCompile Include="..\bin\ShaderFiles\Shader_Point.hlsl" />
-    <FxCompile Include="..\bin\ShaderFiles\Shader_Terrain_MFC.hlsl" />
+    <None Include="ClassDiagram.cd" />
+    <None Include="res\MFCTool.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MFCTool.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

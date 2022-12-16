@@ -129,12 +129,12 @@ _int CBullet::Tick(double TimeDelta)
 		CCollider*		pColliderCom	= dynamic_cast<CCollider*>(pGameInstance->Find_Component(LEVEL_GAMEPLAY0, TEXT("Layer_Monster"), TEXT("Com_Collider"), i));
 		CMonster*		pMonster		= dynamic_cast<CMonster*>(pGameInstance->Find_GameObject(LEVEL_GAMEPLAY0, TEXT("Layer_Monster"), i));
 
-		if (true == m_pColliderCom->Collision_AABB(pColliderCom) && false == pMonster->Get_isHurt())
+		if (true == m_pColliderCom->Collision_AABB(pColliderCom))
 		{
 			if (false == g_isCheat)
 			{
 				pMonster->Set_isHurt(true);
-				_uint iDamage = 20 - 10 & rand();
+				_uint iDamage = m_tBulletInfo.m_iAttackDamage;
 
 				pMonster->Sup_Hp(iDamage);
 				m_isDead = true;
@@ -142,7 +142,7 @@ _int CBullet::Tick(double TimeDelta)
 			else
 			{
 				pMonster->Set_isHurt(true);
-				_uint iDamage = 100 - 10 & rand();
+				_uint iDamage = 100;
 
 				pMonster->Sup_Hp(iDamage);
 				m_isDead = true;

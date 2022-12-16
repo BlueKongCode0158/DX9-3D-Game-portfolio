@@ -1,6 +1,5 @@
 #pragma once
 #include "Base.h"
-#include "Engine_Defines.h"
 
 BEGIN(Engine)
 class CPicking : public CBase

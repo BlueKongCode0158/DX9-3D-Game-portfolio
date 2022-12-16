@@ -26,7 +26,7 @@ HRESULT CVIBuffer_Point::NativeConstruct_Prototype(_uint iNumInstance)
 
 	m_pVerticesPos = new _float3[m_iNumVertices];
 
-	if (FAILED(m_pGraphic_Device->CreateVertexBuffer(m_iStride*m_iNumVertices, m_dwVBUsage, m_dwFVF, D3DPOOL_MANAGED, &m_pVB, nullptr)))
+	if (FAILED(m_pGraphic_Device->CreateVertexBuffer(m_iStride*m_iNumVertices, m_dwVBUsage, m_dwFVF, D3DPOOL_DEFAULT, &m_pVB, nullptr)))
 	{
 		return E_FAIL;
 	}

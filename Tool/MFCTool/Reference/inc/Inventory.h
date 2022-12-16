@@ -20,7 +20,7 @@ private:
 	map<const _tchar*, class CItem*>	m_mapItems;
 public:
 	static	CInventory*	Create(LPDIRECT3DDEVICE9 pGraphic_Device);
-	virtual CComponent*	Clone(void* pArg)		override;
+	virtual CComponent*	Clone(void* pArg)		 override;
 	virtual void		Free();
 };
 END

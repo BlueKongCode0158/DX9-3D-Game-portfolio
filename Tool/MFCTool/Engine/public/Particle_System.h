@@ -4,7 +4,7 @@
 BEGIN(Engine)
 class ENGINE_DLL CParticle_System : public CBase
 {
-protected:
+private:
 	explicit CParticle_System(LPDIRECT3DDEVICE9 pGraphic_Device);
 	explicit CParticle_System(const CParticle_System& rhs);
 	virtual  ~CParticle_System() = default;

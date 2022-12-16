@@ -137,7 +137,6 @@ void CDIgLog1::OnBnClicked_SaveCell()
 {
 	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
 	CFileDialog Dlg(FALSE, L"dat", L"*.dat");
-
 	TCHAR szFilePath[MAX_PATH]{};
 	GetCurrentDirectory(MAX_PATH,szFilePath);
 	PathRemoveFileSpec(szFilePath);
@@ -149,7 +148,6 @@ void CDIgLog1::OnBnClicked_SaveCell()
 	{
 		CString wstrFilePath = Dlg.GetPathName();
 		CCellPoint_Manager::Get_Instance()->Save_VecCellPoint(wstrFilePath);
-
 	}
 }
 
@@ -225,8 +223,6 @@ void CDIgLog1::OnBnClicked_Cell_Create()
 	UpdateData(TRUE);
 
 	m_CreateRadioState[2].SetCheck(true);
-
-	this;
 
 	UpdateData(FALSE);
 }

@@ -16,8 +16,8 @@
 #define IDD_TAB_DIALOG1                 314
 #define IDC_TAB_DIALOG2                 315
 #define IDD_TAB_DIALOG2                 315
-#define IDD_UITABLOG                    316
 #define IDC_UITABLOG                    316
+#define IDD_UITABLOG                    316
 #define IDC_MFCVSLISTBOX1               1001
 #define IDC_LIST1                       1002
 #define IDC_TERRAIN_LIST                1002
@@ -37,6 +37,7 @@
 #define IDC_BUTTON4                     1010
 #define IDC_EDIT4                       1010
 #define IDC_BUTTON5                     1011
+#define IDC_BUTTON17                    1011
 #define IDC_BUTTON6                     1012
 #define IDC_CLONE_DELETE                1012
 #define IDC_EDIT18                      1012

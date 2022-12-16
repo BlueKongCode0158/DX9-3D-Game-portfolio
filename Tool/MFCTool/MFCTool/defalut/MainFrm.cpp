@@ -10,6 +10,7 @@
 #include "ControlFormView.h"
 #include "GameInstacne.h"
 #include "Brush_Manager.h"
+#include "UICreate_Manager.h"
 #include "CellPoint_Manager.h"
 #include "Mesh_Manager.h"
 
@@ -49,6 +50,7 @@ CMainFrame::~CMainFrame()
 	CMesh_Manager::Destroy_Instance();
 	CCellPoint_Manager::Destroy_Instance();
 	CBrush_Manager::Destroy_Instance();
+	CUICreate_Manager::Destroy_Instance();
 	CGameInstacne::Release_Engine();
 }
 

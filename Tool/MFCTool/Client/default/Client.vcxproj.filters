@@ -364,6 +364,18 @@
     <Filter Include="02.GameObject\10.UI\08.SelectWindow">
       <UniqueIdentifier>{954ac7b9-b4c1-4ab5-b7c4-f108d3075f26}</UniqueIdentifier>
     </Filter>
+    <Filter Include="96.Manager">
+      <UniqueIdentifier>{5487384a-0bf2-4291-a7a4-ddb357af7879}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="96.Manager\00.Collision_Manager">
+      <UniqueIdentifier>{9a459b44-8e0a-4469-bee5-64c8024f22c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Xml">
+      <UniqueIdentifier>{eef3cad3-6024-4724-a61a-c5384147fe36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Xml\Manager">
+      <UniqueIdentifier>{bc9f0fc2-e8b8-4f12-b752-ecbfd5da519f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Client.h">
@@ -624,6 +636,9 @@
     <ClInclude Include="..\public\Logo_Terrain.h">
       <Filter>02.GameObject\03.Terrain\Logo</Filter>
     </ClInclude>
+    <ClInclude Include="..\public\Xml_Manager.h">
+      <Filter>04.Xml\Manager</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Client.cpp">
@@ -875,6 +890,9 @@
     <ClCompile Include="..\private\Logo_Terrain.cpp">
       <Filter>02.GameObject\03.Terrain\Logo</Filter>
     </ClCompile>
+    <ClCompile Include="..\private\Xml_Manager.cpp">
+      <Filter>04.Xml\Manager</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Client.ico">
@@ -916,5 +934,9 @@
     <FxCompile Include="..\bin\ShaderFiles\Shader_UI_3D.hlsl">
       <Filter>02.GameObject\10.UI\ShaderFile</Filter>
     </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\.gitattributes" />
+    <None Include="..\..\..\..\.gitignore" />
   </ItemGroup>
 </Project>

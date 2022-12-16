@@ -21,6 +21,9 @@
 #include "CellPoint.h"
 #include "Static_Prob_Object.h"
 #include "Canvas.h"
+#include "UI_Dummy.h"
+#include "tinyxml2.h"
+
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
@@ -296,6 +299,10 @@ HRESULT CMFCToolView::Add_Prototype_Object()
 		return E_FAIL;
 	}
 	if (FAILED(pGameInstance->Add_Prototype_Object(LEVEL_STATIC, TEXT("Prototype_Canvas"), CCanvas::Create(m_pGraphic_Device))))
+	{
+		return E_FAIL;
+	}
+	if (FAILED(pGameInstance->Add_Prototype_Object(LEVEL_STATIC, TEXT("Prototype_3DUI"), CUI_Dummy::Create(m_pGraphic_Device))))
 	{
 		return E_FAIL;
 	}

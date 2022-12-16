@@ -1,18 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="소스 파일">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="헤더 파일">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
-    <Filter Include="리소스 파일">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
     <Filter Include="99.Default">
       <UniqueIdentifier>{711c0f77-d2d0-40b1-859e-fd0bb0db619f}</UniqueIdentifier>
     </Filter>
@@ -115,6 +103,18 @@
     <Filter Include="05.Tab\03.UITab">
       <UniqueIdentifier>{63acbad0-f4e1-489f-beb0-955d4e56bfb0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="04.Object\06.UI">
+      <UniqueIdentifier>{2a9284ed-eb31-4f8d-af5b-bf5e3a326a0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Object\06.UI\3DUI">
+      <UniqueIdentifier>{4ac59182-d771-4296-934e-46ebcdba51e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{2956fc8a-4d5b-47a8-9e04-845fc5ae80ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="04.Object\06.UI\UICreate_Manager">
+      <UniqueIdentifier>{e349ee2d-796f-4dbf-800a-43dd67bde76a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainFrm.h">
@@ -201,6 +201,15 @@
     <ClInclude Include="UITabLog.h">
       <Filter>05.Tab\03.UITab</Filter>
     </ClInclude>
+    <ClInclude Include="..\public\UI_Dummy.h">
+      <Filter>04.Object\06.UI\3DUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\UICreate_Manager.h">
+      <Filter>04.Object\06.UI\UICreate_Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\MFC_Functions.h">
+      <Filter>98.Headers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MainFrm.cpp">
@@ -275,27 +284,12 @@
     <ClCompile Include="UITabLog.cpp">
       <Filter>05.Tab\03.UITab</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="MFCTool.rc">
-      <Filter>리소스 파일</Filter>
-    </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="res\MFCTool.rc2">
-      <Filter>리소스 파일</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="res\MFCToolDoc.ico">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="res\MFCTool.ico">
-      <Filter>리소스 파일</Filter>
-    </Image>
-    <Image Include="res\Toolbar.bmp">
-      <Filter>리소스 파일</Filter>
-    </Image>
+    <ClCompile Include="..\private\UI_Dummy.cpp">
+      <Filter>04.Object\06.UI\3DUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\UICreate_Manager.cpp">
+      <Filter>04.Object\06.UI\UICreate_Manager</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt">
@@ -309,5 +303,27 @@
     <FxCompile Include="..\bin\ShaderFiles\Shader_Point.hlsl">
       <Filter>04.Object\00.Point\00.Shader</Filter>
     </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\MFCTool.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\MFCToolDoc.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="res\Toolbar.bmp">
+      <Filter>리소스 파일</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\MFCTool.rc2">
+      <Filter>리소스 파일</Filter>
+    </None>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MFCTool.rc">
+      <Filter>리소스 파일</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>

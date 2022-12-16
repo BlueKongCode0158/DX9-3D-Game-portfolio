@@ -1,5 +1,4 @@
 #pragma once
-#include "Engine_Defines.h"
 #include "GameObject.h"
 
 BEGIN(Engine)

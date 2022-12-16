@@ -100,6 +100,7 @@ _int CPlayer::Tick(double TimeDelta)
 	{
 		CBullet::BULLETINFO BulletInfo;
 		BulletInfo.eType = CBullet::GUN_BULLET::GUN_LEFT;
+		BulletInfo.m_iAttackDamage = 20;
 		BulletInfo.m_vTargetPos = m_pTransformCom->Get_MatrixRow(CTransform::STATE::STATE_LOOK);
 
 		if (FAILED(pGameInstance->Add_GameObject_Clone(LEVEL_GAMEPLAY0, TEXT("Prototype_Bullet"), TEXT("Layer_Bullet"), &BulletInfo)))
@@ -116,6 +117,7 @@ _int CPlayer::Tick(double TimeDelta)
 	{
 		CBullet::BULLETINFO BulletInfo;
 		BulletInfo.eType = CBullet::GUN_BULLET::GUN_RIGHT;
+		BulletInfo.m_iAttackDamage = 20;
 		BulletInfo.m_vTargetPos = m_pTransformCom->Get_MatrixRow(CTransform::STATE::STATE_LOOK);
 
 		if (FAILED(pGameInstance->Add_GameObject_Clone(LEVEL_GAMEPLAY0, TEXT("Prototype_Bullet"), TEXT("Layer_Bullet"), &BulletInfo)))

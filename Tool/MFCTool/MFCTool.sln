@@ -3,21 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02.MFCTool", "02.MFCTool", "{B6214A4B-2AFE-479E-8C68-74393B8EEFA4}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00.Client", "00.Client", "{CC8EC569-8EB3-45CE-B628-490128D98B0D}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\.gitattributes = ..\..\.gitattributes
-		..\..\.gitignore = ..\..\.gitignore
-	EndProjectSection
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MFCTool", "MFCTool\defalut\MFCTool.vcxproj", "{2DEC49F1-5B50-4C8A-9ADB-78B98A2B8942}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01.Engine", "01.Engine", "{D76E6BAB-0F86-40BB-AF38-D2F9DFDC7804}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Engine", "Engine\default\Engine.vcxproj", "{40A85688-0788-4751-A104-3C214E22B9C0}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Client", "Client\default\Client.vcxproj", "{6C4A75E4-7924-4CE9-BD94-10DEF19EE27F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TinyXML", "TinyXML\default\TinyXML.vcxproj", "{2BF11165-87A6-4FA3-BEF9-32A29F94D874}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,13 +43,16 @@ Global
 		{6C4A75E4-7924-4CE9-BD94-10DEF19EE27F}.Release|x64.Build.0 = Release|x64
 		{6C4A75E4-7924-4CE9-BD94-10DEF19EE27F}.Release|x86.ActiveCfg = Release|Win32
 		{6C4A75E4-7924-4CE9-BD94-10DEF19EE27F}.Release|x86.Build.0 = Release|Win32
+		{2BF11165-87A6-4FA3-BEF9-32A29F94D874}.Debug|x64.ActiveCfg = Debug|x64
+		{2BF11165-87A6-4FA3-BEF9-32A29F94D874}.Debug|x64.Build.0 = Debug|x64
+		{2BF11165-87A6-4FA3-BEF9-32A29F94D874}.Debug|x86.ActiveCfg = Debug|Win32
+		{2BF11165-87A6-4FA3-BEF9-32A29F94D874}.Debug|x86.Build.0 = Debug|Win32
+		{2BF11165-87A6-4FA3-BEF9-32A29F94D874}.Release|x64.ActiveCfg = Release|x64
+		{2BF11165-87A6-4FA3-BEF9-32A29F94D874}.Release|x64.Build.0 = Release|x64
+		{2BF11165-87A6-4FA3-BEF9-32A29F94D874}.Release|x86.ActiveCfg = Release|Win32
+		{2BF11165-87A6-4FA3-BEF9-32A29F94D874}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{2DEC49F1-5B50-4C8A-9ADB-78B98A2B8942} = {B6214A4B-2AFE-479E-8C68-74393B8EEFA4}
-		{40A85688-0788-4751-A104-3C214E22B9C0} = {D76E6BAB-0F86-40BB-AF38-D2F9DFDC7804}
-		{6C4A75E4-7924-4CE9-BD94-10DEF19EE27F} = {CC8EC569-8EB3-45CE-B628-490128D98B0D}
 	EndGlobalSection
 EndGlobal

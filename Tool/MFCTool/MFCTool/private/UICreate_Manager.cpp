@@ -16,8 +16,7 @@ CUICreate_Manager::~CUICreate_Manager()
 
 HRESULT CUICreate_Manager::Add_UI(const _tchar* pLayerTag, CUI_Dummy * pUI)
 {
-	auto iter = map_UIs.find(pLayerTag);
-
+	auto iter = find_if(map_UIs.begin(), map_UIs.end(), CTagFinder(pLayerTag));
 	if (iter != map_UIs.end())
 	{
 		pUI->Set_Dead(true);
@@ -28,14 +27,16 @@ HRESULT CUICreate_Manager::Add_UI(const _tchar* pLayerTag, CUI_Dummy * pUI)
 	}
 	
 	map_UIs.emplace(pLayerTag, pUI);
+	map_Radians.emplace(pLayerTag, 0.f);
 	Safe_AddRef(pUI);
 
 	return S_OK;
 }
 
-HRESULT CUICreate_Manager::Delete_UI(const _tchar * pLayer)
+HRESULT CUICreate_Manager::Delete_UI(const _tchar * pLayerTag)
 {
-	auto iter = map_UIs.find(pLayer);
+	auto iter = find_if(map_UIs.begin(), map_UIs.end(), CTagFinder(pLayerTag));
+	auto mapiter_Radian = find_if(map_Radians.begin(), map_Radians.end(), CTagFinder(pLayerTag));
 
 	if (iter == map_UIs.end())
 	{
@@ -46,9 +47,11 @@ HRESULT CUICreate_Manager::Delete_UI(const _tchar * pLayer)
 	Safe_Release(iter->second);
 	iter->second->Set_Dead(true);
 
-	map_UIs.erase(pLayer);
+	map_UIs.erase(iter);
+	map_Radians.erase(mapiter_Radian);
 
 	CGameInstacne* pGameInstance = GET_INSTANCE(CGameInstacne);
+	pGameInstance->Delete_GameObject(LEVEL_STATIC, pLayerTag, 0);
 	RELEASE_INSTANCE(CGameInstacne);
 	return S_OK;
 }
@@ -85,6 +88,16 @@ void CUICreate_Manager::Set_Rotation(const _tchar * pLayerTag, _float fY)
 	_float fRadian = D3DXToRadian(fY);
 	pTransform->SetUp_RotatinAxis(_float3(0.f, 1.f, 0.f), fRadian);
 
+	auto iter = find_if(map_Radians.begin(), map_Radians.end(), CTagFinder(pLayerTag));
+	if (iter != map_Radians.end())
+	{
+		iter->second = fY;
+	}
+	else
+	{
+		map_Radians.emplace(pLayerTag, fY);
+	}
+
 	RELEASE_INSTANCE(CGameInstacne);
 }
 
@@ -100,6 +113,46 @@ void CUICreate_Manager::Set_Scale(const _tchar * pLayerTag, _float fScaleX, _flo
 	}
 	pTransform->Set_MatrixScale(fScaleX, fScaleY, 1.f);
 	RELEASE_INSTANCE(CGameInstacne);
+}
+
+void CUICreate_Manager::Get_Information(const _tchar* pLayerTag, UIINFO& rInfo)
+{
+	auto map_iter		= find_if(map_UIs.begin(), map_UIs.end(), CTagFinder(pLayerTag));
+	auto mapiter_Radian = find_if(map_Radians.begin(), map_Radians.end(), CTagFinder(pLayerTag));
+
+	if (map_UIs.end() == map_iter )
+	{
+		MSGBOX("해당 UI는 존재하지 않습니다.");
+		return;
+	}
+	map_iter->second->Get_Information(rInfo);
+
+	if (map_Radians.end() == mapiter_Radian)
+	{
+		MSGBOX("해당 Radian은 존재하지 않습니다.");
+		return;
+	}
+	rInfo.fRadian = mapiter_Radian->second;
+	return;
+}
+
+void CUICreate_Manager::Set_Select(const _tchar * pLayerTag)
+{
+	if (nullptr == m_pastTag && nullptr == m_preTag)
+	{
+		_tcscpy(m_pastTag, pLayerTag);
+		_tcscpy(m_preTag, pLayerTag);
+		Object_Select(m_preTag, true);
+		return;
+	}
+	_tcscpy(m_preTag, pLayerTag);
+	if (0 == _tcscmp(m_preTag, m_pastTag))
+	{
+		return;
+	}
+	Object_Select(m_pastTag, false);
+	Object_Select(m_preTag, true);
+	_tcscpy(m_pastTag, m_preTag);
 }
 
 HRESULT CUICreate_Manager::Load_UI( _tchar * pFile)
@@ -147,6 +200,17 @@ HRESULT CUICreate_Manager::Save_UI(_tchar * pFileName)
 	doc.SaveFile(cTemp);
 
 	return S_OK;
+}
+
+void CUICreate_Manager::Object_Select(const _tchar * pLayerTag, _bool isSelect)
+{
+	auto iter = find_if(map_UIs.begin(), map_UIs.end(), CTagFinder(pLayerTag));
+	if (iter == map_UIs.end())
+	{
+		MSGBOX("해당 Layer는 존재하지않습니다.");
+		return;
+	}
+	iter->second->Set_Select(isSelect);
 }
 
 void CUICreate_Manager::Free()

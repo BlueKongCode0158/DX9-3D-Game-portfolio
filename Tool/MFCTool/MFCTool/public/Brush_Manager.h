@@ -13,7 +13,7 @@ public:
 	enum BRUSHCOLOR{ RED, GREEN, BLUE, ALPHA ,COLOR_END};
 private:
 	CBrush_Manager();
-	~CBrush_Manager();
+	virtual ~CBrush_Manager();
 public:
 	HRESULT	NativeConstruct(LPDIRECT3DDEVICE9 pGraphic_Device);
 public:

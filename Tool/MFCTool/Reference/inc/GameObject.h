@@ -22,9 +22,13 @@ public:
 	virtual _int	Tick(_double TimeDelta);
 	virtual _int	Late_Tick(_double TimeDelta);
 	virtual	HRESULT	Render();
+public:
+	_bool	IsDead();
 protected:
 	LPDIRECT3DDEVICE9		m_pGraphicDevice	= nullptr;
 	_float					m_fCamDistance		= 0.f;
+protected:
+	_bool					m_isDead			= false;
 protected:
 	map<const _tchar*, CComponent*>		m_Componenets;
 	typedef map<const _tchar*, CComponent*> COMPONENT;

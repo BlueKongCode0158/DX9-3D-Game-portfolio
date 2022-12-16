@@ -6,3 +6,5 @@ xcopy	/y	.\Engine\bin\Engine.dll			.\MFCTool\bin\
 xcopy	/y	.\MFCTool\bin\ShaderFiles\*.*	.\Client\bin\ShaderFiles\*.*
 xcopy	/y	.\Engine\bin\ShaderFiles\*.*	.\MFCTool\bin\ShaderFiles\*.*
 xcopy	/y	.\Engine\bin\ShaderFiles\*.*	.\Client\bin\ShaderFiles\*.*
+xcopy	/y	.\TinyXML\bin\TinyXML.lib		.\Reference\lib\
+xcopy	/y	.\TinyXML\public\*.h			.\Reference\inc\

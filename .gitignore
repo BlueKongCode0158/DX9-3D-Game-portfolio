@@ -14,6 +14,8 @@
 *.pdb
 *.dll
 *.exe
+*.enc
+*.log
 
 # 불필요한 폴더
 Tool/MFCTool/.vs/

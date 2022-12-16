@@ -79,6 +79,9 @@ public:
 	CGameObject* Find_GameObject(_uint iLevelIndex, const _tchar* pLayerTag, _uint iIndexNum = 0);
 public:
 	HRESULT	Delete_Prototype(_uint iTypeNum, const _tchar* pPrototypeTag);
+	HRESULT Delete_GameObject(_uint iTypeNum, const _tchar* pLayerTag, _int iIndex);
+	HRESULT Delete_GameObjects(_uint iTypeNum, const _tchar* pLayerTag);
+	HRESULT Delete_GameObject_End(_uint iTypeNum, const _tchar* pLayerTag);
 public:
 	_uint	Get_GameObject_ListSize(_uint iLevelIndex, const _tchar* pLayerTag);
 #pragma endregion
@@ -92,6 +95,7 @@ public:
 public:
 	HRESULT	Add_Timers(const _tchar* pTimerTag);
 	_float	Compute_Time(const _tchar* pTimerTag);
+	_float	Get_Time(const _tchar* pTimerTag);
 #pragma endregion
 #pragma region PICKING
 public:

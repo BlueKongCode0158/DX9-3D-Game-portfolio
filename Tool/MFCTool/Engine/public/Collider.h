@@ -46,6 +46,7 @@ public:
 	_bool		Collision_AABB(CCollider*	pTargetCollider);
 	_bool		Collision_OBB(CCollider*	pTargetCollider);
 	_bool		Collision_SPHERE(CCollider* pTargetCollider);
+	_bool		Collision_Bullet(CCollider* pTargetCollider);
 #ifdef _DEBUG
 public:
 	virtual HRESULT		Render() override;

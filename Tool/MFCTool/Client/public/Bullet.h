@@ -20,6 +20,7 @@ public:
 		_float3			m_vTargetPos;
 		const _matrix*	m_pParentWorldMatrix	= nullptr;
 		const _matrix*	m_pParentBoneMatrix		= nullptr;
+		_int			m_iAttackDamage			= 0;
 		GUN_BULLET		eType = GUN_END;
 	}BULLETINFO;
 private:

@@ -57,6 +57,8 @@ public:
 	void Walk_Look(_float TimeDelta, class CNavigation* pNavigation = nullptr);
 	void Walk_Left(_float TimeDelta, class CNavigation* pNavigation = nullptr);
 	void Walk_Right(_float TimeDelta,class CNavigation* pNavigation = nullptr);
+	void Walk_Down(_float TimeDelta, class CNavigation* pNavigation = nullptr);
+	void Walk_Up(_float TimeDelta, class CNavigation* pNavigation = nullptr);
 public:
 	void Jump(_float TimeDelta);
 public:

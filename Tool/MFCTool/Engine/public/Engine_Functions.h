@@ -49,4 +49,3 @@ unsigned long Safe_Release(T& pInstance)
 	return dwRefcnt;
 }
 
-

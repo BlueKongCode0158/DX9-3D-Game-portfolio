@@ -364,6 +364,11 @@ _bool CCollider::Collision_SPHERE(CCollider * pTargetCollider)
 	m_isCollision = false;
 	return false;
 }
+_bool CCollider::Collision_Bullet(CCollider * pTargetCollider)
+{
+
+	return false;
+}
 #ifdef _DEBUG
 
 HRESULT CCollider::Render()

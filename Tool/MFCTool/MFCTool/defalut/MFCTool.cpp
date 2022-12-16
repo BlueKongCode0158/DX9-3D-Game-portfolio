@@ -155,6 +155,8 @@ protected:
 // 구현입니다.
 protected:
 	DECLARE_MESSAGE_MAP()
+public:
+	afx_msg void OnBnClickedSaveButton();
 };
 
 CAboutDlg::CAboutDlg() : CDialogEx(IDD_ABOUTBOX)
@@ -177,6 +179,5 @@ void CMFCToolApp::OnAppAbout()
 }
 
 // CMFCToolApp 메시지 처리기
-
 
 
