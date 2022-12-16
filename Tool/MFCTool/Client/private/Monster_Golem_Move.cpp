@@ -68,7 +68,13 @@ void CMonster_Golem_Move::Update(_float TimeDelta)
 	else if (m_pMonster->Get_MeshCom()->Play_Animation_Per_Lower() <= 0.5f && m_pMonster->Get_MeshCom()->Play_Animation_Per_Lower() >= 0.4f &&
 			 m_pMonster->Get_MeshCom()->Play_Animation_Per_Upper() <= 0.5f && m_pMonster->Get_MeshCom()->Play_Animation_Per_Upper() >= 0.4f)
 	{
-		m_fSpeed = 0.f;
+		if (m_fSpeed != 0.f)
+		{
+			CSound_Manager::Get_Instance()->StopSound(CSound_Manager::CHANNELID::MONSTER);
+			CSound_Manager::Get_Instance()->PlaySound(L"golem_step_01.ogg", CSound_Manager::CHANNELID::MONSTER);
+			CSound_Manager::Get_Instance()->SetVolum(CSound_Manager::CHANNELID::MONSTER, 0.3f);
+			m_fSpeed = 0.f;
+		}
 	}
 	else if (m_pMonster->Get_MeshCom()->Play_Animation_Per_Lower() <= 0.9f && m_pMonster->Get_MeshCom()->Play_Animation_Per_Lower() >= 0.5f &&
 			 m_pMonster->Get_MeshCom()->Play_Animation_Per_Upper() <= 0.9f && m_pMonster->Get_MeshCom()->Play_Animation_Per_Upper() >= 0.5f)
@@ -78,7 +84,13 @@ void CMonster_Golem_Move::Update(_float TimeDelta)
 	else if (m_pMonster->Get_MeshCom()->Play_Animation_Per_Lower() <= 1.f && m_pMonster->Get_MeshCom()->Play_Animation_Per_Lower() >= 0.9f &&
 			 m_pMonster->Get_MeshCom()->Play_Animation_Per_Upper() <= 1.f && m_pMonster->Get_MeshCom()->Play_Animation_Per_Upper() >= 0.9f)
 	{
-		m_fSpeed = 0.f;
+		if (m_fSpeed != 0.f)
+		{
+			CSound_Manager::Get_Instance()->StopSound(CSound_Manager::CHANNELID::MONSTER);
+			CSound_Manager::Get_Instance()->PlaySound(L"golem_step_01.ogg", CSound_Manager::CHANNELID::MONSTER);
+			CSound_Manager::Get_Instance()->SetVolum(CSound_Manager::CHANNELID::MONSTER, 0.3f);
+			m_fSpeed = 0.f;
+		}
 	}
 
 	if (m_pMonster->Get_MeshCom()->Animation_State_End_Lower(CGolem::ANIMATION_KEY::RUNFORWARD_RM))
