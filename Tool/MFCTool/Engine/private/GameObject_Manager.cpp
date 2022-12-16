@@ -269,11 +269,13 @@ CLayer * CGameObject_Manager::Find_Layer(_uint iLevelIndex, const _tchar * pLaye
 HRESULT CGameObject_Manager::Delete_EmptyLayer(_uint iTypeNum, const _tchar * pLayerTag)
 {
 	CLayer* pLayer = Find_Layer(iTypeNum, pLayerTag);
-
-	if (pLayer->IsEmpty() == true)
+	if (nullptr != pLayer)
 	{
-		Safe_Release(pLayer);
-		m_pLayers[iTypeNum].erase(pLayerTag);
+		if (pLayer->IsEmpty() == true)
+		{
+			Safe_Release(pLayer);
+			m_pLayers[iTypeNum].erase(pLayerTag);
+		}
 	}
 	return S_OK;
 }
