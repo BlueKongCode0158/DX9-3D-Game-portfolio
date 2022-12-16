@@ -118,7 +118,6 @@ void CTransform::Walk_Left(_float TimeDelta, CNavigation* pNavigation /* = nullp
 
 void CTransform::Walk_Right(_float TimeDelta, CNavigation* pNavigation/* = nullptr*/)
 {
-
 	_float3 vRight = Get_MatrixRow(STATE::STATE_RIGHT);
 	_float3 vPosition = Get_MatrixRow(STATE::STATE_POSITION);
 
@@ -140,6 +139,54 @@ void CTransform::Walk_Right(_float TimeDelta, CNavigation* pNavigation/* = nullp
 		Set_WorldMatrixRow(STATE::STATE_POSITION, vPosition);
 	}
 
+}
+
+void CTransform::Walk_Down(_float TimeDelta, CNavigation * pNavigation/* = nullptr*/)
+{
+	_float3 vUp			= Get_MatrixRow(STATE::STATE_UP);
+	_float3 vPosition	= Get_MatrixRow(STATE::STATE_POSITION);
+
+	D3DXVec3Normalize(&vUp, &vUp);
+
+	vPosition -= vUp*m_TransformInfo.fTransformSpec*TimeDelta;
+
+	_float3*	vNormal = nullptr;
+
+	if (nullptr == pNavigation ||
+		true == pNavigation->Move_OnNavigation(vPosition, &vNormal))
+	{
+		Set_WorldMatrixRow(STATE::STATE_POSITION, vPosition);
+	}
+	else if (nullptr != vNormal)
+	{
+		D3DXVec3Normalize(vNormal, vNormal);
+		vPosition = vPosition - (D3DXVec3Dot(vNormal, &vUp)* *vNormal) * m_TransformInfo.fTransformSpec * TimeDelta;
+		Set_WorldMatrixRow(STATE::STATE_POSITION, vPosition);
+	}
+}
+
+void CTransform::Walk_Up(_float TimeDelta, CNavigation * pNavigation/* = nullptr*/)
+{
+	_float3 vUp			= Get_MatrixRow(STATE::STATE_UP);
+	_float3 vPosition	= Get_MatrixRow(STATE::STATE_POSITION);
+
+	D3DXVec3Normalize(&vUp, &vUp);
+
+	vPosition += vUp*m_TransformInfo.fTransformSpec*TimeDelta;
+
+	_float3*	vNormal = nullptr;
+
+	if (nullptr == pNavigation ||
+		true == pNavigation->Move_OnNavigation(vPosition, &vNormal))
+	{
+		Set_WorldMatrixRow(STATE::STATE_POSITION, vPosition);
+	}
+	else if (nullptr != vNormal)
+	{
+		D3DXVec3Normalize(vNormal, vNormal);
+		vPosition = vPosition - (D3DXVec3Dot(vNormal, &vUp)* *vNormal) * m_TransformInfo.fTransformSpec * TimeDelta;
+		Set_WorldMatrixRow(STATE::STATE_POSITION, vPosition);
+	}
 }
 
 void CTransform::Jump(_float TimeDelta)
