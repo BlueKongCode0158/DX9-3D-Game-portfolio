@@ -2,6 +2,7 @@
 #include "..\public\UI_Dummy.h"
 #include "GameInstacne.h"
 #include "UICreate_Manager.h"
+#include "tinyxml2.h"
 
 CUI_Dummy::CUI_Dummy(LPDIRECT3DDEVICE9 pGraphic_Device)
 	:CGameObject(pGraphic_Device)
@@ -139,6 +140,15 @@ void CUI_Dummy::Get_Information(UIINFO & rInfo)
 {
 	rInfo.vPosition = m_pTransformCom->Get_MatrixRow(CTransform::STATE::STATE_POSITION);
 	rInfo.vScale = m_pTransformCom->Get_Scale();
+}
+
+CTransform * CUI_Dummy::Get_Transform()
+{
+	if (nullptr == m_pTransformCom)
+	{
+		return nullptr;
+	}
+	return m_pTransformCom;
 }
 
 HRESULT CUI_Dummy::Add_Component()

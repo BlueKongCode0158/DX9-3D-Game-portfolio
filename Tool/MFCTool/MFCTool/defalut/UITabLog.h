@@ -26,7 +26,7 @@ protected:
 public:
 	afx_msg void OnLbnSelchangeList_UIList();
 	afx_msg void OnBnClickedButton_Create();
-	afx_msg void OnBnClickedSaveButton();
+	afx_msg void OnBnClickedButton_Save ();
 private:
 	CString m_LayerName;
 	float m_fX;
@@ -38,4 +38,5 @@ private:
 public:
 	afx_msg void OnBnClicked_EditButton();
 	afx_msg void OnBnClicked_Delete();
+	afx_msg void OnBnClicked_Load();
 };

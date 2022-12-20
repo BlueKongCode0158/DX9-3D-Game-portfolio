@@ -45,9 +45,10 @@ void CUITabLog::DoDataExchange(CDataExchange* pDX)
 BEGIN_MESSAGE_MAP(CUITabLog, CDialogEx)
 	ON_LBN_SELCHANGE(IDC_LIST1, &CUITabLog::OnLbnSelchangeList_UIList)
 	ON_BN_CLICKED(IDC_BUTTON1, &CUITabLog::OnBnClickedButton_Create)
-	ON_BN_CLICKED(IDC_BUTTON12, &CUITabLog::OnBnClickedSaveButton)
+	ON_BN_CLICKED(IDC_BUTTON12, &CUITabLog::OnBnClickedButton_Save)
 	ON_BN_CLICKED(IDC_BUTTON2, &CUITabLog::OnBnClicked_EditButton)
 	ON_BN_CLICKED(IDC_BUTTON7, &CUITabLog::OnBnClicked_Delete)
+	ON_BN_CLICKED(IDC_BUTTON17, &CUITabLog::OnBnClicked_Load)
 END_MESSAGE_MAP()
 
 
@@ -107,7 +108,7 @@ void CUITabLog::OnBnClickedButton_Create()
 }
 
 
-void CUITabLog::OnBnClickedSaveButton()
+void CUITabLog::OnBnClickedButton_Save()
 {
 	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
 	CFileDialog Dlg(FALSE, L"xml", L"*.xml");
@@ -157,4 +158,10 @@ void CUITabLog::OnBnClicked_Delete()
 	int iIndex = m_UIListBox.GetCurSel();
 	m_UIListBox.DeleteString(iIndex);
 	UpdateData(FALSE);
+}
+
+
+void CUITabLog::OnBnClicked_Load()
+{
+	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
 }

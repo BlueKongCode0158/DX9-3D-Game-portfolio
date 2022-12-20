@@ -36,7 +36,8 @@ public:
 	void	Set_Dead(_bool isDead);
 	void	Update_Matrix();
 public:
-	void	Get_Information(UIINFO& rInfo);
+	void		Get_Information(UIINFO& rInfo);
+	CTransform*	Get_Transform();
 private:
 	HRESULT	Add_Component();
 	HRESULT	SetUp_ConstantTable();

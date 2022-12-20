@@ -163,34 +163,33 @@ HRESULT CUICreate_Manager::Load_UI( _tchar * pFile)
 HRESULT CUICreate_Manager::Save_UI(_tchar * pFileName)
 {
 	tinyxml2::XMLDocument doc;
-
-	/*
-	수정 전 사항
-	tinyxml2::XMLDeclaration* pDecl = doc.NewDeclaration();
-	doc.LinkEndChild(pDecl);
-
-	tinyxml2::XMLElement* pRootNode = doc.NewElement("UI_Node");
-	doc.LinkEndChild(pRootNode);
-
-	tinyxml2::XMLElement* pUIElement = doc.NewElement("UI_Element_1");
-	pRootNode->LinkEndChild(pUIElement);
-	pUIElement->SetAttribute("Attribute", "Data");
-	pUIElement->SetAttribute("eType", 1);
-	pUIElement->SetAttribute("eID", 1);
-	pUIElement->SetAttribute("Text", "Prototype");
-	pUIElement->SetAttribute("double", 1.454877);
-
-	*/
-	tinyxml2::XMLNode* pRootNode = doc.NewElement("UI_Node");
+	tinyxml2::XMLNode* pRootNode = doc.NewElement("UI_Interface");
 	doc.InsertFirstChild(pRootNode);
-
-	tinyxml2::XMLElement* pUIElement = doc.NewElement("UI_Element_1");
-	pRootNode->InsertEndChild(pUIElement);
-	pUIElement->SetAttribute("eType", 1);
-	pUIElement->SetAttribute("eID", 1);
-	pUIElement->SetAttribute("Prototype_Tag", "Prototype");
-	pUIElement->SetAttribute("double", 1.454877);
-
+	for (auto& Pair : map_UIs)
+	{
+		/* _tchar -> char 로 변환하는 과정 */
+		char cName[MAX_PATH];
+		memset(static_cast<void*>(cName), 0, sizeof(cName));
+		WideCharToMultiByte(CP_ACP, 0, Pair.first, MAX_PATH, cName, MAX_PATH, NULL, NULL);
+		
+		tinyxml2::XMLElement* pUIElement = doc.NewElement(cName);
+		pRootNode->InsertEndChild(pUIElement);
+		const CTransform* pTransform = Pair.second->Get_Transform();
+		_matrix tMatrix = *pTransform->Get_WorldMatrix();
+		
+		for (int iRow = 0; iRow < 4; iRow++)
+		{
+			for (int iCol = 0; iCol < 4; iCol++)
+			{
+				string tString;
+				tString += 'm';
+				tString += (iRow + '0');
+				tString += (iCol + '0');
+				pUIElement->SetAttribute(tString.c_str(), tMatrix.m[iRow][iCol]);
+			}
+		}
+	}
+	 
 	_tchar pFile[MAX_PATH];
 	wcscpy(pFile, pFileName);
 	char cTemp[MAX_PATH];
