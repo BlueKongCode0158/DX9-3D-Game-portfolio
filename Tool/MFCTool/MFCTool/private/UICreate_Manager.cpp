@@ -1,5 +1,7 @@
 #include "stdafx.h"
 #include "..\public\UICreate_Manager.h"
+#include "ControlFormView.h"
+#include "MainFrm.h"
 #include "GameInstacne.h"
 #include "UI_Dummy.h"
 #include "tinyxml2.h"
@@ -155,8 +157,71 @@ void CUICreate_Manager::Set_Select(const _tchar * pLayerTag)
 	_tcscpy(m_pastTag, m_preTag);
 }
 
-HRESULT CUICreate_Manager::Load_UI( _tchar * pFile)
+HRESULT CUICreate_Manager::Load_UI( _tchar * pFileName)
 {
+	CGameInstacne* pGameInstance = GET_INSTANCE(CGameInstacne);
+	for (auto Pair : map_UIs)
+	{
+		pGameInstance->Delete_GameObjects(LEVEL_STATIC, Pair.first);
+		Safe_Release(Pair.second);
+	}
+	map_UIs.clear();
+	RELEASE_INSTANCE(CGameInstacne);
+
+	CControlFormView *pView = (CControlFormView*)(((CMainFrame*)AfxGetMainWnd())->m_tMainSplitter.GetPane(0, 0));
+	if (CControlFormView::UI != pView->m_MapTab.GetCurSel())
+	{
+		return 0;
+	}
+	tinyxml2::XMLDocument Doc;
+
+	_tchar pFile[MAX_PATH];
+	wcscpy(pFile, pFileName);
+	char cTemp[MAX_PATH];
+	int iLen = MAX_PATH;
+	WideCharToMultiByte(CP_ACP, 0, pFile, iLen, cTemp, iLen, NULL, NULL);
+	Doc.LoadFile(cTemp);
+
+	tinyxml2::XMLNode* pRootNode = Doc.FirstChild();
+	tinyxml2::XMLElement* pElement = pRootNode->FirstChildElement();
+	for (pElement; pElement; pElement = pElement->NextSiblingElement())
+	{
+		_matrix tMatrix;
+		D3DXMatrixIdentity(&tMatrix);
+
+		for (int iRow = 0; iRow < 4; iRow++)
+		{
+			for (int iCol= 0; iCol < 4; iCol++)
+			{
+				string tString;
+				tString += 'm';
+				tString += (iRow + '0');
+				tString += (iCol + '0');
+				const tinyxml2::XMLAttribute* pAttribute = pElement->FindAttribute(tString.c_str());
+				if (nullptr != pAttribute)
+				{
+					tMatrix.m[iRow][iCol] = pAttribute->FloatValue();
+				}
+			}
+		}
+		CGameInstacne* pGameInstance = GET_INSTANCE(CGameInstacne);
+		string pName = pElement->Name();
+		CString LayerName;
+		LayerName = pName.c_str();
+		wstring pWname;
+		pWname.assign(pName.begin(), pName.end());
+
+		if (FAILED(pGameInstance->Add_GameObject_Clone(LEVEL_STATIC, TEXT("Prototype_3DUI"),pWname.c_str(), &LayerName)))
+		{
+			RELEASE_INSTANCE(CGameInstacne);
+			continue;
+		}
+		CTransform* pTransform = dynamic_cast<CTransform*>(pGameInstance->Find_Component(LEVEL_STATIC, pWname.c_str(), TEXT("Com_Transform")));
+		pTransform->Set_WorldMatrix(tMatrix);
+
+		RELEASE_INSTANCE(CGameInstacne);
+	}
+
 	return S_OK;
 }
 
@@ -219,6 +284,7 @@ void CUICreate_Manager::Free()
 		Safe_Release(Pair.second);
 	}
 	map_UIs.clear();
+	map_Radians.clear();
 }
 
 

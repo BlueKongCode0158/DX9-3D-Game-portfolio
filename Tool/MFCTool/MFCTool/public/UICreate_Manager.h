@@ -23,7 +23,7 @@ public:
 public:
 	void	Set_Select(const _tchar* pLayerTag);
 public:
-	HRESULT Load_UI(_tchar* pFile);
+	HRESULT Load_UI(_tchar* pFileName);
 	HRESULT Save_UI(_tchar* pFileName);
 private:
 	void	Object_Select(const _tchar* pLayerTag, _bool isSelect);
