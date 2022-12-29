@@ -11,8 +11,8 @@
 #include "Engine_Font.h"
 #include "VIBuffer_Rect.h"
 #include "VIBuffer_Cube.h"
+#include "VIBuffer_Point.h"
 #include "VIBuffer_Terrain.h"
-
 
 BEGIN(Engine)
 class CComponent_Manager final : public CBase

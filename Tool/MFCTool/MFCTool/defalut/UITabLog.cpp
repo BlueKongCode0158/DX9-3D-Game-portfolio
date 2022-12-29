@@ -164,4 +164,23 @@ void CUITabLog::OnBnClicked_Delete()
 void CUITabLog::OnBnClicked_Load()
 {
 	// TODO: 여기에 컨트롤 알림 처리기 코드를 추가합니다.
+	UpdateData(TRUE);
+
+	CFileDialog Dlg(TRUE, L"xml", L"*.xml");
+	TCHAR szFilePath[MAX_PATH]{};
+	GetCurrentDirectory(MAX_PATH, szFilePath);
+	PathRemoveFileSpec(szFilePath);
+	PathRemoveFileSpec(szFilePath);
+	lstrcat(szFilePath, L"\\Data\\Save\\XML");
+	Dlg.m_ofn.lpstrInitialDir = szFilePath;
+
+	if (IDOK == Dlg.DoModal())
+	{
+		CString wstPathName = Dlg.GetPathName();
+		_tchar* pFilePath;
+		pFilePath = wstPathName.GetBuffer(wstPathName.GetLength());
+		wstPathName.ReleaseBuffer();
+		m_pManager->Load_UI(pFilePath);
+	}
+	UpdateData(FALSE);
 }

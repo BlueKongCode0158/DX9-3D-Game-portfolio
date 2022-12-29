@@ -1,5 +1,6 @@
 #pragma once
 #include "Mesh.h"
+#include "Animation.h"
 
 BEGIN(Engine)
 class CShader;
