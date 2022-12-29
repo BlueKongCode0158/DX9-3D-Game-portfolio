@@ -1,5 +1,5 @@
 #include "..\public\VIBuffer_Point.h"
-
+#include "Attribute.h"
 
 CVIBuffer_Point::CVIBuffer_Point(LPDIRECT3DDEVICE9 pGraphic_Device)
 	:CVIBuffer(pGraphic_Device)
@@ -103,6 +103,25 @@ HRESULT CVIBuffer_Point::Render_VIBuffer()
 	m_pGraphic_Device->SetStreamSourceFreq(0, 1);
 	m_pGraphic_Device->SetStreamSourceFreq(1, 1);
 	return S_OK;
+}
+
+_int CVIBuffer_Point::Tick(_float Time_delta, list<CAttribute*>& rList)
+{
+	VTXMATRIX*		pMatrix = nullptr;
+
+	m_pVBInstance->Lock(0, 0, reinterpret_cast<void**>(&pMatrix), 0);
+	int iIndex = 0;
+	for (auto iter = rList.begin(); iter != rList.end(); iter++, iIndex++)
+	{
+		const CAttribute::PDESC* pDesc	= (*iter)->GetInfo();
+		pMatrix[iIndex].vRight		= _float4(1.f, 0.f, 0.f, 0.f);
+		pMatrix[iIndex].vUp			= _float4(0.f, 1.f, 0.f, 0.f);
+		pMatrix[iIndex].vLook		= _float4(0.f, 0.f, 1.f, 0.f);
+		pMatrix[iIndex].vPosition	= _float4(pDesc->m_vPosition , 1.f);
+	}
+	m_pVBInstance->Unlock();
+
+	return _int();
 }
 
 CVIBuffer_Point * CVIBuffer_Point::Create(LPDIRECT3DDEVICE9 pGraphic_Device, _uint iNumInstance)
