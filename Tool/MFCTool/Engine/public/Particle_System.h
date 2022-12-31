@@ -29,6 +29,9 @@ public:
 	_int	Late_Tick(_float Time_Delta);
 	HRESULT	Render();
 public:
+	void	Set_Index(_int iIndex);
+	_int	Get_Index();
+public:
 	_bool	Set_ParticleDesc(PSDESC* pArg);
 private:
 	HRESULT	SetUp_ConstantTable();
@@ -39,9 +42,12 @@ private:
 	CVIBuffer_Point*	m_pVIBufferCom = nullptr;
 	LPDIRECT3DDEVICE9	m_pGraphic_Device = nullptr;
 private:
+	_int				m_iIndex = 0;
+private:
 	PSDESC				m_tDesc;
 public:
-	CParticle_System*	Create(LPDIRECT3DDEVICE9 pGraphic_Device);
-	virtual void		Free() override;
+	static CParticle_System*	Create(LPDIRECT3DDEVICE9 pGraphic_Device);
+	CParticle_System*			Clone(void* pArg);
+	virtual void				Free() override;
 };
 END

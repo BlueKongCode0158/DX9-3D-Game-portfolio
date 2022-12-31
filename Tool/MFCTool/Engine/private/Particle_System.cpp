@@ -13,6 +13,7 @@ CParticle_System::CParticle_System(LPDIRECT3DDEVICE9 pGraphic_Device)
 CParticle_System::CParticle_System(const CParticle_System & rhs)
 	:m_pGraphic_Device(rhs.m_pGraphic_Device)
 {
+	Safe_AddRef(m_pGraphic_Device);
 }
 
 HRESULT CParticle_System::NativeConstruct_Prototype()
@@ -58,6 +59,7 @@ _int CParticle_System::Tick(_float Time_Delta)
   
 _int CParticle_System::Late_Tick(_float Time_Delta)
 {
+
 	return 0;
 }
 
@@ -72,6 +74,16 @@ HRESULT CParticle_System::Render()
 	m_pVIBufferCom->Render_VIBuffer();
 	m_pShaderCom->End_Shader();
 	return S_OK;
+}
+
+void CParticle_System::Set_Index(_int iIndex)
+{
+	m_iIndex = iIndex;
+}
+
+_int CParticle_System::Get_Index()
+{
+	return  m_iIndex;
 }
 
 _bool CParticle_System::Set_ParticleDesc(PSDESC* pArg)
@@ -94,6 +106,17 @@ CParticle_System * CParticle_System::Create(LPDIRECT3DDEVICE9 pGraphic_Device)
 {
 	CParticle_System* pInstance = new CParticle_System(pGraphic_Device);
 	if (FAILED(pInstance->NativeConstruct_Prototype()))
+	{
+		Safe_Release(pInstance);
+		return nullptr;
+	}
+	return pInstance;
+}
+
+CParticle_System * CParticle_System::Clone(void * pArg)
+{
+	CParticle_System* pInstance = new CParticle_System(*this);
+	if (FAILED(pInstance->NativeConstruct(pArg)))
 	{
 		Safe_Release(pInstance);
 		return nullptr;
