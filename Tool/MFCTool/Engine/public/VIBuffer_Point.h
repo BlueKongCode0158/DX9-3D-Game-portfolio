@@ -13,6 +13,7 @@ public:
 	virtual	HRESULT NativeConstruct_Prototype(_uint iNumInstance);
 	virtual HRESULT	NativeConstruct(void* pArg) override;
 	virtual HRESULT Render_VIBuffer()			override;
+	HRESULT			Render_VIBuffer(_uint iNumInstance);
 public:
 	_int	Tick(_float Time_delta, list<CAttribute*>& rList);
 private:

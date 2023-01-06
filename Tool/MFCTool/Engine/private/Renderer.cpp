@@ -4,6 +4,7 @@
 #include "Light_Manager.h"
 #include "VIBuffer_Rect_Viewport.h"
 #include "Input_Device.h"
+#include "Particle_System.h"
 #include "Shader.h"
 
 CRenderer::CRenderer(LPDIRECT3DDEVICE9 pGraphic_Device)
@@ -135,30 +136,30 @@ HRESULT CRenderer::Add_RenderGroup(RENDERGROUP eGroup, CGameObject * pGameObject
 	return S_OK;
 }
 
-#ifdef _DEBUG
+HRESULT CRenderer::Add_RenderEffect(CParticle_System * pObject)
+{
+	if (nullptr == pObject)
+	{
+		return E_FAIL;
+	}
+	
+	m_RenderEffects.push_back(pObject);
+	Safe_AddRef(pObject);
 
+	return S_OK;
+}
+
+#ifdef _DEBUG
 HRESULT CRenderer::Add_RenderDebug(CComponent * pComponent)
 {
 	m_DebugObject.push_back(pComponent);
-
 	Safe_AddRef(pComponent);
 	return S_OK;
 }
-#endif // _DEBUG
 
-
-HRESULT CRenderer::Render_GameObject()
+HRESULT CRenderer::Render_Debug()
 {
-	Render_Priority();
-	Render_NonAlpha();
-	Render_LightAcc();
-	Render_Blend();
-	Render_Alpha();
-	Render_UI();
-
-#ifdef _DEBUG
 	CInput_Device* pInputDevice = GET_INSTANCE(CInput_Device);
-
 	if (pInputDevice->Input_KeyBoard_Down(DIK_Q))
 	{
 		if (true == m_isDebugRender)
@@ -170,10 +171,7 @@ HRESULT CRenderer::Render_GameObject()
 			m_isDebugRender = true;
 		}
 	}
-
-
 	RELEASE_INSTANCE(CInput_Device);
-
 
 	if (true == m_isDebugRender)
 	{
@@ -195,6 +193,22 @@ HRESULT CRenderer::Render_GameObject()
 		Safe_Release(pDebugObj);
 	}
 	m_DebugObject.clear();
+
+	return S_OK;
+}
+#endif // _DEBUG
+
+
+HRESULT CRenderer::Render_GameObject()
+{
+	Render_Priority();
+	Render_NonAlpha();
+	Render_LightAcc();
+	Render_Blend();
+	Render_Alpha();
+	Render_UI();
+#ifdef _DEBUG
+	Render_Debug();
 #endif // _DEBUG
 
 

@@ -13,6 +13,7 @@ CGameInstacne::CGameInstacne()
 	, m_pPicking(CPicking::Get_Instance())
 	, m_pLight(CLight_Manager::Get_Instance())
 	, m_pKeyManager(CKey_Manager::Get_Instance())
+	, m_pParticle(CParticleSystem_Manager::Get_Instance())
 {
 	Safe_AddRef(m_pDevice);
 	Safe_AddRef(m_pPipe);
@@ -24,6 +25,7 @@ CGameInstacne::CGameInstacne()
 	Safe_AddRef(m_pPicking);
 	Safe_AddRef(m_pLight);
 	Safe_AddRef(m_pKeyManager);
+	Safe_AddRef(m_pParticle);
 }
 
 HRESULT CGameInstacne::Initialize_Engine(_uint iNumLevel, HWND hWnd, HINSTANCE hInst)
@@ -537,7 +539,43 @@ HRESULT CGameInstacne::Add_Light(LPDIRECT3DDEVICE9 pGraphic_Device, const D3DLIG
 
 	return m_pLight->Add_Light(pGraphic_Device, LightDesc);
 }
+#pragma endregion
+#pragma region PARTICLE
+HRESULT CGameInstacne::Add_ParticleSystem(const _tchar * pLayerTag)
+{
+	if (nullptr == m_pParticle)
+	{
+		return E_FAIL;
+	}
+	return m_pParticle->Add_ParticleSystem(pLayerTag);
+}
 
+HRESULT CGameInstacne::Add_ParticleSystem(const _tchar * pLayerTag, void * pArg)
+{
+	if (nullptr == m_pParticle)
+	{
+		return E_FAIL;
+	}
+	return m_pParticle->Add_ParticleSystem(pLayerTag, pArg);
+}
+
+HRESULT CGameInstacne::DeleteAll_ParticleSystem(const _tchar * pLayerTag)
+{
+	if (nullptr == m_pParticle)
+	{
+		return E_FAIL;
+	}
+	return m_pParticle->DeleteAll_ParticleSystem(pLayerTag);
+}
+
+HRESULT CGameInstacne::Delete_ParticleSystem(const _tchar * pLayerTag, _int iIndex)
+{
+	if (nullptr == m_pParticle)
+	{
+		return E_FAIL;
+	}
+	return m_pParticle->Delete_ParticleSystem(pLayerTag, iIndex);
+}
 #pragma endregion
 
 void CGameInstacne::Release_Engine()
@@ -549,6 +587,10 @@ void CGameInstacne::Release_Engine()
 	if (0 != CLevel_Manager::Get_Instance()->Destroy_Instance())
 	{
 		MSGBOX("Failed to Relese CLevel_Manager");
+	}
+	if (0 != CParticleSystem_Manager::Get_Instance()->Destroy_Instance())
+	{
+		MSGBOX("Failed to Relese CParticle");
 	}
 	if (0 != CGameObject_Manager::Get_Instance()->Destroy_Instance())
 	{
@@ -603,5 +645,6 @@ void CGameInstacne::Free()
 	Safe_Release(m_pInput);
 	Safe_Release(m_pPipe);
 	Safe_Release(m_pPicking);
+	Safe_Release(m_pParticle);
 	Safe_Release(m_pDevice);
 }

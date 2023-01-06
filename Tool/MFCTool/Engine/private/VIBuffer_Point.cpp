@@ -105,6 +105,22 @@ HRESULT CVIBuffer_Point::Render_VIBuffer()
 	return S_OK;
 }
 
+HRESULT CVIBuffer_Point::Render_VIBuffer(_uint iNumInstance)
+{
+	m_pGraphic_Device->SetStreamSource(0, m_pVB, 0, m_iStride);
+
+	m_pGraphic_Device->SetStreamSourceFreq(0, 1);
+	m_pGraphic_Device->SetStreamSource(1, m_pVBInstance, 0, sizeof(VTXMATRIX));
+	m_pGraphic_Device->SetStreamSourceFreq(1, 1);
+
+	m_pGraphic_Device->SetVertexDeclaration(m_pVertexDeclaration);
+	m_pGraphic_Device->DrawPrimitive(m_ePrimitiveType, 0, iNumInstance);
+
+	m_pGraphic_Device->SetStreamSourceFreq(0, 1);
+	m_pGraphic_Device->SetStreamSourceFreq(1, 1);
+	return S_OK;
+}
+
 _int CVIBuffer_Point::Tick(_float Time_delta, list<CAttribute*>& rList)
 {
 	VTXMATRIX*		pMatrix = nullptr;
@@ -123,6 +139,7 @@ _int CVIBuffer_Point::Tick(_float Time_delta, list<CAttribute*>& rList)
 
 	return _int();
 }
+
 
 CVIBuffer_Point * CVIBuffer_Point::Create(LPDIRECT3DDEVICE9 pGraphic_Device, _uint iNumInstance)
 {

@@ -15,6 +15,7 @@ public:
 		_int	m_iMinParticle = 0;
 		_bool	m_isEmission = true;
 		_float	m_fEmissionTime = 0.f;
+		_float3	m_vSystemPosition;
 	}PSDESC;
 private:
 	explicit CParticle_System(LPDIRECT3DDEVICE9 pGraphic_Device);
@@ -36,13 +37,16 @@ public:
 private:
 	HRESULT	SetUp_ConstantTable();
 private:
+	CAttribute*			m_pPrototypeSystem = nullptr;
+private:
 	list<CAttribute*>	m_pAttributeList;
 	CShader*			m_pShaderCom = nullptr;
 	CTransform*			m_pTransfomCom = nullptr;
 	CVIBuffer_Point*	m_pVIBufferCom = nullptr;
 	LPDIRECT3DDEVICE9	m_pGraphic_Device = nullptr;
 private:
-	_int				m_iIndex = 0;
+	_int				m_iIndex	= 0;
+	_float				m_fTime		= 0.f;
 private:
 	PSDESC				m_tDesc;
 public:

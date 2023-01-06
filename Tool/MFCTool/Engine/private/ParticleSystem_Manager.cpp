@@ -51,7 +51,7 @@ HRESULT CParticleSystem_Manager::Add_ParticleSystem(const _tchar * pLayerTag, vo
 }
 
 
-HRESULT CParticleSystem_Manager::Delete_ParticleSystem(const _tchar * pLayerTag)
+HRESULT CParticleSystem_Manager::DeleteAll_ParticleSystem(const _tchar * pLayerTag)
 {
 	auto iter = Find_PrototypeParticle(pLayerTag);
 	if (nullptr == iter)
@@ -74,6 +74,33 @@ HRESULT CParticleSystem_Manager::Delete_ParticleSystem(const _tchar * pLayerTag)
 	pLayer->clear();
 	m_mapParticles.erase(pLayerTag);
 
+	return S_OK;
+}
+
+HRESULT CParticleSystem_Manager::Delete_ParticleSystem(const _tchar * pLayerTag, _int iIndex)
+{
+	auto pLayer = Find_Particles(pLayerTag);
+	if (nullptr == pLayer)
+	{
+		return E_FAIL;
+	}
+	
+	int iNum = 0;
+	auto iter = pLayer->begin();
+	for (iter ; iter != pLayer->end(); iter++, iNum++)
+	{
+		if (iNum == iIndex)
+		{
+			break;
+		}
+	}
+	Safe_Release(*iter);
+
+	if (pLayer->size() == 0)
+	{
+		pLayer->clear();
+		m_mapParticles.erase(pLayerTag);
+	}
 	return S_OK;
 }
 

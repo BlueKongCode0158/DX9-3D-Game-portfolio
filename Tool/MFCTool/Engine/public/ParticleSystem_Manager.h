@@ -1,5 +1,7 @@
 #pragma once
 #include "Base.h"
+#include "Attribute.h"
+#include "Particle_System.h"
 
 BEGIN(Engine)
 class CParticle_System;
@@ -12,9 +14,11 @@ private:
 public:
 	HRESULT	Add_ParticleSystem(const _tchar* pLayerTag);
 	HRESULT	Add_ParticleSystem(const _tchar* pLayerTag, void* pArg);
-	HRESULT	Delete_ParticleSystem(const _tchar* pLayerTag);
+public:
+	HRESULT	DeleteAll_ParticleSystem(const _tchar* pLayerTag);
+	HRESULT	Delete_ParticleSystem(const _tchar* pLayerTag, _int iIndex);
 private:
-	CParticle_System*	Find_PrototypeParticle(const _tchar* pLayerTag);
+	CParticle_System*			Find_PrototypeParticle(const _tchar* pLayerTag);
 	list<CParticle_System*>*	Find_Particles(const _tchar* pLayerTag);
 private:
 	void	Update_Index();
@@ -28,6 +32,13 @@ private:
 	typedef map<const _tchar*, CParticle_System*> PROTOTYPE_PARTICLES;
 public:
 	virtual void Free() override;
+
+public:
+	typedef struct ParticleInfo
+	{
+		CAttribute::PDESC			m_ParticleDesc;
+		CParticle_System::PSDESC	m_SystemDesc;
+	}PINFO;
 };
 END
 

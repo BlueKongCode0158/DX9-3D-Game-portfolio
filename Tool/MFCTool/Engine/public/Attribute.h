@@ -79,7 +79,7 @@ private:
 	virtual ~CAttribute() = default;
 public:
 	HRESULT	NativeConstruct_Prototype();
-	HRESULT	NativeConstruct(void* pArg);
+	HRESULT	NativeConstruct();
 public:
 	_bool	GetAlive()
 	{
@@ -88,6 +88,11 @@ public:
 	const PDESC*	GetInfo()
 	{
 		return &m_tCurretnDesc;
+	}
+public:
+	void	SetInfo(PDESC tDesc)
+	{
+		m_tCreateDesc = tDesc;
 	}
 public:
 	_int	Reset();
@@ -99,6 +104,7 @@ private:
 	LPDIRECT3DDEVICE9	m_pGraphic_Device = nullptr;
 public:
 	static CAttribute*	Create(LPDIRECT3DDEVICE9 pGraphic_Device);
+	CAttribute*			Clone();
 	virtual void		Free() override;
 };
 END

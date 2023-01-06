@@ -18,14 +18,9 @@ HRESULT CAttribute::NativeConstruct_Prototype()
 	return S_OK;
 }
 
-HRESULT CAttribute::NativeConstruct(void * pArg)
+HRESULT CAttribute::NativeConstruct()
 {
-	if (nullptr == pArg)
-	{
-		return E_FAIL;
-	}
-	memcpy(&m_tCreateDesc, pArg, sizeof(PDESC));
-	memcpy(&m_tCurretnDesc, &m_tCurretnDesc, sizeof(PDESC));
+	memcpy(&m_tCurretnDesc, &m_tCreateDesc, sizeof(PDESC));
 
 	Engine::GetRandomVector(m_tCreateDesc.m_vDir, m_tCurretnDesc.m_vDirStart, m_tCreateDesc.m_vDirEnd);
 	m_tCurretnDesc.m_vDir = m_tCreateDesc.m_vDir;
@@ -59,6 +54,17 @@ CAttribute * CAttribute::Create(LPDIRECT3DDEVICE9 pGraphic_Device)
 {
 	CAttribute* pInstance = new CAttribute(pGraphic_Device);
 	if (FAILED(pInstance->NativeConstruct_Prototype()))
+	{
+		Safe_Release(pInstance);
+		return nullptr;
+	}
+	return pInstance;
+}
+
+CAttribute * CAttribute::Clone()
+{
+	CAttribute* pInstance = new CAttribute(*this);
+	if (FAILED(pInstance->NativeConstruct()))
 	{
 		Safe_Release(pInstance);
 		return nullptr;
