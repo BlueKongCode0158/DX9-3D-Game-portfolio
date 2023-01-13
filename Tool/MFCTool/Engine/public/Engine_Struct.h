@@ -83,7 +83,7 @@ namespace Engine
 		_float3	m_vSystemPosition;
 	}PSDESC;
 
-	typedef struct ParticleDesc
+	typedef struct PointDesc
 	{
 		_float3 m_vDir = _float3(0.f, 0.f, 0.f);
 		_float3 m_vDirStart = _float3(-1.f, -1.f, -1.f);
@@ -98,7 +98,7 @@ namespace Engine
 		_float	m_fAcceleration = 0.f;
 		_bool	m_isAlive = true;
 
-		_bool	operator == (const ParticleDesc& rDesc) const
+		_bool	operator == (const PointDesc& rDesc) const
 		{
 			if (m_vDir != rDesc.m_vDir)
 			{
@@ -146,7 +146,7 @@ namespace Engine
 			}
 			return true;
 		}
-		_bool	operator != (const ParticleDesc& rDesc) const
+		_bool	operator != (const PointDesc& rDesc) const
 		{
 			return !(*this == rDesc);
 		}

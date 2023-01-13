@@ -1,16 +1,12 @@
 #include "..\public\Attribute.h"
 
-CAttribute::CAttribute(LPDIRECT3DDEVICE9 pGraphic_Device)
-	:m_pGraphic_Device(pGraphic_Device)
+CAttribute::CAttribute()
 {
-	Safe_AddRef(pGraphic_Device);
 }
 
-CAttribute::CAttribute(const CAttribute & rhs)
-	:m_pGraphic_Device(rhs.m_pGraphic_Device),
-	m_tCreateDesc(rhs.m_tCreateDesc)
+CAttribute::CAttribute()
+	: m_tCreateDesc(rhs.m_tCreateDesc)
 {
-	Safe_AddRef(m_pGraphic_Device);
 }
 
 HRESULT CAttribute::NativeConstruct_Prototype()
@@ -50,9 +46,9 @@ _int CAttribute::Update(_float Time_Delta)
 	return 0;
 }
 
-CAttribute * CAttribute::Create(LPDIRECT3DDEVICE9 pGraphic_Device)
+CAttribute * CAttribute::Create()
 {
-	CAttribute* pInstance = new CAttribute(pGraphic_Device);
+	CAttribute* pInstance = new CAttribute();
 	if (FAILED(pInstance->NativeConstruct_Prototype()))
 	{
 		Safe_Release(pInstance);
@@ -74,5 +70,5 @@ CAttribute * CAttribute::Clone()
 
 void CAttribute::Free()
 {
-	Safe_Release(m_pGraphic_Device);
+
 }
