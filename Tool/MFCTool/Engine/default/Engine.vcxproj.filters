@@ -166,23 +166,47 @@
     <Filter Include="01.Utility\03.Components\11.Inventory">
       <UniqueIdentifier>{fb24562d-da6c-40e1-834d-552731070dd4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="01.Utility\11.Item">
-      <UniqueIdentifier>{cbfd1c8c-cfe4-439c-8266-9f78a147f2eb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01.Utility\11.Item\Single">
-      <UniqueIdentifier>{dec36c1a-176f-48b7-83d7-446850b321da}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01.Utility\11.Item\Multy">
-      <UniqueIdentifier>{fe563b88-3ede-403f-a046-6abf17b25d50}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01.Utility\12.Particle_System">
-      <UniqueIdentifier>{1193c58e-3ad2-4754-b609-2e83d73e05b0}</UniqueIdentifier>
-    </Filter>
     <Filter Include="01.Utility\03.Components\09.Font\ShaderFile">
       <UniqueIdentifier>{33f0ab1f-934e-4eee-8994-a6336bc6c9be}</UniqueIdentifier>
     </Filter>
     <Filter Include="01.Utility\02.GameObject\Canvas">
       <UniqueIdentifier>{48105e02-7fb3-45d4-b64a-bf376a47ffec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Utility\03.Components\12.Particle">
+      <UniqueIdentifier>{5e864d94-726c-4aea-a9fe-ab8505f4715d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Utility\11.Particle_System">
+      <UniqueIdentifier>{1193c58e-3ad2-4754-b609-2e83d73e05b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Utility\11.Particle_System\00.Manager">
+      <UniqueIdentifier>{9e5d661e-9124-410c-b847-670da13313be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Utility\11.Particle_System\01.Attribute">
+      <UniqueIdentifier>{8e6cb5a1-a37f-4f76-9565-fdfab280d6dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Utility\03.Components\11.Inventory\Item">
+      <UniqueIdentifier>{cbfd1c8c-cfe4-439c-8266-9f78a147f2eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Utility\03.Components\11.Inventory\Item\Single">
+      <UniqueIdentifier>{dec36c1a-176f-48b7-83d7-446850b321da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Utility\03.Components\11.Inventory\Item\Multy">
+      <UniqueIdentifier>{fe563b88-3ede-403f-a046-6abf17b25d50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Utility\03.Components\12.Particle\00.Particle">
+      <UniqueIdentifier>{d26556f1-9130-4ab6-a63b-c79f790e03bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Utility\03.Components\12.Particle\00.Particle\Particle_Mesh">
+      <UniqueIdentifier>{e3cc92eb-2132-4146-a065-6481d252372b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Utility\03.Components\12.Particle\00.Particle\Particle_Point">
+      <UniqueIdentifier>{6349a7f6-7f15-42cd-b3c3-f685c9535376}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Utility\03.Components\12.Particle\00.Particle\Particle_Point\Attribute_Layer">
+      <UniqueIdentifier>{3846a4e8-1b15-4215-924c-f7930e5a02dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Utility\03.Components\12.Particle\00.Particle\Particle_Point\Attribute_Layer\Attribute">
+      <UniqueIdentifier>{fb977cf4-760e-4045-a148-35f4b7a769bb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -325,19 +349,37 @@
       <Filter>01.Utility\03.Components\11.Inventory</Filter>
     </ClCompile>
     <ClCompile Include="..\private\Item.cpp">
-      <Filter>01.Utility\11.Item</Filter>
+      <Filter>01.Utility\03.Components\11.Inventory\Item</Filter>
     </ClCompile>
     <ClCompile Include="..\private\Single_ITem.cpp">
-      <Filter>01.Utility\11.Item\Single</Filter>
+      <Filter>01.Utility\03.Components\11.Inventory\Item\Single</Filter>
     </ClCompile>
     <ClCompile Include="..\private\Multy_ITem.cpp">
-      <Filter>01.Utility\11.Item\Multy</Filter>
-    </ClCompile>
-    <ClCompile Include="..\private\Particle_System.cpp">
-      <Filter>01.Utility\12.Particle_System</Filter>
+      <Filter>01.Utility\03.Components\11.Inventory\Item\Multy</Filter>
     </ClCompile>
     <ClCompile Include="..\private\Canvas.cpp">
       <Filter>01.Utility\02.GameObject\Canvas</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\Particle_System.cpp">
+      <Filter>01.Utility\11.Particle_System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\ParticleSystem_Manager.cpp">
+      <Filter>01.Utility\11.Particle_System\00.Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\Attribute.cpp">
+      <Filter>01.Utility\03.Components\12.Particle\00.Particle\Particle_Point\Attribute_Layer\Attribute</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\Particle_Mesh.cpp">
+      <Filter>01.Utility\03.Components\12.Particle\00.Particle\Particle_Mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\Particle_Point.cpp">
+      <Filter>01.Utility\03.Components\12.Particle\00.Particle\Particle_Point</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\Particle.cpp">
+      <Filter>01.Utility\03.Components\12.Particle\00.Particle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\Attribute_Layer.cpp">
+      <Filter>01.Utility\03.Components\12.Particle\00.Particle\Particle_Point\Attribute_Layer</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -498,19 +540,37 @@
       <Filter>01.Utility\03.Components\11.Inventory</Filter>
     </ClInclude>
     <ClInclude Include="..\public\Item.h">
-      <Filter>01.Utility\11.Item</Filter>
+      <Filter>01.Utility\03.Components\11.Inventory\Item</Filter>
     </ClInclude>
     <ClInclude Include="..\public\Single_ITem.h">
-      <Filter>01.Utility\11.Item\Single</Filter>
+      <Filter>01.Utility\03.Components\11.Inventory\Item\Single</Filter>
     </ClInclude>
     <ClInclude Include="..\public\Multy_ITem.h">
-      <Filter>01.Utility\11.Item\Multy</Filter>
-    </ClInclude>
-    <ClInclude Include="..\public\Particle_System.h">
-      <Filter>01.Utility\12.Particle_System</Filter>
+      <Filter>01.Utility\03.Components\11.Inventory\Item\Multy</Filter>
     </ClInclude>
     <ClInclude Include="..\public\Canvas.h">
       <Filter>01.Utility\02.GameObject\Canvas</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\Particle_System.h">
+      <Filter>01.Utility\11.Particle_System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\ParticleSystem_Manager.h">
+      <Filter>01.Utility\11.Particle_System\00.Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\Attribute.h">
+      <Filter>01.Utility\03.Components\12.Particle\00.Particle\Particle_Point\Attribute_Layer\Attribute</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\Particle_Mesh.h">
+      <Filter>01.Utility\03.Components\12.Particle\00.Particle\Particle_Mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\Particle_Point.h">
+      <Filter>01.Utility\03.Components\12.Particle\00.Particle\Particle_Point</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\Particle.h">
+      <Filter>01.Utility\03.Components\12.Particle\00.Particle</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\Attribute_Layer.h">
+      <Filter>01.Utility\03.Components\12.Particle\00.Particle\Particle_Point\Attribute_Layer</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

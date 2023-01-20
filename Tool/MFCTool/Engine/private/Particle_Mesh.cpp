@@ -27,6 +27,11 @@ HRESULT CParticle_Mesh::Render()
 	return S_OK;
 }
 
+_int CParticle_Mesh::Tick(_float fTimeDelta)
+{
+	return _int();
+}
+
 CComponent * CParticle_Mesh::Create(LPDIRECT3DDEVICE9 pGraphic_Device)
 {
 	CParticle_Mesh* pInstance = new CParticle_Mesh(pGraphic_Device);

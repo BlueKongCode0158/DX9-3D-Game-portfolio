@@ -23,13 +23,11 @@ public:
 	_int	Reset();
 	_int	Set_Transform(_matrix tMatrix);
 private:
-	CAttribute*				m_pPrototypeSystem = nullptr;
+	CAttribute_Layer*		m_pPrototypeSystem = nullptr;
 	list<CAttribute_Layer*>	m_pAttributeList;
 private:
 	_float	m_fTime		= 0.f;
 	_bool	m_isLoop	= false;
-private:
-	PSDESC	m_tDesc;
 public:
 	static	CComponent*	Create(LPDIRECT3DDEVICE9 pGraphic_Device);
 	virtual CComponent* Clone(void* pArg) override;

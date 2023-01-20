@@ -540,43 +540,43 @@ HRESULT CGameInstacne::Add_Light(LPDIRECT3DDEVICE9 pGraphic_Device, const D3DLIG
 	return m_pLight->Add_Light(pGraphic_Device, LightDesc);
 }
 #pragma endregion
-#pragma region PARTICLE
-HRESULT CGameInstacne::Add_ParticleSystem(const _tchar * pLayerTag)
-{
-	if (nullptr == m_pParticle)
-	{
-		return E_FAIL;
-	}
-	return m_pParticle->Add_ParticleSystem(pLayerTag);
-}
-
-HRESULT CGameInstacne::Add_ParticleSystem(const _tchar * pLayerTag, void * pArg)
-{
-	if (nullptr == m_pParticle)
-	{
-		return E_FAIL;
-	}
-	return m_pParticle->Add_ParticleSystem(pLayerTag, pArg);
-}
-
-HRESULT CGameInstacne::DeleteAll_ParticleSystem(const _tchar * pLayerTag)
-{
-	if (nullptr == m_pParticle)
-	{
-		return E_FAIL;
-	}
-	return m_pParticle->DeleteAll_ParticleSystem(pLayerTag);
-}
-
-HRESULT CGameInstacne::Delete_ParticleSystem(const _tchar * pLayerTag, _int iIndex)
-{
-	if (nullptr == m_pParticle)
-	{
-		return E_FAIL;
-	}
-	return m_pParticle->Delete_ParticleSystem(pLayerTag, iIndex);
-}
-#pragma endregion
+//#pragma region PARTICLE
+//HRESULT CGameInstacne::Add_ParticleSystem(const _tchar * pLayerTag)
+//{
+//	if (nullptr == m_pParticle)
+//	{
+//		return E_FAIL;
+//	}
+//	return m_pParticle->Add_ParticleSystem(pLayerTag);
+//}
+//
+//HRESULT CGameInstacne::Add_ParticleSystem(const _tchar * pLayerTag, void * pArg)
+//{
+//	if (nullptr == m_pParticle)
+//	{
+//		return E_FAIL;
+//	}
+//	return m_pParticle->Add_ParticleSystem(pLayerTag, pArg);
+//}
+//
+//HRESULT CGameInstacne::DeleteAll_ParticleSystem(const _tchar * pLayerTag)
+//{
+//	if (nullptr == m_pParticle)
+//	{
+//		return E_FAIL;
+//	}
+//	return m_pParticle->DeleteAll_ParticleSystem(pLayerTag);
+//}
+//
+//HRESULT CGameInstacne::Delete_ParticleSystem(const _tchar * pLayerTag, _int iIndex)
+//{
+//	if (nullptr == m_pParticle)
+//	{
+//		return E_FAIL;
+//	}
+//	return m_pParticle->Delete_ParticleSystem(pLayerTag, iIndex);
+//}
+//#pragma endregion
 
 void CGameInstacne::Release_Engine()
 {

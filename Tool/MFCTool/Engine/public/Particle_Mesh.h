@@ -16,11 +16,13 @@ public:
 	virtual HRESULT NativeConstruct(void* pArg) override;
 	virtual HRESULT Render() override;
 public:
-
+	_int	Tick(_float fTimeDelta);
 private:
 	CStatic_Mesh*	m_pMeshCom			= nullptr;
 	CTransform*		m_pTransformCom		= nullptr;
 	CShader*		m_pShaderCom		= nullptr;
+private:
+	PSDESC			m_tInfo;
 public:
 	static	CComponent*	Create(LPDIRECT3DDEVICE9 pGraphic_Device);
 	virtual CComponent* Clone(void* pArg) override;

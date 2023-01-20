@@ -1,7 +1,7 @@
 #include "..\public\Particle_Point.h"
+#include "Attribute_Layer.h"
 #include "VIBuffer_Point.h"
 #include "Transform.h"
-#include "Attribute.h"
 #include "Shader.h"
 
 
@@ -32,39 +32,27 @@ HRESULT CParticle_Point::Render()
 
 _int CParticle_Point::Tick(_float fTimeDelta)
 {
-	// 간격 초기화
-	if (m_fTime >= 1.f && m_isLoop == true)
+	for (auto iter = m_pAttributeList.begin(); iter != m_pAttributeList.end(); )
 	{
-		m_fTime = 0.f;
-		m_tDesc.m_isEmission = true;
+		if (m_isLoop == true)
+		{
+			(*iter)->Reset();
+			iter++;
+			continue;
+		}
+		else
+		{
+			if (PARTICLE_DEAD == (*iter)->Tick(fTimeDelta))
+			{
+				Safe_Release(*iter);
+				iter = m_pAttributeList.erase(iter);
+			}
+			else
+			{
+				iter++;
+			}
+		}
 	}
-
-	// 파티클 생성
-	if (m_tDesc.m_isEmission == true && m_tDesc.m_iMaxParticle >= m_pAttributeList.size())
-	{
-		CAttribute* pObject = m_pPrototypeSystem->Clone();
-		m_pAttributeList.push_back(pObject);
-		m_tDesc.m_isEmission = false;
-	}
-	else
-	{
-		m_fTime += fTimeDelta;
-	}
-
-	if (true == m_isLoop)
-	{
-		Reset();
-	}
-	else if (false == m_isLoop && m_fTime > 1.f)
-	{
-		return CParticle_Point::STATE::PARTICLE_DEAD;
-	}
-
-	for (auto iter = m_pAttributeList.begin(); iter != m_pAttributeList.end(); iter++)
-	{
-		(*iter)->Update(fTimeDelta);
-	}
-
 	return 0;
 }
 
@@ -118,8 +106,4 @@ void CParticle_Point::Free()
 		Safe_Release(*iter);
 	}
 	m_pAttributeList.clear();
-
-	Safe_Release(m_pShaderCom);
-	Safe_Release(m_pVIBufferCom);
-	Safe_Release(m_pTransformCom);
 }

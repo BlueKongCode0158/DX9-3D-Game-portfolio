@@ -74,6 +74,18 @@ namespace Engine
 		float				iAddSpeed;
 	}SINGLEITEM;
 
+	typedef struct tagMeshParticle
+	{
+		_float	m_fMinSize = 0.f;
+		_float	m_fMaxSize = 0.f;
+
+		_float	m_fAge		= 0.f;
+		_float	m_fLifeTime = 0.f;
+
+		_float	m_fTextureStart = 0.f;
+		_float	m_fTextureEnd	= 0.f;
+	}PDESC_MESH;
+
 	typedef struct PSystemDesc
 	{
 		_int	m_iMaxParticle = 0;

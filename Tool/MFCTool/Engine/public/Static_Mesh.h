@@ -23,9 +23,9 @@ public:
 	virtual	HRESULT	 NativeConstruct_Prototype(const _tchar* pFilePath , const _tchar* pFileName);
 	virtual HRESULT	 NativeConstruct(void* pArg = nullptr)	override;
 public:
-	HRESULT				 SetUp_TextureOnShader(CShader* pShader, D3DXHANDLE hHandle, MESHMATERIALTEXTURE::TYPE eType, const _uint uiMaterialIndex);
-	HRESULT				 Render(_uint iMaterialIndex);
-	LPDIRECT3DTEXTURE9 Get_Material_Diffuse(MESHMATERIALTEXTURE::TYPE eType, const _uint uiMaterialIndex);
+	HRESULT				SetUp_TextureOnShader(CShader* pShader, D3DXHANDLE hHandle, MESHMATERIALTEXTURE::TYPE eType, const _uint uiMaterialIndex);
+	HRESULT				Render(_uint iMaterialIndex);
+	LPDIRECT3DTEXTURE9	Get_Material_Diffuse(MESHMATERIALTEXTURE::TYPE eType, const _uint uiMaterialIndex);
 private:
 	LPD3DXBUFFER		m_pAdjacency	= nullptr;
 	LPD3DXBUFFER		m_pMaterials	= nullptr;

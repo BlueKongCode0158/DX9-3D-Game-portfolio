@@ -1,4 +1,7 @@
 #include "..\public\Item.h"
+#include "VIBuffer_Rect.h"
+#include "Texture.h"
+#include "Shader.h"
 
 CItem::CItem(LPDIRECT3DDEVICE9 pGraphic_Device)
 	:m_pGraphic_Device(pGraphic_Device)
@@ -20,6 +23,11 @@ HRESULT CItem::NativeConstruct_Prototype()
 }
 
 HRESULT CItem::NativeConstruct(void * pArg)
+{
+	return S_OK;
+}
+
+HRESULT CItem::Render()
 {
 	return S_OK;
 }

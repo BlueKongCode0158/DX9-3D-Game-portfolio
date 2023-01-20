@@ -115,13 +115,13 @@ public:
 	HRESULT		Level_Relese_Light();
 	HRESULT		Add_Light(LPDIRECT3DDEVICE9 pGraphic_Device, const D3DLIGHT9& LightDesc);
 #pragma endregion
-#pragma region PARTICLE
-public:
-	HRESULT	Add_ParticleSystem(const _tchar* pLayerTag);
-	HRESULT	Add_ParticleSystem(const _tchar* pLayerTag, void* pArg);
-	HRESULT	DeleteAll_ParticleSystem(const _tchar* pLayerTag);
-	HRESULT	Delete_ParticleSystem(const _tchar* pLayerTag, _int iIndex);
-#pragma endregion
+//#pragma region PARTICLE
+//public:
+//	HRESULT	Add_ParticleSystem(const _tchar* pLayerTag);
+//	HRESULT	Add_ParticleSystem(const _tchar* pLayerTag, void* pArg);
+//	HRESULT	DeleteAll_ParticleSystem(const _tchar* pLayerTag);
+//	HRESULT	Delete_ParticleSystem(const _tchar* pLayerTag, _int iIndex);
+//#pragma endregion
 public:
 	static void Release_Engine();
 private:
