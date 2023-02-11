@@ -1,6 +1,10 @@
 #pragma once
 #include <GameObject.h>
 
+/*
+3D UI 부모격 Canvas [ Unity 에서 아이디어를 따왔다. ]
+*/
+
 BEGIN(Engine)
 class CShader;
 class CRenderer;
