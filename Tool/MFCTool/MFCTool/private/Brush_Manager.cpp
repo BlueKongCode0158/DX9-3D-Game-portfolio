@@ -7,11 +7,6 @@ CBrush_Manager::CBrush_Manager()
 {
 }
 
-
-CBrush_Manager::~CBrush_Manager()
-{
-}
-
 HRESULT CBrush_Manager::NativeConstruct(LPDIRECT3DDEVICE9 pGraphic_Device)
 {
 	m_pGraphicDevice = pGraphic_Device;
