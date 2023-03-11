@@ -1,5 +1,5 @@
 # DX9 Game Portfolio
->**USE** : *DirectX9 Lib* , *MFC Lib* , *TinyXML2 Lib*  
+>**USE** : *DirectX9 Lib* , *MFC Lib* , *TinyXML2 Lib* , *
 
 ### Project Structure
 
