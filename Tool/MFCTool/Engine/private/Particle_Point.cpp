@@ -36,9 +36,9 @@ _int CParticle_Point::Tick(_float fTimeDelta)
 	{
 		if (m_isLoop == true)
 		{
+			(*iter)->Tick(fTimeDelta);
 			(*iter)->Reset();
 			iter++;
-			continue;
 		}
 		else
 		{

@@ -20,10 +20,7 @@ public:
 	_int	Tick(_float fTimeDelta);
 	HRESULT Render();
 public:
-	_bool	GetAlive()
-	{
-		return m_tInfo.m_isAlive;
-	}
+
 	
 public:
 	void	Reset();

@@ -29,9 +29,9 @@ HRESULT CAttribute_Layer::NativeConstruct(void* pArg)
 
 _int CAttribute_Layer::Tick(_float fTimeDelta)
 {
-	m_tInfo.m_fLifeTime += fTimeDelta;
+	m_tInfo.m_fDuration += fTimeDelta;
 
-	if (m_tInfo.m_fAge <= m_tInfo.m_fLifeTime)
+	if (m_tInfo.m_fAge <= m_tInfo.m_fDuration)
 	{
 		return PARTICLE_DEAD;
 	}
@@ -40,7 +40,9 @@ _int CAttribute_Layer::Tick(_float fTimeDelta)
 	{
 		(*iter)->Update(fTimeDelta);
 	}
-
+	
+	// Attribute 의 역할은 Point 위치를 옮겨주는 것에 있다.
+	// 정보값은 Attribute가 가지고 있고 해당 정보값을 넘겨주는 걸로 VIBuffer가 작동하고 있음.
 	m_pVIBufferCom->Tick(fTimeDelta, m_pAttributeList);
 	return PARTICLE_ALIVE;
 }
@@ -48,6 +50,7 @@ _int CAttribute_Layer::Tick(_float fTimeDelta)
 HRESULT CAttribute_Layer::Render()
 {
 	if (FAILED(SetUp_ConstantTable()))
+
 	{
 		return E_FAIL;
 	}

@@ -88,80 +88,23 @@ namespace Engine
 
 	typedef struct PSystemDesc
 	{
-		_int	m_iMaxParticle = 0;
-		_int	m_iMinParticle = 0;
-		_bool	m_isEmission = true;
-		_float	m_fEmissionTime = 0.f;
-		_float3	m_vSystemPosition;
+		_int	m_iMaxParticle	= 0;
+		_bool	m_isAlive		= true;
+		_bool	m_isEmission	= true;
+		_bool	m_isLoop		= false;
 	}PSDESC;
 
 	typedef struct PointDesc
 	{
-		_float3 m_vDir = _float3(0.f, 0.f, 0.f);
-		_float3 m_vDirStart = _float3(-1.f, -1.f, -1.f);
-		_float3 m_vDirEnd = _float3(1.f, 1.f, 1.f);
-		_float3	m_vPosition = _float3(0.f, 0.f, 0.f);
-		_float3	m_vColor = _float3(0.f, 0.f, 0.f);
-
-		_float	m_fAge = 0.f;
-		_float	m_fLifeTime = 0.f;
-		_float	m_fColorFade = 0.f;
-		_float	m_fVelocity = 0.f;
-		_float	m_fAcceleration = 0.f;
-		_bool	m_isAlive = true;
-
-		_bool	operator == (const PointDesc& rDesc) const
-		{
-			if (m_vDir != rDesc.m_vDir)
-			{
-				return false;
-			}
-			if (m_vDirStart != rDesc.m_vDirStart)
-			{
-				return false;
-			}
-			if (m_vDirEnd != rDesc.m_vDirEnd)
-			{
-				return false;
-			}
-			if (m_vPosition != rDesc.m_vPosition)
-			{
-				return false;
-			}
-			if (m_vColor != rDesc.m_vColor)
-			{
-				return false;
-			}
-			if (m_fColorFade != rDesc.m_fColorFade)
-			{
-				return false;
-			}
-			if (m_fVelocity != rDesc.m_fVelocity)
-			{
-				return false;
-			}
-			if (m_fAcceleration != rDesc.m_fAcceleration)
-			{
-				return false;
-			}
-			if (m_fLifeTime != rDesc.m_fLifeTime)
-			{
-				return false;
-			}
-			if (m_fAge != rDesc.m_fAge)
-			{
-				return false;
-			}
-			if (m_isAlive != rDesc.m_isAlive)
-			{
-				return false;
-			}
-			return true;
-		}
-		_bool	operator != (const PointDesc& rDesc) const
-		{
-			return !(*this == rDesc);
-		}
+	public:
+		_float3	m_vPosition = _float3(0.f, 0.f, 0.f);	// 위치
+		_float3	m_vColor	= _float3(0.f, 0.f, 0.f);	// 파티클 색상
+	public:
+		_float	m_fDuration		= 0.f;	// 
+		_float	m_fAge			= 0.f;	// 현재 나이.
+		_float	m_fColorFade	= 0.f;	
+		_float	m_fVelocity		= 0.f;	// 파티클 속도
+		
 	}PDESC;
 
 	typedef struct ParticleInfo

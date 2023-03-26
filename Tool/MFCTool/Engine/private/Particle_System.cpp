@@ -29,13 +29,6 @@ HRESULT CParticle_System::NativeConstruct(void * pArg)
 		return E_FAIL;
 	}
 
-	CParticleSystem_Manager::PINFO*	vInfo = static_cast<CParticleSystem_Manager::PINFO*>(pArg);
-	m_pTransfomCom->Set_WorldMatrixRow(CTransform::STATE_POSITION, vInfo->m_SystemDesc.m_vSystemPosition);
-	m_pVIBufferCom = CVIBuffer_Point::Create(m_pGraphic_Device, vInfo->m_SystemDesc.m_iMaxParticle);
-
-	m_pPrototypeSystem = CAttribute::Create(m_pGraphic_Device);
-	m_pPrototypeSystem->SetInfo(vInfo->m_ParticleDesc);
-
 	return S_OK;
 }
 
@@ -54,34 +47,6 @@ HRESULT CParticle_System::Reset()
 
 _int CParticle_System::Tick(_float Time_Delta)
 {
-	// 간격 초기화
-	if (m_fTime >= 1.f)
-	{
-		m_fTime = 0.f;
-		m_tDesc.m_isEmission = true;
-	}
-
-	// 파티클 생성
-	if (m_tDesc.m_isEmission == true && m_tDesc.m_iMaxParticle >= m_pAttributeList.size())
-	{
-		CAttribute* pObject = m_pPrototypeSystem->Clone();
-		m_pAttributeList.push_back(pObject);
-		m_tDesc.m_isEmission = false;
-	}
-	else
-	{
-		m_fTime += Time_Delta;
-	}
-
-	Reset();
-	
-	for (auto iter = m_pAttributeList.begin(); iter != m_pAttributeList.end(); iter++)
-	{
-		(*iter)->Update(Time_Delta);
-	}
-
-	// VIBuffer 초기화
-	m_pVIBufferCom->Tick(Time_Delta, m_pAttributeList);
 
 	return 0;
 }

@@ -6,16 +6,12 @@ class CAttribute : public CBase
 {
 private:
 	explicit CAttribute();
-	explicit CAttribute();
+	explicit CAttribute(const CAttribute& rhs);
 	virtual ~CAttribute() = default;
 public:
 	HRESULT	NativeConstruct_Prototype();
 	HRESULT	NativeConstruct();
 public:
-	_bool	GetAlive()
-	{
-		return m_tCurretnDesc.m_isAlive;
-	}
 	const PDESC*	GetInfo()
 	{
 		return &m_tCurretnDesc;
@@ -26,6 +22,7 @@ public:
 		m_tCreateDesc = tDesc;
 	}
 public:
+	
 	_int	Reset();
 	_int	Update(_float Time_Delta);
 private:

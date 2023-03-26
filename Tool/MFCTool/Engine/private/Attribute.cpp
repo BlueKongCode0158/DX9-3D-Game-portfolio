@@ -4,7 +4,7 @@ CAttribute::CAttribute()
 {
 }
 
-CAttribute::CAttribute()
+CAttribute::CAttribute(const CAttribute& rhs)
 	: m_tCreateDesc(rhs.m_tCreateDesc)
 {
 }

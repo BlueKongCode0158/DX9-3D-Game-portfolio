@@ -200,7 +200,6 @@
     <ClInclude Include="..\public\Multy_ITem.h" />
     <ClInclude Include="..\public\Navigation.h" />
     <ClInclude Include="..\public\Particle.h" />
-    <ClInclude Include="..\public\ParticleSystem_Manager.h" />
     <ClInclude Include="..\public\Particle_Mesh.h" />
     <ClInclude Include="..\public\Particle_Point.h" />
     <ClInclude Include="..\public\Particle_System.h" />
@@ -261,7 +260,6 @@
     <ClCompile Include="..\private\Multy_ITem.cpp" />
     <ClCompile Include="..\private\Navigation.cpp" />
     <ClCompile Include="..\private\Particle.cpp" />
-    <ClCompile Include="..\private\ParticleSystem_Manager.cpp" />
     <ClCompile Include="..\private\Particle_Mesh.cpp" />
     <ClCompile Include="..\private\Particle_Point.cpp" />
     <ClCompile Include="..\private\Particle_System.cpp" />

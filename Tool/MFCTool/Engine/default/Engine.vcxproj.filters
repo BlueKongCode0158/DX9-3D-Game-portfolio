@@ -178,12 +178,6 @@
     <Filter Include="01.Utility\11.Particle_System">
       <UniqueIdentifier>{1193c58e-3ad2-4754-b609-2e83d73e05b0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="01.Utility\11.Particle_System\00.Manager">
-      <UniqueIdentifier>{9e5d661e-9124-410c-b847-670da13313be}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01.Utility\11.Particle_System\01.Attribute">
-      <UniqueIdentifier>{8e6cb5a1-a37f-4f76-9565-fdfab280d6dd}</UniqueIdentifier>
-    </Filter>
     <Filter Include="01.Utility\03.Components\11.Inventory\Item">
       <UniqueIdentifier>{cbfd1c8c-cfe4-439c-8266-9f78a147f2eb}</UniqueIdentifier>
     </Filter>
@@ -362,9 +356,6 @@
     </ClCompile>
     <ClCompile Include="..\private\Particle_System.cpp">
       <Filter>01.Utility\11.Particle_System</Filter>
-    </ClCompile>
-    <ClCompile Include="..\private\ParticleSystem_Manager.cpp">
-      <Filter>01.Utility\11.Particle_System\00.Manager</Filter>
     </ClCompile>
     <ClCompile Include="..\private\Attribute.cpp">
       <Filter>01.Utility\03.Components\12.Particle\00.Particle\Particle_Point\Attribute_Layer\Attribute</Filter>
@@ -553,9 +544,6 @@
     </ClInclude>
     <ClInclude Include="..\public\Particle_System.h">
       <Filter>01.Utility\11.Particle_System</Filter>
-    </ClInclude>
-    <ClInclude Include="..\public\ParticleSystem_Manager.h">
-      <Filter>01.Utility\11.Particle_System\00.Manager</Filter>
     </ClInclude>
     <ClInclude Include="..\public\Attribute.h">
       <Filter>01.Utility\03.Components\12.Particle\00.Particle\Particle_Point\Attribute_Layer\Attribute</Filter>

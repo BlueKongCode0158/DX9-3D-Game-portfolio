@@ -115,6 +115,9 @@
     <Filter Include="04.Object\06.UI\UICreate_Manager">
       <UniqueIdentifier>{e349ee2d-796f-4dbf-800a-43dd67bde76a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="07.Manager\01.Particle_Manager">
+      <UniqueIdentifier>{07d5ed1b-d102-413a-8e7e-37deb7f2e4d6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainFrm.h">
@@ -210,6 +213,9 @@
     <ClInclude Include="..\public\MFC_Functions.h">
       <Filter>98.Headers</Filter>
     </ClInclude>
+    <ClInclude Include="Particle_Manager.h">
+      <Filter>07.Manager\01.Particle_Manager</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MainFrm.cpp">
@@ -289,6 +295,9 @@
     </ClCompile>
     <ClCompile Include="..\private\UICreate_Manager.cpp">
       <Filter>04.Object\06.UI\UICreate_Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Particle_Manager.cpp">
+      <Filter>07.Manager\01.Particle_Manager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -21,7 +21,7 @@ void CXml_Manager::Read_XmlFile(const _tchar* pFilePath)
 	xmlError = doc.LoadFile(chTemp);
 	if (xmlError == tinyxml2::XML_SUCCESS)
 	{
-		MSGBOX("Parse Success");
+		//MSGBOX("Parse Success");
 		tinyxml2::XMLNode*	  pNode		= doc.FirstChild();
 		tinyxml2::XMLElement* pElement  = pNode->FirstChildElement();
 

@@ -27,11 +27,6 @@ HRESULT CItem::NativeConstruct(void * pArg)
 	return S_OK;
 }
 
-HRESULT CItem::Render()
-{
-	return S_OK;
-}
-
 void CItem::Free()
 {
 	Safe_Release(m_pGraphic_Device);
