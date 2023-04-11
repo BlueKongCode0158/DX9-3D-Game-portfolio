@@ -136,19 +136,6 @@ HRESULT CRenderer::Add_RenderGroup(RENDERGROUP eGroup, CGameObject * pGameObject
 	return S_OK;
 }
 
-HRESULT CRenderer::Add_RenderEffect(CParticle_System * pObject)
-{
-	if (nullptr == pObject)
-	{
-		return E_FAIL;
-	}
-	
-	m_RenderEffects.push_back(pObject);
-	Safe_AddRef(pObject);
-
-	return S_OK;
-}
-
 #ifdef _DEBUG
 HRESULT CRenderer::Add_RenderDebug(CComponent * pComponent)
 {

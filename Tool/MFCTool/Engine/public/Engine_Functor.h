@@ -24,4 +24,14 @@ namespace Engine
 	private:
 		const _tchar*	m_pTargetTag = nullptr;
 	};
+
+	template<typename T>
+	class CGet_Instance
+	{
+	private:
+		CGet_Instance(T) { m_pInstance = GET_INSTANCE(T) }
+		~CGet_Instance() { RELEASE_INSTANCE(T) }
+	private:
+		T*	m_pInstance = nullptr;
+	};
 }
