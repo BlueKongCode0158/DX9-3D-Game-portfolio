@@ -2,7 +2,6 @@
 #include "Base.h"
 
 BEGIN(Engine)
-
 class CGraphic_Device final:
 	public Engine::CBase
 {

@@ -90,8 +90,8 @@ namespace Engine
 	{
 		_int	m_iMaxParticle	= 0;
 		_bool	m_isAlive		= true;
-		_bool	m_isEmission	= true;
-		_bool	m_isLoop		= false;
+		_bool	m_isEmission	= true;		// 파티클이 방출될 수 있나?
+		_bool	m_isLoop		= false;	//
 	}PSDESC;
 
 	typedef struct PointDesc
@@ -102,7 +102,7 @@ namespace Engine
 	public:
 		_float	m_fDuration		= 0.f;	// 
 		_float	m_fAge			= 0.f;	// 현재 나이.
-		_float	m_fColorFade	= 0.f;	
+		_float	m_fColorFade	= 0.f;	// 색이 변하는 정도.
 		_float	m_fVelocity		= 0.f;	// 파티클 속도
 		
 	}PDESC;

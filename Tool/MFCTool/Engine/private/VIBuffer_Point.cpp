@@ -129,7 +129,7 @@ _int CVIBuffer_Point::Tick(_float Time_delta, list<CAttribute*>& rList)
 	int iIndex = 0;
 	for (auto iter = rList.begin(); iter != rList.end(); iter++, iIndex++)
 	{
-		const CAttribute::PDESC* pDesc	= (*iter)->GetInfo();
+		const PDESC* pDesc	= (*iter)->GetInfo();
 		pMatrix[iIndex].vRight		= _float4(1.f, 0.f, 0.f, 0.f);
 		pMatrix[iIndex].vUp			= _float4(0.f, 1.f, 0.f, 0.f);
 		pMatrix[iIndex].vLook		= _float4(0.f, 0.f, 1.f, 0.f);
