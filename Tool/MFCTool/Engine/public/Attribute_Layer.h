@@ -18,7 +18,7 @@ public:
 	HRESULT NativeConstruct_Prototype();
 	HRESULT NativeConstruct(void* pArg);
 	_int	Tick(_float fTimeDelta);
-	HRESULT Render();
+	HRESULT Render(CShader* pShader);
 public:
 
 	
@@ -27,7 +27,6 @@ public:
 private:
 	HRESULT SetUp_ConstantTable();
 private:
-	CShader*			m_pShaderCom = nullptr;
 	CTransform*			m_pTransformCom = nullptr;
 	CVIBuffer_Point*	m_pVIBufferCom = nullptr;
 private:

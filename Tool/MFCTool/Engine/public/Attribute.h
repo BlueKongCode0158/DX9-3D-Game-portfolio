@@ -1,3 +1,7 @@
+/*	
+	데이터만 가질 class
+	Render 할 필요 없다.
+*/
 #pragma once
 #include "Base.h"
 
@@ -22,7 +26,6 @@ public:
 		m_tCreateDesc = tDesc;
 	}
 public:
-	
 	_int	Reset();
 	_int	Update(_float Time_Delta);
 private:

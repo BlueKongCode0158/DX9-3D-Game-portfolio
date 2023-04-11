@@ -1,5 +1,4 @@
 #include "..\public\Particle_System.h"
-#include "ParticleSystem_Manager.h"
 #include "VIBuffer_Point.h"
 #include "Transform.h"
 #include "Attribute.h"
@@ -36,10 +35,6 @@ HRESULT CParticle_System::Reset()
 {
 	for (auto iter = m_pAttributeList.begin(); iter != m_pAttributeList.end(); iter++)
 	{
-		if ((*iter)->GetAlive())
-		{
-			continue;
-		}
 		(*iter)->Reset();
 	}
 	return S_OK;
@@ -70,26 +65,6 @@ HRESULT CParticle_System::Render()
 	return S_OK;
 }
 
-void CParticle_System::Set_Index(_int iIndex)
-{
-	m_iIndex = iIndex;
-}
-
-_int CParticle_System::Get_Index()
-{
-	return  m_iIndex;
-}
-
-_bool CParticle_System::Set_ParticleDesc(PSDESC* pArg)
-{
-	if (nullptr == pArg)
-	{
-		return false;
-	}
-
-	m_tDesc = *pArg;
-	return true;
-}
 
 HRESULT CParticle_System::SetUp_ConstantTable()
 {
@@ -120,7 +95,6 @@ CParticle_System * CParticle_System::Clone(void * pArg)
 
 void CParticle_System::Free()
 {
-	Safe_Release(m_pPrototypeSystem);
 	Safe_Release(m_pGraphic_Device);
 	Safe_Release(m_pVIBufferCom);
 	Safe_Release(m_pTransfomCom);

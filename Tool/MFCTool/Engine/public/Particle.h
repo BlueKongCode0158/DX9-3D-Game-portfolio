@@ -2,7 +2,7 @@
 #include "Component.h"
 
 BEGIN(Engine)
-class CParticle : public CComponent
+class ENGINE_DLL CParticle : public CComponent
 {
 protected:
 	explicit CParticle(LPDIRECT3DDEVICE9 pGraphicDevice);

@@ -2,9 +2,6 @@
 #include "Particle.h"
 
 BEGIN(Engine)
-class CShader;
-class CTransform;
-class CVIBuffer_Point;
 class CAttribute_Layer;
 class ENGINE_DLL CParticle_Point final : public CParticle
 {
@@ -28,6 +25,9 @@ private:
 private:
 	_float	m_fTime		= 0.f;
 	_bool	m_isLoop	= false;
+private:
+	//	모든 파티클들은 하나의 쉐이더로 그린다.
+	CShader*	m_pShaderCom = nullptr;
 public:
 	static	CComponent*	Create(LPDIRECT3DDEVICE9 pGraphic_Device);
 	virtual CComponent* Clone(void* pArg) override;

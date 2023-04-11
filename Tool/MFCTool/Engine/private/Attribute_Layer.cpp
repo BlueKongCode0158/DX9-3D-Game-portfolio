@@ -11,8 +11,7 @@ CAttribute_Layer::CAttribute_Layer()
 }
 
 CAttribute_Layer::CAttribute_Layer(const CAttribute_Layer & rhs)
-	:m_pShaderCom(dynamic_cast<CShader*>(rhs.m_pShaderCom->Clone()))
-	,m_pTransformCom(dynamic_cast<CTransform*>(rhs.m_pTransformCom->Clone()))
+	:m_pTransformCom(dynamic_cast<CTransform*>(rhs.m_pTransformCom->Clone()))
 	,m_pVIBufferCom(dynamic_cast<CVIBuffer_Point*>(rhs.m_pVIBufferCom->Clone(nullptr)))
 {
 }
@@ -47,7 +46,12 @@ _int CAttribute_Layer::Tick(_float fTimeDelta)
 	return PARTICLE_ALIVE;
 }
 
-HRESULT CAttribute_Layer::Render()
+HRESULT CAttribute_Layer::Render(CShader * pShader)
+{
+	return E_NOTIMPL;
+}
+
+HRESULT CAttribute_Layer::Render(CShader* pShader)
 {
 	if (FAILED(SetUp_ConstantTable()))
 
@@ -55,9 +59,9 @@ HRESULT CAttribute_Layer::Render()
 		return E_FAIL;
 	}
 
-	m_pShaderCom->Begin_Shader(0);
+	pShader->Begin_Shader(0);
 	m_pVIBufferCom->Render();
-	m_pShaderCom->End_Shader();
+	pShader->End_Shader();
 	return S_OK;
 }
 
@@ -101,7 +105,6 @@ void CAttribute_Layer::Free()
 	}
 	m_pAttributeList.clear();
 
-	Safe_Release(m_pShaderCom);
 	Safe_Release(m_pVIBufferCom);
 	Safe_Release(m_pTransformCom);
 }

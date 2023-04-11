@@ -25,11 +25,6 @@ HRESULT CParticle_Point::NativeConstruct(void * pArg)
 	return S_OK;
 }
 
-HRESULT CParticle_Point::Render()
-{
-	return S_OK;
-}
-
 _int CParticle_Point::Tick(_float fTimeDelta)
 {
 	for (auto iter = m_pAttributeList.begin(); iter != m_pAttributeList.end(); )
@@ -56,15 +51,20 @@ _int CParticle_Point::Tick(_float fTimeDelta)
 	return 0;
 }
 
+HRESULT CParticle_Point::Render()
+{
+	for (auto iter : m_pAttributeList)
+	{
+		iter->Render(m_pShaderCom);
+	}
+	return S_OK;
+}
+
 _int CParticle_Point::Reset()
 {
-	for (auto iter = m_pAttributeList.begin(); iter != m_pAttributeList.end(); iter++)
+	for (auto iter : m_pAttributeList)
 	{
-		if ((*iter)->GetAlive())
-		{
-			continue;
-		}
-		(*iter)->Reset();
+		iter->Reset();
 	}
 	return 0;
 }
@@ -100,6 +100,7 @@ void CParticle_Point::Free()
 {
 	__super::Free();
 
+	Safe_Release(m_pShaderCom);
 	Safe_Release(m_pPrototypeSystem);
 	for (auto iter : m_pAttributeList)
 	{
