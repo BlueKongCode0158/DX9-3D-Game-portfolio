@@ -1,8 +1,4 @@
 #include "..\public\Particle.h"
-#include "VIBuffer_Point.h"
-#include "Transform.h"
-#include "Attribute.h"
-#include "Shader.h"
 
 CParticle::CParticle(LPDIRECT3DDEVICE9 pGraphicDevice)
 	:CComponent(pGraphicDevice)
