@@ -1,16 +1,16 @@
 #pragma once
 namespace Engine
 {
-	float static GetRandomFloat(float flowBound, float fhighBound)
+	float static GetRandomFloat(float fLowBound, float fHighBound)
 	{
-		if (flowBound >= fhighBound)
+		if (fLowBound >= fHighBound)
 		{
-			return flowBound;
+			return fLowBound;
 		}
 
 		float fTemp = (rand() % 10000) * 0.0001f;
 
-		return (fTemp*(fhighBound - flowBound)) + flowBound;
+		return (fTemp*(fHighBound - fLowBound)) + fLowBound;
 	}
 
 	void static GetRandomVector(D3DXVECTOR3& rOut, D3DXVECTOR3& rMin, D3DXVECTOR3& rMax)
@@ -20,9 +20,42 @@ namespace Engine
 		rOut.z = GetRandomFloat(rMin.z, rMax.z);
 	}
 
-	void static GetRandomDirVertor(D3DXVECTOR3& rOut, D3DXVECTOR3& rAxis, float fRadian)
+	void static GetRandomVector_Circle(D3DXVECTOR3& rOut, float fRadian, D3DXVECTOR3* pCenter)
 	{
-		
+		D3DXVECTOR3 vDir = D3DXVECTOR3(GetRandomFloat(0.f, 1.f), GetRandomFloat(0.f, 1.f), 0.f);
+		D3DXVec3Normalize(&vDir, &vDir);
+
+		vDir *= fRadian;
+		if (nullptr != pCenter)
+		{
+			vDir += *pCenter;
+		}
+
+		rOut = vDir;
+	}
+
+	void static GetRandomVector_Circle_AxisX(D3DXVECTOR3& rOut, float fRadian, D3DXVECTOR3* pCenter)
+	{
+
+	}
+
+	void static GetRandomVector_Circle_AxisY()
+	{
+
+	}
+
+	void static GetRandomVector_Circle_AxisZ()
+	{
+
+	}
+
+	void static GetRandomDirVertor(D3DXVECTOR3& rOut, D3DXVECTOR3 vStart, D3DXVECTOR3 vEnd)
+	{
+		vEnd.y += vStart.y;
+
+		rOut.x = vEnd.x - vStart.x;
+		rOut.y = vEnd.y - vStart.y;
+		rOut.z = vEnd.z - vStart.z;
 	}
 }
 

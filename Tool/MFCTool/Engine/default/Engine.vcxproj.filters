@@ -202,6 +202,9 @@
     <Filter Include="01.Utility\03.Components\12.Particle\00.Particle\Particle_Point\Attribute_Layer\Attribute">
       <UniqueIdentifier>{fb977cf4-760e-4045-a148-35f4b7a769bb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="01.Utility\12.Shape">
+      <UniqueIdentifier>{2ce997ad-3e98-4b95-bd54-dc1ea39fe4da}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\private\Base.cpp">
@@ -371,6 +374,9 @@
     </ClCompile>
     <ClCompile Include="..\private\Attribute_Layer.cpp">
       <Filter>01.Utility\03.Components\12.Particle\00.Particle\Particle_Point\Attribute_Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\Shape.cpp">
+      <Filter>01.Utility\12.Shape</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -559,6 +565,9 @@
     </ClInclude>
     <ClInclude Include="..\public\Attribute_Layer.h">
       <Filter>01.Utility\03.Components\12.Particle\00.Particle\Particle_Point\Attribute_Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\Shape.h">
+      <Filter>01.Utility\12.Shape</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

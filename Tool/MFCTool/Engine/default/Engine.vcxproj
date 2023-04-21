@@ -208,6 +208,7 @@
     <ClInclude Include="..\public\QuadTree.h" />
     <ClInclude Include="..\public\Renderer.h" />
     <ClInclude Include="..\public\Shader.h" />
+    <ClInclude Include="..\public\Shape.h" />
     <ClInclude Include="..\public\Single_ITem.h" />
     <ClInclude Include="..\public\State.h" />
     <ClInclude Include="..\public\Static_Mesh.h" />
@@ -268,6 +269,7 @@
     <ClCompile Include="..\private\QuadTree.cpp" />
     <ClCompile Include="..\private\Renderer.cpp" />
     <ClCompile Include="..\private\Shader.cpp" />
+    <ClCompile Include="..\private\Shape.cpp" />
     <ClCompile Include="..\private\Single_ITem.cpp" />
     <ClCompile Include="..\private\State.cpp" />
     <ClCompile Include="..\private\Static_Mesh.cpp" />
