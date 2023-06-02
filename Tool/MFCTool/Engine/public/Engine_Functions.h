@@ -30,23 +30,25 @@ namespace Engine
 		{
 			vDir += *pCenter;
 		}
-
 		rOut = vDir;
 	}
 
-	void static GetRandomVector_Circle_AxisX(D3DXVECTOR3& rOut, float fRadian, D3DXVECTOR3* pCenter)
+	void static GetRandomVector_Circle_Rotate_AxisX(D3DXMATRIX& rOut, float fRadian)
 	{
-
+		float fRandomRadian = GetRandomFloat(min(0.f, fRadian), max(0.f, fRadian));
+		D3DXMatrixRotationX(&rOut, fRandomRadian);
 	}
 
-	void static GetRandomVector_Circle_AxisY()
+	void static GetRandomVector_Circle_Rotate_AxisY(D3DXMATRIX& rOut, float fRadian)
 	{
-
+		float fRandomRadian = GetRandomFloat(min(0.f, fRadian), max(0.f, fRadian));
+		D3DXMatrixRotationY(&rOut, fRandomRadian);
 	}
 
-	void static GetRandomVector_Circle_AxisZ()
+	void static GetRandomVector_Circle_Rotate_AxisZ(D3DXMATRIX& rOut, float fRadian)
 	{
-
+		float fRandomRadian = GetRandomFloat(min(0.f, fRadian), max(0.f, fRadian));
+		D3DXMatrixRotationZ(&rOut, fRandomRadian);
 	}
 
 	void static GetRandomDirVertor(D3DXVECTOR3& rOut, D3DXVECTOR3 vStart, D3DXVECTOR3 vEnd)
