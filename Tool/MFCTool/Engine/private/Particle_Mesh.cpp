@@ -1,5 +1,7 @@
 #include "..\public\Particle_Mesh.h"
-
+#include "Static_Mesh.h"
+#include "Transform.h"
+#include "Shader.h"
 CParticle_Mesh::CParticle_Mesh(LPDIRECT3DDEVICE9 pGraphic_Device)
 	:CParticle(pGraphic_Device)
 {

@@ -2,6 +2,7 @@
 #include "Particle.h"
 
 BEGIN(Engine)
+class CShader;
 class CAttribute_Layer;
 class ENGINE_DLL CParticle_Point final : public CParticle
 {

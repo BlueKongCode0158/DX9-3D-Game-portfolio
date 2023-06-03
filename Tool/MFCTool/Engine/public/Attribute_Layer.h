@@ -36,7 +36,6 @@ public:
 	static CAttribute_Layer*	Create();
 	CAttribute_Layer*			Clone(void* pArg = nullptr);
 	virtual void				Free()		override;
-
 };
 END
  

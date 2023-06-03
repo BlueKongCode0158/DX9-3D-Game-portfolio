@@ -4,8 +4,6 @@
 #include "Attribute.h"
 #include "Shader.h"
 
-
-
 CAttribute_Layer::CAttribute_Layer()
 {
 }
@@ -44,11 +42,6 @@ _int CAttribute_Layer::Tick(_float fTimeDelta)
 	// 정보값은 Attribute가 가지고 있고 해당 정보값을 넘겨주는 걸로 VIBuffer가 작동하고 있음.
 	m_pVIBufferCom->Tick(fTimeDelta, m_pAttributeList);
 	return PARTICLE_ALIVE;
-}
-
-HRESULT CAttribute_Layer::Render(CShader * pShader)
-{
-	return E_NOTIMPL;
 }
 
 HRESULT CAttribute_Layer::Render(CShader* pShader)
@@ -99,9 +92,9 @@ CAttribute_Layer * CAttribute_Layer::Clone(void* pArg)
 
 void CAttribute_Layer::Free()
 {
-	for (auto pointer : m_pAttributeList)
+	for (auto& pointer : m_pAttributeList)
 	{
-		Safe_Release(*pointer);
+		Safe_Release(pointer);
 	}
 	m_pAttributeList.clear();
 

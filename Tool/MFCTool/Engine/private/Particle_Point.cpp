@@ -102,9 +102,9 @@ void CParticle_Point::Free()
 
 	Safe_Release(m_pShaderCom);
 	Safe_Release(m_pPrototypeSystem);
-	for (auto iter : m_pAttributeList)
+	for (auto& iter : m_pAttributeList)
 	{
-		Safe_Release(*iter);
+		Safe_Release(iter);
 	}
 	m_pAttributeList.clear();
 }

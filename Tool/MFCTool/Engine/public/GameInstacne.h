@@ -11,7 +11,6 @@
 #include "Light_Manager.h"
 #include "Target_Manager.h"
 #include "Key_Manager.h"
-#include "ParticleSystem_Manager.h"
 
 BEGIN(Engine)
 class ENGINE_DLL CGameInstacne final : public CBase
@@ -135,7 +134,6 @@ private:
 	CPicking*			     m_pPicking		= nullptr;
 	CLight_Manager*		     m_pLight		= nullptr;
 	CKey_Manager*		     m_pKeyManager	= nullptr;
-	CParticleSystem_Manager* m_pParticle	= nullptr;
 public:
 	virtual void Free() override;
 

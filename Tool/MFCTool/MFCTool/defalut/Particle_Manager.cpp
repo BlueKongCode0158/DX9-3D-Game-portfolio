@@ -32,3 +32,8 @@ HRESULT CParticle_Manager::Render_Particles()
 {
 	return E_NOTIMPL;
 }
+
+void CParticle_Manager::Free()
+{
+
+}

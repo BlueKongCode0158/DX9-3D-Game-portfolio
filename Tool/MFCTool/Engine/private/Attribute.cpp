@@ -18,9 +18,6 @@ HRESULT CAttribute::NativeConstruct()
 {
 	memcpy(&m_tCurretnDesc, &m_tCreateDesc, sizeof(PDESC));
 
-	Engine::GetRandomVector(m_tCreateDesc.m_vDir, m_tCurretnDesc.m_vDirStart, m_tCreateDesc.m_vDirEnd);
-	m_tCurretnDesc.m_vDir = m_tCreateDesc.m_vDir;
-
 	return S_OK;
 }
 
@@ -35,13 +32,11 @@ _int CAttribute::Reset()
 
 _int CAttribute::Update(_float Time_Delta)
 {
-	if (m_tCreateDesc.m_fAge > m_tCurretnDesc.m_fLifeTime)
+	if (m_tCreateDesc.m_fAge > m_tCurretnDesc.m_fDuration)
 	{
-		m_tCreateDesc.m_isAlive = false;
 		return -1;
 	}
 
-	m_tCurretnDesc.m_vPosition += m_tCurretnDesc.m_vDir * Time_Delta * m_tCurretnDesc.m_fAcceleration;
 	m_tCurretnDesc.m_fAge += Time_Delta;
 	return 0;
 }
