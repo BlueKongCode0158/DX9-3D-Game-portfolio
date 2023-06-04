@@ -51,10 +51,8 @@ namespace Engine
 		D3DXMatrixRotationZ(&rOut, fRandomRadian);
 	}
 
-	void static GetRandomDirVertor(D3DXVECTOR3& rOut, D3DXVECTOR3 vStart, D3DXVECTOR3 vEnd)
+	void static GetDirVertor(D3DXVECTOR3& rOut, D3DXVECTOR3 vStart, D3DXVECTOR3 vEnd)
 	{
-		vEnd.y += vStart.y;
-
 		rOut.x = vEnd.x - vStart.x;
 		rOut.y = vEnd.y - vStart.y;
 		rOut.z = vEnd.z - vStart.z;

@@ -55,7 +55,7 @@ HRESULT CParticle_Point::Render()
 {
 	for (auto iter : m_pAttributeList)
 	{
-		iter->Render(m_pShaderCom);
+		iter->Render(m_pShaderCom, m_iShaderNumber);
 	}
 	return S_OK;
 }
@@ -72,6 +72,11 @@ _int CParticle_Point::Reset()
 _int CParticle_Point::Set_Transform(_matrix tMatrix)
 {
 	return _int();
+}
+
+_bool CParticle_Point::Set_Index(_int iIndex)
+{
+	return __super::Set_Index(iIndex);
 }
 
 CComponent * CParticle_Point::Create(LPDIRECT3DDEVICE9 pGraphic_Device)

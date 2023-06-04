@@ -44,7 +44,7 @@ _int CAttribute_Layer::Tick(_float fTimeDelta)
 	return PARTICLE_ALIVE;
 }
 
-HRESULT CAttribute_Layer::Render(CShader* pShader)
+HRESULT CAttribute_Layer::Render(CShader* pShader, _uint iShaderNum)
 {
 	if (FAILED(SetUp_ConstantTable()))
 
@@ -52,7 +52,7 @@ HRESULT CAttribute_Layer::Render(CShader* pShader)
 		return E_FAIL;
 	}
 
-	pShader->Begin_Shader(0);
+	pShader->Begin_Shader(iShaderNum);
 	m_pVIBufferCom->Render();
 	pShader->End_Shader();
 	return S_OK;

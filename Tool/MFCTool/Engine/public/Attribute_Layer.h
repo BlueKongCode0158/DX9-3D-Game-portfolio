@@ -18,7 +18,7 @@ public:
 	HRESULT NativeConstruct_Prototype();
 	HRESULT NativeConstruct(void* pArg);
 	_int	Tick(_float fTimeDelta);
-	HRESULT Render(CShader* pShader);
+	HRESULT Render(CShader* pShader, _uint iShaderNum);
 public:
 
 	

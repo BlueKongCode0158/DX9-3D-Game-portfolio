@@ -20,12 +20,15 @@ public:
 	_int	Tick(_float fTimeDelta);
 	_int	Reset();
 	_int	Set_Transform(_matrix tMatrix);
+public:
+	_bool	Set_Index(_int iIndex);
 private:
 	CAttribute_Layer*		m_pPrototypeSystem = nullptr;
 	list<CAttribute_Layer*>	m_pAttributeList;
 private:
-	_float	m_fTime		= 0.f;
-	_bool	m_isLoop	= false;
+	_float	m_fTime			= 0.f;
+	_bool	m_isLoop		= false;
+	_uint	m_iShaderNumber = 0;
 private:
 	//	모든 파티클들은 하나의 쉐이더로 그린다.
 	CShader*	m_pShaderCom = nullptr;
