@@ -1,7 +1,7 @@
 #include "..\public\Particle_Point.h"
-#include "Attribute_Layer.h"
 #include "VIBuffer_Point.h"
 #include "Transform.h"
+#include "Attribute.h"
 #include "Shader.h"
 
 
@@ -12,7 +12,10 @@ CParticle_Point::CParticle_Point(LPDIRECT3DDEVICE9 pGraphic_Device)
 
 CParticle_Point::CParticle_Point(const CParticle_Point & rhs)
 	:CParticle(rhs)
+	,m_tInfo(rhs.m_tInfo)
+	,m_tParticleState(rhs.m_tParticleState)
 {
+	Safe_AddRef(rhs.m_pPrototypeSystem);
 }
 
 HRESULT CParticle_Point::NativeConstruct_Prototype()
@@ -29,15 +32,15 @@ _int CParticle_Point::Tick(_float fTimeDelta)
 {
 	for (auto iter = m_pAttributeList.begin(); iter != m_pAttributeList.end(); )
 	{
-		if (m_isLoop == true)
+		if (m_tParticleState.m_isLoop == true)
 		{
-			(*iter)->Tick(fTimeDelta);
+			(*iter)->Update(fTimeDelta);
 			(*iter)->Reset();
 			iter++;
 		}
 		else
 		{
-			if (PARTICLE_DEAD == (*iter)->Tick(fTimeDelta))
+			if (PARTICLE_DEAD == (*iter)->Update(fTimeDelta))
 			{
 				Safe_Release(*iter);
 				iter = m_pAttributeList.erase(iter);
@@ -48,30 +51,33 @@ _int CParticle_Point::Tick(_float fTimeDelta)
 			}
 		}
 	}
-	return 0;
+
+	m_pVIBuffer->Update(m_pAttributeList);
+	return PARTICLE_ALIVE;
 }
 
 HRESULT CParticle_Point::Render()
 {
-	for (auto iter : m_pAttributeList)
+	if (FAILED(SetUp_ConstantTable()))
+
 	{
-		iter->Render(m_pShaderCom, m_iShaderNumber);
+		return E_FAIL;
 	}
+
+	m_pShaderCom->Begin_Shader(m_iShaderNumber);
+	m_pVIBuffer->Render_VIBuffer();
+	m_pShaderCom->End_Shader();
 	return S_OK;
 }
 
-_int CParticle_Point::Reset()
+HRESULT CParticle_Point::SetUp_ConstantTable()
 {
-	for (auto iter : m_pAttributeList)
-	{
-		iter->Reset();
-	}
-	return 0;
+	return S_OK;
 }
 
-_int CParticle_Point::Set_Transform(_matrix tMatrix)
+void CParticle_Point::Set_Position(_float3 vPosition)
 {
-	return _int();
+	m_pTransform->Set_WorldMatrixRow(CTransform::STATE::STATE_POSITION, vPosition);
 }
 
 _bool CParticle_Point::Set_Index(_int iIndex)
@@ -105,8 +111,10 @@ void CParticle_Point::Free()
 {
 	__super::Free();
 
-	Safe_Release(m_pShaderCom);
 	Safe_Release(m_pPrototypeSystem);
+	Safe_Release(m_pVIBuffer);
+	Safe_Release(m_pShaderCom);
+	Safe_Release(m_pTransform);
 	for (auto& iter : m_pAttributeList)
 	{
 		Safe_Release(iter);

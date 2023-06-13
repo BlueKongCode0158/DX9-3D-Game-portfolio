@@ -9,7 +9,7 @@ CVIBuffer_Point::CVIBuffer_Point(LPDIRECT3DDEVICE9 pGraphic_Device)
 
 CVIBuffer_Point::CVIBuffer_Point(const CVIBuffer_Point & rhs)
 	:CVIBuffer(rhs)
-	, m_pVBInstance(rhs.m_pVBInstance)
+	,m_pVBInstance(rhs.m_pVBInstance)
 	,m_pVertexDeclaration(rhs.m_pVertexDeclaration)
 	,m_iNumInstance(rhs.m_iNumInstance)
 {
@@ -121,7 +121,7 @@ HRESULT CVIBuffer_Point::Render_VIBuffer(_uint iNumInstance)
 	return S_OK;
 }
 
-_int CVIBuffer_Point::Tick(_float Time_delta, list<CAttribute*>& rList)
+_int CVIBuffer_Point::Update(list<CAttribute*>& rList)
 {
 	VTXMATRIX*		pMatrix = nullptr;
 

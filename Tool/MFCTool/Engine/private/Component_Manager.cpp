@@ -47,7 +47,6 @@ HRESULT CComponent_Manager::Add_Prototype(_uint iLevelIndex, const _tchar * pPro
 	}
 
 	m_pProtoType[iLevelIndex].emplace(pPrototypeTag, pPrototype);
-
 	return S_OK;
 }
 
@@ -60,13 +59,11 @@ CComponent * CComponent_Manager::Clone_Component(_uint iLevelIndex, const _tchar
 	}
 
 	CComponent*		pPrototype = Find_Component(iLevelIndex, pPrototypeTag);
-
 	if (nullptr == pPrototype)
 	{
 		MSGBOX("Failed to Clone Component_ Pointer nullptr");
 		return nullptr;
 	}
-
 	CComponent*		pComponent = pPrototype->Clone(pArg);
 
 	return pComponent;

@@ -8,6 +8,8 @@
 BEGIN(Engine)
 class CAttribute : public CBase
 {
+public:
+	enum STATE {ATTRIBUTE_DEAD = -1, ATTRIBUTE_ALIVE, ATTRIBUTE_END};
 private:
 	explicit CAttribute();
 	explicit CAttribute(const CAttribute& rhs);
@@ -18,19 +20,21 @@ public:
 public:
 	const PDESC*	GetInfo()
 	{
-		return &m_tCurretnDesc;
+		return &m_tInfo;
 	}
 public:
 	void	SetInfo(PDESC tDesc)
 	{
-		m_tCreateDesc = tDesc;
+		m_tInfo = tDesc;
 	}
 public:
 	_int	Reset();
 	_int	Update(_float Time_Delta);
 private:
-	PDESC	m_tCreateDesc;
-	PDESC	m_tCurretnDesc;
+	void	Move_Position();
+	void	Fade_Color();
+private:
+	PDESC	m_tInfo;
 public:
 	static CAttribute*	Create();
 	CAttribute*			Clone();

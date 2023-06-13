@@ -15,7 +15,7 @@ public:
 	virtual HRESULT Render_VIBuffer()			override;
 	HRESULT			Render_VIBuffer(_uint iNumInstance);
 public:
-	_int	Tick(_float Time_delta, list<CAttribute*>& rList);
+	_int	Update(list<CAttribute*>& rList);
 private:
 	LPDIRECT3DVERTEXBUFFER9			m_pVBInstance			= nullptr;
 	LPDIRECT3DVERTEXDECLARATION9	m_pVertexDeclaration	= nullptr;

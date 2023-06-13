@@ -13,7 +13,6 @@ CGameInstacne::CGameInstacne()
 	, m_pPicking(CPicking::Get_Instance())
 	, m_pLight(CLight_Manager::Get_Instance())
 	, m_pKeyManager(CKey_Manager::Get_Instance())
-	, m_pParticle(CParticleSystem_Manager::Get_Instance())
 {
 	Safe_AddRef(m_pDevice);
 	Safe_AddRef(m_pPipe);
@@ -25,7 +24,6 @@ CGameInstacne::CGameInstacne()
 	Safe_AddRef(m_pPicking);
 	Safe_AddRef(m_pLight);
 	Safe_AddRef(m_pKeyManager);
-	Safe_AddRef(m_pParticle);
 }
 
 HRESULT CGameInstacne::Initialize_Engine(_uint iNumLevel, HWND hWnd, HINSTANCE hInst)
@@ -588,10 +586,6 @@ void CGameInstacne::Release_Engine()
 	{
 		MSGBOX("Failed to Relese CLevel_Manager");
 	}
-	if (0 != CParticleSystem_Manager::Get_Instance()->Destroy_Instance())
-	{
-		MSGBOX("Failed to Relese CParticle");
-	}
 	if (0 != CGameObject_Manager::Get_Instance()->Destroy_Instance())
 	{
 		MSGBOX("Failed to Relese CGameObject_Manger");
@@ -645,6 +639,5 @@ void CGameInstacne::Free()
 	Safe_Release(m_pInput);
 	Safe_Release(m_pPipe);
 	Safe_Release(m_pPicking);
-	Safe_Release(m_pParticle);
 	Safe_Release(m_pDevice);
 }

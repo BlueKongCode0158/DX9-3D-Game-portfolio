@@ -80,36 +80,38 @@ namespace Engine
 		_float	m_fMaxSize = 0.f;
 
 		_float	m_fAge		= 0.f;
-		_float	m_fLifeTime = 0.f;
+		_float	m_fDuration = 0.f;
 
 		_float	m_fTextureStart = 0.f;
 		_float	m_fTextureEnd	= 0.f;
 	}PDESC_MESH;
 
+	// 파티클 시스템이 가지고 있는 Particle 클래스의 데이터 객체.
 	typedef struct PSystemDesc
 	{
 		_int	m_iMaxParticle	= 0;
 		_bool	m_isAlive		= true;
 		_bool	m_isEmission	= true;		// 파티클이 방출될 수 있나?
-		_bool	m_isLoop		= false;	//
+		_bool	m_isLoop		= false;	// 파티클 반복 유무.
 	}PSDESC;
 
+	// 파티클의 Attribute 데이터 객체
 	typedef struct PointDesc
 	{
 	public:
-		_float3	m_vPosition = _float3(0.f, 0.f, 0.f);	// 위치
-		_float3	m_vColor	= _float3(0.f, 0.f, 0.f);	// 파티클 색상
+		_float3 m_vMinPos		= _float3(0.f, 0.f, 0.f);	// MIN POS
+		_float3 m_vMaxPos		= _float3(0.f, 0.f, 0.f);	// MAX POS
+		_float3	m_vPosition		= _float3(0.f, 0.f, 0.f);	// CUR POS
+		_float3 m_vVelocity		= _float3(0.f, 0.f, 0.f);	// 속도
+		_float3	m_vDir			= _float3(0.f, 0.f, 0.f);	// 방향벡터.
 	public:
-		_float	m_fDuration		= 0.f;	// 
-		_float	m_fAge			= 0.f;	// 현재 나이.
+		_float3 m_vColor		= _float3(0.f, 0.f, 0.f);
+		_float3 m_vStartColor	= _float3(0.f, 0.f, 0.f);	// 시작 컬러
+		_float3	m_vEndColor		= _float3(0.f, 0.f, 0.f);	// 마지막 컬러.
 		_float	m_fColorFade	= 0.f;	// 색이 변하는 정도.
+	public:
+		_float	m_fDuration		= 0.f;	// 파티클의 수명 
+		_float	m_fAge			= 0.f;	// 현재 나이.
 		_float	m_fVelocity		= 0.f;	// 파티클 속도
-		
 	}PDESC;
-
-	typedef struct ParticleInfo
-	{
-		PDESC			m_ParticleDesc;
-		PSDESC			m_SystemDesc;
-	}PINFO;
 }
