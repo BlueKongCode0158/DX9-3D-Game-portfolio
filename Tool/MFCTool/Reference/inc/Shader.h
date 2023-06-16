@@ -23,7 +23,6 @@ public:
 	void	Commit();
 	HRESULT	End_Shader();
 protected:
-
 	LPD3DXEFFECT		m_pEffect	= nullptr;
 public:
 	static	CShader*		Create(LPDIRECT3DDEVICE9 pGraphic_Device, const _tchar* pFilePath);

@@ -41,9 +41,7 @@ VS_OUT VS_MAIN(VS_IN In)
 {
 	VS_OUT			Out;
 
-
 	matrix			matVW, matVWV, matVWVP;
-
 	matrix			VtxMatrix = float4x4(In.vRight, In.vUp, In.vLook, In.vTranslation);
 
 	matVW = mul(VtxMatrix, g_WorldMatrix);

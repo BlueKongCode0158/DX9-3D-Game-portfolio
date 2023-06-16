@@ -10,7 +10,7 @@ CParticle_Manager::CParticle_Manager()
 
 HRESULT CParticle_Manager::Create_Particle(const _tchar *)
 {
-	return E_NOTIMPL;
+	return S_OK;
 }
 
 HRESULT CParticle_Manager::Delete_Particle(const _tchar *, _int iIndex)
@@ -30,7 +30,7 @@ _int CParticle_Manager::Late_Tick(_float fTime_Delta)
 
 HRESULT CParticle_Manager::Render_Particles()
 {
-	return E_NOTIMPL;
+	return S_OK;
 }
 
 void CParticle_Manager::Free()

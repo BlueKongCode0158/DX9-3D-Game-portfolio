@@ -162,8 +162,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\public\Animation.h" />
-    <ClInclude Include="..\public\Attribute.h" />
-    <ClInclude Include="..\public\Attribute_Layer.h" />
+    <ClInclude Include="..\public\Attribute.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="..\public\Base.h" />
     <ClInclude Include="..\public\Camera.h" />
     <ClInclude Include="..\public\Canvas.h" />
@@ -199,9 +200,15 @@
     <ClInclude Include="..\public\Mesh.h" />
     <ClInclude Include="..\public\Multy_ITem.h" />
     <ClInclude Include="..\public\Navigation.h" />
-    <ClInclude Include="..\public\Particle.h" />
-    <ClInclude Include="..\public\Particle_Mesh.h" />
-    <ClInclude Include="..\public\Particle_Point.h" />
+    <ClInclude Include="..\public\Particle.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\public\Particle_Mesh.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\public\Particle_Point.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="..\public\Particle_System.h" />
     <ClInclude Include="..\public\Picking.h" />
     <ClInclude Include="..\public\PipeLine.h" />
@@ -229,8 +236,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\private\Animation.cpp" />
-    <ClCompile Include="..\private\Attribute.cpp" />
-    <ClCompile Include="..\private\Attribute_Layer.cpp" />
+    <ClCompile Include="..\private\Attribute.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\private\Base.cpp" />
     <ClCompile Include="..\private\Camera.cpp" />
     <ClCompile Include="..\private\Canvas.cpp" />
@@ -260,9 +268,15 @@
     <ClCompile Include="..\private\Mesh.cpp" />
     <ClCompile Include="..\private\Multy_ITem.cpp" />
     <ClCompile Include="..\private\Navigation.cpp" />
-    <ClCompile Include="..\private\Particle.cpp" />
-    <ClCompile Include="..\private\Particle_Mesh.cpp" />
-    <ClCompile Include="..\private\Particle_Point.cpp" />
+    <ClCompile Include="..\private\Particle.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\private\Particle_Mesh.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\private\Particle_Point.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\private\Particle_System.cpp" />
     <ClCompile Include="..\private\Picking.cpp" />
     <ClCompile Include="..\private\PipeLine.cpp" />
@@ -292,6 +306,16 @@
     <FxCompile Include="..\bin\ShaderFiles\Shader_Collider.hlsl" />
     <FxCompile Include="..\bin\ShaderFiles\Shader_Deferred.hlsl" />
     <FxCompile Include="..\bin\ShaderFiles\Shader_Font.hlsl" />
+    <FxCompile Include="..\bin\ShaderFiles\Shader_Particle.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Effect</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">2.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Compute</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0</ShaderModel>
+    </FxCompile>
     <FxCompile Include="..\bin\ShaderFiles\Shader_UI.hlsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

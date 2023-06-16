@@ -124,9 +124,6 @@
     <Filter Include="01.Utility\03.Components\04.Meshes\01.Static_Mesh">
       <UniqueIdentifier>{0a79f917-3161-40c2-ab0b-7e778c18c2b6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="01.Utility\03.Components\06.Collider\ShaderFile">
-      <UniqueIdentifier>{39750997-02b9-4f11-a2bc-bf4629899811}</UniqueIdentifier>
-    </Filter>
     <Filter Include="01.Utility\03.Components\05.Navigation\00.Cell">
       <UniqueIdentifier>{cb2d87f6-53ef-4e7c-9722-832566ad1ff8}</UniqueIdentifier>
     </Filter>
@@ -145,12 +142,6 @@
     <Filter Include="01.Utility\09.RenderTargets\01.Target">
       <UniqueIdentifier>{6909a7d1-a3da-4c64-b3f0-5ce8923dfca6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="01.Utility\03.Components\00.Renderer\ShaderFile">
-      <UniqueIdentifier>{3462dbda-19e8-4500-a423-90fd0ac5885e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01.Utility\02.GameObject\UI\00.ShaderFile">
-      <UniqueIdentifier>{79422880-3ce1-4acd-8ab8-bf568e77a5ca}</UniqueIdentifier>
-    </Filter>
     <Filter Include="01.Utility\03.Components\02.VlBuffer\04.VIBuffer_Point">
       <UniqueIdentifier>{5bfafe53-e631-4cfb-91ea-df2ba7aac811}</UniqueIdentifier>
     </Filter>
@@ -165,9 +156,6 @@
     </Filter>
     <Filter Include="01.Utility\03.Components\11.Inventory">
       <UniqueIdentifier>{fb24562d-da6c-40e1-834d-552731070dd4}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01.Utility\03.Components\09.Font\ShaderFile">
-      <UniqueIdentifier>{33f0ab1f-934e-4eee-8994-a6336bc6c9be}</UniqueIdentifier>
     </Filter>
     <Filter Include="01.Utility\02.GameObject\Canvas">
       <UniqueIdentifier>{48105e02-7fb3-45d4-b64a-bf376a47ffec}</UniqueIdentifier>
@@ -196,14 +184,14 @@
     <Filter Include="01.Utility\03.Components\12.Particle\00.Particle\Particle_Point">
       <UniqueIdentifier>{6349a7f6-7f15-42cd-b3c3-f685c9535376}</UniqueIdentifier>
     </Filter>
-    <Filter Include="01.Utility\03.Components\12.Particle\00.Particle\Particle_Point\Attribute_Layer">
-      <UniqueIdentifier>{3846a4e8-1b15-4215-924c-f7930e5a02dd}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="01.Utility\03.Components\12.Particle\00.Particle\Particle_Point\Attribute_Layer\Attribute">
-      <UniqueIdentifier>{fb977cf4-760e-4045-a148-35f4b7a769bb}</UniqueIdentifier>
-    </Filter>
     <Filter Include="01.Utility\12.Shape">
       <UniqueIdentifier>{2ce997ad-3e98-4b95-bd54-dc1ea39fe4da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97.ShaderFiles">
+      <UniqueIdentifier>{cd41b704-5a67-4cbf-9aa2-688df6532669}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Utility\03.Components\12.Particle\00.Particle\Particle_Point\Attribute">
+      <UniqueIdentifier>{fb977cf4-760e-4045-a148-35f4b7a769bb}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -361,7 +349,7 @@
       <Filter>01.Utility\11.Particle_System</Filter>
     </ClCompile>
     <ClCompile Include="..\private\Attribute.cpp">
-      <Filter>01.Utility\03.Components\12.Particle\00.Particle\Particle_Point\Attribute_Layer\Attribute</Filter>
+      <Filter>01.Utility\03.Components\12.Particle\00.Particle\Particle_Point\Attribute</Filter>
     </ClCompile>
     <ClCompile Include="..\private\Particle_Mesh.cpp">
       <Filter>01.Utility\03.Components\12.Particle\00.Particle\Particle_Mesh</Filter>
@@ -371,9 +359,6 @@
     </ClCompile>
     <ClCompile Include="..\private\Particle.cpp">
       <Filter>01.Utility\03.Components\12.Particle\00.Particle</Filter>
-    </ClCompile>
-    <ClCompile Include="..\private\Attribute_Layer.cpp">
-      <Filter>01.Utility\03.Components\12.Particle\00.Particle\Particle_Point\Attribute_Layer</Filter>
     </ClCompile>
     <ClCompile Include="..\private\Shape.cpp">
       <Filter>01.Utility\12.Shape</Filter>
@@ -552,7 +537,7 @@
       <Filter>01.Utility\11.Particle_System</Filter>
     </ClInclude>
     <ClInclude Include="..\public\Attribute.h">
-      <Filter>01.Utility\03.Components\12.Particle\00.Particle\Particle_Point\Attribute_Layer\Attribute</Filter>
+      <Filter>01.Utility\03.Components\12.Particle\00.Particle\Particle_Point\Attribute</Filter>
     </ClInclude>
     <ClInclude Include="..\public\Particle_Mesh.h">
       <Filter>01.Utility\03.Components\12.Particle\00.Particle\Particle_Mesh</Filter>
@@ -563,25 +548,25 @@
     <ClInclude Include="..\public\Particle.h">
       <Filter>01.Utility\03.Components\12.Particle\00.Particle</Filter>
     </ClInclude>
-    <ClInclude Include="..\public\Attribute_Layer.h">
-      <Filter>01.Utility\03.Components\12.Particle\00.Particle\Particle_Point\Attribute_Layer</Filter>
-    </ClInclude>
     <ClInclude Include="..\public\Shape.h">
       <Filter>01.Utility\12.Shape</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="..\bin\ShaderFiles\Shader_Collider.hlsl">
-      <Filter>01.Utility\03.Components\06.Collider\ShaderFile</Filter>
-    </FxCompile>
-    <FxCompile Include="..\bin\ShaderFiles\Shader_Deferred.hlsl">
-      <Filter>01.Utility\03.Components\00.Renderer\ShaderFile</Filter>
+      <Filter>97.ShaderFiles</Filter>
     </FxCompile>
     <FxCompile Include="..\bin\ShaderFiles\Shader_UI.hlsl">
-      <Filter>01.Utility\02.GameObject\UI\00.ShaderFile</Filter>
+      <Filter>97.ShaderFiles</Filter>
+    </FxCompile>
+    <FxCompile Include="..\bin\ShaderFiles\Shader_Deferred.hlsl">
+      <Filter>97.ShaderFiles</Filter>
     </FxCompile>
     <FxCompile Include="..\bin\ShaderFiles\Shader_Font.hlsl">
-      <Filter>01.Utility\03.Components\09.Font\ShaderFile</Filter>
+      <Filter>97.ShaderFiles</Filter>
+    </FxCompile>
+    <FxCompile Include="..\bin\ShaderFiles\Shader_Particle.hlsl">
+      <Filter>97.ShaderFiles</Filter>
     </FxCompile>
   </ItemGroup>
 </Project>

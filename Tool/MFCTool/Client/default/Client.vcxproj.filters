@@ -43,9 +43,6 @@
     <Filter Include="01.Level\02.Level_GamePlay\00.Stage0">
       <UniqueIdentifier>{af4068be-161a-410a-9afb-a516c3460a6b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="97.ShaderFile">
-      <UniqueIdentifier>{2045096e-c62d-4bd7-ac0a-b783bc8ae6a4}</UniqueIdentifier>
-    </Filter>
     <Filter Include="02.GameObject\05.Sky">
       <UniqueIdentifier>{7f3d6147-5181-44b1-9a80-3673ab8ccfde}</UniqueIdentifier>
     </Filter>
@@ -298,9 +295,6 @@
     <Filter Include="02.GameObject\10.UI\05.BackGround">
       <UniqueIdentifier>{d8dab3c7-e350-4918-95c7-63ba386e7761}</UniqueIdentifier>
     </Filter>
-    <Filter Include="02.GameObject\10.UI\ShaderFile">
-      <UniqueIdentifier>{de810d7f-c867-469b-bccb-7c7085fcd7c5}</UniqueIdentifier>
-    </Filter>
     <Filter Include="02.GameObject\11.Dummy">
       <UniqueIdentifier>{c7c91e2f-1e55-461c-b2a1-5edc752fa739}</UniqueIdentifier>
     </Filter>
@@ -375,6 +369,9 @@
     </Filter>
     <Filter Include="04.Xml\Manager">
       <UniqueIdentifier>{bc9f0fc2-e8b8-4f12-b752-ecbfd5da519f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97.ShaderFiles">
+      <UniqueIdentifier>{2045096e-c62d-4bd7-ac0a-b783bc8ae6a4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -914,25 +911,25 @@
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="..\bin\ShaderFiles\Shader_Cube.hlsl">
-      <Filter>97.ShaderFile</Filter>
+      <Filter>97.ShaderFiles</Filter>
     </FxCompile>
     <FxCompile Include="..\bin\ShaderFiles\Shader_Mesh.hlsl">
-      <Filter>97.ShaderFile</Filter>
+      <Filter>97.ShaderFiles</Filter>
     </FxCompile>
     <FxCompile Include="..\bin\ShaderFiles\Shader_Rect.hlsl">
-      <Filter>97.ShaderFile</Filter>
+      <Filter>97.ShaderFiles</Filter>
     </FxCompile>
     <FxCompile Include="..\bin\ShaderFiles\Shader_SkyBox.hlsl">
-      <Filter>97.ShaderFile</Filter>
+      <Filter>97.ShaderFiles</Filter>
     </FxCompile>
     <FxCompile Include="..\bin\ShaderFiles\Shader_Terrain.hlsl">
-      <Filter>97.ShaderFile</Filter>
+      <Filter>97.ShaderFiles</Filter>
     </FxCompile>
     <FxCompile Include="..\bin\ShaderFiles\Shader_Point_Effect.hlsl">
-      <Filter>97.ShaderFile</Filter>
+      <Filter>97.ShaderFiles</Filter>
     </FxCompile>
     <FxCompile Include="..\bin\ShaderFiles\Shader_UI_3D.hlsl">
-      <Filter>02.GameObject\10.UI\ShaderFile</Filter>
+      <Filter>97.ShaderFiles</Filter>
     </FxCompile>
   </ItemGroup>
   <ItemGroup>

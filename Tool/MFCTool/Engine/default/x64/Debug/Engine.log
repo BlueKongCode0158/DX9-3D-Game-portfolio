@@ -1,92 +1,164 @@
-﻿cl : 명령줄 warning D9030: '/Gm'이(가) 다중 처리와 호환되지 않습니다. /MP 스위치를 무시합니다.
+﻿FXC : warning X4717: Effects deprecated for D3DCompiler_47
+  
+  compilation object save succeeded; see C:\Users\a\Desktop\GitHub\Risk-of-Rain2\Tool\MFCTool\Engine\bin\Shader_Collider.cso
+C:\Users\a\Desktop\GitHub\Risk-of-Rain2\Tool\MFCTool\Engine\bin\ShaderFiles\Shader_Deferred.hlsl(138,3-120): warning X3206: implicit truncation of vector type
+C:\Users\a\Desktop\GitHub\Risk-of-Rain2\Tool\MFCTool\Engine\bin\ShaderFiles\Shader_Deferred.hlsl(182,3-123): warning X3206: implicit truncation of vector type
+FXC : warning X4717: Effects deprecated for D3DCompiler_47
+  
+  compilation object save succeeded; see C:\Users\a\Desktop\GitHub\Risk-of-Rain2\Tool\MFCTool\Engine\bin\Shader_Deferred.cso
+C:\Users\a\Desktop\GitHub\Risk-of-Rain2\Tool\MFCTool\Engine\bin\ShaderFiles\Shader_Font.hlsl(22,2-61): warning X3206: implicit truncation of vector type
+C:\Users\a\Desktop\GitHub\Risk-of-Rain2\Tool\MFCTool\Engine\bin\ShaderFiles\Shader_Font.hlsl(23,17-47): warning X3206: 'mul': implicit truncation of vector type
+C:\Users\a\Desktop\GitHub\Risk-of-Rain2\Tool\MFCTool\Engine\bin\ShaderFiles\Shader_Font.hlsl(23,2-47): warning X3206: implicit truncation of vector type
+C:\Users\a\Desktop\GitHub\Risk-of-Rain2\Tool\MFCTool\Engine\bin\ShaderFiles\Shader_Font.hlsl(24,18-54): warning X3206: 'mul': implicit truncation of vector type
+FXC : warning X4717: Effects deprecated for D3DCompiler_47
+  
+  compilation object save succeeded; see C:\Users\a\Desktop\GitHub\Risk-of-Rain2\Tool\MFCTool\Engine\bin\Shader_Font.cso
+FXC : warning X4717: Effects deprecated for D3DCompiler_47
+  
+  compilation object save succeeded; see C:\Users\a\Desktop\GitHub\Risk-of-Rain2\Tool\MFCTool\Engine\bin\Shader_UI.cso
+cl : 명령줄 warning D9030: '/Gm'이(가) 다중 처리와 호환되지 않습니다. /MP 스위치를 무시합니다.
+  VIBuffer_Terrain.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(112): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(114): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(197): warning C4244: '인수': 'Engine::_ulong'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(209): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(211): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(278): warning C4244: '=': 'Engine::_float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(279): warning C4244: '=': 'Engine::_float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(280): warning C4244: '=': 'Engine::_float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(281): warning C4244: '=': 'Engine::_float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(300): warning C4244: '=': 'Engine::_float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(301): warning C4244: '=': 'Engine::_float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(302): warning C4244: '=': 'Engine::_float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(303): warning C4244: '=': 'Engine::_float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(329): warning C4244: '=': 'Engine::_float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(337): warning C4244: '=': 'Engine::_float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(347): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(349): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(390): warning C4244: '=': 'Engine::_float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(398): warning C4244: '=': 'Engine::_float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(409): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(411): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(462): warning C4244: '=': 'Engine::_float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(470): warning C4244: '=': 'Engine::_float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(484): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(486): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(498): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(500): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(558): warning C4244: '=': 'Engine::_float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(566): warning C4244: '=': 'Engine::_float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(579): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(581): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(593): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(595): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(599): warning C4244: '=': 'Engine::_double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(603): warning C4244: '=': 'Engine::_double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(634): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(636): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(714): warning C4244: '인수': 'Engine::_ulong'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  VIBuffer_Rect_Viewport.cpp
+  VIBuffer_Rect.cpp
+  VIBuffer_Point.cpp
+  VIBuffer_Cube.cpp
+  VIBuffer.cpp
+  UI.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Transform.cpp
+  Time_Manager.cpp
+  Timer.cpp
+  Texture.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Target_Manager.cpp
+  Target.cpp
+  Status.cpp
+  Static_Mesh.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\static_mesh.cpp(46): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  State.cpp
+  Single_ITem.cpp
+  Shape.cpp
+  Shader.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Renderer.cpp
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\renderer.cpp(80): warning C4244: '인수': 'DWORD'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
+  QuadTree.cpp
+  PipeLine.cpp
+  Picking.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\picking.cpp(118): warning C4805: '==': 연산에 'bool' 형식과 'BOOL' 형식을 함께 사용하는 것은 안전하지 않습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\picking.cpp(165): warning C4805: '==': 연산에 'bool' 형식과 'HRESULT' 형식을 함께 사용하는 것은 안전하지 않습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\picking.cpp(212): warning C4805: '==': 연산에 'bool' 형식과 'BOOL' 형식을 함께 사용하는 것은 안전하지 않습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\picking.cpp(259): warning C4805: '==': 연산에 'bool' 형식과 'BOOL' 형식을 함께 사용하는 것은 안전하지 않습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\picking.cpp(305): warning C4805: '==': 연산에 'bool' 형식과 'HRESULT' 형식을 함께 사용하는 것은 안전하지 않습니다.
   Particle_System.cpp
-c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\particle_system.cpp(2): fatal error C1083: 포함 파일을 열 수 없습니다. 'ParticleSystem_Manager.h': No such file or directory
-  Particle_Point.cpp
-c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\particle_point.cpp(63): error C2039: 'GetAlive': 'Engine::CAttribute_Layer'의 멤버가 아닙니다.
-  c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\attribute_layer.h(9): note: 'Engine::CAttribute_Layer' 선언을 참조하십시오.
-  Particle_Mesh.cpp
-c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(68): error C2027: 정의되지 않은 형식 'Engine::CShader'을(를) 사용했습니다.
-  c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\particle_mesh.h(5): note: 'Engine::CShader' 선언을 참조하십시오.
-  c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\particle_mesh.cpp(60): note: 컴파일 중인 함수 템플릿 인스턴스화 'unsigned long Safe_Release<Engine::CShader*>(T &)'에 대한 참조를 확인하십시오.
-          with
-          [
-              T=Engine::CShader *
-          ]
-c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(68): error C2227: '->Release' 왼쪽은 클래스/구조체/공용 구조체/제네릭 형식을 가리켜야 합니다.
-c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(68): error C2027: 정의되지 않은 형식 'Engine::CStatic_Mesh'을(를) 사용했습니다.
-  c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\particle_mesh.h(7): note: 'Engine::CStatic_Mesh' 선언을 참조하십시오.
-  c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\particle_mesh.cpp(61): note: 컴파일 중인 함수 템플릿 인스턴스화 'unsigned long Safe_Release<Engine::CStatic_Mesh*>(T &)'에 대한 참조를 확인하십시오.
-          with
-          [
-              T=Engine::CStatic_Mesh *
-          ]
-c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(68): error C2027: 정의되지 않은 형식 'Engine::CTransform'을(를) 사용했습니다.
-  c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\particle_mesh.h(6): note: 'Engine::CTransform' 선언을 참조하십시오.
-  c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\particle_mesh.cpp(62): note: 컴파일 중인 함수 템플릿 인스턴스화 'unsigned long Safe_Release<Engine::CTransform*>(T &)'에 대한 참조를 확인하십시오.
-          with
-          [
-              T=Engine::CTransform *
-          ]
+  Navigation.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\navigation.cpp(44): warning C4267: '인수': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Multy_ITem.cpp
+  Mesh.cpp
+  Light_Manager.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Light.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\light.cpp(20): warning C4244: '인수': 'DWORD'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Level_Manager.cpp
+  Level.cpp
+  Layer.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\layer.h(13): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Key_Manager.cpp
+  Inventory.cpp
+  Input_Device.cpp
+  HierarchyLoader.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\hierarchyloader.cpp(18): warning C4267: '초기화 중': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\hierarchyloader.cpp(79): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\hierarchyloader.cpp(125): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  Graphic_Device.cpp
+  GameObject_Manager.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\layer.h(13): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   GameObject.cpp
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\dynamic_mesh.h(18): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\gameinstacne.h(14): fatal error C1083: 포함 파일을 열 수 없습니다. 'ParticleSystem_Manager.h': No such file or directory
   GameInstacne.cpp
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\dynamic_mesh.h(18): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\gameinstacne.h(14): fatal error C1083: 포함 파일을 열 수 없습니다. 'ParticleSystem_Manager.h': No such file or directory
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
+  Frustum.cpp
+  Engine_Font.cpp
+  Dynamic_Mesh.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\dynamic_mesh.h(18): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\dynamic_mesh.cpp(25): warning C4267: '초기화 중': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\dynamic_mesh.cpp(374): warning C4305: 'return': 'HRESULT'에서 'Engine::_float'(으)로 잘립니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\dynamic_mesh.cpp(383): warning C4305: 'return': 'HRESULT'에서 'Engine::_float'(으)로 잘립니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\dynamic_mesh.cpp(392): warning C4305: 'return': 'HRESULT'에서 'Engine::_float'(으)로 잘립니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\dynamic_mesh.cpp(604): warning C4267: '초기화 중': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\dynamic_mesh.cpp(673): warning C4267: '초기화 중': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Component_Manager.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\dynamic_mesh.h(18): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Component.cpp
+  Collider.cpp
+  Cell.cpp
   Canvas.cpp
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\dynamic_mesh.h(18): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\gameinstacne.h(14): fatal error C1083: 포함 파일을 열 수 없습니다. 'ParticleSystem_Manager.h': No such file or directory
-  Attribute_Layer.cpp
-c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(66): error C2679: 이항 '!=': 오른쪽 피연산자로 'Engine::CAttribute' 형식을 사용하는 연산자가 없거나 허용되는 변환이 없습니다.
-  c:\program files (x86)\windows kits\8.1\include\shared\guiddef.h(197): note: 'bool operator !=(const GUID &,const GUID &)'일 수 있습니다.
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\system_error(419): note: 또는       'bool std::operator !=(const std::error_condition &,const std::error_condition &) noexcept'
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\system_error(412): note: 또는       'bool std::operator !=(const std::error_condition &,const std::error_code &) noexcept'
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\system_error(405): note: 또는       'bool std::operator !=(const std::error_code &,const std::error_condition &) noexcept'
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\system_error(398): note: 또는       'bool std::operator !=(const std::error_code &,const std::error_code &) noexcept'
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\exception(354): note: 또는       'bool std::operator !=(const std::exception_ptr &,std::nullptr_t) throw()'
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\exception(349): note: 또는       'bool std::operator !=(std::nullptr_t,const std::exception_ptr &) throw()'
-  c:\program files (x86)\microsoft visual studio 14.0\vc\include\exception(344): note: 또는       'bool std::operator !=(const std::exception_ptr &,const std::exception_ptr &) throw()'
-  c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(66): note: 인수 목록 '(nullptr, Engine::CAttribute)'을(를) 일치시키는 동안
-  c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\attribute_layer.cpp(100): note: 컴파일 중인 함수 템플릿 인스턴스화 'unsigned long Safe_Release<Engine::CAttribute>(T &)'에 대한 참조를 확인하십시오.
-          with
-          [
-              T=Engine::CAttribute
-          ]
-c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(68): error C2819: 'Engine::CAttribute' 형식에 오버로드된 멤버 'operator ->'가 없습니다.
-  c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\attribute.h(5): note: 'Engine::CAttribute' 선언을 참조하십시오.
-  c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(68): note: 대신 '.'을(를) 사용하려고 했습니까?
-c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(68): error C2232: '->Engine::CBase::Release': 왼쪽 피연산자에 'class' 형식이 있습니다. '.'를 사용하십시오.
-c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(71): error C2679: 이항 '=': 오른쪽 피연산자로 'nullptr' 형식을 사용하는 연산자가 없거나 허용되는 변환이 없습니다.
-  c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\attribute.h(34): note: 'Engine::CAttribute &Engine::CAttribute::operator =(const Engine::CAttribute &)'일 수 있습니다.
-  c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(71): note: 인수 목록 '(Engine::CAttribute, nullptr)'을(를) 일치시키는 동안
-  Attribute.cpp
-c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\attribute.cpp(21): error C2039: 'm_vDir': 'Engine::PointDesc'의 멤버가 아닙니다.
-  c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_struct.h(98): note: 'Engine::PointDesc' 선언을 참조하십시오.
-c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\attribute.cpp(21): error C2039: 'm_vDirStart': 'Engine::PointDesc'의 멤버가 아닙니다.
-  c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_struct.h(98): note: 'Engine::PointDesc' 선언을 참조하십시오.
-c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\attribute.cpp(21): error C2039: 'm_vDirEnd': 'Engine::PointDesc'의 멤버가 아닙니다.
-  c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_struct.h(98): note: 'Engine::PointDesc' 선언을 참조하십시오.
-c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\attribute.cpp(21): error C2660: 'Engine::GetRandomVector': 함수는 1개의 매개 변수를 사용하지 않습니다.
-c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\attribute.cpp(22): error C2039: 'm_vDir': 'Engine::PointDesc'의 멤버가 아닙니다.
-  c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_struct.h(98): note: 'Engine::PointDesc' 선언을 참조하십시오.
-c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\attribute.cpp(38): error C2039: 'm_fLifeTime': 'Engine::PointDesc'의 멤버가 아닙니다.
-  c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_struct.h(98): note: 'Engine::PointDesc' 선언을 참조하십시오.
-c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\attribute.cpp(40): error C2039: 'm_isAlive': 'Engine::PointDesc'의 멤버가 아닙니다.
-  c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_struct.h(98): note: 'Engine::PointDesc' 선언을 참조하십시오.
-c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\attribute.cpp(44): error C2039: 'm_vDir': 'Engine::PointDesc'의 멤버가 아닙니다.
-  c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_struct.h(98): note: 'Engine::PointDesc' 선언을 참조하십시오.
-c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\attribute.cpp(44): error C2039: 'm_fAcceleration': 'Engine::PointDesc'의 멤버가 아닙니다.
-  c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_struct.h(98): note: 'Engine::PointDesc' 선언을 참조하십시오.
+  Camera.cpp
+  Base.cpp
+  Animation.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\animation.cpp(180): warning C4305: 'return': 'HRESULT'에서 'Engine::_bool'(으)로 잘립니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\animation.cpp(212): warning C4244: '초기화 중': 'DOUBLE'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   코드를 생성하고 있습니다...
-  컴파일하고 있습니다...
+cl : 명령줄 warning D9030: '/Gm'이(가) 다중 처리와 호환되지 않습니다. /MP 스위치를 무시합니다.
+  Particle_Point.cpp
+  Particle_Mesh.cpp
   Particle.cpp
+  Item.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Attribute_Layer.cpp
+  Attribute.cpp
   코드를 생성하고 있습니다...
+     ..\bin\Engine.lib 라이브러리 및 ..\bin\Engine.exp 개체를 생성하고 있습니다.
+  Engine.vcxproj -> C:\Users\a\Desktop\GitHub\Risk-of-Rain2\Tool\MFCTool\Engine\default\..\bin\Engine.dll
+  Engine.vcxproj -> ..\bin\Engine.pdb (Full PDB)

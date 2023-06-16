@@ -114,19 +114,26 @@ public:
 	HRESULT		Level_Relese_Light();
 	HRESULT		Add_Light(LPDIRECT3DDEVICE9 pGraphic_Device, const D3DLIGHT9& LightDesc);
 #pragma endregion
+//#pragma region PARTICLE
+//public:
+//	HRESULT	Add_ParticleSystem(const _tchar* pLayerTag);
+//	HRESULT	Add_ParticleSystem(const _tchar* pLayerTag, void* pArg);
+//	HRESULT	DeleteAll_ParticleSystem(const _tchar* pLayerTag);
+//	HRESULT	Delete_ParticleSystem(const _tchar* pLayerTag, _int iIndex);
+//#pragma endregion
 public:
 	static void Release_Engine();
 private:
-	CGraphic_Device*		m_pDevice		= nullptr;
-	CLevel_Manager*			m_pLevel		= nullptr;
-	CGameObject_Manager*	m_pGameObject	= nullptr;
-	CComponent_Manager*		m_pComponent	= nullptr;
-	CTime_Manager*			m_pTimer		= nullptr;
-	CInput_Device*			m_pInput		= nullptr;
-	CPipeLine*				m_pPipe			= nullptr;
-	CPicking*				m_pPicking		= nullptr;
-	CLight_Manager*			m_pLight		= nullptr;
-	CKey_Manager*			m_pKeyManager	= nullptr;
+	CGraphic_Device*	     m_pDevice		= nullptr;
+	CLevel_Manager*		     m_pLevel		= nullptr;
+	CGameObject_Manager*     m_pGameObject	= nullptr;
+	CComponent_Manager*	     m_pComponent	= nullptr;
+	CTime_Manager*		     m_pTimer		= nullptr;
+	CInput_Device*		     m_pInput		= nullptr;
+	CPipeLine*			     m_pPipe		= nullptr;
+	CPicking*			     m_pPicking		= nullptr;
+	CLight_Manager*		     m_pLight		= nullptr;
+	CKey_Manager*		     m_pKeyManager	= nullptr;
 public:
 	virtual void Free() override;
 

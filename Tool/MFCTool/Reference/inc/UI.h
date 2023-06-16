@@ -1,6 +1,9 @@
 #pragma once
 #include "GameObject.h"
 
+/*
+2D UI Class
+*/
 BEGIN(Engine)
 class CVIBuffer_Rect;
 class CRenderer;

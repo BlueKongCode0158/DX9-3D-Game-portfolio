@@ -50,8 +50,3 @@ void CShape::Free()
 {
 	Safe_Release(m_pMesh);
 }
-
-
-CShape::~CShape()
-{
-}

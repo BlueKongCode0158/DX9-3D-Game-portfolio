@@ -37,9 +37,6 @@
     <Filter Include="05.Tab\01.GameObjectTab">
       <UniqueIdentifier>{9bad8dfd-bfb8-4917-ac91-6fcfa3a479b7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="97.Shader_File">
-      <UniqueIdentifier>{535e5df5-c8f7-49ca-b06a-0070d44554e8}</UniqueIdentifier>
-    </Filter>
     <Filter Include="06.Save_Load">
       <UniqueIdentifier>{1f0541dc-5d34-405a-9e3a-ba39a1116f24}</UniqueIdentifier>
     </Filter>
@@ -117,6 +114,9 @@
     </Filter>
     <Filter Include="07.Manager\01.Particle_Manager">
       <UniqueIdentifier>{07d5ed1b-d102-413a-8e7e-37deb7f2e4d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="97.ShaderFiles">
+      <UniqueIdentifier>{535e5df5-c8f7-49ca-b06a-0070d44554e8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -307,7 +307,7 @@
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="..\bin\ShaderFiles\Shader_Terrain_MFC.hlsl">
-      <Filter>97.Shader_File</Filter>
+      <Filter>97.ShaderFiles</Filter>
     </FxCompile>
     <FxCompile Include="..\bin\ShaderFiles\Shader_Point.hlsl">
       <Filter>04.Object\00.Point\00.Shader</Filter>
