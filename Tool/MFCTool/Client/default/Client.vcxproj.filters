@@ -358,20 +358,20 @@
     <Filter Include="02.GameObject\10.UI\08.SelectWindow">
       <UniqueIdentifier>{954ac7b9-b4c1-4ab5-b7c4-f108d3075f26}</UniqueIdentifier>
     </Filter>
-    <Filter Include="96.Manager">
-      <UniqueIdentifier>{5487384a-0bf2-4291-a7a4-ddb357af7879}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="96.Manager\00.Collision_Manager">
-      <UniqueIdentifier>{9a459b44-8e0a-4469-bee5-64c8024f22c9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="04.Xml">
-      <UniqueIdentifier>{eef3cad3-6024-4724-a61a-c5384147fe36}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="04.Xml\Manager">
-      <UniqueIdentifier>{bc9f0fc2-e8b8-4f12-b752-ecbfd5da519f}</UniqueIdentifier>
-    </Filter>
     <Filter Include="97.ShaderFiles">
       <UniqueIdentifier>{2045096e-c62d-4bd7-ac0a-b783bc8ae6a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="96.Managers">
+      <UniqueIdentifier>{5487384a-0bf2-4291-a7a4-ddb357af7879}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="96.Managers\00.Collision_Manager">
+      <UniqueIdentifier>{9a459b44-8e0a-4469-bee5-64c8024f22c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="96.Managers\01.UI_Manager">
+      <UniqueIdentifier>{454db071-e43b-46fd-b724-7129ea74b120}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="96.Managers\02.Xml_Manager">
+      <UniqueIdentifier>{42eb2b82-3a2c-4cbb-9898-2e5a694d66fe}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -633,8 +633,14 @@
     <ClInclude Include="..\public\Logo_Terrain.h">
       <Filter>02.GameObject\03.Terrain\Logo</Filter>
     </ClInclude>
+    <ClInclude Include="..\public\Collision_Manager.h">
+      <Filter>96.Managers\00.Collision_Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\UI_Manager.h">
+      <Filter>96.Managers\01.UI_Manager</Filter>
+    </ClInclude>
     <ClInclude Include="..\public\Xml_Manager.h">
-      <Filter>04.Xml\Manager</Filter>
+      <Filter>96.Managers\02.Xml_Manager</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -887,8 +893,14 @@
     <ClCompile Include="..\private\Logo_Terrain.cpp">
       <Filter>02.GameObject\03.Terrain\Logo</Filter>
     </ClCompile>
+    <ClCompile Include="..\private\Collision_Manager.cpp">
+      <Filter>96.Managers\00.Collision_Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\UI_Manager.cpp">
+      <Filter>96.Managers\01.UI_Manager</Filter>
+    </ClCompile>
     <ClCompile Include="..\private\Xml_Manager.cpp">
-      <Filter>04.Xml\Manager</Filter>
+      <Filter>96.Managers\02.Xml_Manager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

@@ -208,6 +208,8 @@
     <ClInclude Include="..\public\DIgLog2.h" />
     <ClInclude Include="..\public\DIgTab0.h" />
     <ClInclude Include="..\public\Dynamic_Mesh_List.h" />
+    <ClInclude Include="..\public\Effect_Mesh_List.h" />
+    <ClInclude Include="..\public\Effect_Mesh_Texture_List.h" />
     <ClInclude Include="..\public\Free_Camera.h" />
     <ClInclude Include="..\public\MeshList.h" />
     <ClInclude Include="..\public\Mesh_Manager.h" />
@@ -248,6 +250,8 @@
     <ClCompile Include="..\private\DIgLog2.cpp" />
     <ClCompile Include="..\private\DIgTab0.cpp" />
     <ClCompile Include="..\private\Dynamic_Mesh_List.cpp" />
+    <ClCompile Include="..\private\Effect_Mesh_List.cpp" />
+    <ClCompile Include="..\private\Effect_Mesh_Texture_List.cpp" />
     <ClCompile Include="..\private\Free_Camera.cpp" />
     <ClCompile Include="..\private\MeshList.cpp" />
     <ClCompile Include="..\private\Mesh_Manager.cpp" />

@@ -18,6 +18,8 @@
 #define IDD_TAB_DIALOG2                 315
 #define IDC_UITABLOG                    316
 #define IDD_UITABLOG                    316
+#define IDD_EFFECT_MESH_LIST            317
+#define IDD_EFFECT_MESH_TEXTURE_LIST    318
 #define IDC_MFCVSLISTBOX1               1001
 #define IDC_LIST1                       1002
 #define IDC_TERRAIN_LIST                1002
@@ -51,15 +53,24 @@
 #define IDC_BUTTON9                     1015
 #define IDC_EDIT23                      1015
 #define IDC_BUTTON10                    1016
+#define IDC_EDIT24                      1016
 #define IDC_BUTTON11                    1017
+#define IDC_EDIT25                      1017
+#define IDC_EDIT26                      1018
 #define IDC_EDIT3                       1019
+#define IDC_EDIT27                      1019
 #define IDC_EDIT7                       1020
 #define IDC_EDIT5                       1021
+#define IDC_EDIT28                      1021
 #define IDC_RADIO1                      1022
+#define IDC_EDIT29                      1022
 #define IDC_RADIO2                      1023
+#define IDC_EDIT30                      1023
 #define IDC_RADIO3                      1024
+#define IDC_EDIT31                      1024
 #define IDC_EDIT6                       1025
 #define IDC_RADIO16                     1025
+#define IDC_EDIT32                      1025
 #define IDC_RADIO11                     1026
 #define IDC_RADIO17                     1027
 #define IDC_RADIO18                     1028
@@ -100,14 +111,16 @@
 #define IDC_StaticTag1                  1058
 #define IDC_LOCKTEXT                    1058
 #define IDC_DynamicTag1                 1059
+#define IDC_SLIDER1                     1067
+#define IDC_TREE1                       1068
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        321
+#define _APS_NEXT_RESOURCE_VALUE        323
 #define _APS_NEXT_COMMAND_VALUE         32771
-#define _APS_NEXT_CONTROL_VALUE         1060
-#define _APS_NEXT_SYMED_VALUE           317
+#define _APS_NEXT_CONTROL_VALUE         1070
+#define _APS_NEXT_SYMED_VALUE           319
 #endif
 #endif

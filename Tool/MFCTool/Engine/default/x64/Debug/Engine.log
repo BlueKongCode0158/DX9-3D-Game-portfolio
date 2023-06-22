@@ -15,9 +15,13 @@ FXC : warning X4717: Effects deprecated for D3DCompiler_47
   compilation object save succeeded; see C:\Users\a\Desktop\GitHub\Risk-of-Rain2\Tool\MFCTool\Engine\bin\Shader_Font.cso
 FXC : warning X4717: Effects deprecated for D3DCompiler_47
   
+  compilation object save succeeded; see C:\Users\a\Desktop\GitHub\Risk-of-Rain2\Tool\MFCTool\Engine\bin\Shader_Particle.cso
+FXC : warning X4717: Effects deprecated for D3DCompiler_47
+  
   compilation object save succeeded; see C:\Users\a\Desktop\GitHub\Risk-of-Rain2\Tool\MFCTool\Engine\bin\Shader_UI.cso
 cl : 명령줄 warning D9030: '/Gm'이(가) 다중 처리와 호환되지 않습니다. /MP 스위치를 무시합니다.
   VIBuffer_Terrain.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(112): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(114): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(197): warning C4244: '인수': 'Engine::_ulong'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
@@ -57,76 +61,118 @@ c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_ter
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(636): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\vibuffer_terrain.cpp(714): warning C4244: '인수': 'Engine::_ulong'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   VIBuffer_Rect_Viewport.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   VIBuffer_Rect.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   VIBuffer_Point.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   VIBuffer_Cube.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   VIBuffer.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   UI.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Transform.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Time_Manager.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Timer.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Texture.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Target_Manager.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Target.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Status.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Static_Mesh.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\static_mesh.cpp(46): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   State.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Single_ITem.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Shape.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Shader.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Renderer.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\renderer.cpp(80): warning C4244: '인수': 'DWORD'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   코드를 생성하고 있습니다...
   컴파일하고 있습니다...
   QuadTree.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   PipeLine.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Picking.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\picking.cpp(118): warning C4805: '==': 연산에 'bool' 형식과 'BOOL' 형식을 함께 사용하는 것은 안전하지 않습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\picking.cpp(165): warning C4805: '==': 연산에 'bool' 형식과 'HRESULT' 형식을 함께 사용하는 것은 안전하지 않습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\picking.cpp(212): warning C4805: '==': 연산에 'bool' 형식과 'BOOL' 형식을 함께 사용하는 것은 안전하지 않습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\picking.cpp(259): warning C4805: '==': 연산에 'bool' 형식과 'BOOL' 형식을 함께 사용하는 것은 안전하지 않습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\picking.cpp(305): warning C4805: '==': 연산에 'bool' 형식과 'HRESULT' 형식을 함께 사용하는 것은 안전하지 않습니다.
   Particle_System.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Navigation.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\navigation.cpp(44): warning C4267: '인수': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Multy_ITem.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Mesh.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Light_Manager.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Light.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\light.cpp(20): warning C4244: '인수': 'DWORD'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Level_Manager.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Level.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Layer.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\layer.h(13): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Key_Manager.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Inventory.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Input_Device.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   HierarchyLoader.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\hierarchyloader.cpp(18): warning C4267: '초기화 중': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\hierarchyloader.cpp(79): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\hierarchyloader.cpp(125): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
   Graphic_Device.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   GameObject_Manager.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\layer.h(13): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   GameObject.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\dynamic_mesh.h(18): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   GameInstacne.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\dynamic_mesh.h(18): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   코드를 생성하고 있습니다...
   컴파일하고 있습니다...
   Frustum.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Engine_Font.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Dynamic_Mesh.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\dynamic_mesh.h(18): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\dynamic_mesh.cpp(25): warning C4267: '초기화 중': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\dynamic_mesh.cpp(374): warning C4305: 'return': 'HRESULT'에서 'Engine::_float'(으)로 잘립니다.
@@ -135,29 +181,41 @@ c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\dynamic_mesh
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\dynamic_mesh.cpp(604): warning C4267: '초기화 중': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\dynamic_mesh.cpp(673): warning C4267: '초기화 중': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Component_Manager.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\dynamic_mesh.h(18): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Component.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Collider.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Cell.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Canvas.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\light_manager.h(15): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\dynamic_mesh.h(18): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Camera.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Base.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Animation.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\animation.cpp(180): warning C4305: 'return': 'HRESULT'에서 'Engine::_bool'(으)로 잘립니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\animation.cpp(212): warning C4244: '초기화 중': 'DOUBLE'에서 'Engine::_float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   코드를 생성하고 있습니다...
 cl : 명령줄 warning D9030: '/Gm'이(가) 다중 처리와 호환되지 않습니다. /MP 스위치를 무시합니다.
   Particle_Point.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Particle_Mesh.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Particle.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Item.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  Attribute_Layer.cpp
   Attribute.cpp
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   코드를 생성하고 있습니다...
      ..\bin\Engine.lib 라이브러리 및 ..\bin\Engine.exp 개체를 생성하고 있습니다.
   Engine.vcxproj -> C:\Users\a\Desktop\GitHub\Risk-of-Rain2\Tool\MFCTool\Engine\default\..\bin\Engine.dll

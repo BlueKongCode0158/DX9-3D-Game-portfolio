@@ -178,12 +178,13 @@ HRESULT CUICreate_Manager::Load_UI( _tchar * pFileName)
 	_tchar pFile[MAX_PATH];
 	wcscpy(pFile, pFileName);
 	char cTemp[MAX_PATH];
-	int iLen = MAX_PATH;
-	WideCharToMultiByte(CP_ACP, 0, pFile, iLen, cTemp, iLen, NULL, NULL);
+
+	WcharToChar(pFile, cTemp);
 	Doc.LoadFile(cTemp);
 
 	tinyxml2::XMLNode* pRootNode = Doc.FirstChild();
 	tinyxml2::XMLElement* pElement = pRootNode->FirstChildElement();
+
 	for (pElement; pElement; pElement = pElement->NextSiblingElement())
 	{
 		_matrix tMatrix;
@@ -204,6 +205,7 @@ HRESULT CUICreate_Manager::Load_UI( _tchar * pFileName)
 				}
 			}
 		}
+
 		CGameInstacne* pGameInstance = GET_INSTANCE(CGameInstacne);
 		string pName = pElement->Name();
 		CString LayerName;
@@ -234,9 +236,9 @@ HRESULT CUICreate_Manager::Save_UI(_tchar * pFileName)
 	{
 		/* _tchar -> char 로 변환하는 과정 */
 		char cName[MAX_PATH];
-		memset(static_cast<void*>(cName), 0, sizeof(cName));
-		WideCharToMultiByte(CP_ACP, 0, Pair.first, MAX_PATH, cName, MAX_PATH, NULL, NULL);
-		
+		memset(static_cast<void*>(cName), 0, sizeof(cName));		
+		WcharToChar(Pair.first, cName);
+
 		tinyxml2::XMLElement* pUIElement = doc.NewElement(cName);
 		pRootNode->InsertEndChild(pUIElement);
 		const CTransform* pTransform = Pair.second->Get_Transform();

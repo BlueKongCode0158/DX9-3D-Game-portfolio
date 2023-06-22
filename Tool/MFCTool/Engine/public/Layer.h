@@ -28,7 +28,6 @@ public:
 	_bool	IsEmpty();
 private:
 	list<CGameObject*>	m_Objects;
-
 public:
 	static CLayer* Create();
 	virtual void   Free() override;

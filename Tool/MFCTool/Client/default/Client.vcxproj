@@ -168,6 +168,7 @@
     <ClInclude Include="..\public\Camera_Free.h" />
     <ClInclude Include="..\public\Character_Camera.h" />
     <ClInclude Include="..\public\Client_Defines.h" />
+    <ClInclude Include="..\public\Collision_Manager.h" />
     <ClInclude Include="..\public\Exit_Button.h" />
     <ClInclude Include="..\public\Golem.h" />
     <ClInclude Include="..\public\Gun_Left.h" />
@@ -240,6 +241,7 @@
     <ClInclude Include="..\public\Titan.h" />
     <ClInclude Include="..\public\Title.h" />
     <ClInclude Include="..\public\UI_BackGround.h" />
+    <ClInclude Include="..\public\UI_Manager.h" />
     <ClInclude Include="..\public\Vagrant.h" />
     <ClInclude Include="..\public\Wisp.h" />
     <ClInclude Include="..\public\Xml_Manager.h" />
@@ -256,6 +258,7 @@
     <ClCompile Include="..\private\Bullet.cpp" />
     <ClCompile Include="..\private\Camera_Free.cpp" />
     <ClCompile Include="..\private\Character_Camera.cpp" />
+    <ClCompile Include="..\private\Collision_Manager.cpp" />
     <ClCompile Include="..\private\Exit_Button.cpp" />
     <ClCompile Include="..\private\Golem.cpp" />
     <ClCompile Include="..\private\Gun_Left.cpp" />
@@ -330,6 +333,7 @@
     <ClCompile Include="..\private\Titan.cpp" />
     <ClCompile Include="..\private\Title.cpp" />
     <ClCompile Include="..\private\UI_BackGround.cpp" />
+    <ClCompile Include="..\private\UI_Manager.cpp" />
     <ClCompile Include="..\private\Vagrant.cpp" />
     <ClCompile Include="..\private\Wisp.cpp" />
     <ClCompile Include="..\private\Xml_Manager.cpp" />

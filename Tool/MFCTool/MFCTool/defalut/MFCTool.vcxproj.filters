@@ -118,6 +118,12 @@
     <Filter Include="97.ShaderFiles">
       <UniqueIdentifier>{535e5df5-c8f7-49ca-b06a-0070d44554e8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="08.Window\02. Effect_Mesh_Window">
+      <UniqueIdentifier>{39f9d380-0b11-4c6e-b733-60822973f5c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="08.Window\03. Effet_Mesh_Texture_Window">
+      <UniqueIdentifier>{1378bb72-e6ef-4257-b308-8de46686761c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MainFrm.h">
@@ -216,6 +222,12 @@
     <ClInclude Include="Particle_Manager.h">
       <Filter>07.Manager\01.Particle_Manager</Filter>
     </ClInclude>
+    <ClInclude Include="..\public\Effect_Mesh_List.h">
+      <Filter>08.Window\02. Effect_Mesh_Window</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\Effect_Mesh_Texture_List.h">
+      <Filter>08.Window\03. Effet_Mesh_Texture_Window</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MainFrm.cpp">
@@ -298,6 +310,12 @@
     </ClCompile>
     <ClCompile Include="Particle_Manager.cpp">
       <Filter>07.Manager\01.Particle_Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\Effect_Mesh_List.cpp">
+      <Filter>08.Window\02. Effect_Mesh_Window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\Effect_Mesh_Texture_List.cpp">
+      <Filter>08.Window\03. Effet_Mesh_Texture_Window</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

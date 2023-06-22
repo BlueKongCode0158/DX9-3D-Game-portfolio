@@ -23,6 +23,7 @@ private:
 
 private:
 	map<const _tchar*, list<CParticle*>> map_Particles;
+	typedef map<const _tchar*, list<CParticle*>> PARTICLE;
 public:
 	virtual	void Free() override;
 };

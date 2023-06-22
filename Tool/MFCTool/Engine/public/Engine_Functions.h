@@ -106,3 +106,17 @@ unsigned long Safe_Release(T& pInstance)
 
 	return dwRefcnt;
 }
+
+
+// Len은 MAX_PATH로 통일한다.
+void static WcharToChar(const wchar_t* pInText, char* pOutText)
+{
+	int		iLen = MAX_PATH;
+	WideCharToMultiByte(CP_ACP, 0, pInText, iLen, pOutText, iLen, 0, 0);
+}
+
+// Len은 MAX_PATH로 통일한다.
+void static CharToWchar(char* pInText, wchar_t* pOutText)
+{
+	MultiByteToWideChar(CP_ACP, MB_PRECOMPOSED, pInText, strlen(pInText), pOutText, MAX_PATH);
+}
