@@ -42,8 +42,8 @@ public:
 private:
 	/* Terrain */
 	CListBox	m_Terrain_Value_ListBox;
-	CStatic		m_TerrainPicture;
 	CListBox	m_Terrain_ObjectList;
+	CStatic		m_TerrainPicture;
 private:
 	/* Slider Brush */
 	CSliderCtrl m_BrushSizeSlider;
@@ -96,4 +96,5 @@ public:
 	afx_msg void OnBnClicked_SaveTerrain_Height();
 	afx_msg void OnBnClicked_LoadTerrainHeightMap();
 	afx_msg void OnBnClicked_FilterLoad();
+	afx_msg void OnLButtonUp(UINT nFlags, CPoint point);
 };

@@ -6,7 +6,6 @@
 #include "ControlFormView.h"
 #include "CellPoint_Manager.h"
 
-
 CMFC_Terrain::CMFC_Terrain(LPDIRECT3DDEVICE9 pGraphic_Device)
 	:CGameObject(pGraphic_Device)
 {
@@ -63,10 +62,9 @@ HRESULT CMFC_Terrain::NativeConstruct(void * pArg)
 		{
 			_uint	iIndex = i * m_iIndexX + j;
 
-			((_ulong*)LockRect.pBits)[iIndex] = D3DXCOLOR(1.f, 0.f, 0.f, 1.f);
+			((_ulong*)LockRect.pBits)[iIndex] = D3DXCOLOR(0.f, 0.f, 0.f, 1.f);
 		}
 	}
-
 	m_pFilterTexture->UnlockRect(0);
 
 	D3DXSaveTextureToFile(TEXT("../bin/Filter.bmp"), D3DXIFF_BMP, m_pFilterTexture, nullptr);
@@ -188,16 +186,12 @@ HRESULT CMFC_Terrain::Render()
 
 	if (1 == pView->m_MapTab.GetCurSel())
 	{
-		CGameInstacne* pGameInstance = GET_INSTANCE(CGameInstacne);
-
 #ifdef _DEBUG
 		if (pGameInstance->Input_KeyBoard_Pressing(DIK_Q))
 		{
 			CCellPoint_Manager::Get_Instance()->Render(m_pTransformCom->Get_WorldMatrix());
 		}
 #endif // _DEBUG
-
-		RELEASE_INSTANCE(CGameInstacne);
 	}
 
 	RELEASE_INSTANCE(CGameInstacne);
@@ -353,7 +347,7 @@ void CMFC_Terrain::Splatting_BrushType(_float TimeDelta, _float fBrushSize, _flo
 		}
 	}
 	m_pFilterTexture->UnlockRect(0);
-
+	D3DXSaveTextureToFile(TEXT("../bin/Filter.bmp"), D3DXIFF_BMP, m_pFilterTexture, nullptr);
 }
 
 CMFC_Terrain * CMFC_Terrain::Create(LPDIRECT3DDEVICE9 pGraphic_Device, const _uint iIndexX, const _uint iIndexZ, const _tchar* TerrainPrototype_ComponentName)

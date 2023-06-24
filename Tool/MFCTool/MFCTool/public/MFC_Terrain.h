@@ -52,7 +52,7 @@ private:
 	_uint					m_iIndexX;
 	_uint					m_iIndexZ;
 	const _tchar*			m_pTerrainPrototypeName;
-public:
+private:
 	LPDIRECT3DTEXTURE9	m_pFilterTexture	= nullptr;
 	LPDIRECT3DTEXTURE9	m_pHightMapTexture	= nullptr;
 public:

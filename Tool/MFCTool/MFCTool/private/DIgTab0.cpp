@@ -662,6 +662,25 @@ void CDIgTab0::OnBnClicked_FilterLoad()
 }
 
 
+void CDIgTab0::OnLButtonUp(UINT nFlags, CPoint point)
+{
+	// TODO: 여기에 메시지 처리기 코드를 추가 및/또는 기본값을 호출합니다.
+	UpdateData(TRUE);
+
+	CRect	tRect;
+	m_TerrainPicture.GetWindowRect(tRect);
+	CDC*	dc;
+	dc = m_TerrainPicture.GetDC();
+
+	CImage	Image;
+	Image.Load(TEXT("../bin/Filter.bmp"));
+	Image.StretchBlt(dc->m_hDC, 0, 0, tRect.Width(), tRect.Height(), SRCCOPY);
+	ReleaseDC(dc);
+
+	CDialogEx::OnLButtonUp(nFlags, point);
+	UpdateData(FALSE);
+}
+
 BEGIN_MESSAGE_MAP(CDIgTab0, CDialogEx)
 ON_BN_CLICKED(IDC_BUTTON3, &CDIgTab0::OnBnClicked_TerrainButton)
 ON_BN_CLICKED(IDC_BUTTON2, &CDIgTab0::OnBnClicked_CreateButton)
@@ -692,5 +711,7 @@ ON_BN_CLICKED(IDC_RADIO15, &CDIgTab0::OnBnClicked_RenderState_Circle)
 ON_BN_CLICKED(IDC_BUTTON11, &CDIgTab0::OnBnClicked_SaveTerrain_Height)
 ON_BN_CLICKED(IDC_BUTTON9, &CDIgTab0::OnBnClicked_LoadTerrainHeightMap)
 ON_BN_CLICKED(IDC_BUTTON12, &CDIgTab0::OnBnClicked_FilterLoad)
+//ON_WM_KEYUP()
+ON_WM_LBUTTONUP()
 END_MESSAGE_MAP()
 // CDIgTab0 메시지 처리기입니다.
