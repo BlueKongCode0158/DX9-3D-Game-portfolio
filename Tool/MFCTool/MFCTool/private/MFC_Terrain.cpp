@@ -5,7 +5,7 @@
 #include "MainFrm.h"
 #include "ControlFormView.h"
 #include "CellPoint_Manager.h"
-
+#include "DIgTab0.h"
 CMFC_Terrain::CMFC_Terrain(LPDIRECT3DDEVICE9 pGraphic_Device)
 	:CGameObject(pGraphic_Device)
 {
@@ -68,7 +68,6 @@ HRESULT CMFC_Terrain::NativeConstruct(void * pArg)
 	m_pFilterTexture->UnlockRect(0);
 
 	D3DXSaveTextureToFile(TEXT("../bin/Filter.bmp"), D3DXIFF_BMP, m_pFilterTexture, nullptr);
-
 	return S_OK;
 }
 
@@ -82,7 +81,6 @@ _int CMFC_Terrain::Tick(double TimeDelta)
 	}
 
 	__super::Tick(TimeDelta);
-
 	CGameInstacne* pGameInstacne = GET_INSTANCE(CGameInstacne);
 
 	m_vBrushPoint = pGameInstacne->Compute_PickingPoint(m_pVIBufferCom, *m_pTransformCom->Get_WorldMatrix());
@@ -347,7 +345,14 @@ void CMFC_Terrain::Splatting_BrushType(_float TimeDelta, _float fBrushSize, _flo
 		}
 	}
 	m_pFilterTexture->UnlockRect(0);
+
+	CControlFormView* pView = (CControlFormView*)(((CMainFrame*)AfxGetMainWnd())->m_tMainSplitter.GetPane(0, 0));
 	D3DXSaveTextureToFile(TEXT("../bin/Filter.bmp"), D3DXIFF_BMP, m_pFilterTexture, nullptr);
+	CPoint	tPoint;
+	::GetCursorPos(&tPoint);
+	pView->pTab_MapTool->ScreenToClient(&tPoint);
+	pView->pTab_MapTool->OnLButtonUp(0, tPoint);
+
 }
 
 CMFC_Terrain * CMFC_Terrain::Create(LPDIRECT3DDEVICE9 pGraphic_Device, const _uint iIndexX, const _uint iIndexZ, const _tchar* TerrainPrototype_ComponentName)

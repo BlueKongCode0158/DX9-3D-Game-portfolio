@@ -677,8 +677,9 @@ void CDIgTab0::OnLButtonUp(UINT nFlags, CPoint point)
 	Image.StretchBlt(dc->m_hDC, 0, 0, tRect.Width(), tRect.Height(), SRCCOPY);
 	ReleaseDC(dc);
 
-	CDialogEx::OnLButtonUp(nFlags, point);
 	UpdateData(FALSE);
+
+	CDialogEx::OnLButtonUp(nFlags, point);
 }
 
 BEGIN_MESSAGE_MAP(CDIgTab0, CDialogEx)
