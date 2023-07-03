@@ -4,6 +4,11 @@
 // 들어 있는 포함 파일입니다.
 
 #pragma once
+#ifdef		_DEBUG
+#define		_CRTDBG_MAP_ALLOC
+#define		_INC_MALLOC
+#endif // _DEBUG
+
 
 #ifndef VC_EXTRALEAN
 #define VC_EXTRALEAN            // 거의 사용되지 않는 내용은 Windows 헤더에서 제외합니다.

@@ -27,11 +27,14 @@ public:
 	virtual HRESULT Render() override;
 private:
 	HRESULT	SetUp_ConstantTable();
+	void	Create_Attribute();
+	void	Update_List(_float fTimeDelta);
 public:
 	_int	Tick(_float fTimeDelta);
 public:
 	void	Set_Position(_float3 vPosition);
 	_bool	Set_Index(_int iIndex);
+	_bool	Set_ParticleInfo(PDESC* tPInfo);
 private:
 	// 스마트 포인터식으로 RefCnt로 카운팅 할 것이다.
 	CAttribute*				m_pPrototypeSystem = nullptr;
@@ -40,6 +43,7 @@ private:
 	PDESC	m_tInfo;
 	PSDESC	m_tParticleState;
 private:
+	_float	m_fAccTime		= 0.f;
 	_int	m_iShaderNumber = 0;
 private:
 	//	모든 파티클들은 하나의 쉐이더로 그린다.

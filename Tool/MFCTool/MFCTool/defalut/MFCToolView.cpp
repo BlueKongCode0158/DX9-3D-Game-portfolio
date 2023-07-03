@@ -313,7 +313,6 @@ HRESULT CMFCToolView::Add_Prototype_Object()
 HRESULT CMFCToolView::Add_Prototype_Component()
 {
 	CGameInstacne* pGameInstance = GET_INSTANCE(CGameInstacne);
-
 	if (FAILED(pGameInstance->Add_Prototype_Component(LEVEL_STATIC, TEXT("Prototype_Transform"), CTransform::Create(m_pGraphic_Device))))
 	{
 		return E_FAIL;
@@ -391,8 +390,6 @@ HRESULT CMFCToolView::Add_Prototype_Component()
 	{
 		return E_FAIL;
 	}
-
-
 	RELEASE_INSTANCE(CGameInstacne);
 	return S_OK;
 }
@@ -440,7 +437,7 @@ HRESULT CMFCToolView::Add_LightDest()
 		return E_FAIL;
 	}
 
-	CGameInstacne *pGameInstance = GET_INSTANCE(CGameInstacne);
+	CGameInstacne* pGameInstance = GET_INSTANCE(CGameInstacne);
 
 	D3DLIGHT9	LightDesc;
 	ZeroMemory(&LightDesc, sizeof(D3DLIGHT9));

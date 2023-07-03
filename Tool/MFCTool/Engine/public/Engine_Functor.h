@@ -28,10 +28,16 @@ namespace Engine
 	template<typename T>
 	class CGet_Instance
 	{
-	private:
-		CGet_Instance(T) { m_pInstance = GET_INSTANCE(T) }
-		~CGet_Instance() { RELEASE_INSTANCE(T) }
+	public:
+		CGet_Instance(T* Instance) { m_pInstance = GET_INSTANCE(typeid(Instance).name()); }
+		~CGet_Instance() { RELEASE_INSTANCE(typeid(Instance).name()); }
+	public:
+		T*	Get_Pointer() const     
+		{
+			return m_pInstance;
+		}
 	private:
 		T*	m_pInstance = nullptr;
 	};
+
 }

@@ -16,7 +16,7 @@ private:
 	virtual ~CAttribute() = default;
 public:
 	HRESULT	NativeConstruct_Prototype();
-	HRESULT	NativeConstruct();
+	HRESULT	NativeConstruct(void* pArg);
 public:
 	const PDESC*	GetInfo()
 	{
@@ -37,7 +37,7 @@ private:
 	PDESC	m_tInfo;
 public:
 	static CAttribute*	Create();
-	CAttribute*			Clone();
+	CAttribute*			Clone(void* pArg);
 	virtual void		Free() override;
 };
 END

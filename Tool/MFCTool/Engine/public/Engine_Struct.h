@@ -89,10 +89,13 @@ namespace Engine
 	// 파티클 시스템이 가지고 있는 Particle 클래스의 데이터 객체.
 	typedef struct PSystemDesc
 	{
+	public:
 		_int	m_iMaxParticle	= 0;
 		_bool	m_isAlive		= true;
 		_bool	m_isEmission	= true;		// 파티클이 방출될 수 있나?
 		_bool	m_isLoop		= false;	// 파티클 반복 유무.
+	public:
+		_float	m_fEmissionTime = 0.f;
 	}PSDESC;
 
 	// 파티클의 Attribute 데이터 객체

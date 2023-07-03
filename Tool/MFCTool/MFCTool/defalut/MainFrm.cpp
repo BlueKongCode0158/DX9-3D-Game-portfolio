@@ -8,15 +8,16 @@
 #include "MainFrm.h"
 #include "MFCToolView.h"
 #include "ControlFormView.h"
+
+#ifdef _DEBUG
+#define new DEBUG_NEW
+#endif
+
 #include "GameInstacne.h"
 #include "Brush_Manager.h"
 #include "UICreate_Manager.h"
 #include "CellPoint_Manager.h"
 #include "Mesh_Manager.h"
-
-#ifdef _DEBUG
-#define new DEBUG_NEW
-#endif
 
 // CMainFrame
 

@@ -5,18 +5,21 @@ CAttribute::CAttribute()
 }
 
 CAttribute::CAttribute(const CAttribute& rhs)
-	: m_tInfo(rhs.m_tInfo)
 {
 }
 
 HRESULT CAttribute::NativeConstruct_Prototype()
 {
+
 	return S_OK;
 }
 
-HRESULT CAttribute::NativeConstruct()
+HRESULT CAttribute::NativeConstruct(void* pArg)
 {
-	
+	if (nullptr != pArg)
+	{
+		memcpy(&m_tInfo, pArg, sizeof(PDESC));
+	}
 	return S_OK;
 }
 
@@ -64,7 +67,7 @@ void CAttribute::Fade_Color()
 CAttribute * CAttribute::Create()
 {
 	CAttribute* pInstance = new CAttribute();
-	if (FAILED(pInstance->NativeConstruct_Prototype()))
+	if (FAILED(pInstance->NativeConstruct_Prototype(pArg)))
 	{
 		Safe_Release(pInstance);
 		return nullptr;
@@ -72,10 +75,10 @@ CAttribute * CAttribute::Create()
 	return pInstance;
 }
 
-CAttribute * CAttribute::Clone()
+CAttribute * CAttribute::Clone(void* pArg)
 {
 	CAttribute* pInstance = new CAttribute(*this);
-	if (FAILED(pInstance->NativeConstruct()))
+	if (FAILED(pInstance->NativeConstruct(pArg)))
 	{
 		Safe_Release(pInstance);
 		return nullptr;

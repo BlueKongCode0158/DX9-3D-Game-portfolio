@@ -30,29 +30,12 @@ HRESULT CParticle_Point::NativeConstruct(void * pArg)
 
 _int CParticle_Point::Tick(_float fTimeDelta)
 {
-	for (auto iter = m_pAttributeList.begin(); iter != m_pAttributeList.end(); )
-	{
-		if (m_tParticleState.m_isLoop == true)
-		{
-			(*iter)->Update(fTimeDelta);
-			(*iter)->Reset();
-			iter++;
-		}
-		else
-		{
-			if (PARTICLE_DEAD == (*iter)->Update(fTimeDelta))
-			{
-				Safe_Release(*iter);
-				iter = m_pAttributeList.erase(iter);
-			}
-			else
-			{
-				iter++;
-			}
-		}
-	}
+	m_fAccTime += fTimeDelta;
+	Create_Attribute();
 
+	Update_List(fTimeDelta);
 	m_pVIBuffer->Update(m_pAttributeList);
+
 	return PARTICLE_ALIVE;
 }
 
@@ -75,6 +58,41 @@ HRESULT CParticle_Point::SetUp_ConstantTable()
 	return S_OK;
 }
 
+void CParticle_Point::Create_Attribute()
+{
+	if (m_fAccTime >= m_tParticleState.m_fEmissionTime)
+	{
+		CAttribute*	pAttribute = m_pPrototypeSystem->Clone(&m_tInfo);
+		m_pAttributeList.push_back(pAttribute);
+		m_fAccTime = 0.f;
+	}
+}
+
+void CParticle_Point::Update_List(_float fTimeDelta)
+{
+	for (auto iter = m_pAttributeList.begin(); iter != m_pAttributeList.end(); )
+	{
+		if (m_tParticleState.m_isLoop == true)
+		{
+			(*iter)->Update(fTimeDelta);
+			(*iter)->Reset();
+			iter++;
+		}
+		else
+		{
+			if (PARTICLE_DEAD == (*iter)->Update(fTimeDelta))
+			{
+				Safe_Release(*iter);
+				iter = m_pAttributeList.erase(iter);
+			}
+			else
+			{
+				iter++;
+			}
+		}
+	}
+}
+
 void CParticle_Point::Set_Position(_float3 vPosition)
 {
 	m_pTransform->Set_WorldMatrixRow(CTransform::STATE::STATE_POSITION, vPosition);
@@ -83,6 +101,12 @@ void CParticle_Point::Set_Position(_float3 vPosition)
 _bool CParticle_Point::Set_Index(_int iIndex)
 {
 	return __super::Set_Index(iIndex);
+}
+
+_bool CParticle_Point::Set_ParticleInfo(PDESC* tPInfo)
+{
+	memcpy(&m_tInfo, tPInfo, sizeof(PDESC));
+	return true;
 }
 
 CComponent * CParticle_Point::Create(LPDIRECT3DDEVICE9 pGraphic_Device)

@@ -52,7 +52,6 @@ c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\dy
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\engine_font.obj
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\frustum.obj
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\attribute.obj
-c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\attribute_layer.obj
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\item.obj
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\particle.obj
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\particle_mesh.obj
@@ -60,10 +59,10 @@ c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\pa
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\bin\shader_collider.cso
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\bin\shader_deferred.cso
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\bin\shader_font.cso
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\bin\shader_particle.cso
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\bin\shader_ui.cso
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\bin\engine.lib
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\bin\engine.exp
-c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\bin\shader_particle.cso
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\bin\engine.ilk
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\bin\engine.dll
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\bin\engine.pdb

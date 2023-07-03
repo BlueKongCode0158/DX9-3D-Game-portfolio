@@ -97,4 +97,6 @@ public:
 	afx_msg void OnBnClicked_LoadTerrainHeightMap();
 	afx_msg void OnBnClicked_FilterLoad();
 	afx_msg void OnLButtonUp(UINT nFlags, CPoint point);
+public:
+	void	Update_TerrainFilterPicture();
 };

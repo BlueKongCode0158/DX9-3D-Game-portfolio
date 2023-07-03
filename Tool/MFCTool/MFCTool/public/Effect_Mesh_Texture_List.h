@@ -15,7 +15,8 @@ public:
 #ifdef AFX_DESIGN_TIME
 	enum { IDD = IDD_EFFECT_MESH_TEXTURE_LIST };
 #endif
-
+private:
+	CImage	m_PreviewImg;
 protected:
 	virtual void DoDataExchange(CDataExchange* pDX);    // DDX/DDV 지원입니다.
 
