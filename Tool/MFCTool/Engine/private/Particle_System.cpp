@@ -31,15 +31,6 @@ HRESULT CParticle_System::NativeConstruct(void * pArg)
 	return S_OK;
 }
 
-HRESULT CParticle_System::Reset()
-{
-	for (auto iter = m_pAttributeList.begin(); iter != m_pAttributeList.end(); iter++)
-	{
-		(*iter)->Reset();
-	}
-	return S_OK;
-}
-
 _int CParticle_System::Tick(_float Time_Delta)
 {
 

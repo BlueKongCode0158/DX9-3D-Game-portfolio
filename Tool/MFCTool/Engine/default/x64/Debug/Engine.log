@@ -1,5 +1,4 @@
-﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppClean.targets(76,5): warning : 'c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\bin\engine.ilk' 파일은 다른 프로세스에서 사용 중이므로 프로세스에서 액세스할 수 없습니다.
-FXC : warning X4717: Effects deprecated for D3DCompiler_47
+﻿FXC : warning X4717: Effects deprecated for D3DCompiler_47
   
   compilation object save succeeded; see C:\Users\a\Desktop\GitHub\Risk-of-Rain2\Tool\MFCTool\Engine\bin\Shader_Collider.cso
 C:\Users\a\Desktop\GitHub\Risk-of-Rain2\Tool\MFCTool\Engine\bin\ShaderFiles\Shader_Deferred.hlsl(138,3-120): warning X3206: implicit truncation of vector type
@@ -208,6 +207,9 @@ c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\animation.cp
 cl : 명령줄 warning D9030: '/Gm'이(가) 다중 처리와 호환되지 않습니다. /MP 스위치를 무시합니다.
   Particle_Point.cpp
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\particle_point.cpp(68): warning C4267: '인수': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\particle_point.cpp(97): error C2660: 'Engine::CAttribute::Clone': 함수는 1개의 매개 변수를 사용하지 않습니다.
   Particle_Mesh.cpp
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Particle.cpp
@@ -218,7 +220,3 @@ c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\texture.h(16)
   Attribute.cpp
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   코드를 생성하고 있습니다...
-  LINK : ..\bin\Engine.dll을(를) 찾을 수 없거나 마지막 증분 링크에 의해 빌드되지 않았습니다. 전체 링크를 수행하고 있습니다.
-     ..\bin\Engine.lib 라이브러리 및 ..\bin\Engine.exp 개체를 생성하고 있습니다.
-  Engine.vcxproj -> C:\Users\a\Desktop\GitHub\Risk-of-Rain2\Tool\MFCTool\Engine\default\..\bin\Engine.dll
-  Engine.vcxproj -> ..\bin\Engine.pdb (Full PDB)

@@ -127,6 +127,27 @@ PS_OUT PS_MAIN(PS_IN In)
 	return Out;
 }
 
+PS_OUT PS_MAIN_ALPHA(PS_IN In)
+{
+	PS_OUT Out = (PS_OUT)0;
+
+	vector	vMtrIDiffuse = tex2D(DiffuseSampler, In.vTexUV);
+	vector	vNormalDesc = tex2D(NormalSampler, In.vTexUV);
+	float3	vNormal = vNormalDesc.xyz * 2.f - 1.f;
+
+	Out.vDiffuse = vMtrIDiffuse;
+	Out.vDiffuse.a = 0.3f;
+
+	float3x3	TBN = float3x3(In.vTangent, In.vBinormal, In.vNormal);
+
+	vNormal = mul(vNormal, TBN);
+
+	Out.vNormal = vector(vNormal.xyz*0.5f + 0.5f, 1.f);
+	Out.vDepth = vector(In.vProjectionPos.w / 300.f, In.vProjectionPos.z / In.vProjectionPos.w, 0.f, 0.f);
+
+	return Out;
+}
+
 struct PS_IN_LIGHT
 {
 	float4 vPosition		: POSITION;
@@ -257,6 +278,7 @@ technique DefaultTechnique
 {
 	pass DefaultRendering
 	{
+		ALPHABLENDENABLE = false;
 		AlphaTestEnable = true;
 		ZWriteEnable = true;
 		AlphaFunc = Greater;
@@ -268,6 +290,7 @@ technique DefaultTechnique
 	}
 	pass DefaultRendering
 	{
+		ALPHABLENDENABLE = false;
 		AlphaTestEnable = true;
 		ZWriteEnable = true;
 		AlphaFunc = Greater;
@@ -279,6 +302,7 @@ technique DefaultTechnique
 	}
 	pass DefaultRendering
 	{
+		ALPHABLENDENABLE = false;
 		ZWriteEnable = true;
 		AlphaTestEnable = false;
 
@@ -287,6 +311,7 @@ technique DefaultTechnique
 	}
 	pass DefaultRendering
 	{
+		ALPHABLENDENABLE = false;
 		ZWriteEnable = true;
 		AlphaTestEnable = false;
 
@@ -295,6 +320,7 @@ technique DefaultTechnique
 	}
 	pass DefaultRendering
 	{
+		ALPHABLENDENABLE = false;
 		ZWriteEnable = true;
 		AlphaTestEnable = false;
 
@@ -303,9 +329,22 @@ technique DefaultTechnique
 	}
 	pass DefaultRendering
 	{
+		ALPHABLENDENABLE = false;
 		ZWriteEnable = false;
 
 		VertexShader = compile vs_3_0 VS_MAIN_SHADOW();
 		PixelShader = compile ps_3_0 PS_MAIN_SHADOW();
+	}
+	pass DefaultRendring
+	{
+		ZWriteEnable = true;
+		ALPHABLENDENABLE = true;
+		BlendOp = Add;
+		SrcBlend = SRCALPHA;
+		DestBlend = INVSRCALPHA;
+		CULLMODE = None;
+
+		VertexShader = compile vs_3_0 VS_MAIN();
+		PixelShader = compile ps_3_0 PS_MAIN_ALPHA();
 	}
 };

@@ -62,6 +62,7 @@ namespace Engine
 	{
 		D3DXVECTOR3		vPosition;
 		D3DXVECTOR2		vTexUV;
+		D3DXVECTOR4		vColor;
 		float			fSize;
 	}VTXPOINT;
 
@@ -95,7 +96,8 @@ namespace Engine
 		_bool	m_isEmission	= true;		// 파티클이 방출될 수 있나?
 		_bool	m_isLoop		= false;	// 파티클 반복 유무.
 	public:
-		_float	m_fEmissionTime = 0.f;
+		_float	m_fEmissionTime	= 0.f;
+		_int	m_iInitCount	= 0;
 	}PSDESC;
 
 	// 파티클의 Attribute 데이터 객체

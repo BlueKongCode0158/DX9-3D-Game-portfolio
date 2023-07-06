@@ -29,8 +29,8 @@ namespace Engine
 	class CGet_Instance
 	{
 	public:
-		CGet_Instance(T* Instance) { m_pInstance = GET_INSTANCE(typeid(*Instance).name()); }
-		~CGet_Instance() { RELEASE_INSTANCE(typeid(*Instance).name()); }
+		CGet_Instance(T* Instance) { m_pInstance = GET_INSTANCE(typeid(Instance).name()); }
+		~CGet_Instance() { RELEASE_INSTANCE(typeid(Instance).name()); }
 	public:
 		T*	Get_Pointer() const     
 		{

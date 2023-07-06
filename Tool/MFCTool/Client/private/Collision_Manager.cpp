@@ -6,11 +6,14 @@ CCollision_Manager::CCollision_Manager()
 {
 }
 
-
-
-HRESULT CCollision_Manager::Delete_CollisionManager()
+_bool CCollision_Manager::Create(_int iStage)
 {
-	Free();
+	return _bool();
+}
+
+_bool CCollision_Manager::Clear(_int iStage)
+{
+	return _bool();
 }
 
 void CCollision_Manager::Free()

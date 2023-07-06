@@ -98,6 +98,7 @@ technique DefaultTechnique
 {
 	pass DefaultRendering
 	{
+		ZWriteEnable = true;
 		AlphaBlendenable = true;
 		BlendOp = Add;
 		SrcBlend = SRCALPHA;
@@ -109,6 +110,7 @@ technique DefaultTechnique
 
 	pass DefaultRendering
 	{
+		ZWriteEnable = true;
 		AlphaBlendenable = true;
 		BlendOp = Add;
 		SrcBlend = SRCALPHA;
@@ -120,6 +122,7 @@ technique DefaultTechnique
 	}
 	pass DefaultRendering
 	{
+		ZWriteEnable = true;
 		AlphaBlendenable = true;
 		BlendOp = Add;
 		SrcBlend = SRCALPHA;
@@ -131,6 +134,7 @@ technique DefaultTechnique
 	}
 	pass DefaultRendering
 	{
+		ZWriteEnable = true;
 		AlphaBlendenable = true;
 		BlendOp = Add;
 		SrcBlend = SRCALPHA;

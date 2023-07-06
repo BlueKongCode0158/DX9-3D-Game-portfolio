@@ -36,7 +36,6 @@ c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\li
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\mesh.obj
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\multy_item.obj
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\navigation.obj
-c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\particle_system.obj
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\picking.obj
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\pipeline.obj
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\quadtree.obj
@@ -51,22 +50,11 @@ c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\co
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\dynamic_mesh.obj
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\engine_font.obj
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\frustum.obj
-c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\attribute.obj
-c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\item.obj
-c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\particle.obj
-c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\particle_mesh.obj
-c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\particle_point.obj
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\bin\shader_collider.cso
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\bin\shader_deferred.cso
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\bin\shader_font.cso
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\bin\shader_particle.cso
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\bin\shader_ui.cso
-c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\bin\engine.lib
-c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\bin\engine.exp
-c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\bin\engine.ilk
-c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\bin\engine.dll
-c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\bin\engine.pdb
-c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\..\bin\engine.dll
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\engine.tlog\cl.command.1.tlog
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\engine.tlog\cl.read.1.tlog
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\engine.tlog\cl.write.1.tlog
@@ -74,6 +62,3 @@ c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\en
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\engine.tlog\fxc.command.1.tlog
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\engine.tlog\fxc.read.1.tlog
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\engine.tlog\fxc.write.1.tlog
-c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\engine.tlog\link.command.1.tlog
-c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\engine.tlog\link.read.1.tlog
-c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\engine.tlog\link.write.1.tlog

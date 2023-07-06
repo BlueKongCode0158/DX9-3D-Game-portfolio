@@ -19,7 +19,7 @@ CVIBuffer_Point::CVIBuffer_Point(const CVIBuffer_Point & rhs)
 
 HRESULT CVIBuffer_Point::NativeConstruct_Prototype(_uint iNumInstance)
 {
-	if (FAILED(__super::NativeConstruct_VertexBuffer(sizeof(VTXPOINT), iNumInstance, 0, D3DFVF_XYZ | D3DFVF_PSIZE | D3DFVF_TEX1, D3DPT_POINTLIST, 0)))
+	if (FAILED(__super::NativeConstruct_VertexBuffer(sizeof(VTXPOINT), iNumInstance, 0, D3DFVF_XYZ | D3DFVF_PSIZE | D3DFVF_TEX2 | D3DFVF_TEXCOORDSIZE2(0) | D3DFVF_TEXCOORDSIZE4(1)  , D3DPT_POINTLIST, 0)))
 	{
 		return E_FAIL;
 	}
@@ -40,6 +40,9 @@ HRESULT CVIBuffer_Point::NativeConstruct_Prototype(_uint iNumInstance)
 		pVertices[i].vPosition = m_pVerticesPos[i] = _float3(0.f, 0.f, 0.f);
 		pVertices[i].fSize = 1.f;
 		pVertices[i].vTexUV = _float2(0.f, 0.f);
+
+		// { a, r, g, b }
+		pVertices[i].vColor = _float4(1.f, 0.f, 0.f, 1.f);
 	}
 
 	m_pVB->Unlock();
@@ -67,10 +70,11 @@ HRESULT CVIBuffer_Point::NativeConstruct_Prototype(_uint iNumInstance)
 		{ 0,0,D3DDECLTYPE_FLOAT3,D3DDECLMETHOD_DEFAULT,D3DDECLUSAGE_POSITION,0 },
 		{ 0,12,D3DDECLTYPE_FLOAT1,D3DDECLMETHOD_DEFAULT,D3DDECLUSAGE_PSIZE,0 },
 		{ 0,16,D3DDECLTYPE_FLOAT2,D3DDECLMETHOD_DEFAULT,D3DDECLUSAGE_TEXCOORD,0 },
-		{ 1,0,D3DDECLTYPE_FLOAT4,D3DDECLMETHOD_DEFAULT,D3DDECLUSAGE_TEXCOORD,1 },
-		{ 1,16,D3DDECLTYPE_FLOAT3,D3DDECLMETHOD_DEFAULT,D3DDECLUSAGE_TEXCOORD,2 },
-		{ 1,32,D3DDECLTYPE_FLOAT3,D3DDECLMETHOD_DEFAULT,D3DDECLUSAGE_TEXCOORD,3 },
-		{ 1,48,D3DDECLTYPE_FLOAT3,D3DDECLMETHOD_DEFAULT,D3DDECLUSAGE_TEXCOORD,4 },
+		{ 0,24,D3DDECLTYPE_FLOAT4,D3DDECLMETHOD_DEFAULT,D3DDECLUSAGE_TEXCOORD,1 },
+		{ 1,0,D3DDECLTYPE_FLOAT4,D3DDECLMETHOD_DEFAULT,D3DDECLUSAGE_TEXCOORD,2 },
+		{ 1,16,D3DDECLTYPE_FLOAT4,D3DDECLMETHOD_DEFAULT,D3DDECLUSAGE_TEXCOORD,3 },
+		{ 1,32,D3DDECLTYPE_FLOAT4,D3DDECLMETHOD_DEFAULT,D3DDECLUSAGE_TEXCOORD,4 },
+		{ 1,48,D3DDECLTYPE_FLOAT4,D3DDECLMETHOD_DEFAULT,D3DDECLUSAGE_TEXCOORD,5 },
 		D3DDECL_END()
 	};
 
@@ -108,8 +112,8 @@ HRESULT CVIBuffer_Point::Render_VIBuffer()
 HRESULT CVIBuffer_Point::Render_VIBuffer(_uint iNumInstance)
 {
 	m_pGraphic_Device->SetStreamSource(0, m_pVB, 0, m_iStride);
-
 	m_pGraphic_Device->SetStreamSourceFreq(0, 1);
+
 	m_pGraphic_Device->SetStreamSource(1, m_pVBInstance, 0, sizeof(VTXMATRIX));
 	m_pGraphic_Device->SetStreamSourceFreq(1, 1);
 
@@ -123,10 +127,26 @@ HRESULT CVIBuffer_Point::Render_VIBuffer(_uint iNumInstance)
 
 _int CVIBuffer_Point::Update(list<CAttribute*>& rList)
 {
+
+	VTXPOINT*	pVertices = nullptr;
+
+	m_pVB->Lock(0, 0, reinterpret_cast<void**>(&pVertices), 0);
+
+	int iIndex = 0;
+	for (auto iter = rList.begin(); iter != rList.end(); iter++, iIndex++)
+	{
+		const PDESC* pDesc = (*iter)->GetInfo();
+		pVertices[iIndex].vColor = _float4(pDesc->m_vColor, 1.f);
+		pVertices[iIndex].vPosition = m_pVerticesPos[iIndex] = _float3(0.f, 0.f, 0.f);
+		pVertices[iIndex].fSize = 1.f;
+		pVertices[iIndex].vTexUV = _float2(0.f, 0.f);
+	}
+
+	m_pVB->Unlock();
 	VTXMATRIX*		pMatrix = nullptr;
 
 	m_pVBInstance->Lock(0, 0, reinterpret_cast<void**>(&pMatrix), 0);
-	int iIndex = 0;
+	iIndex = 0;
 	for (auto iter = rList.begin(); iter != rList.end(); iter++, iIndex++)
 	{
 		const PDESC* pDesc	= (*iter)->GetInfo();

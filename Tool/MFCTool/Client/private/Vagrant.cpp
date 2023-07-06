@@ -138,7 +138,7 @@ HRESULT CVagrant::Render()
 		return E_FAIL;
 	}
 
-	_uint iShaderIndex = 2;
+	_uint iShaderIndex = 6;
 	m_pShaderCom->Begin_Shader(iShaderIndex);
 	_uint iNumMeshContainers = m_pMeshCom->Get_NumMeshContainer();
 
@@ -153,7 +153,7 @@ HRESULT CVagrant::Render()
 			{
 				return E_FAIL;
 			}
-			if (SUCCEEDED(m_pMeshCom->SetUp_TextureOnShader(m_pShaderCom, "g_NormalTexture", MESHMATERIALTEXTURE::TYPE_NORMAL, i, j)))
+			if (FAILED(m_pMeshCom->SetUp_TextureOnShader(m_pShaderCom, "g_NormalTexture", MESHMATERIALTEXTURE::TYPE_NORMAL, i, j)))
 			{
 				iShaderIndex = 3;
 				m_pShaderCom->End_Shader();
@@ -161,7 +161,7 @@ HRESULT CVagrant::Render()
 			}
 			else
 			{
-				iShaderIndex = 2;
+				iShaderIndex = 6;
 				m_pShaderCom->End_Shader();
 				m_pShaderCom->Begin_Shader(iShaderIndex);
 			}

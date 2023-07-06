@@ -16,7 +16,6 @@ public:
 	HRESULT	NativeConstruct_Prototype();
 	HRESULT	NativeConstruct(void* pArg);
 public:
-	HRESULT	Reset();
 	_int	Tick(_float Time_Delta);
 	_int	Late_Tick(_float Time_Delta);
 	HRESULT	Render();
