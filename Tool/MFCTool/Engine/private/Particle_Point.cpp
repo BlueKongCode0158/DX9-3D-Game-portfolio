@@ -94,7 +94,7 @@ void CParticle_Point::Create_Attribute()
 		{
 			for (int i = 0; i < m_iCurInitCount; i++)
 			{
-				CAttribute*	pAttribute = m_pPrototypeSystem->Clone(&m_tInfo);
+				CAttribute*	pAttribute = m_pPrototypeSystem->Clone();
 				m_pAttributeList.push_back(pAttribute);
 			}
 			m_fAccTime = 0.f;

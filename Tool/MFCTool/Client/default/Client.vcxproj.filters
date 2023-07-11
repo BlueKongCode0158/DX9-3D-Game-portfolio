@@ -367,9 +367,6 @@
     <Filter Include="96.Managers\00.Collision_Manager">
       <UniqueIdentifier>{9a459b44-8e0a-4469-bee5-64c8024f22c9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="96.Managers\01.UI_Manager">
-      <UniqueIdentifier>{454db071-e43b-46fd-b724-7129ea74b120}</UniqueIdentifier>
-    </Filter>
     <Filter Include="96.Managers\02.Xml_Manager">
       <UniqueIdentifier>{42eb2b82-3a2c-4cbb-9898-2e5a694d66fe}</UniqueIdentifier>
     </Filter>
@@ -636,9 +633,6 @@
     <ClInclude Include="..\public\Collision_Manager.h">
       <Filter>96.Managers\00.Collision_Manager</Filter>
     </ClInclude>
-    <ClInclude Include="..\public\UI_Manager.h">
-      <Filter>96.Managers\01.UI_Manager</Filter>
-    </ClInclude>
     <ClInclude Include="..\public\Xml_Manager.h">
       <Filter>96.Managers\02.Xml_Manager</Filter>
     </ClInclude>
@@ -895,9 +889,6 @@
     </ClCompile>
     <ClCompile Include="..\private\Collision_Manager.cpp">
       <Filter>96.Managers\00.Collision_Manager</Filter>
-    </ClCompile>
-    <ClCompile Include="..\private\UI_Manager.cpp">
-      <Filter>96.Managers\01.UI_Manager</Filter>
     </ClCompile>
     <ClCompile Include="..\private\Xml_Manager.cpp">
       <Filter>96.Managers\02.Xml_Manager</Filter>

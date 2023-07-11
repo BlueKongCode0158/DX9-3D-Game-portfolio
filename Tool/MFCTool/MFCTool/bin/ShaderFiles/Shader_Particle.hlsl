@@ -21,6 +21,7 @@ struct VS_IN
 	float3		vPosition : POSITION;
 	float		fSize : PSIZE;
 	float2		vTexUV : TEXCOORD0;
+	float4		vColor : COLOR0;
 
 	float4		vRight : TEXCOORD1;
 	float4		vUp : TEXCOORD2;
@@ -30,10 +31,10 @@ struct VS_IN
 
 struct VS_OUT
 {
-
 	float4		vPosition : POSITION;
 	float		fSize : PSIZE;
 	float2		vTexUV : TEXCOORD0;
+	float4		vColor : COLOR0;
 };
 
 
@@ -54,7 +55,7 @@ VS_OUT VS_MAIN(VS_IN In)
 	Out.fSize = (g_fWinSizeH * In.fSize) * sqrt(1.f / pow(Out.vPosition.w, 2.f));
 
 	Out.vTexUV = In.vTexUV;
-
+	Out.vColor = In.vColor;
 
 	return Out;
 }
@@ -66,6 +67,7 @@ struct PS_IN
 	float4		vPosition : POSITION;
 	float		fSize : PSIZE;
 	float2		vTexUV : TEXCOORD0;
+	float4		vColor : COLOR0;
 };
 
 struct PS_OUT
@@ -79,7 +81,7 @@ PS_OUT PS_MAIN(PS_IN In)
 {
 	PS_OUT			Out;
 
-	Out.vColor = tex2D(DiffuseSampler, In.vTexUV);
+	Out.vColor = tex2D(DiffuseSampler, In.vTexUV) * In.vColor;
 
 	return Out;
 }

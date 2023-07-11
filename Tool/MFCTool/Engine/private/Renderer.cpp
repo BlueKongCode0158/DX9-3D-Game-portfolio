@@ -136,6 +136,20 @@ HRESULT CRenderer::Add_RenderGroup(RENDERGROUP eGroup, CGameObject * pGameObject
 	return S_OK;
 }
 
+HRESULT CRenderer::Add_RenderGroup_Front(RENDERGROUP eGroup, CGameObject * pGameObject)
+{
+	if (nullptr == pGameObject ||
+		RENDER_END <= eGroup)
+	{
+		MSGBOX("Failed to Add_RenderGroup - Line 25");
+		return E_FAIL;
+	}
+
+	m_RenderObjects[eGroup].push_front(pGameObject);
+	Safe_AddRef(pGameObject);
+	return S_OK;
+}
+
 #ifdef _DEBUG
 HRESULT CRenderer::Add_RenderDebug(CComponent * pComponent)
 {

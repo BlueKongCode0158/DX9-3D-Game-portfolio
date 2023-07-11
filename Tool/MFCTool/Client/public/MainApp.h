@@ -10,7 +10,6 @@ END
 
 BEGIN(Client)
 class CMainApp final : public CBase
-	/* 오류 났던 이유 : Engine에 있는 CBase라고 정확하게 표기해주지 않았기때문에*/
 {
 private:
 	explicit CMainApp();

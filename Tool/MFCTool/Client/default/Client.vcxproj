@@ -241,7 +241,6 @@
     <ClInclude Include="..\public\Titan.h" />
     <ClInclude Include="..\public\Title.h" />
     <ClInclude Include="..\public\UI_BackGround.h" />
-    <ClInclude Include="..\public\UI_Manager.h" />
     <ClInclude Include="..\public\Vagrant.h" />
     <ClInclude Include="..\public\Wisp.h" />
     <ClInclude Include="..\public\Xml_Manager.h" />
@@ -333,7 +332,6 @@
     <ClCompile Include="..\private\Titan.cpp" />
     <ClCompile Include="..\private\Title.cpp" />
     <ClCompile Include="..\private\UI_BackGround.cpp" />
-    <ClCompile Include="..\private\UI_Manager.cpp" />
     <ClCompile Include="..\private\Vagrant.cpp" />
     <ClCompile Include="..\private\Wisp.cpp" />
     <ClCompile Include="..\private\Xml_Manager.cpp" />

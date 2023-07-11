@@ -93,7 +93,7 @@ _int CSelect_Button::Late_Tick(_double TimeDelta)
 {
 	__super::Late_Tick(TimeDelta);
 
-	m_pRendererCom->Add_RenderGroup(CRenderer::RENDERGROUP::RENDER_UI, this);
+	m_pRendererCom->Add_RenderGroup_Front(CRenderer::RENDERGROUP::RENDER_UI, this);
 
 	CGameInstacne* pGameInstance = GET_INSTANCE(CGameInstacne);
 	if (pGameInstance->Input_KeyMouse_Down(CInput_Device::DIM::DIM_LBUTTON) && true == m_isSelecting)

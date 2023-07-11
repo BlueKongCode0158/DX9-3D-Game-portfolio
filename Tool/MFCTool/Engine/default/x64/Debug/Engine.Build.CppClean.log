@@ -36,6 +36,7 @@ c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\li
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\mesh.obj
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\multy_item.obj
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\navigation.obj
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\particle_system.obj
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\picking.obj
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\pipeline.obj
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\quadtree.obj
@@ -50,6 +51,10 @@ c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\co
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\dynamic_mesh.obj
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\engine_font.obj
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\frustum.obj
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\attribute.obj
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\item.obj
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\particle.obj
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\default\x64\debug\particle_mesh.obj
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\bin\shader_collider.cso
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\bin\shader_deferred.cso
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\bin\shader_font.cso

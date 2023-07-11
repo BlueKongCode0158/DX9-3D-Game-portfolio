@@ -209,7 +209,6 @@ cl : 명령줄 warning D9030: '/Gm'이(가) 다중 처리와 호환되지 않습
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\texture.h(16): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\particle_point.cpp(68): warning C4267: '인수': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\particle_point.cpp(97): error C2660: 'Engine::CAttribute::Clone': 함수는 1개의 매개 변수를 사용하지 않습니다.
   Particle_Mesh.cpp
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   Particle.cpp
@@ -220,3 +219,6 @@ c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\texture.h(16)
   Attribute.cpp
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   코드를 생성하고 있습니다...
+     ..\bin\Engine.lib 라이브러리 및 ..\bin\Engine.exp 개체를 생성하고 있습니다.
+  Engine.vcxproj -> C:\Users\a\Desktop\GitHub\Risk-of-Rain2\Tool\MFCTool\Engine\default\..\bin\Engine.dll
+  Engine.vcxproj -> ..\bin\Engine.pdb (Full PDB)

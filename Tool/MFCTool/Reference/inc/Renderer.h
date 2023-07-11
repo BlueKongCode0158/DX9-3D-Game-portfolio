@@ -22,7 +22,7 @@ public:
 
 public:
 	HRESULT Add_RenderGroup(RENDERGROUP eGroup, CGameObject* pGameObject);
-	HRESULT Add_RenderEffect(CParticle_System* pObject);
+	HRESULT	Add_RenderGroup_Front(RENDERGROUP eGroup, CGameObject* pGameObject);
 #ifdef _DEBUG
 	HRESULT	Add_RenderDebug(CComponent* pComponent);
 	HRESULT	Render_Debug();
