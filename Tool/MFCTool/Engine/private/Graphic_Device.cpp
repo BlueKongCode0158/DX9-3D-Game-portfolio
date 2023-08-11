@@ -6,7 +6,7 @@ IMPLEMENT_SINGLETON(CGraphic_Device)
 
 CGraphic_Device::CGraphic_Device()
 	:m_pSDK(nullptr)
-	, m_pDevice(nullptr)
+	,m_pDevice(nullptr)
 {
 
 }
@@ -39,6 +39,8 @@ HRESULT CGraphic_Device::Ready_Graphic_Device(HWND hWnd, WINMODE eMode, _uint iW
 
 	d3dpp.SwapEffect = D3DSWAPEFFECT_DISCARD;
 	d3dpp.hDeviceWindow = hWnd;
+	m_hWnd = hWnd;
+
 	d3dpp.Windowed = eMode;
 	d3dpp.EnableAutoDepthStencil = TRUE;
 	d3dpp.AutoDepthStencilFormat = D3DFMT_D24S8;
@@ -75,6 +77,7 @@ HRESULT CGraphic_Device::Ready_Graphic_Device(HWND hWnd, WINMODE eMode, _uint iW
 		Safe_AddRef(m_pDevice);
 	}
 
+	
 	return S_OK;
 ERR:
 	MSGBOX("Creating Failed Graphic_Device ");

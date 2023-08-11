@@ -25,19 +25,15 @@ HRESULT CGameObject::Add_Component(_uint iLevelIndex, const _tchar * pPrototypeT
 		return E_FAIL;
 	}
 
-	CGameInstacne*		pInstance = CGameInstacne::Get_Instance();
-	if (nullptr == pInstance)
-	{
-		return E_FAIL;
-	}
-	Safe_AddRef(pInstance);
+	CGameInstacne*	pInstance = GET_INSTANCE(CGameInstacne);
 
 	CComponent*	pComponent = pInstance->Clone_Component(iLevelIndex, pPrototypeTag, pArg);
 	m_Componenets.emplace(pComponentTag, pComponent);
 
 	Safe_AddRef(pComponent);
 	*ppOut = pComponent;
-	Safe_Release(pInstance);
+
+	RELEASE_INSTANCE(CGameInstacne);
 	
 	return S_OK;
 }

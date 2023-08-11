@@ -11,6 +11,7 @@
 #include "Light_Manager.h"
 #include "Target_Manager.h"
 #include "Key_Manager.h"
+#include "Imgui_Manager.h"
 
 BEGIN(Engine)
 class ENGINE_DLL CGameInstacne final : public CBase
@@ -114,6 +115,12 @@ public:
 	HRESULT		Level_Relese_Light();
 	HRESULT		Add_Light(LPDIRECT3DDEVICE9 pGraphic_Device, const D3DLIGHT9& LightDesc);
 #pragma endregion
+#pragma region IMGUI
+public:
+	void	Frame();
+	void	Render();
+	void	OnOffWindow();
+#pragma endregion
 //#pragma region PARTICLE
 //public:
 //	HRESULT	Add_ParticleSystem(const _tchar* pLayerTag);
@@ -134,6 +141,7 @@ private:
 	CPicking*			     m_pPicking		= nullptr;
 	CLight_Manager*		     m_pLight		= nullptr;
 	CKey_Manager*		     m_pKeyManager	= nullptr;
+	CImgui_Manager*			 m_pImgui		= nullptr;
 public:
 	virtual void Free() override;
 

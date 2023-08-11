@@ -16,6 +16,7 @@ public:
 	LPD3DXSPRITE		Get_Sprite() { return m_pSprite; }
 	LPD3DXFONT			Get_Font() { return m_pFont; }
 	LPD3DXLINE			Get_Line() { return m_pLine; }
+	HWND				Get_hWnd() { return m_hWnd; }
 public:
 	HRESULT Ready_Graphic_Device(HWND hWnd, WINMODE eMode ,_uint iWinCx, _uint iWinCY, LPDIRECT3DDEVICE9* ppGraphic_Device = nullptr);
 	void	Render_Begin();
@@ -26,6 +27,7 @@ private:
 	LPD3DXSPRITE		m_pSprite;
 	LPD3DXFONT			m_pFont;
 	LPD3DXLINE			m_pLine;
+	HWND				m_hWnd;
 public:
 	virtual void Free() override;
 };

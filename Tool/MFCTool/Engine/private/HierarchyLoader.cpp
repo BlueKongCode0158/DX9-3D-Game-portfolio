@@ -100,8 +100,10 @@ STDMETHODIMP CHierarchyLoader::CreateMeshContainer(LPCSTR Name, CONST D3DXMESHDA
 		D3DXCreateTextureFromFile(m_pGraphic_Device, szFullPath, &pMeshConatiner->ppMaterialTextures[i]->pNormalMap);
 		
 		szFullPath[uiIndex] = L'S';
-		D3DXCreateTextureFromFile(m_pGraphic_Device, szFullPath, &pMeshConatiner->ppMaterialTextures[i]->pNormalMap);
+		D3DXCreateTextureFromFile(m_pGraphic_Device, szFullPath, &pMeshConatiner->ppMaterialTextures[i]->pSpecularMap);
 
+		szFullPath[uiIndex] = L'E';
+		D3DXCreateTextureFromFile(m_pGraphic_Device, szFullPath, &pMeshConatiner->ppMaterialTextures[i]->pEmissionMap);
 	}
 
 	pMeshConatiner->pAdjacency = new _ulong[pMeshConatiner->MeshData.pMesh->GetNumFaces() * 3];
@@ -171,7 +173,7 @@ STDMETHODIMP CHierarchyLoader::DestroyMeshContainer(LPD3DXMESHCONTAINER pMeshCon
 		Safe_Release(pMeshContainer->ppMaterialTextures[i]->pDiffuseMap);
 		Safe_Release(pMeshContainer->ppMaterialTextures[i]->pNormalMap);
 		Safe_Release(pMeshContainer->ppMaterialTextures[i]->pSpecularMap);
-
+		Safe_Release(pMeshContainer->ppMaterialTextures[i]->pEmissionMap);
 		Safe_Delete(pMeshContainer->ppMaterialTextures[i]);
 	}
 

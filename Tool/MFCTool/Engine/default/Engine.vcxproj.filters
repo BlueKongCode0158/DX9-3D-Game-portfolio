@@ -193,6 +193,12 @@
     <Filter Include="01.Utility\03.Components\12.Particle\00.Particle\Particle_Point\Attribute">
       <UniqueIdentifier>{fb977cf4-760e-4045-a148-35f4b7a769bb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="01.Utility\02.GameObject\Decal">
+      <UniqueIdentifier>{748f2859-a214-4a04-9bfc-a819bec18feb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="00.Device\Imgui">
+      <UniqueIdentifier>{78c93a01-20cb-4efc-aeb0-2875121a9a96}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\private\Base.cpp">
@@ -362,6 +368,12 @@
     </ClCompile>
     <ClCompile Include="..\private\Shape.cpp">
       <Filter>01.Utility\12.Shape</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\Decal.cpp">
+      <Filter>01.Utility\02.GameObject\Decal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\Imgui_Manager.cpp">
+      <Filter>00.Device\Imgui</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -551,6 +563,12 @@
     <ClInclude Include="..\public\Shape.h">
       <Filter>01.Utility\12.Shape</Filter>
     </ClInclude>
+    <ClInclude Include="..\public\Decal.h">
+      <Filter>01.Utility\02.GameObject\Decal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\Imgui_Manager.h">
+      <Filter>00.Device\Imgui</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="..\bin\ShaderFiles\Shader_Collider.hlsl">
@@ -566,6 +584,9 @@
       <Filter>97.ShaderFiles</Filter>
     </FxCompile>
     <FxCompile Include="..\bin\ShaderFiles\Shader_Particle.hlsl">
+      <Filter>97.ShaderFiles</Filter>
+    </FxCompile>
+    <FxCompile Include="..\bin\ShaderFiles\Shader_Decal.hlsl">
       <Filter>97.ShaderFiles</Filter>
     </FxCompile>
   </ItemGroup>

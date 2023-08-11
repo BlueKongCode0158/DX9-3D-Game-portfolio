@@ -107,14 +107,14 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_WINDOWS;_USRDLL;ENGINE_EXPORTS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>..\public\;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\Reference\Inc\Imgui\;..\public\;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>d3d9.lib;d3dx9.lib;dinput8.lib;dxguid.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\Reference\lib\Imgui\;C:\Program Files %28x86%29\Microsoft DirectX SDK %28June 2010%29\Lib\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>d3d9.lib;d3dx9.lib;dinput8.lib;dxguid.lib;Imgui.lib</AdditionalDependencies>
       <LargeAddressAware>true</LargeAddressAware>
     </Link>
     <FxCompile>
@@ -172,6 +172,7 @@
     <ClInclude Include="..\public\Collider.h" />
     <ClInclude Include="..\public\Component.h" />
     <ClInclude Include="..\public\Component_Manager.h" />
+    <ClInclude Include="..\public\Decal.h" />
     <ClInclude Include="..\public\Dynamic_Mesh.h" />
     <ClInclude Include="..\public\Engine_Defines.h" />
     <ClInclude Include="..\public\Engine_Font.h" />
@@ -186,6 +187,7 @@
     <ClInclude Include="..\public\GameObject_Manager.h" />
     <ClInclude Include="..\public\Graphic_Device.h" />
     <ClInclude Include="..\public\HierarchyLoader.h" />
+    <ClInclude Include="..\public\Imgui_Manager.h" />
     <ClInclude Include="..\public\Input_Device.h" />
     <ClInclude Include="..\public\Inventory.h" />
     <ClInclude Include="..\public\Item.h">
@@ -246,6 +248,7 @@
     <ClCompile Include="..\private\Collider.cpp" />
     <ClCompile Include="..\private\Component.cpp" />
     <ClCompile Include="..\private\Component_Manager.cpp" />
+    <ClCompile Include="..\private\Decal.cpp" />
     <ClCompile Include="..\private\Dynamic_Mesh.cpp" />
     <ClCompile Include="..\private\Engine_Font.cpp" />
     <ClCompile Include="..\private\Frustum.cpp" />
@@ -254,6 +257,7 @@
     <ClCompile Include="..\private\GameObject_Manager.cpp" />
     <ClCompile Include="..\private\Graphic_Device.cpp" />
     <ClCompile Include="..\private\HierarchyLoader.cpp" />
+    <ClCompile Include="..\private\Imgui_Manager.cpp" />
     <ClCompile Include="..\private\Input_Device.cpp" />
     <ClCompile Include="..\private\Inventory.cpp" />
     <ClCompile Include="..\private\Item.cpp">
@@ -304,6 +308,13 @@
   </ItemGroup>
   <ItemGroup>
     <FxCompile Include="..\bin\ShaderFiles\Shader_Collider.hlsl" />
+    <FxCompile Include="..\bin\ShaderFiles\Shader_Decal.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Effect</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">2.0</ShaderModel>
+    </FxCompile>
     <FxCompile Include="..\bin\ShaderFiles\Shader_Deferred.hlsl" />
     <FxCompile Include="..\bin\ShaderFiles\Shader_Font.hlsl" />
     <FxCompile Include="..\bin\ShaderFiles\Shader_Particle.hlsl">

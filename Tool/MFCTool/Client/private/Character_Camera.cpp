@@ -134,6 +134,7 @@ _int CCharacter_Camera::Tick(_double TimeDelta)
 		m_CameraDesc.fAt = *reinterpret_cast<_float3*>(&End_WorldMatrix.m[3][0]);
 	}
 	
+	
 	RELEASE_INSTANCE(CGameInstacne);
 	return _int();
 }

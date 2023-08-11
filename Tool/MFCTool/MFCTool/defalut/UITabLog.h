@@ -27,6 +27,8 @@ public:
 	afx_msg void OnLbnSelchangeList_UIList();
 	afx_msg void OnBnClickedButton_Create();
 	afx_msg void OnBnClickedButton_Save ();
+public:
+	void Update_LayerName(CString LayerName);
 private:
 	CString m_LayerName;
 	float m_fX;

@@ -130,6 +130,13 @@ void CUITabLog::OnBnClickedButton_Save()
 	}
 }
 
+void CUITabLog::Update_LayerName(CString LayerName)
+{
+	UpdateData(TRUE);
+	m_UIListBox.AddString(LayerName);
+	UpdateData(FALSE);
+}
+
 
 void CUITabLog::OnBnClicked_EditButton()
 {

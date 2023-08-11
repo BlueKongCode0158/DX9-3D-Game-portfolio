@@ -9,10 +9,11 @@ namespace Engine
 
 	typedef struct MeshMaterialTexture
 	{
-		enum TYPE { TYPE_DIFFUSE, TYPE_NORMAL, TYPE_SPECULAR, TYPE_END };
-		LPDIRECT3DTEXTURE9		pDiffuseMap = nullptr;
-		LPDIRECT3DTEXTURE9		pNormalMap	= nullptr;
-		LPDIRECT3DTEXTURE9		pSpecularMap= nullptr;
+		enum TYPE { TYPE_DIFFUSE, TYPE_NORMAL, TYPE_SPECULAR, TYPE_EMISSION, TYPE_END };
+		LPDIRECT3DTEXTURE9		pDiffuseMap		= nullptr;
+		LPDIRECT3DTEXTURE9		pNormalMap		= nullptr;
+		LPDIRECT3DTEXTURE9		pSpecularMap	= nullptr;
+		LPDIRECT3DTEXTURE9		pEmissionMap	= nullptr;
 	}MESHMATERIALTEXTURE;
 
 	typedef struct D3DXMeshContainerDerived : public D3DXMESHCONTAINER

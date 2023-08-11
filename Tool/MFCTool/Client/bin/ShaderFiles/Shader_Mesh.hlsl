@@ -21,6 +21,24 @@ sampler NormalSampler = sampler_state
 	magfilter = linear;
 };
 
+texture g_SpecularTexture;
+
+sampler SpecularSampler = sampler_state
+{
+	texture = g_SpecularTexture;
+	mipfilter = linear;
+	magfilter = linear;
+};
+
+texture g_EmissionTexture;
+
+sampler EmissionSampler = sampler_state
+{
+	texture = g_EmissionTexture;
+	mipfilter = linear;
+	magfilter = linear;
+};
+
 struct VS_IN
 {
 	float3 vPosition	: POSITION;
@@ -137,6 +155,27 @@ PS_OUT PS_MAIN_ALPHA(PS_IN In)
 
 	Out.vDiffuse = vMtrIDiffuse;
 	Out.vDiffuse.a = 0.3f;
+
+	float3x3	TBN = float3x3(In.vTangent, In.vBinormal, In.vNormal);
+
+	vNormal = mul(vNormal, TBN);
+
+	Out.vNormal = vector(vNormal.xyz*0.5f + 0.5f, 1.f);
+	Out.vDepth = vector(In.vProjectionPos.w / 300.f, In.vProjectionPos.z / In.vProjectionPos.w, 0.f, 0.f);
+
+	return Out;
+}
+
+PS_OUT PS_MAIN_TRANS_OBJ(PS_IN In)
+{
+	PS_OUT Out = (PS_OUT)0;
+
+	vector	vMtrIDiffuse = tex2D(DiffuseSampler, In.vTexUV);
+	vector	vNormalDesc = tex2D(NormalSampler, In.vTexUV);
+	vector	vEmissionDesc = tex2D(EmissionSampler, In.vTexUV);
+	float3	vNormal = vNormalDesc.xyz * 2.f - 1.f;
+
+	Out.vDiffuse.rgb = vMtrIDiffuse + vEmissionDesc;
 
 	float3x3	TBN = float3x3(In.vTangent, In.vBinormal, In.vNormal);
 
@@ -276,6 +315,7 @@ PS_OUT_SHADOW PS_MAIN_SHADOW(PS_IN_SHADOW In)
 
 technique DefaultTechnique
 {
+	// 0
 	pass DefaultRendering
 	{
 		ALPHABLENDENABLE = false;
@@ -288,6 +328,7 @@ technique DefaultTechnique
 		VertexShader = compile vs_3_0 VS_MAIN();
 		PixelShader = compile ps_3_0 PS_MAIN();
 	}
+	// 1
 	pass DefaultRendering
 	{
 		ALPHABLENDENABLE = false;
@@ -300,6 +341,7 @@ technique DefaultTechnique
 		VertexShader = compile vs_3_0 VS_MAIN();
 		PixelShader = compile ps_3_0 PS_MAIN();
 	}
+	// 2
 	pass DefaultRendering
 	{
 		ALPHABLENDENABLE = false;
@@ -309,6 +351,7 @@ technique DefaultTechnique
 		VertexShader = compile vs_3_0 VS_MAIN_LIGHT();
 		PixelShader = compile ps_3_0 PS_MAIN_LIGHT();
 	}
+	// 3
 	pass DefaultRendering
 	{
 		ALPHABLENDENABLE = false;
@@ -318,6 +361,7 @@ technique DefaultTechnique
 		VertexShader = compile vs_3_0 VS_MAIN_LIGHT();
 		PixelShader = compile ps_3_0 PS_MAIN_LIGHT_NORMAL();
 	}
+	// 4
 	pass DefaultRendering
 	{
 		ALPHABLENDENABLE = false;
@@ -327,6 +371,7 @@ technique DefaultTechnique
 		VertexShader = compile vs_3_0 VS_MAIN_LIGHT();
 		PixelShader = compile ps_3_0 PS_MAIN_LIGHT_NORMAL_DEFAULT();
 	}
+	// 5
 	pass DefaultRendering
 	{
 		ALPHABLENDENABLE = false;
@@ -335,6 +380,7 @@ technique DefaultTechnique
 		VertexShader = compile vs_3_0 VS_MAIN_SHADOW();
 		PixelShader = compile ps_3_0 PS_MAIN_SHADOW();
 	}
+	// 6
 	pass DefaultRendring
 	{
 		ZWriteEnable = true;
@@ -346,5 +392,13 @@ technique DefaultTechnique
 
 		VertexShader = compile vs_3_0 VS_MAIN();
 		PixelShader = compile ps_3_0 PS_MAIN_ALPHA();
+	}
+	// 7 -> Vagrant Shader
+	pass DefaultRandering
+	{
+		ALPHABLENDENABLE = false;
+
+		VertexShader = compile vs_3_0 VS_MAIN();
+		PixelShader = compile ps_3_0 PS_MAIN_TRANS_OBJ();
 	}
 };

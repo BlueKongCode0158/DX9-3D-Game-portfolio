@@ -34,6 +34,7 @@ CDynamic_Mesh::CDynamic_Mesh(const CDynamic_Mesh & rhs)
 			Safe_AddRef(m_vecMeshContainers[i]->ppMaterialTextures[j]->pDiffuseMap);
 			Safe_AddRef(m_vecMeshContainers[i]->ppMaterialTextures[j]->pNormalMap);
 			Safe_AddRef(m_vecMeshContainers[i]->ppMaterialTextures[j]->pSpecularMap);
+			Safe_AddRef(m_vecMeshContainers[i]->ppMaterialTextures[j]->pEmissionMap);
 		}
 	}
 }
@@ -156,6 +157,9 @@ HRESULT CDynamic_Mesh::SetUp_TextureOnShader(CShader * pShader, D3DXHANDLE hPara
 		break;
 	case Engine::MeshMaterialTexture::TYPE_SPECULAR:
 		pTexture = m_vecMeshContainers[iMeshContainerIndex]->ppMaterialTextures[iMaterialIndex]->pSpecularMap;
+		break;
+	case Engine::MeshMaterialTexture::TYPE_EMISSION:
+		pTexture = m_vecMeshContainers[iMeshContainerIndex]->ppMaterialTextures[iMaterialIndex]->pEmissionMap;
 		break;
 	default:
 		MSGBOX("Warring Number. This Number is Not Texture_Material");
@@ -682,6 +686,7 @@ void CDynamic_Mesh::Free()
 			Safe_Release(m_vecMeshContainers[i]->ppMaterialTextures[j]->pDiffuseMap);
 			Safe_Release(m_vecMeshContainers[i]->ppMaterialTextures[j]->pNormalMap);
 			Safe_Release(m_vecMeshContainers[i]->ppMaterialTextures[j]->pSpecularMap);
+			Safe_Release(m_vecMeshContainers[i]->ppMaterialTextures[i]->pEmissionMap);
 		}
 	}
 	m_vecMeshContainers.clear();

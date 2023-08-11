@@ -153,15 +153,21 @@ HRESULT CVagrant::Render()
 			{
 				return E_FAIL;
 			}
-			if (FAILED(m_pMeshCom->SetUp_TextureOnShader(m_pShaderCom, "g_NormalTexture", MESHMATERIALTEXTURE::TYPE_NORMAL, i, j)))
+			if (SUCCEEDED(m_pMeshCom->SetUp_TextureOnShader(m_pShaderCom, "g_NormalTexture", MESHMATERIALTEXTURE::TYPE_NORMAL, i, j)))
 			{
-				iShaderIndex = 3;
+				iShaderIndex = 6;
 				m_pShaderCom->End_Shader();
 				m_pShaderCom->Begin_Shader(iShaderIndex);
 			}
 			else
 			{
 				iShaderIndex = 6;
+				m_pShaderCom->End_Shader();
+				m_pShaderCom->Begin_Shader(iShaderIndex);
+			}
+			if (SUCCEEDED(m_pMeshCom->SetUp_TextureOnShader(m_pShaderCom, "g_EmissionTexture", MESHMATERIALTEXTURE::TYPE_EMISSION, i, j)))
+			{
+				iShaderIndex = 7;
 				m_pShaderCom->End_Shader();
 				m_pShaderCom->Begin_Shader(iShaderIndex);
 			}

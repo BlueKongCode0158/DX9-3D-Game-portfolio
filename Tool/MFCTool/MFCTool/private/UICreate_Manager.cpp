@@ -3,8 +3,17 @@
 #include "ControlFormView.h"
 #include "MainFrm.h"
 #include "GameInstacne.h"
+#include "MFCToolView.h"
 #include "UI_Dummy.h"
 #include "tinyxml2.h"
+#include "UITabLog.h"
+
+
+#ifdef DEBUG
+#define new DEBUG_NEW
+#undef THIS_FILE
+static char THIS_FILE[] = __FILE__;
+#endif
 
 IMPLEMENT_SINGLETON(CUICreate_Manager)
 
@@ -66,6 +75,7 @@ void CUICreate_Manager::Set_Position(const _tchar * pLayerTag, _float fX, _float
 	if (nullptr == pTransform)
 	{
 		MSGBOX("해당 Component는 존재하지 않습니다.");
+		RELEASE_INSTANCE(CGameInstacne);
 		return;
 	}
 	_float3 tPosition = pTransform->Get_MatrixRow(CTransform::STATE::STATE_POSITION);
@@ -83,6 +93,7 @@ void CUICreate_Manager::Set_Rotation(const _tchar * pLayerTag, _float fY)
 	if (nullptr == pTransform)
 	{
 		MSGBOX("해당 Component는 존재하지 않습니다.");
+		RELEASE_INSTANCE(CGameInstacne);
 		return;
 	}
 
@@ -111,6 +122,7 @@ void CUICreate_Manager::Set_Scale(const _tchar * pLayerTag, _float fScaleX, _flo
 	if (nullptr == pTransform)
 	{
 		MSGBOX("해당 Component는 존재하지 않습니다.");
+		RELEASE_INSTANCE(CGameInstacne);
 		return;
 	}
 	pTransform->Set_MatrixScale(fScaleX, fScaleY, 1.f);
@@ -205,6 +217,7 @@ HRESULT CUICreate_Manager::Load_UI( _tchar * pFileName)
 				}
 			}
 		}
+		CControlFormView* pView = (CControlFormView*)(((CMainFrame*)AfxGetMainWnd())->m_tMainSplitter.GetPane(0, 0));
 
 		CGameInstacne* pGameInstance = GET_INSTANCE(CGameInstacne);
 		string pName = pElement->Name();
@@ -220,7 +233,8 @@ HRESULT CUICreate_Manager::Load_UI( _tchar * pFileName)
 		}
 		CTransform* pTransform = dynamic_cast<CTransform*>(pGameInstance->Find_Component(LEVEL_STATIC, pWname.c_str(), TEXT("Com_Transform")));
 		pTransform->Set_WorldMatrix(tMatrix);
-
+		
+		pView->pTab_UITool->Update_LayerName(LayerName);
 		RELEASE_INSTANCE(CGameInstacne);
 	}
 

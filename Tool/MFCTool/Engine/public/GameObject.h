@@ -38,7 +38,7 @@ private:
 	CComponent* Find_Component(const _tchar* pComponentTag);
 public:
 	virtual CGameObject* Clone(void* pArg = nullptr)PURE;
-	virtual void Free() override;
+	virtual void		 Free() override;
 };
 END
 

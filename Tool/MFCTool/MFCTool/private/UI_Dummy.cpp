@@ -4,6 +4,13 @@
 #include "UICreate_Manager.h"
 #include "tinyxml2.h"
 
+#ifdef DEBUG
+#define new DEBUG_NEW
+#undef THIS_FILE
+static char THIS_FILE[] = __FILE__;
+#endif
+
+
 CUI_Dummy::CUI_Dummy(LPDIRECT3DDEVICE9 pGraphic_Device)
 	:CGameObject(pGraphic_Device)
 {

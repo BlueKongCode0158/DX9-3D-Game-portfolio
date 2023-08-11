@@ -86,6 +86,7 @@ void CMFCToolView::OnDraw(CDC* /*pDC*/)
 	m_pRendererCom->Render_GameObject();
 
 	pGameInstance->Render_End(m_hWnd);
+	pGameInstance->Render();
 	RELEASE_INSTANCE(CGameInstacne);
 }
 
@@ -136,7 +137,7 @@ CMFCToolDoc* CMFCToolView::GetDocument() const // 디버그되지 않은 버전은 인라인�
 void CMFCToolView::OnInitialUpdate()
 {
 	/* Scroll Test를 위해 ScrollView로 변환해줌
-	   해줄려고 했지만 딱히 필요없을 것 같아서 보류함..*/
+	   해줄려고 했지만 딱히 필요없을 것 같아서 보류함.*/
 	//CScrollView::OnInitialUpdate();
 	CView::OnInitialUpdate();
 	CMainFrame* pMain = dynamic_cast<CMainFrame*>(AfxGetApp()->GetMainWnd());
@@ -251,10 +252,15 @@ void CMFCToolView::Update_Tick()
 {
 	CGameInstacne* pGameInstance = GET_INSTANCE(CGameInstacne);
 	_float fTimeDelta = pGameInstance->Compute_Time(TEXT("FPS_60"));
-
+	
+	if (pGameInstance->Input_KeyMouse_Down(CInput_Device::DIM::DIM_WHEELBUTTON))
+	{
+		pGameInstance->OnOffWindow();
+	}
 	pGameInstance->Compute_MouseCursorPosInWorld(m_hWnd);
 	pGameInstance->Tick(fTimeDelta);
 	pGameInstance->Late_Tick(fTimeDelta);
+	pGameInstance->Frame();
 	RELEASE_INSTANCE(CGameInstacne);
 }
 
@@ -454,6 +460,7 @@ HRESULT CMFCToolView::Add_LightDest()
 	RELEASE_INSTANCE(CGameInstacne);
 	return S_OK;
 }
+
 
 
 void CMFCToolView::OnMouseMove(UINT nFlags, CPoint point)
