@@ -30,6 +30,7 @@ void CImgui_Manager::Frame()
 		ImGui_ImplDX9_NewFrame();
 		ImGui_ImplWin32_NewFrame();
 		ImGui::NewFrame();
+		ImGuizmo::BeginFrame();
 	}
 }
 
@@ -37,6 +38,7 @@ void CImgui_Manager::Render()
 {
 	if (m_bWindowEnable)
 	{
+		ImGui::EndFrame();
 		ImGui::Render();
 		ImGui_ImplDX9_RenderDrawData(ImGui::GetDrawData());
 	}

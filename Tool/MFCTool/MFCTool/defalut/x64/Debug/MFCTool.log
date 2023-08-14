@@ -1,2 +1,3 @@
-﻿  MFCTool.vcxproj -> C:\Users\a\Desktop\GitHub\Risk-of-Rain2\Tool\MFCTool\MFCTool\defalut\..\bin\MFCTool.exe
+﻿TinyXML.lib(tinyxml2.obj) : warning LNK4099: 'TinyXML.pdb' PDB를 'TinyXML.lib(tinyxml2.obj)' 또는 'C:\git_Clone\ROR_2\DX9-3D-Game-portfolio\Tool\MFCTool\MFCTool\bin\TinyXML.pdb'에서 찾을 수 없습니다. 디버그 정보가 없는 것처럼 개체를 링크합니다.
+  MFCTool.vcxproj -> C:\git_Clone\ROR_2\DX9-3D-Game-portfolio\Tool\MFCTool\MFCTool\defalut\..\bin\MFCTool.exe
   MFCTool.vcxproj -> ..\bin\MFCTool.pdb (Partial PDB)
