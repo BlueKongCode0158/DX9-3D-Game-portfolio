@@ -34,6 +34,9 @@ HRESULT CGraphic_Device::Ready_Graphic_Device(HWND hWnd, WINMODE eMode, _uint iW
 	d3dpp.BackBufferFormat = D3DFMT_A8R8G8B8;
 	d3dpp.BackBufferCount = 1;
 
+	m_WindowSize.x = iWinCX;
+	m_WindowSize.y = iWinCY;
+
 	d3dpp.MultiSampleType = D3DMULTISAMPLE_NONE;
 	d3dpp.MultiSampleQuality = 0;
 
@@ -50,7 +53,6 @@ HRESULT CGraphic_Device::Ready_Graphic_Device(HWND hWnd, WINMODE eMode, _uint iW
 
 	if (FAILED(m_pSDK->CreateDevice(D3DADAPTER_DEFAULT, D3DDEVTYPE_HAL, hWnd, vp, &d3dpp, &m_pDevice)))
 		goto ERR;
-
 	if (FAILED(D3DXCreateSprite(m_pDevice, &m_pSprite)))
 		goto ERR;
 

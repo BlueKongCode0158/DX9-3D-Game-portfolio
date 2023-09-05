@@ -20,27 +20,44 @@ HRESULT CImgui_Manager::NativeConstruct(HWND hWnd, LPDIRECT3DDEVICE9 pDevice)
 {
 	ImGui_ImplWin32_Init(hWnd);
 	ImGui_ImplDX9_Init(pDevice);
+	ImGuiIO& io = ImGui::GetIO();
+	ImGuizmo::SetRect(0, 0, io.DisplaySize.x, io.DisplaySize.y);
+	return S_OK;
+}
+
+HRESULT CImgui_Manager::Set_Viewport()
+{
+	
 	return S_OK;
 }
 
 void CImgui_Manager::Frame()
 {
+	CGraphic_Device* pGraphicInstance = GET_INSTANCE(CGraphic_Device);
 	if (m_bWindowEnable)
 	{
 		ImGui_ImplDX9_NewFrame();
 		ImGui_ImplWin32_NewFrame();
 		ImGui::NewFrame();
+		ImGui::Begin("Transform");
 		ImGuizmo::BeginFrame();
+
+		ImGuizmo::SetDrawlist(ImGui::GetBackgroundDrawList());
+		ImGuizmo::SetRect(0, 0, pGraphicInstance->Get_WindowSize().x, pGraphicInstance->Get_WindowSize().y);
+
+		ImGuizmo::Enable(true);
 	}
+	RELEASE_INSTANCE(CGraphic_Device);
 }
 
 void CImgui_Manager::Render()
 {
 	if (m_bWindowEnable)
 	{
-		ImGui::EndFrame();
-		ImGui::Render();
 		ImGui_ImplDX9_RenderDrawData(ImGui::GetDrawData());
+		// ฟภท๙ ลอมü 2023.8.21
+		ImGui::End();
+		ImGui::Render();
 	}
 }
 

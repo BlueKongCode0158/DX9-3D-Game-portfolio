@@ -10,6 +10,7 @@ private:
 	virtual ~CImgui_Manager() = default;
 public:
 	HRESULT	NativeConstruct(HWND hWnd, LPDIRECT3DDEVICE9 pDevice);
+	HRESULT	Set_Viewport();
 public:
 	void	Frame();
 	void	Render();
