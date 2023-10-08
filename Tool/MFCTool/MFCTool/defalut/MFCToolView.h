@@ -60,8 +60,10 @@ private:
 	HRESULT	Add_LightDest();
 private:
 	CPoint	m_pCursorPoint;
+	MSG		msg;
 public:
 	afx_msg void OnMouseMove(UINT nFlags, CPoint point);
+	virtual LRESULT WindowProc(UINT message, WPARAM wParam, LPARAM lParam);
 };
 
 #ifndef _DEBUG  // MFCToolView.cpp의 디버그 버전

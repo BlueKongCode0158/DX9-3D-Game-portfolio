@@ -1,4 +1,5 @@
 #include "Graphic_Device.h"
+#include "imgui_impl_win32.h"
 #pragma comment(lib, "user32.lib")
 /* 오류가 나서 lib 추가해줬음. 그랬더니 잘 됨. */
 
@@ -94,13 +95,13 @@ void CGraphic_Device::Render_Begin()
 	m_pDevice->BeginScene();
 
 }
+
 void CGraphic_Device::Render_End(HWND hWND /*= nullptr*/)
 {
 	/* 최종적으로 렌더되는 부분 */
 	m_pDevice->EndScene();
 	m_pDevice->Present(nullptr, nullptr, hWND, nullptr);
 }
-
 
 void CGraphic_Device::Free()
 {

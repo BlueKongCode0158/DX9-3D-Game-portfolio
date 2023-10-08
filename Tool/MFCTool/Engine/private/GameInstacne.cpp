@@ -115,10 +115,17 @@ HRESULT CGameInstacne::Ready_Graphic_Device(HWND hWnd, CGraphic_Device::WINMODE 
 		m_pPicking->NativeConstruct(m_pDevice->Get_Device());
 	}
 
+	return S_OK;
+}
+
+HRESULT CGameInstacne::Ready_Imgui_Device(HWND hWnd)
+{
 	if (FAILED(m_pImgui->NativeConstruct(hWnd, m_pDevice->Get_Device())))
 	{
 		return E_FAIL;
-	}	
+	}
+
+	m_IsSetting = true;
 	return S_OK;
 }
 
@@ -557,6 +564,15 @@ void CGameInstacne::Render()
 void CGameInstacne::OnOffWindow()
 {
 	m_pImgui->OnOffWindow();
+}
+
+LRESULT CGameInstacne::Engine_ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
+{
+	if (m_pImgui == nullptr)
+	{
+		return false;
+	}
+	return m_pImgui->Engine_ImGui_ImplWin32_WndProcHandler(hWnd, msg, wParam, lParam);
 }
 
 #pragma endregion

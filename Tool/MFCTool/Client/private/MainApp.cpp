@@ -40,6 +40,11 @@ HRESULT CMainApp::NativeConstruct()
 	{
 		return E_FAIL;
 	}
+
+	if (FAILED(pInstance->Ready_Imgui_Device(g_hWnd)))
+	{
+		return E_FAIL;
+	}
 	if (FAILED(Add_Prototype_Component()))
 	{
 		return E_FAIL;
@@ -81,6 +86,11 @@ _int CMainApp::Tick(_double TimeDelta)
 	m_pFrustum->Update_Frustum();
 	pInstance->Late_Tick(TimeDelta);
 
+	if (pInstance->Input_KeyMouse_Down(CInput_Device::DIM::DIM_WHEELBUTTON))
+	{
+		pInstance->OnOffWindow();
+	}
+	pInstance->Frame();
 	Safe_Release(pInstance);
 
 	return 0;
@@ -96,12 +106,14 @@ HRESULT CMainApp::Render()
 
 	Safe_AddRef(pInstance);
 
+
 	pInstance->Render_Begin();
 
 	ShowCursor(FALSE);
 	//m_pGraphic_Device->ShowCursor(FALSE);
 
 	m_pRenderer->Render_GameObject();
+	pInstance->Render();
 
 	if (FAILED(pInstance->Render_Level()))
 	{
@@ -109,7 +121,6 @@ HRESULT CMainApp::Render()
 	}
 
 	pInstance->Render_End();
-
 	Safe_Release(pInstance);
 	return S_OK;
 }

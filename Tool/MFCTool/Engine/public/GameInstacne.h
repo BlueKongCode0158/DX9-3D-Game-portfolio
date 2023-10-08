@@ -25,10 +25,15 @@ public:
 	_int	Tick(_double TimeDelta);
 	_int	Late_Tick(_double TimeDelta);
 	void	Clear(_uint iLevel);
-
+public:
+	_bool	IsSetting()
+	{
+		return m_IsSetting;
+	}
 #pragma region GRAPHIC
 public:
 	HRESULT Ready_Graphic_Device(HWND hWnd, CGraphic_Device::WINMODE eMode, _uint iWinCX, _uint iWinCY, LPDIRECT3DDEVICE9* ppGraphic_Device);
+	HRESULT	Ready_Imgui_Device(HWND hWnd);
 	void	Render_Begin();
 	void	Render_End(HWND hWnd = nullptr);
 public:
@@ -120,6 +125,7 @@ public:
 	void	Frame();
 	void	Render();
 	void	OnOffWindow();
+	LRESULT	Engine_ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 #pragma endregion
 //#pragma region PARTICLE
 //public:
@@ -142,6 +148,8 @@ private:
 	CLight_Manager*		     m_pLight		= nullptr;
 	CKey_Manager*		     m_pKeyManager	= nullptr;
 	CImgui_Manager*			 m_pImgui		= nullptr;
+private:
+	_bool					 m_IsSetting	= false;	
 public:
 	virtual void Free() override;
 

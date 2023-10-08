@@ -157,8 +157,8 @@ c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\hierarchyloa
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\hierarchyloader.cpp(127): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
   Graphic_Device.cpp
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\graphic_device.cpp(37): warning C4244: '=': 'Engine::_uint'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\graphic_device.cpp(38): warning C4244: '=': 'Engine::_uint'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\private\graphic_device.cpp(39): warning C4244: '=': 'Engine::_uint'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
   GameObject_Manager.cpp
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\engine_functions.h(121): warning C4267: '인수': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
 c:\users\a\desktop\github\risk-of-rain2\tool\mfctool\engine\public\layer.h(13): warning C4267: 'return': 'size_t'에서 'Engine::_uint'(으)로 변환하면서 데이터가 손실될 수 있습니다.

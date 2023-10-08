@@ -21,6 +21,7 @@ public:
 	HRESULT Ready_Graphic_Device(HWND hWnd, WINMODE eMode ,_uint iWinCx, _uint iWinCY, LPDIRECT3DDEVICE9* ppGraphic_Device = nullptr);
 	void	Render_Begin();
 	void	Render_End(HWND hWND = nullptr);
+
 private:
 	LPDIRECT3D9			m_pSDK;
 	LPDIRECT3DDEVICE9	m_pDevice;

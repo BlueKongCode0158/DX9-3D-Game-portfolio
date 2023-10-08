@@ -84,9 +84,9 @@ void CMFCToolView::OnDraw(CDC* /*pDC*/)
 	pGameInstance->Render_Begin();
 
 	m_pRendererCom->Render_GameObject();
+	pGameInstance->Render();
 
 	pGameInstance->Render_End(m_hWnd);
-	pGameInstance->Render();
 	RELEASE_INSTANCE(CGameInstacne);
 }
 
@@ -166,7 +166,14 @@ void CMFCToolView::OnInitialUpdate()
 		MessageBoxA(g_hWND, "Failed to Creating Engine", "완료", MB_OK);
 		return;
 	}
+
 	if (FAILED(pGameInstance->Ready_Graphic_Device(m_hWnd, CGraphic_Device::WINMODE::MODE_WIN, WINCX, WINCY, &m_pGraphic_Device)))
+	{
+		RELEASE_INSTANCE(CGameInstacne);
+		return;
+	}
+
+	if (FAILED(pGameInstance->Ready_Imgui_Device(m_hWnd)))
 	{
 		RELEASE_INSTANCE(CGameInstacne);
 		return;
@@ -250,6 +257,19 @@ void CMFCToolView::OnDestroy()
 
 void CMFCToolView::Update_Tick()
 {
+	for(int iLoop = 0 ; iLoop < 10 ; iLoop++)
+	{
+		if (PeekMessage(&msg, nullptr, 0, 0, PM_NOREMOVE))
+		{
+			if (WM_QUIT == msg.message)
+			{
+				break;
+			}
+			TranslateMessage(&msg);
+			DispatchMessage(&msg);
+		}
+	}
+
 	CGameInstacne* pGameInstance = GET_INSTANCE(CGameInstacne);
 	_float fTimeDelta = pGameInstance->Compute_Time(TEXT("FPS_60"));
 	
@@ -478,3 +498,20 @@ void CMFCToolView::OnMouseMove(UINT nFlags, CPoint point)
 	CView::OnMouseMove(nFlags, point);
 }
 
+LRESULT CMFCToolView::WindowProc(UINT message, WPARAM wParam, LPARAM lParam)
+{
+	// TODO: 여기에 특수화된 코드를 추가 및/또는 기본 클래스를 호출합니다.
+	CGameInstacne*	pInstance = GET_INSTANCE(CGameInstacne);
+	if (pInstance->IsSetting() == false)
+	{
+		RELEASE_INSTANCE(CGameInstacne);
+		return CView::WindowProc(message, wParam, lParam);
+	}
+	if (pInstance->Engine_ImGui_ImplWin32_WndProcHandler(AfxGetMainWnd()->m_hWnd, message, wParam, lParam))
+	{
+		RELEASE_INSTANCE(CGameInstacne);
+		return true;
+	}
+	RELEASE_INSTANCE(CGameInstacne);
+	return CView::WindowProc(message, wParam, lParam);
+}

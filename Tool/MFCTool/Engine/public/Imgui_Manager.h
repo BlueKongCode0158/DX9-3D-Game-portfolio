@@ -10,13 +10,17 @@ private:
 	virtual ~CImgui_Manager() = default;
 public:
 	HRESULT	NativeConstruct(HWND hWnd, LPDIRECT3DDEVICE9 pDevice);
-	HRESULT	Set_Viewport();
 public:
 	void	Frame();
 	void	Render();
 	void	OnOffWindow();
+	LRESULT	Engine_ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 private:
+	_bool	m_isInit		= false;
 	_bool	m_bWindowEnable = false;
+private:
+	_bool	m_show_another_window	= false;
+	_bool	m_show_demo_window		= false;
 public:
 	virtual void Free() override;
 };

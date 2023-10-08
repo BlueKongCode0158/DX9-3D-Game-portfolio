@@ -193,7 +193,15 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 //
 LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
-    switch (message)
+
+	CGameInstacne*	pInstance = GET_INSTANCE(CGameInstacne);
+	if (pInstance->Engine_ImGui_ImplWin32_WndProcHandler(g_hWnd, message, wParam, lParam))
+	{
+		RELEASE_INSTANCE(CGameInstacne);
+		return true;
+	}
+	RELEASE_INSTANCE(CGameInstacne);
+	switch (message)
     {
     case WM_COMMAND:
         {
