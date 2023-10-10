@@ -58,9 +58,12 @@ private:
 	HRESULT	Add_Prototype_Component();
 	HRESULT Add_GameObject();
 	HRESULT	Add_LightDest();
+	void	ProcessWindowMessage();
 private:
 	CPoint	m_pCursorPoint;
 	MSG		msg;
+	_float	m_fTimeDelta	= 0.f;
+	_float	m_fAccTimeDelta = 0.f;
 public:
 	afx_msg void OnMouseMove(UINT nFlags, CPoint point);
 	virtual LRESULT WindowProc(UINT message, WPARAM wParam, LPARAM lParam);

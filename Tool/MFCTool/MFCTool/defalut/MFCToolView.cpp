@@ -257,29 +257,17 @@ void CMFCToolView::OnDestroy()
 
 void CMFCToolView::Update_Tick()
 {
-	for(int iLoop = 0 ; iLoop < 10 ; iLoop++)
-	{
-		if (PeekMessage(&msg, nullptr, 0, 0, PM_NOREMOVE))
-		{
-			if (WM_QUIT == msg.message)
-			{
-				break;
-			}
-			TranslateMessage(&msg);
-			DispatchMessage(&msg);
-		}
-	}
-
 	CGameInstacne* pGameInstance = GET_INSTANCE(CGameInstacne);
-	_float fTimeDelta = pGameInstance->Compute_Time(TEXT("FPS_60"));
+	m_fTimeDelta = pGameInstance->Compute_Time(TEXT("FPS_60"));
 	
 	if (pGameInstance->Input_KeyMouse_Down(CInput_Device::DIM::DIM_WHEELBUTTON))
 	{
 		pGameInstance->OnOffWindow();
 	}
+
 	pGameInstance->Compute_MouseCursorPosInWorld(m_hWnd);
-	pGameInstance->Tick(fTimeDelta);
-	pGameInstance->Late_Tick(fTimeDelta);
+	pGameInstance->Tick(m_fTimeDelta);
+	pGameInstance->Late_Tick(m_fTimeDelta);
 	pGameInstance->Frame();
 	RELEASE_INSTANCE(CGameInstacne);
 }
@@ -481,6 +469,14 @@ HRESULT CMFCToolView::Add_LightDest()
 	return S_OK;
 }
 
+void CMFCToolView::ProcessWindowMessage()
+{
+	while (::PeekMessage(&msg, NULL, NULL, NULL, PM_REMOVE))
+	{
+		::SendMessage(msg.hwnd, msg.message, msg.wParam, msg.lParam);
+	}
+}
+
 
 
 void CMFCToolView::OnMouseMove(UINT nFlags, CPoint point)
@@ -501,16 +497,34 @@ void CMFCToolView::OnMouseMove(UINT nFlags, CPoint point)
 LRESULT CMFCToolView::WindowProc(UINT message, WPARAM wParam, LPARAM lParam)
 {
 	// TODO: 여기에 특수화된 코드를 추가 및/또는 기본 클래스를 호출합니다.
+
+	/*
+	Client 에서는 Capture가 Set->Relese가 잘 됐는데 MFC에서는 문제가 발생하는 관계로 
+	임의로 풀어주는 코드를 삽입해줌. 
+
+	1) 창을 이동 시켰을 때 움직임도 초기화하는 관계로 개선할 부분이 있음.
+	*/
+	if (::GetCapture() != NULL && m_fAccTimeDelta >= 2.f)
+	{
+		::ReleaseCapture();
+		m_fAccTimeDelta = 0.f;
+	}
+	
+	if (::GetCapture() != NULL)
+	{
+		m_fAccTimeDelta += m_fTimeDelta * 10.f;
+	}
 	CGameInstacne*	pInstance = GET_INSTANCE(CGameInstacne);
 	if (pInstance->IsSetting() == false)
 	{
 		RELEASE_INSTANCE(CGameInstacne);
 		return CView::WindowProc(message, wParam, lParam);
 	}
+
 	if (pInstance->Engine_ImGui_ImplWin32_WndProcHandler(AfxGetMainWnd()->m_hWnd, message, wParam, lParam))
 	{
 		RELEASE_INSTANCE(CGameInstacne);
-		return true;
+		return CView::WindowProc(message, wParam, lParam);
 	}
 	RELEASE_INSTANCE(CGameInstacne);
 	return CView::WindowProc(message, wParam, lParam);
