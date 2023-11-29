@@ -62,8 +62,9 @@ private:
 private:
 	CPoint	m_pCursorPoint;
 	MSG		msg;
-	_float	m_fTimeDelta	= 0.f;
-	_float	m_fAccTimeDelta = 0.f;
+	_float	m_fTimeDelta		= 0.f;
+	_float	m_fAccTimeDelta		= 0.f;
+	_bool	m_IsPush			= false;
 public:
 	afx_msg void OnMouseMove(UINT nFlags, CPoint point);
 	virtual LRESULT WindowProc(UINT message, WPARAM wParam, LPARAM lParam);

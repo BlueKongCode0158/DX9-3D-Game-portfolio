@@ -504,16 +504,14 @@ LRESULT CMFCToolView::WindowProc(UINT message, WPARAM wParam, LPARAM lParam)
 
 	1) 창을 이동 시켰을 때 움직임도 초기화하는 관계로 개선할 부분이 있음.
 	*/
-	if (::GetCapture() != NULL && m_fAccTimeDelta >= 2.f)
+
+	if (::GetCapture() != NULL && m_fAccTimeDelta >= 2.f && m_IsPush == true)
 	{
 		::ReleaseCapture();
 		m_fAccTimeDelta = 0.f;
+		m_IsPush = false;
 	}
-	
-	if (::GetCapture() != NULL)
-	{
-		m_fAccTimeDelta += m_fTimeDelta * 10.f;
-	}
+
 	CGameInstacne*	pInstance = GET_INSTANCE(CGameInstacne);
 	if (pInstance->IsSetting() == false)
 	{
@@ -526,6 +524,17 @@ LRESULT CMFCToolView::WindowProc(UINT message, WPARAM wParam, LPARAM lParam)
 		RELEASE_INSTANCE(CGameInstacne);
 		return CView::WindowProc(message, wParam, lParam);
 	}
+
+	if (::GetCapture() != NULL)
+	{
+		m_fAccTimeDelta += m_fTimeDelta * 10.f;
+
+		if (message == WM_LBUTTONDOWN)
+		{
+			m_IsPush = true;
+		}
+	}
+	
 	RELEASE_INSTANCE(CGameInstacne);
 	return CView::WindowProc(message, wParam, lParam);
 }
