@@ -6,6 +6,7 @@
 #include "..\public\DIgLog1.h"
 #include "afxdialogex.h"
 #include "CellPoint_Manager.h"
+#include "GameInstacne.h"
 #include "Mesh_Manager.h"
 
 
@@ -80,9 +81,9 @@ HRESULT CDIgLog1::Update_NavigationCell_List()
 HRESULT CDIgLog1::Update_Dynamic_Mesh_List()
 {
 	m_Dynamic_ListBox.ResetContent();
-
-	_uint iIndexSize = CMesh_Manager::Get_Instance()->Get_DynamicMapVectorSize(m_DynamicTag);
-
+	CGameInstacne* pInstance = GET_INSTANCE(CGameInstacne);
+	
+	_uint iIndexSize = pInstance->Get_GameObject_ListSize(LEVEL_STATIC, m_DynamicTag);
 	for (size_t i = 0; i < iIndexSize; i++)
 	{
 		CString iIndexNum;
@@ -90,15 +91,15 @@ HRESULT CDIgLog1::Update_Dynamic_Mesh_List()
 
 		m_Dynamic_ListBox.AddString(iIndexNum);
 	}
+	RELEASE_INSTANCE(CGameInstacne);
 	return S_OK;
 }
 
 HRESULT CDIgLog1::Update_Static_Mesh_List()
 {
 	m_Static_ListBox.ResetContent();
-
-	_uint iIndexSize = CMesh_Manager::Get_Instance()->Get_StaticMapVectorSize(m_StaticTag);
-
+	CGameInstacne* pInstance = GET_INSTANCE(CGameInstacne);
+	_uint iIndexSize = pInstance->Get_GameObject_ListSize(LEVEL_STATIC, m_StaticTag);
 	for (size_t i = 0; i < iIndexSize; i++)
 	{
 		CString iIndexNum;
@@ -106,6 +107,7 @@ HRESULT CDIgLog1::Update_Static_Mesh_List()
 
 		m_Static_ListBox.AddString(iIndexNum);
 	}
+	RELEASE_INSTANCE(CGameInstacne);
 	return S_OK;
 }
 

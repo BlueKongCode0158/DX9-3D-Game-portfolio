@@ -63,27 +63,21 @@ HRESULT CStatic_Prob_Object::NativeConstruct(void * pArg)
 	{
 	case MFC_TOOL::CStatic_Prob_Object::TREE:
 		m_pPrototypeTag = TEXT("Prototype_Tree_Mesh");
-		CMesh_Manager::Get_Instance()->Add_StaticMeshList(TEXT("Layer_Tree"), this);
 		break;
 	case MFC_TOOL::CStatic_Prob_Object::ROCK:
 		m_pPrototypeTag = TEXT("Prototype_Rock_Mesh");
-		CMesh_Manager::Get_Instance()->Add_StaticMeshList(TEXT("Layer_Rock"), this);
 		break;
 	case MFC_TOOL::CStatic_Prob_Object::GRASS:
 		m_pPrototypeTag = TEXT("Prototype_Grass_Mesh");
-		CMesh_Manager::Get_Instance()->Add_StaticMeshList(TEXT("Layer_Grass"), this);
 		break;
 	case MFC_TOOL::CStatic_Prob_Object::RING:
 		m_pPrototypeTag = TEXT("Prototype_Ring_Mesh");
-		CMesh_Manager::Get_Instance()->Add_StaticMeshList(TEXT("Layer_Ring"), this);
 		break;
 	case MFC_TOOL::CStatic_Prob_Object::RING_BREAK:
 		m_pPrototypeTag = TEXT("Prototype_Ring_Break_Mesh");
-		CMesh_Manager::Get_Instance()->Add_StaticMeshList(TEXT("Layer_Ring_Broken"), this);
 		break;
 	case MFC_TOOL::CStatic_Prob_Object::PLAYER_SELECT:
 		m_pPrototypeTag = TEXT("Prototype_Player_Select_Mesh");
-		CMesh_Manager::Get_Instance()->Add_StaticMeshList(TEXT("Layer_Player_Select"), this);
 		break;
 	case MFC_TOOL::CStatic_Prob_Object::CRETEOBJECT_END:
 		break;

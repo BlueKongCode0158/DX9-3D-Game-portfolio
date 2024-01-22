@@ -42,6 +42,7 @@ void CImgui_Manager::Frame()
 		ImGui_ImplDX9_NewFrame();
 		ImGui_ImplWin32_NewFrame();
 		ImGui::NewFrame();
+		ImGuizmo::BeginFrame();
 		//ImGui::Begin("Transform");
 		//ImGuizmo::BeginFrame();
 		//ImGui::Text("Hello, world!");
@@ -82,6 +83,12 @@ LRESULT CImgui_Manager::Engine_ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT ms
 		return false;
 	}
 	return ImGui_ImplWin32_WndProcHandler(hWnd, msg, wParam, lParam);
+}
+
+LRESULT CImgui_Manager::EditTransform(CGameObject * pObject)
+{
+
+	return S_OK;
 }
 
 

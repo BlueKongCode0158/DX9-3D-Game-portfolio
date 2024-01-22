@@ -2,6 +2,7 @@
 #include "Base.h"
 
 BEGIN(Engine)
+class CGameObject;
 class CImgui_Manager : public CBase
 {
 	DECLARE_SINGLETON(CImgui_Manager)
@@ -15,6 +16,7 @@ public:
 	void	Render();
 	void	OnOffWindow();
 	LRESULT	Engine_ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
+	LRESULT	EditTransform(CGameObject* pObject);
 private:
 	_bool	m_isInit		= false;
 	_bool	m_bWindowEnable = false;

@@ -6,8 +6,6 @@
 IMPLEMENT_SINGLETON(CMesh_Manager)
 CMesh_Manager::CMesh_Manager()
 {
-
-
 }
 
 
