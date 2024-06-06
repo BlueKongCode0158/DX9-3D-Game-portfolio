@@ -13,7 +13,6 @@ CGameInstacne::CGameInstacne()
 	, m_pPicking(CPicking::Get_Instance())
 	, m_pLight(CLight_Manager::Get_Instance())
 	, m_pKeyManager(CKey_Manager::Get_Instance())
-	, m_pImgui(CImgui_Manager::Get_Instance())
 {
 	Safe_AddRef(m_pDevice);
 	Safe_AddRef(m_pPipe);
@@ -25,7 +24,6 @@ CGameInstacne::CGameInstacne()
 	Safe_AddRef(m_pPicking);
 	Safe_AddRef(m_pLight);
 	Safe_AddRef(m_pKeyManager);
-	Safe_AddRef(m_pImgui);
 }
 
 HRESULT CGameInstacne::Initialize_Engine(_uint iNumLevel, HWND hWnd, HINSTANCE hInst)
@@ -118,16 +116,6 @@ HRESULT CGameInstacne::Ready_Graphic_Device(HWND hWnd, CGraphic_Device::WINMODE 
 	return S_OK;
 }
 
-HRESULT CGameInstacne::Ready_Imgui_Device(HWND hWnd)
-{
-	if (FAILED(m_pImgui->NativeConstruct(hWnd, m_pDevice->Get_Device())))
-	{
-		return E_FAIL;
-	}
-
-	m_IsSetting = true;
-	return S_OK;
-}
 
 void CGameInstacne::Render_Begin()
 {
@@ -552,30 +540,6 @@ HRESULT CGameInstacne::Add_Light(LPDIRECT3DDEVICE9 pGraphic_Device, const D3DLIG
 	return m_pLight->Add_Light(pGraphic_Device, LightDesc);
 }
 #pragma endregion
-#pragma region IMGUI
-void CGameInstacne::Frame()
-{	
-	m_pImgui->Frame();
-}
-void CGameInstacne::Render()
-{
-	m_pImgui->Render();
-}
-void CGameInstacne::OnOffWindow()
-{
-	m_pImgui->OnOffWindow();
-}
-
-LRESULT CGameInstacne::Engine_ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
-{
-	if (m_pImgui == nullptr)
-	{
-		return false;
-	}
-	return m_pImgui->Engine_ImGui_ImplWin32_WndProcHandler(hWnd, msg, wParam, lParam);
-}
-
-#pragma endregion
 //#pragma region PARTICLE
 //HRESULT CGameInstacne::Add_ParticleSystem(const _tchar * pLayerTag)
 //{
@@ -660,10 +624,6 @@ void CGameInstacne::Release_Engine()
 	{
 		MSGBOX("Failed to Relese CPicking");
 	}
-	if (0 != CImgui_Manager::Get_Instance()->Destroy_Instance())
-	{
-		MSGBOX("Failed to Relese CImgui");
-	}
 	if (0 != CGraphic_Device::Get_Instance()->Destroy_Instance())
 	{
 		MSGBOX("Failed to Release CGraphic_Device");
@@ -682,5 +642,4 @@ void CGameInstacne::Free()
 	Safe_Release(m_pPipe);
 	Safe_Release(m_pPicking);
 	Safe_Release(m_pDevice);
-	Safe_Release(m_pImgui);
 }

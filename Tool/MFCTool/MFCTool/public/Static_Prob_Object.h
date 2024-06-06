@@ -45,10 +45,10 @@ private:
 	Crete_Object	m_eType = CRETEOBJECT_END;
 private:
 	Crete_Object	m_eCreateType = CStatic_Prob_Object::Crete_Object::CRETEOBJECT_END;
-	const	_tchar* m_pPrototypeTag = L"";
+	const _tchar*	m_pPrototypeTag = L"";
 public:
 	static CStatic_Prob_Object* Create(LPDIRECT3DDEVICE9 pGraphic_Device, CStatic_Prob_Object::Crete_Object eType);
 	virtual CGameObject*		Clone(void* pArg) override;
-	virtual void				Free() override;
+	virtual void		        		Free() override;
 };
 END

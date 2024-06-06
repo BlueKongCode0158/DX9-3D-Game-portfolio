@@ -196,9 +196,6 @@
     <Filter Include="01.Utility\02.GameObject\Decal">
       <UniqueIdentifier>{748f2859-a214-4a04-9bfc-a819bec18feb}</UniqueIdentifier>
     </Filter>
-    <Filter Include="00.Device\Imgui">
-      <UniqueIdentifier>{78c93a01-20cb-4efc-aeb0-2875121a9a96}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\private\Base.cpp">
@@ -371,9 +368,6 @@
     </ClCompile>
     <ClCompile Include="..\private\Decal.cpp">
       <Filter>01.Utility\02.GameObject\Decal</Filter>
-    </ClCompile>
-    <ClCompile Include="..\private\Imgui_Manager.cpp">
-      <Filter>00.Device\Imgui</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -565,9 +559,6 @@
     </ClInclude>
     <ClInclude Include="..\public\Decal.h">
       <Filter>01.Utility\02.GameObject\Decal</Filter>
-    </ClInclude>
-    <ClInclude Include="..\public\Imgui_Manager.h">
-      <Filter>00.Device\Imgui</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

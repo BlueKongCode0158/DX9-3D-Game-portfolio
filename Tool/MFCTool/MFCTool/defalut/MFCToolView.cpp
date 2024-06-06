@@ -84,7 +84,6 @@ void CMFCToolView::OnDraw(CDC* /*pDC*/)
 	pGameInstance->Render_Begin();
 
 	m_pRendererCom->Render_GameObject();
-	pGameInstance->Render();
 
 	pGameInstance->Render_End(m_hWnd);
 	RELEASE_INSTANCE(CGameInstacne);
@@ -173,12 +172,6 @@ void CMFCToolView::OnInitialUpdate()
 		return;
 	}
 
-	if (FAILED(pGameInstance->Ready_Imgui_Device(m_hWnd)))
-	{
-		RELEASE_INSTANCE(CGameInstacne);
-		return;
-	}
-
 	if (FAILED(pGameInstance->Add_Timers(TEXT("FPS_60"))))
 	{
 		MessageBoxA(g_hWND, "Failed to Creating Timer", "¿Ï·á", MB_OK);
@@ -260,15 +253,9 @@ void CMFCToolView::Update_Tick()
 	CGameInstacne* pGameInstance = GET_INSTANCE(CGameInstacne);
 	m_fTimeDelta = pGameInstance->Compute_Time(TEXT("FPS_60"));
 	
-	if (pGameInstance->Input_KeyMouse_Down(CInput_Device::DIM::DIM_WHEELBUTTON))
-	{
-		pGameInstance->OnOffWindow();
-	}
-
 	pGameInstance->Compute_MouseCursorPosInWorld(m_hWnd);
 	pGameInstance->Tick(m_fTimeDelta);
 	pGameInstance->Late_Tick(m_fTimeDelta);
-	pGameInstance->Frame();
 	RELEASE_INSTANCE(CGameInstacne);
 }
 
@@ -514,12 +501,6 @@ LRESULT CMFCToolView::WindowProc(UINT message, WPARAM wParam, LPARAM lParam)
 
 	CGameInstacne*	pInstance = GET_INSTANCE(CGameInstacne);
 	if (pInstance->IsSetting() == false)
-	{
-		RELEASE_INSTANCE(CGameInstacne);
-		return CView::WindowProc(message, wParam, lParam);
-	}
-
-	if (pInstance->Engine_ImGui_ImplWin32_WndProcHandler(AfxGetMainWnd()->m_hWnd, message, wParam, lParam))
 	{
 		RELEASE_INSTANCE(CGameInstacne);
 		return CView::WindowProc(message, wParam, lParam);

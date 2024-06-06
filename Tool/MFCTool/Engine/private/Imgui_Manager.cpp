@@ -87,7 +87,7 @@ LRESULT CImgui_Manager::Engine_ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT ms
 
 LRESULT CImgui_Manager::EditTransform(CGameObject * pObject)
 {
-
+	
 	return S_OK;
 }
 

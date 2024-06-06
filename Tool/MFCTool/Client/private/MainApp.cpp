@@ -41,10 +41,6 @@ HRESULT CMainApp::NativeConstruct()
 		return E_FAIL;
 	}
 
-	if (FAILED(pInstance->Ready_Imgui_Device(g_hWnd)))
-	{
-		return E_FAIL;
-	}
 	if (FAILED(Add_Prototype_Component()))
 	{
 		return E_FAIL;
