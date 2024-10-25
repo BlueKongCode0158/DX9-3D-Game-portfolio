@@ -30,7 +30,7 @@ protected:
 protected:
 	_bool					m_isDead			= false;
 protected:
-	map<const _tchar*, CComponent*>		m_Componenets;
+	map<const _tchar*, CComponent*>		m_Componenets; 
 	typedef map<const _tchar*, CComponent*> COMPONENT;
 protected:
 	void Compute_CameraDistance(class CTransform* pTransform);

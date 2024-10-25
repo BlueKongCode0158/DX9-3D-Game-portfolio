@@ -1,0 +1,9 @@
+#pragma once
+
+extern HWND			g_hWnd;
+extern HINSTANCE	g_hInst;
+
+enum LEVEL { LEVEL_STATIC, LEVEL_LOGO, LEVEL_LOADING, LEVEL_SELECT, LEVEL_GAMEPLAY0, LEVEL_GAMEPLAY1, LEVEL_GAMEPLAY2, LEVEL_END };
+
+namespace IMGUITOOL {}
+using namespace IMGUITOOL;

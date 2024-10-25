@@ -67,6 +67,12 @@ namespace Engine
 		float			fSize;
 	}VTXPOINT;
 
+	typedef struct tagVertexGizmo
+	{
+		D3DXVECTOR3		vPosition;
+		D3DXVECTOR4		vColor;
+	}VTXGIZMO;
+
 	typedef struct tagSingleItem
 	{
 		unsigned int		iAddHp;

@@ -82,11 +82,6 @@ _int CMainApp::Tick(_double TimeDelta)
 	m_pFrustum->Update_Frustum();
 	pInstance->Late_Tick(TimeDelta);
 
-	if (pInstance->Input_KeyMouse_Down(CInput_Device::DIM::DIM_WHEELBUTTON))
-	{
-		pInstance->OnOffWindow();
-	}
-	pInstance->Frame();
 	Safe_Release(pInstance);
 
 	return 0;
@@ -109,7 +104,6 @@ HRESULT CMainApp::Render()
 	//m_pGraphic_Device->ShowCursor(FALSE);
 
 	m_pRenderer->Render_GameObject();
-	pInstance->Render();
 
 	if (FAILED(pInstance->Render_Level()))
 	{

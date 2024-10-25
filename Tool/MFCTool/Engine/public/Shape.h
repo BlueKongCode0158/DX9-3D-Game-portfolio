@@ -1,5 +1,6 @@
 #pragma once
 #include "Base.h"
+// - Particle System에서 Mesh Particle을 만들 때 쓸 Class
 
 BEGIN(Engine)
 class CStatic_Mesh;

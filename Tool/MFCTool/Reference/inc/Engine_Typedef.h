@@ -12,6 +12,8 @@ namespace Engine
 	typedef int					_int;
 	typedef unsigned int		_uint;
 
+	typedef DWORD				_DWORD;
+
 	typedef long				_long;
 	typedef unsigned long		_ulong;
 

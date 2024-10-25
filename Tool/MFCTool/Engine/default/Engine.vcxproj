@@ -185,6 +185,7 @@
     <ClInclude Include="..\public\GameInstacne.h" />
     <ClInclude Include="..\public\GameObject.h" />
     <ClInclude Include="..\public\GameObject_Manager.h" />
+    <ClInclude Include="..\public\Gizmo.h" />
     <ClInclude Include="..\public\Graphic_Device.h" />
     <ClInclude Include="..\public\HierarchyLoader.h" />
     <ClInclude Include="..\public\Input_Device.h" />
@@ -229,7 +230,9 @@
     <ClInclude Include="..\public\Transform.h" />
     <ClInclude Include="..\public\UI.h" />
     <ClInclude Include="..\public\VIBuffer.h" />
+    <ClInclude Include="..\public\VIBuffer_Circle.h" />
     <ClInclude Include="..\public\VIBuffer_Cube.h" />
+    <ClInclude Include="..\public\VIBuffer_Gizmo.h" />
     <ClInclude Include="..\public\VIBuffer_Point.h" />
     <ClInclude Include="..\public\VIBuffer_Rect.h" />
     <ClInclude Include="..\public\VIBuffer_Rect_Viewport.h" />
@@ -254,6 +257,7 @@
     <ClCompile Include="..\private\GameInstacne.cpp" />
     <ClCompile Include="..\private\GameObject.cpp" />
     <ClCompile Include="..\private\GameObject_Manager.cpp" />
+    <ClCompile Include="..\private\Gizmo.cpp" />
     <ClCompile Include="..\private\Graphic_Device.cpp" />
     <ClCompile Include="..\private\HierarchyLoader.cpp" />
     <ClCompile Include="..\private\Input_Device.cpp" />
@@ -298,7 +302,9 @@
     <ClCompile Include="..\private\Transform.cpp" />
     <ClCompile Include="..\private\UI.cpp" />
     <ClCompile Include="..\private\VIBuffer.cpp" />
+    <ClCompile Include="..\private\VIBuffer_Circle.cpp" />
     <ClCompile Include="..\private\VIBuffer_Cube.cpp" />
+    <ClCompile Include="..\private\VIBuffer_Gizmo.cpp" />
     <ClCompile Include="..\private\VIBuffer_Point.cpp" />
     <ClCompile Include="..\private\VIBuffer_Rect.cpp" />
     <ClCompile Include="..\private\VIBuffer_Rect_Viewport.cpp" />

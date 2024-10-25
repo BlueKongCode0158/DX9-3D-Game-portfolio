@@ -196,6 +196,15 @@
     <Filter Include="01.Utility\02.GameObject\Decal">
       <UniqueIdentifier>{748f2859-a214-4a04-9bfc-a819bec18feb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="01.Utility\13.Gizmo">
+      <UniqueIdentifier>{9a1dc0fe-659e-4f34-9b32-196a822d0050}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Utility\03.Components\02.VlBuffer\05.VIBuffer_Gizmo">
+      <UniqueIdentifier>{857c1fd9-c460-4918-a8a0-cbf4670041ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01.Utility\03.Components\02.VlBuffer\06.VIBuffer_Circle">
+      <UniqueIdentifier>{53dec8ef-210d-4ea0-9820-2d99f4da3311}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\private\Base.cpp">
@@ -368,6 +377,15 @@
     </ClCompile>
     <ClCompile Include="..\private\Decal.cpp">
       <Filter>01.Utility\02.GameObject\Decal</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\Gizmo.cpp">
+      <Filter>01.Utility\13.Gizmo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\VIBuffer_Gizmo.cpp">
+      <Filter>01.Utility\03.Components\02.VlBuffer\05.VIBuffer_Gizmo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\private\VIBuffer_Circle.cpp">
+      <Filter>01.Utility\03.Components\02.VlBuffer\06.VIBuffer_Circle</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -559,6 +577,15 @@
     </ClInclude>
     <ClInclude Include="..\public\Decal.h">
       <Filter>01.Utility\02.GameObject\Decal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\Gizmo.h">
+      <Filter>01.Utility\13.Gizmo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\VIBuffer_Gizmo.h">
+      <Filter>01.Utility\03.Components\02.VlBuffer\05.VIBuffer_Gizmo</Filter>
+    </ClInclude>
+    <ClInclude Include="..\public\VIBuffer_Circle.h">
+      <Filter>01.Utility\03.Components\02.VlBuffer\06.VIBuffer_Circle</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

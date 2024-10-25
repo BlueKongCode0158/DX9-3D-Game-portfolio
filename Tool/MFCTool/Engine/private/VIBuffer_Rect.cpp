@@ -15,7 +15,7 @@ CVIBuffer_Rect::CVIBuffer_Rect(const CVIBuffer_Rect & rhs)
 HRESULT CVIBuffer_Rect::NativeConstruct_Prototype()
 {
 
-	if (FAILED(__super::NativeConstruct_VertexBuffer(sizeof(VTXTEX), 6, 0, (D3DFVF_XYZ | D3DFVF_TEX1), D3DPT_TRIANGLELIST, 2)))
+	if (FAILED(__super::NativeConstruct_VertexBuffer(sizeof(VTXTEX), 4, 0, (D3DFVF_XYZ | D3DFVF_TEX1), D3DPT_TRIANGLELIST, 2)))
 	{
 		return E_FAIL;
 	}
